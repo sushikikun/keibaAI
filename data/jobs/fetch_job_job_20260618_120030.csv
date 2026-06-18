@@ -1,0 +1,13 @@
+race_id,date,track,race_no,official_url,cache_html_path
+20250908_kawasaki_1,2025-09-08,kawasaki,1,https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceMarkTable?k_raceDate=2025%2F09%2F08&k_raceNo=1&k_babaCode=21,data/cache/html/20250908_kawasaki_1.html
+20250908_kawasaki_2,2025-09-08,kawasaki,2,https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceMarkTable?k_raceDate=2025%2F09%2F08&k_raceNo=2&k_babaCode=21,data/cache/html/20250908_kawasaki_2.html
+20250908_kawasaki_3,2025-09-08,kawasaki,3,https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceMarkTable?k_raceDate=2025%2F09%2F08&k_raceNo=3&k_babaCode=21,data/cache/html/20250908_kawasaki_3.html
+20250908_kawasaki_4,2025-09-08,kawasaki,4,https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceMarkTable?k_raceDate=2025%2F09%2F08&k_raceNo=4&k_babaCode=21,data/cache/html/20250908_kawasaki_4.html
+20250908_kawasaki_5,2025-09-08,kawasaki,5,https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceMarkTable?k_raceDate=2025%2F09%2F08&k_raceNo=5&k_babaCode=21,data/cache/html/20250908_kawasaki_5.html
+20250908_kawasaki_6,2025-09-08,kawasaki,6,https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceMarkTable?k_raceDate=2025%2F09%2F08&k_raceNo=6&k_babaCode=21,data/cache/html/20250908_kawasaki_6.html
+20250908_kawasaki_7,2025-09-08,kawasaki,7,https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceMarkTable?k_raceDate=2025%2F09%2F08&k_raceNo=7&k_babaCode=21,data/cache/html/20250908_kawasaki_7.html
+20250908_kawasaki_8,2025-09-08,kawasaki,8,https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceMarkTable?k_raceDate=2025%2F09%2F08&k_raceNo=8&k_babaCode=21,data/cache/html/20250908_kawasaki_8.html
+20250908_kawasaki_9,2025-09-08,kawasaki,9,https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceMarkTable?k_raceDate=2025%2F09%2F08&k_raceNo=9&k_babaCode=21,data/cache/html/20250908_kawasaki_9.html
+20250908_kawasaki_10,2025-09-08,kawasaki,10,https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceMarkTable?k_raceDate=2025%2F09%2F08&k_raceNo=10&k_babaCode=21,data/cache/html/20250908_kawasaki_10.html
+20250908_kawasaki_11,2025-09-08,kawasaki,11,https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceMarkTable?k_raceDate=2025%2F09%2F08&k_raceNo=11&k_babaCode=21,data/cache/html/20250908_kawasaki_11.html
+20250908_kawasaki_12,2025-09-08,kawasaki,12,https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceMarkTable?k_raceDate=2025%2F09%2F08&k_raceNo=12&k_babaCode=21,data/cache/html/20250908_kawasaki_12.html

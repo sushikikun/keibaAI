@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nankan-ai-data-layer"
+version = "0.1.0"
+description = "Manual CSV data layer MVP for South Kanto horse racing AI."
+requires-python = ">=3.12"
+dependencies = [
+    "duckdb>=1.0.0",
+    "pytest>=8.0.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["nankan_ai*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "."]
+python_files = ["test_validate_csv.py", "test_nankan_*.py", "test_audit_dataset.py", "test_audit_missing_odds.py", "test_append_pipeline.py", "test_append_batch_log.py", "test_fetch_plan.py", "test_parse_result_pages.py", "test_diagnose_network_access.py", "test_import_manual_html_cache.py", "test_fetch_backends.py", "test_cache_bundle_workflow.py"]
+addopts = "-p no:cacheprovider"

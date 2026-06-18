@@ -1,0 +1,9 @@
+race_id,date,track,race_no,race_name,distance,surface,weather,track_condition,class_name,field_size,horse_no,gate_no,horse_name,sex,age,carried_weight,jockey_name,trainer_name,body_weight,body_weight_diff,finish_position,finish_time,margin,passing_order,last_3f,popularity,win_odds_final
+20260616_kawasaki_10,2026-06-16,kawasaki,10,Fixture Race 10,1600,dirt,fine,standard,fixture,5,1,1,Fixture Horse A,M,4,56.0,Fixture Jockey A,Fixture Trainer A,500,2,1,1:38.0,,1-1-1,38.1,1,2.4
+20260616_kawasaki_10,2026-06-16,kawasaki,10,Fixture Race 10,1600,dirt,fine,standard,fixture,5,2,2,Fixture Horse B,F,5,54.0,Fixture Jockey B,Fixture Trainer B,486,-4,2,1:38.2,1,2-2-2,38.3,2,3.1
+20260616_kawasaki_10,2026-06-16,kawasaki,10,Fixture Race 10,1600,dirt,fine,standard,fixture,5,3,3,Fixture Horse C,M,6,56.0,Fixture Jockey C,Fixture Trainer C,510,0,3,1:38.5,2,3-3-3,38.7,4,8.8
+20260616_kawasaki_10,2026-06-16,kawasaki,10,Fixture Race 10,1600,dirt,fine,standard,fixture,5,4,4,Fixture Horse D,F,4,54.0,Fixture Jockey D,Fixture Trainer D,,,SCR,,,,,,
+20260616_kawasaki_10,2026-06-16,kawasaki,10,Fixture Race 10,1600,dirt,fine,standard,fixture,5,5,5,Fixture Horse E,M,7,56.0,Fixture Jockey E,Fixture Trainer E,498,6,DNF,,,,,5,21.0
+20260616_oi_08,2026-06-16,oi,8,Fixture Race 08,1200,dirt,cloudy,standard,fixture,3,1,1,Fixture Horse F,M,3,56.0,Fixture Jockey F,Fixture Trainer F,,,EXC,,,,,,
+20260616_oi_08,2026-06-16,oi,8,Fixture Race 08,1200,dirt,cloudy,standard,fixture,3,2,2,Fixture Horse G,F,4,54.0,Fixture Jockey G,Fixture Trainer G,472,1,4,1:13.0,3,4-4,37.2,3,6.5
+20260616_oi_08,2026-06-16,oi,8,Fixture Race 08,1200,dirt,cloudy,standard,fixture,3,3,3,Fixture Horse H,M,5,56.0,Fixture Jockey H,Fixture Trainer H,530,-2,1,1:12.2,,1-1,36.8,1,1.9

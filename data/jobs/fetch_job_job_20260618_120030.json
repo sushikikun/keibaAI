@@ -1,0 +1,25 @@
+{
+  "job_id": "job_20260618_120030",
+  "created_at": "2026-06-18T12:00:30+09:00",
+  "track": "kawasaki",
+  "date_from": "2025-09-08",
+  "date_to": "2025-09-08",
+  "race_count": 12,
+  "race_ids": [
+    "20250908_kawasaki_1",
+    "20250908_kawasaki_2",
+    "20250908_kawasaki_3",
+    "20250908_kawasaki_4",
+    "20250908_kawasaki_5",
+    "20250908_kawasaki_6",
+    "20250908_kawasaki_7",
+    "20250908_kawasaki_8",
+    "20250908_kawasaki_9",
+    "20250908_kawasaki_10",
+    "20250908_kawasaki_11",
+    "20250908_kawasaki_12"
+  ],
+  "source": "keiba.go.jp official result page",
+  "raw_sha256_at_export": "3c1e862d7b0ba90944f89a9758b21b7f08c89beaf1494b8f103adecfd23a9ab2",
+  "fetch_job_csv": "data/jobs/fetch_job_job_20260618_120030.csv"
+}
