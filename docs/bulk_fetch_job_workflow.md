@@ -4,6 +4,106 @@ This workflow is for processing multiple cache-bundle jobs without manually
 running every command one by one. It does not create prediction models, add
 features, or fetch anything on the local PC.
 
+## One Command Runner
+
+Use `ops/run_bulk_fetch_cycle.ps1` for the current standard operation. It wraps
+the full cycle:
+
+1. preflight checks
+2. optional job CSV/JSON commit and push
+3. GitHub Actions dispatch
+4. Actions completion wait
+5. artifact download
+6. cache bundle import
+7. append CSV build
+8. append validation
+9. merge dry-run
+10. parse-warning classification
+11. optional safe apply
+12. final checks
+
+Dry-run through artifact processing, without applying to raw:
+
+```powershell
+.\ops\run_bulk_fetch_cycle.ps1 `
+  -Repo sushikikun/keibaAI `
+  -JobPrefix job_20260622_161538 `
+  -ExpectedStartRawSha256 755467C05E57FC9494680846AD0E93D33899B8F7975E14B00850BB67E4349855 `
+  -DryRunOnly `
+  -Backend python `
+  -DelaySeconds 1.0
+```
+
+Run the same cycle and apply only when all safety checks pass:
+
+```powershell
+.\ops\run_bulk_fetch_cycle.ps1 `
+  -Repo sushikikun/keibaAI `
+  -JobPrefix job_20260622_161538 `
+  -ExpectedStartRawSha256 755467C05E57FC9494680846AD0E93D33899B8F7975E14B00850BB67E4349855 `
+  -ApplyIfSafe `
+  -Backend python `
+  -DelaySeconds 1.0
+```
+
+Plan-only mode prints and validates the local plan without dispatching Actions,
+downloading artifacts, or applying raw changes:
+
+```powershell
+.\ops\run_bulk_fetch_cycle.ps1 `
+  -Repo sushikikun/keibaAI `
+  -JobPrefix job_20260622_161538 `
+  -ExpectedStartRawSha256 755467C05E57FC9494680846AD0E93D33899B8F7975E14B00850BB67E4349855 `
+  -DryRunOnly `
+  -PlanOnly
+```
+
+The runner intentionally never uses `git add .`. If target job CSV/JSON files
+have local changes, it stages only:
+
+```text
+data/jobs/fetch_job_<job_id>.csv
+data/jobs/fetch_job_<job_id>.json
+```
+
+It stops if any forbidden path is staged, including raw CSV, DuckDB, training
+CSV, cache HTML, bundle zip, backups, reports, virtualenv, pycache, or
+pytest cache.
+
+Safe apply runs only when all of these are true:
+
+- `-ApplyIfSafe` is specified.
+- `-DryRunOnly` is not specified.
+- starting raw SHA256 still matches `-ExpectedStartRawSha256`.
+- all target jobs pass duplicate and race_id/date/track/race_no checks.
+- every Actions run finishes with `success`.
+- every target artifact downloads from the matching run/job only.
+- every job passes append validation and merge dry-run.
+- parse warning classification has `parser_gap = 0`.
+- parse warning classification has `unknown = 0`.
+
+The runner stops automatically when:
+
+- working directory is not the project root.
+- GitHub CLI auth fails.
+- raw SHA256 does not match the expected value.
+- job CSV/JSON files are missing.
+- job race_id values overlap existing raw race_id values.
+- job files contain internal or cross-job duplicate race_id values.
+- race_id, date, track, or race_no do not agree.
+- unrelated or forbidden files are staged.
+- GitHub Actions dispatch, wait, or artifact download fails.
+- validation or merge dry-run fails.
+- parse classification finds `parser_gap` or `unknown`.
+- apply fails at any step.
+
+If apply fails after raw append, do not run the whole cycle again. Use the
+printed `append_state` resume command:
+
+```powershell
+python -m nankan_ai.merge_append_csv --resume data/reports/append_state_<batch_id>.json
+```
+
 ## Scope
 
 Current target jobs:
