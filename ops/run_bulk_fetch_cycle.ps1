@@ -28,10 +28,22 @@ $TrainingRowsCsv = "data/processed/training_rows.csv"
 $IncomingCsv = "data/incoming/nankan_past_races_append.csv"
 $BundlesDir = "data/cache/bundles"
 $ReportsDir = "data/reports"
+$script:CyclePhase = "startup"
+$script:ResumeGuidanceEnabled = $false
 
 function Stop-Cycle {
     param([string]$Message)
     throw $Message
+}
+
+function Set-CyclePhase {
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$Phase,
+        [switch]$ResumeRelevant
+    )
+    $script:CyclePhase = $Phase
+    $script:ResumeGuidanceEnabled = [bool]$ResumeRelevant
 }
 
 function Get-PythonExe {
@@ -128,7 +140,7 @@ function Test-RaceIdConsistency {
     foreach ($job in $Jobs) {
         $rows = @(Import-Csv -LiteralPath $job.CsvPath)
         $ids = @($rows | ForEach-Object { [string]$_.race_id })
-        $idCounts = $ids | Group-Object
+        $idCounts = @($ids | Group-Object)
         $withinDupes = @($idCounts | Where-Object { $_.Count -gt 1 } | ForEach-Object { $_.Name })
 
         foreach ($row in $rows) {
@@ -164,10 +176,10 @@ function Test-RaceIdConsistency {
         $dates = @($rows | ForEach-Object { $_.date } | Where-Object { $_ } | Sort-Object)
         $jobSummaries += [pscustomobject]@{
             job_id = $job.JobId
-            rows = $rows.Count
+            rows = @($rows).Count
             date_min = if ($dates) { $dates[0] } else { "" }
             date_max = if ($dates) { $dates[-1] } else { "" }
-            within_job_duplicate_count = $withinDupes.Count
+            within_job_duplicate_count = @($withinDupes).Count
             within_job_duplicate_ids = $withinDupes
         }
     }
@@ -184,16 +196,17 @@ function Test-RaceIdConsistency {
             }
     )
 
-    $withinDupeTotal = ($jobSummaries | Measure-Object -Property within_job_duplicate_count -Sum).Sum
+    $withinDupeMeasure = @($jobSummaries | Measure-Object -Property within_job_duplicate_count -Sum)
+    $withinDupeTotal = $withinDupeMeasure[0].Sum
     if ($null -eq $withinDupeTotal) { $withinDupeTotal = 0 }
 
     $result = [pscustomobject]@{
         raw_overlap_count = @($rawOverlap | Sort-Object -Unique).Count
         raw_overlap_ids = @($rawOverlap | Sort-Object -Unique)
-        between_job_duplicate_count = $betweenDupes.Count
+        between_job_duplicate_count = @($betweenDupes).Count
         between_job_duplicate_ids = $betweenDupes
         within_job_duplicate_count_total = [int]$withinDupeTotal
-        consistency_issue_count = $allIssues.Count
+        consistency_issue_count = @($allIssues).Count
         consistency_issues = $allIssues
         job_summaries = $jobSummaries
     }
@@ -298,7 +311,18 @@ function Get-RecentWorkflowRunIds {
     if ($LASTEXITCODE -ne 0) {
         Stop-Cycle "Could not list GitHub Actions runs."
     }
-    return @($json | ConvertFrom-Json | ForEach-Object { [int64]$_.databaseId })
+    if ([string]::IsNullOrWhiteSpace($json)) {
+        return @()
+    }
+
+    $items = $json | ConvertFrom-Json
+    $ids = @()
+    foreach ($item in $items) {
+        if ($null -ne $item -and $null -ne $item.databaseId) {
+            $ids += [int64]$item.databaseId
+        }
+    }
+    return $ids
 }
 
 function Dispatch-Actions {
@@ -330,8 +354,8 @@ function Dispatch-Actions {
             Start-Sleep -Seconds 2
             $after = Get-RecentWorkflowRunIds -RepoName $Repo
             $newIds = @($after | Where-Object { $before -notcontains $_ } | Sort-Object -Descending)
-            if ($newIds.Count -gt 0) {
-                $runId = $newIds[0]
+            if (@($newIds).Count -gt 0) {
+                $runId = [int64](@($newIds)[0])
                 break
             }
         }
@@ -743,7 +767,7 @@ function Write-CycleSummary {
         "|---|---:|---|"
     )
     foreach ($job in $Jobs) {
-        $run = @($Runs | Where-Object { $_.job_id -eq $job.JobId } | Select-Object -First 1)
+        $run = $Runs | Where-Object { $_.job_id -eq $job.JobId } | Select-Object -First 1
         $runId = if ($run) { $run.run_id } else { "" }
         $artifact = if ($run) { $run.artifact_name } else { "" }
         $lines += "| $($job.JobId) | $runId | $artifact |"
@@ -764,6 +788,7 @@ function Write-CycleSummary {
 
 try {
     $startedAt = Get-Date -Format "yyyyMMdd_HHmmss"
+    Set-CyclePhase -Phase "preflight"
     Assert-ProjectRoot
     $jobs = @(Get-TargetJobs)
     Write-Output "Target jobs:"
@@ -780,27 +805,49 @@ try {
 
     Assert-RawSha256 -Expected $ExpectedStartRawSha256
     Test-RaceIdConsistency -Jobs $jobs | Out-Null
+    Set-CyclePhase -Phase "publish_job_files"
     Publish-JobFilesIfNeeded -Jobs $jobs
 
     if ($PlanOnly) {
+        Set-CyclePhase -Phase "plan_actions"
         Dispatch-Actions -Jobs $jobs
         $runs = @()
         Write-Output "PLAN: skip run_id save, Actions wait, and artifact download."
     } else {
+        Set-CyclePhase -Phase "dispatch_actions"
         $runs = @(Dispatch-Actions -Jobs $jobs)
         Save-RunIds -Runs $runs -StartedAt $startedAt | Out-Null
+        Set-CyclePhase -Phase "wait_actions"
         Wait-Actions -Runs $runs
+        Set-CyclePhase -Phase "download_artifacts"
         Download-Artifacts -Runs $runs
     }
+    Set-CyclePhase -Phase "local_dry_run"
     Invoke-ProcessDryRun -Jobs $jobs
+    Set-CyclePhase -Phase "parse_classification"
     $classification = Invoke-ParseClassification -Jobs $jobs -StartedAt $startedAt
+    if ($ApplyIfSafe -and -not $DryRunOnly -and -not $PlanOnly) {
+        Set-CyclePhase -Phase "safe_apply" -ResumeRelevant
+    } else {
+        Set-CyclePhase -Phase "safe_apply_not_requested"
+    }
     Invoke-SafeApply -Jobs $jobs -Classification $classification
+    if ($ApplyIfSafe -and -not $DryRunOnly -and -not $PlanOnly) {
+        Set-CyclePhase -Phase "post_apply_checks" -ResumeRelevant
+    } else {
+        Set-CyclePhase -Phase "final_checks"
+    }
     Invoke-FinalChecks
     Write-CycleSummary -Jobs $jobs -Runs $runs -Classification $classification -StartedAt $startedAt
     Write-Output "OK: bulk fetch cycle completed."
 } catch {
     Write-Output "NG: bulk fetch cycle stopped."
+    Write-Output "phase: $script:CyclePhase"
     Write-Output $_.Exception.Message
-    Write-ResumeGuidance
+    if ($script:ResumeGuidanceEnabled) {
+        Write-ResumeGuidance
+    } else {
+        Write-Output "Resume guidance skipped because raw apply had not started."
+    }
     exit 1
 }
