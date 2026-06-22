@@ -726,6 +726,20 @@ print(json.dumps({
     return ($json | ConvertFrom-Json)
 }
 
+function Invoke-PytestCheck {
+    $python = Get-PythonExe
+    Write-Output "> $python -m pytest -q"
+    $output = & $python -m pytest -q 2>&1
+    $exitCode = [int]$LASTEXITCODE
+    if ($output) {
+        $output | Write-Output
+    }
+    if ($exitCode -ne 0) {
+        Stop-Cycle "Pytest failed with exit code ${exitCode}."
+    }
+    Write-Output "OK: pytest passed."
+}
+
 function Invoke-FinalChecks {
     if ($PlanOnly) {
         Write-Output "PLAN: skip final checks."
@@ -734,8 +748,7 @@ function Invoke-FinalChecks {
     $counts = Get-FinalCounts
     Write-Output ($counts | ConvertTo-Json -Depth 5)
 
-    $python = Get-PythonExe
-    Invoke-CheckedCommand -Exe $python -Args @("-m", "pytest") | Out-Null
+    Invoke-PytestCheck
 
     $staged = @(Assert-NoForbiddenStaged)
     if ($staged.Count -gt 0) {
