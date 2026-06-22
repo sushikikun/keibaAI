@@ -28,6 +28,7 @@ $TrainingRowsCsv = "data/processed/training_rows.csv"
 $IncomingCsv = "data/incoming/nankan_past_races_append.csv"
 $BundlesDir = "data/cache/bundles"
 $ReportsDir = "data/reports"
+$AllowedTracks = @("kawasaki", "oi", "funabashi", "urawa")
 $script:CyclePhase = "startup"
 $script:ResumeGuidanceEnabled = $false
 
@@ -151,7 +152,7 @@ function Test-RaceIdConsistency {
             if ($rawIds.Contains($raceId)) {
                 $rawOverlap += $raceId
             }
-            if ($raceId -notmatch "^(\d{8})_(kawasaki)_(\d{1,2})$") {
+            if ($raceId -notmatch "^(\d{8})_([a-z]+)_(\d{1,2})$") {
                 $allIssues += "race_id format mismatch: $($job.JobId) $raceId"
                 continue
             }
@@ -161,8 +162,11 @@ function Test-RaceIdConsistency {
             if ($date -ne $expectedDate) {
                 $allIssues += "date mismatch: $($job.JobId) $raceId date=$date expected=$expectedDate"
             }
-            if ($track -ne $expectedTrack -or $track -ne "kawasaki") {
-                $allIssues += "track mismatch: $($job.JobId) $raceId track=$track"
+            if ($track -ne $expectedTrack) {
+                $allIssues += "track mismatch: $($job.JobId) $raceId track=$track expected=$expectedTrack"
+            }
+            if ($AllowedTracks -notcontains $track) {
+                $allIssues += "unsupported track: $($job.JobId) $raceId track=$track"
             }
             if ($raceNo -ne $expectedRaceNo) {
                 $allIssues += "race_no mismatch: $($job.JobId) $raceId race_no=$raceNo expected=$expectedRaceNo"
