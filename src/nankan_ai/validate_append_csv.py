@@ -2,15 +2,17 @@ from __future__ import annotations
 
 import argparse
 import csv
+import re
 from collections import defaultdict
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Iterable
 
-from .schema import DEFAULT_RAW_CSV_PATH, REQUIRED_COLUMNS
+from .schema import DEFAULT_RAW_CSV_PATH, REQUIRED_COLUMNS, TRACKS
 from .validate_csv import ValidationIssue, format_validation_result, validate_csv
 
 DEFAULT_APPEND_CSV_PATH = Path("data/incoming/nankan_past_races_append.csv")
+RACE_ID_TRACK_PATTERN = re.compile(r"^\d{8}_([a-z]+)_\d{1,2}$")
 RACE_LEVEL_COLUMNS = (
     "date",
     "track",
@@ -43,7 +45,7 @@ def validate_append_csv(
     append_csv_path: str | Path = DEFAULT_APPEND_CSV_PATH,
     *,
     raw_csv_path: str | Path = DEFAULT_RAW_CSV_PATH,
-    required_track: str = "kawasaki",
+    required_track: str | None = None,
 ) -> AppendValidationResult:
     append_path = Path(append_csv_path)
     raw_path = Path(raw_csv_path)
@@ -99,7 +101,7 @@ def validate_append_csv(
             )
         )
 
-    _validate_required_track(result, append_rows, required_track=required_track)
+    _validate_append_track_scope(result, append_rows, required_track=required_track)
     _validate_race_metadata_conflicts(result, append_rows)
     return result
 
@@ -130,13 +132,17 @@ def main(argv: Iterable[str] | None = None) -> int:
         help="Path to data/incoming/nankan_past_races_append.csv",
     )
     parser.add_argument("--raw-csv-path", default=str(DEFAULT_RAW_CSV_PATH))
-    parser.add_argument("--required-track", default="kawasaki")
+    parser.add_argument(
+        "--required-track",
+        default="",
+        help="Optionally require one specific track. By default any single Nankan track is accepted.",
+    )
     args = parser.parse_args(argv)
 
     result = validate_append_csv(
         args.append_csv_path,
         raw_csv_path=args.raw_csv_path,
-        required_track=args.required_track,
+        required_track=args.required_track or None,
     )
     print(format_append_validation_result(result))
     return 0 if result.is_valid else 1
@@ -178,24 +184,62 @@ def _race_ids(rows: list[dict[str, str]]) -> set[str]:
     return {_clean(row.get("race_id")) for row in rows if _clean(row.get("race_id"))}
 
 
-def _validate_required_track(
+def _validate_append_track_scope(
     result: AppendValidationResult,
     rows: list[dict[str, str]],
     *,
-    required_track: str,
+    required_track: str | None,
 ) -> None:
-    if not required_track:
-        return
+    tracks: set[str] = set()
 
     for row_number, row in enumerate(rows, start=2):
         track = _clean(row.get("track"))
-        if track != required_track:
+        race_id = _clean(row.get("race_id"))
+        if track:
+            tracks.add(track)
+        if track and track not in TRACKS:
             result.errors.append(
                 ValidationIssue(
-                    f"append CSV is limited to track={required_track}; found track={track or '(blank)'}.",
+                    f"track must be one of: {', '.join(sorted(TRACKS))}.",
                     row_number=row_number,
                     column="track",
-                    race_id=_clean(row.get("race_id")) or None,
+                    race_id=race_id or None,
+                )
+            )
+        match = RACE_ID_TRACK_PATTERN.match(race_id)
+        if match and track and track != match.group(1):
+            result.errors.append(
+                ValidationIssue(
+                    f"track must match race_id track; found track={track}, race_id track={match.group(1)}.",
+                    row_number=row_number,
+                    column="track",
+                    race_id=race_id,
+                )
+            )
+
+    if len(tracks) > 1:
+        result.errors.append(
+            ValidationIssue(
+                f"append CSV must contain exactly one track; found tracks={', '.join(sorted(tracks))}.",
+                column="track",
+            )
+        )
+
+    if required_track:
+        for track in sorted(tracks):
+            if track != required_track:
+                result.errors.append(
+                    ValidationIssue(
+                        f"append CSV is limited to track={required_track}; found track={track or '(blank)'}.",
+                        column="track",
+                    )
+                )
+
+        if required_track not in TRACKS:
+            result.errors.append(
+                ValidationIssue(
+                    f"required_track must be one of: {', '.join(sorted(TRACKS))}.",
+                    column="track",
                 )
             )
 

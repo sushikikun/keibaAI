@@ -26,6 +26,54 @@ def test_validate_append_csv_accepts_new_kawasaki_race() -> None:
     assert result.race_count == 1
 
 
+def test_validate_append_csv_accepts_new_oi_race() -> None:
+    work = _fresh_work_dir("valid-append-oi")
+    raw_path = work / "raw.csv"
+    append_path = work / "append.csv"
+    _write_csv(raw_path, _race_rows("20260618_kawasaki_1", "2026-06-18"))
+    _write_csv(append_path, _race_rows("20260619_oi_1", "2026-06-19"))
+
+    result = validate_append_csv(append_path, raw_csv_path=raw_path)
+
+    assert result.is_valid
+    assert result.row_count == 2
+    assert result.race_count == 1
+
+
+def test_validate_append_csv_rejects_track_mismatch_with_race_id() -> None:
+    work = _fresh_work_dir("track-race-id-mismatch")
+    raw_path = work / "raw.csv"
+    append_path = work / "append.csv"
+    _write_csv(raw_path, _race_rows("20260618_kawasaki_1", "2026-06-18"))
+    rows = _race_rows("20260619_oi_1", "2026-06-19")
+    rows[0]["track"] = "kawasaki"
+    _write_csv(append_path, rows)
+
+    result = validate_append_csv(append_path, raw_csv_path=raw_path)
+
+    assert not result.is_valid
+    assert "track must match race_id track" in "\n".join(issue.message for issue in result.errors)
+
+
+def test_validate_append_csv_rejects_multiple_tracks_in_one_append() -> None:
+    work = _fresh_work_dir("multi-track-append")
+    raw_path = work / "raw.csv"
+    append_path = work / "append.csv"
+    _write_csv(raw_path, _race_rows("20260618_kawasaki_1", "2026-06-18"))
+    rows = [
+        *_race_rows("20260619_kawasaki_1", "2026-06-19"),
+        *_race_rows("20260619_oi_1", "2026-06-19"),
+    ]
+    _write_csv(append_path, rows)
+
+    result = validate_append_csv(append_path, raw_csv_path=raw_path)
+
+    assert not result.is_valid
+    assert "append CSV must contain exactly one track" in "\n".join(
+        issue.message for issue in result.errors
+    )
+
+
 def test_validate_append_csv_rejects_existing_race_id() -> None:
     work = _fresh_work_dir("duplicate-race")
     raw_path = work / "raw.csv"
@@ -295,7 +343,7 @@ def _row(
     return {
         "race_id": race_id,
         "date": race_date,
-        "track": "kawasaki",
+        "track": race_id.split("_")[1],
         "race_no": race_id.rsplit("_", 1)[1],
         "race_name": "Append Fixture Race",
         "distance": "1400",
