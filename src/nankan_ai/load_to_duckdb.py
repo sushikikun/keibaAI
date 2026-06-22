@@ -58,7 +58,15 @@ def _replace_past_race_rows_table(
         f"""
         CREATE TABLE {PAST_RACE_ROWS_TABLE} AS
         SELECT {select_columns}
-        FROM read_csv_auto(?, header=true, all_varchar=true)
+        FROM read_csv_auto(
+            ?,
+            header=true,
+            all_varchar=true,
+            delim=',',
+            quote='"',
+            escape='"',
+            strict_mode=false
+        )
         """,
         [str(csv_path)],
     )
