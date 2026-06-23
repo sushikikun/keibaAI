@@ -38,6 +38,7 @@ def export_fetch_job(
     race_no_from: int | None = None,
     race_no_to: int | None = None,
     fetch_plan_csv_path: str | Path | None = None,
+    fetch_plan_rows: list[FetchPlanRow | dict[str, str]] | None = None,
     raw_csv_path: str | Path = DEFAULT_RAW_CSV_PATH,
     jobs_dir: str | Path = DEFAULT_JOBS_DIR,
     cache_html_dir: str | Path = DEFAULT_CACHE_HTML_DIR,
@@ -53,6 +54,7 @@ def export_fetch_job(
         race_no_from=race_no_from,
         race_no_to=race_no_to,
         fetch_plan_csv_path=fetch_plan_csv_path,
+        fetch_plan_rows=fetch_plan_rows,
         raw_csv_path=raw_csv_path,
         cache_html_dir=cache_html_dir,
     )
@@ -143,15 +145,23 @@ def _job_rows(
     race_no_from: int | None,
     race_no_to: int | None,
     fetch_plan_csv_path: str | Path | None,
+    fetch_plan_rows: list[FetchPlanRow | dict[str, str]] | None,
     raw_csv_path: str | Path,
     cache_html_dir: str | Path,
 ) -> list[dict[str, str]]:
-    if fetch_plan_csv_path:
+    if fetch_plan_rows is not None and fetch_plan_csv_path:
+        raise ValueError("Provide only one of fetch_plan_rows or fetch_plan_csv_path.")
+    if fetch_plan_rows is not None:
+        rows = [
+            row.as_csv_row() if isinstance(row, FetchPlanRow) else dict(row)
+            for row in fetch_plan_rows
+        ]
+    elif fetch_plan_csv_path:
         rows = _read_fetch_plan_rows(fetch_plan_csv_path)
     else:
         if not all([track, date_from, date_to, race_no_from, race_no_to]):
             raise ValueError(
-                "Provide either --fetch-plan-csv or all of --track, --date-from, --date-to, --race-no-from, --race-no-to."
+                "Provide fetch_plan_rows, --fetch-plan-csv, or all of --track, --date-from, --date-to, --race-no-from, --race-no-to."
             )
         plan_rows = build_fetch_plan(
             track=str(track),
@@ -210,4 +220,3 @@ __all__ = [
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
