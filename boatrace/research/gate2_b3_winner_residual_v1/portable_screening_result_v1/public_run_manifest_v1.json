@@ -1,0 +1,17 @@
+{
+  "run_id": null,
+  "status": "resource_blocked_on_target_host",
+  "screening_race_count": 126978,
+  "screening_fold_count": 4,
+  "portable_zip_sha256": "0355c1f20b736fcc996e2707ede2d1657e811ec74104a69b8d4cded1377c4c6f",
+  "public_manifest_sha256_verified": true,
+  "runtime_validation": "passed",
+  "wr_s_completed_folds": 0,
+  "wr_h_completed_folds": 0,
+  "metrics_generated": false,
+  "supervised_data_access_count": 0,
+  "confirmation_access_count": 0,
+  "final_lock_access_count": 0,
+  "automation": "PAUSED",
+  "formal_champion_decision": "not_made"
+}

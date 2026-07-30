@@ -1,0 +1,14 @@
+{
+  "status": "resource_blocked_on_target_host",
+  "sample_count": 13,
+  "sample_interval_seconds": 5,
+  "available_physical_memory_mib": [2224, 2361, 2469, 2449, 2365, 2338, 2237, 2337, 2277, 2270, 2207, 2273, 2316],
+  "minimum_available_physical_memory_mib": 2207,
+  "mean_available_physical_memory_mib": 2317.2,
+  "required_minimum_available_physical_memory_mib": 3072,
+  "supervised_data_access_count": 0,
+  "training_process_count": 0,
+  "partial_staging_created": false,
+  "partial_metrics_created": false,
+  "retry_count": 0
+}
