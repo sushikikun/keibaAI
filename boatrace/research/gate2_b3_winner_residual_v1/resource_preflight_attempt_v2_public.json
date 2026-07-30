@@ -1,0 +1,21 @@
+{
+    "attempt_id":  "gate2f_resource_preflight_attempt_v2",
+    "measured_at":  "2026-07-30T16:53:07.9159048Z",
+    "total_physical_mib":  16108.1,
+    "sample_count":  13,
+    "interval_seconds":  5,
+    "minimum_available_mib":  450.3,
+    "maximum_available_mib":  3477.8,
+    "first_available_mib":  1085.9,
+    "final_available_mib":  3477.8,
+    "change_mib":  2391.9,
+    "gate2f_process_count":  0,
+    "pass":  false,
+    "failure_reasons":  [
+                            "minimum_available_memory_below_3072_mib",
+                            "first_available_memory_below_3072_mib"
+                        ],
+    "supervised_data_access_count":  0,
+    "model_fit_count":  0,
+    "screening_run_started":  false
+}
