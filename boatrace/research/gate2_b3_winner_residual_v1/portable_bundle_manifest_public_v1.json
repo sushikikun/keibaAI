@@ -1,0 +1,137 @@
+{
+  "bundle": "public_runner_bundle",
+  "private_data_included": false,
+  "screening_race_count": 126978,
+  "confirmation_row_count": 0,
+  "final_lock_row_count": 0,
+  "files": [
+    {
+      "logical_role": "b3_config_screening_fold_1",
+      "bundle_path": "public_runner_bundle/baseline_configs/screening_fold_1/B3_autoregressive_hierarchical_frequency.json",
+      "size_bytes": 356,
+      "sha256": "26fbc27e718d1490412bb34d7e489c2c6b83ee32baa463fd537673cb9a4aa10e",
+      "race_count": 0,
+      "schema_version": "v1"
+    },
+    {
+      "logical_role": "b3_config_screening_fold_2",
+      "bundle_path": "public_runner_bundle/baseline_configs/screening_fold_2/B3_autoregressive_hierarchical_frequency.json",
+      "size_bytes": 357,
+      "sha256": "1fd86ab428eaab53692b9da2e06c3a838fecd2b7234304399c75ce84b30478c4",
+      "race_count": 0,
+      "schema_version": "v1"
+    },
+    {
+      "logical_role": "b3_config_screening_fold_3",
+      "bundle_path": "public_runner_bundle/baseline_configs/screening_fold_3/B3_autoregressive_hierarchical_frequency.json",
+      "size_bytes": 358,
+      "sha256": "287aac687582d8dde9091d872ee27f1b76696f8da8dd8fc7ae8cebc76e5968dc",
+      "race_count": 0,
+      "schema_version": "v1"
+    },
+    {
+      "logical_role": "b3_config_screening_fold_4",
+      "bundle_path": "public_runner_bundle/baseline_configs/screening_fold_4/B3_autoregressive_hierarchical_frequency.json",
+      "size_bytes": 357,
+      "sha256": "3ab2c4b1e1022a08b03d885f9ffe23d160c06a1846b411602f2fbd886fe08fe6",
+      "race_count": 0,
+      "schema_version": "v1"
+    },
+    {
+      "logical_role": "runner_source",
+      "bundle_path": "public_runner_bundle/runner/boatrace_gate2f_winner_residual_runner_v1.py",
+      "size_bytes": 18531,
+      "sha256": "61378e190b323b7a6e67c1daf00e123f334ccae61f9264f35310300b7fb382f3",
+      "race_count": 0,
+      "schema_version": "v1"
+    },
+    {
+      "logical_role": "runner_source",
+      "bundle_path": "public_runner_bundle/runner/boatrace_gate2b_baseline_runner_v1.py",
+      "size_bytes": 33219,
+      "sha256": "070a838a778e96f21a6b6836da5cdd0babd1e8aeee2744c6e5201b89908b66e6",
+      "race_count": 0,
+      "schema_version": "v1"
+    },
+    {
+      "logical_role": "gate2f_contract",
+      "bundle_path": "public_runner_bundle/contracts/winner_residual_model_contract_v1.json",
+      "size_bytes": 514,
+      "sha256": "8af352152b48b049c6dedc1e5e8a9fba163b0d2ac4755f239aedfaff3b76e75f",
+      "race_count": 0,
+      "schema_version": "v1"
+    },
+    {
+      "logical_role": "gate2f_contract",
+      "bundle_path": "public_runner_bundle/contracts/winner_residual_feature_arm_registry_v1.json",
+      "size_bytes": 772,
+      "sha256": "5112d6367e14b739afc8bd446de357f89d5adb0328672485e77d69f8b6de78b2",
+      "race_count": 0,
+      "schema_version": "v1"
+    },
+    {
+      "logical_role": "gate2f_contract",
+      "bundle_path": "public_runner_bundle/contracts/winner_residual_preprocessing_contract_v1.json",
+      "size_bytes": 402,
+      "sha256": "cd32fb5609cd3b86af3e64664acfd7fccc6a23cf5b08fac57f51b1f2cf2c5918",
+      "race_count": 0,
+      "schema_version": "v1"
+    },
+    {
+      "logical_role": "gate2f_contract",
+      "bundle_path": "public_runner_bundle/contracts/winner_residual_optimizer_policy_v1.json",
+      "size_bytes": 370,
+      "sha256": "0a6d8f191db9ff8cb634fe72deb74ceb37175401a6bfd2283542c8d17faf9b2c",
+      "race_count": 0,
+      "schema_version": "v1"
+    },
+    {
+      "logical_role": "gate2f_contract",
+      "bundle_path": "public_runner_bundle/contracts/b3_winner_prior_policy_v1.json",
+      "size_bytes": 649,
+      "sha256": "2be285129f7200069be4ee339791f21c2b44a4269b8cb5ca55a9811f4ff724c7",
+      "race_count": 0,
+      "schema_version": "v1"
+    },
+    {
+      "logical_role": "gate2f_contract",
+      "bundle_path": "public_runner_bundle/contracts/class_map_v1.json",
+      "size_bytes": 1561,
+      "sha256": "7b7d411c6be36e2b4ab0f42ab075dd80c4ce21836f03a51ed1db7de823c97a29",
+      "race_count": 0,
+      "schema_version": "v1"
+    },
+    {
+      "logical_role": "gate2f_contract",
+      "bundle_path": "public_runner_bundle/contracts/gate2f_manifest_v1.json",
+      "size_bytes": 1273,
+      "sha256": "60bd18bf6f1a22723762c8d787f36db9f9adfb4f1a560492c1d36cae63d6ef69",
+      "race_count": 0,
+      "schema_version": "v1"
+    },
+    {
+      "logical_role": "runtime_requirements",
+      "bundle_path": "public_runner_bundle/portable_runtime_requirements_v1.txt",
+      "size_bytes": 14,
+      "sha256": "1d3f2f20358d703407d63268c3bae76605225914c7e3bbd4aa136e37cacdacdf",
+      "race_count": 0,
+      "schema_version": "v1"
+    },
+    {
+      "logical_role": "split_contract",
+      "bundle_path": "public_runner_bundle/contracts/split_contract_v1.json",
+      "size_bytes": 331,
+      "sha256": "922baa236526a6acc27f92ebca286a52b0275a44b14ff47a8f8ddd8bcd07dc42",
+      "race_count": 126978,
+      "schema_version": "v1"
+    },
+    {
+      "logical_role": "execution_runbook",
+      "bundle_path": "public_runner_bundle/portable_execution_runbook_v1.md",
+      "size_bytes": 476,
+      "sha256": "551fb017524978a7462268db703149a0fd12c3e1beb33fc0cb3a88b60c81a129",
+      "race_count": 0,
+      "schema_version": "v1"
+    }
+  ]
+}
