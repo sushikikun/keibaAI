@@ -1,0 +1,116 @@
+{
+  "contract_id": "boatrace_research_stage_gates_v1",
+  "status": "design_only",
+  "global_rules": [
+    "evaluation contract v1.1 remains frozen",
+    "no odds/popularity/vote/payout use",
+    "no gate may be skipped",
+    "a gate opens only when all entry criteria are machine-recorded as satisfied",
+    "fold boundaries, effect thresholds and tuning budgets are frozen at Gate 1, not Gate 0"
+  ],
+  "gates": [
+    {
+      "gate_id": "Gate0",
+      "name": "design_only_while_collection_continues",
+      "entry_criteria": [
+        "data collection is in progress"
+      ],
+      "allowed": [
+        "hypothesis registry",
+        "data-gap audit",
+        "model interface specifications"
+      ],
+      "forbidden": [
+        "model training",
+        "temporary Log Loss",
+        "walk-forward split freeze",
+        "champion selection"
+      ],
+      "exit_criteria": [
+        "candidate corpus exceeds 200,000 races"
+      ],
+      "current_status": "active"
+    },
+    {
+      "gate_id": "Gate1",
+      "name": "final_snapshot_and_contract_audit",
+      "entry_criteria": [
+        "candidate corpus > 200,000 races"
+      ],
+      "required_actions": [
+        "generate final research snapshot",
+        "rerun outcome/target/feature audit",
+        "freeze point-in-time feature definitions",
+        "pre-register walk-forward folds and practical effect thresholds"
+      ],
+      "exit_criteria": [
+        "snapshot/audit valid",
+        "no unresolved P0 leakage blocker"
+      ],
+      "current_status": "closed"
+    },
+    {
+      "gate_id": "Gate2",
+      "name": "baseline_and_exploratory_screening",
+      "entry_criteria": [
+        "Gate1 passed"
+      ],
+      "required_actions": [
+        "mandatory baselines",
+        "core decision exploratory experiments"
+      ],
+      "decision_limit": "screen only; no confirmation claim",
+      "current_status": "closed"
+    },
+    {
+      "gate_id": "Gate3",
+      "name": "future_fold_confirmation",
+      "entry_criteria": [
+        "Gate2 candidates preselected without seeing Gate3 outcomes"
+      ],
+      "required_actions": [
+        "confirmatory comparison on a later untouched future fold"
+      ],
+      "exit_criteria": [
+        "pre-registered rejection/confirmation rules evaluated"
+      ],
+      "current_status": "closed"
+    },
+    {
+      "gate_id": "Gate4",
+      "name": "ablation_and_integration",
+      "entry_criteria": [
+        "Gate3 confirmed components only"
+      ],
+      "required_actions": [
+        "component ablations",
+        "interaction checks",
+        "probability integration"
+      ],
+      "current_status": "closed"
+    },
+    {
+      "gate_id": "Gate5",
+      "name": "single_challenger_freeze",
+      "entry_criteria": [
+        "Gate4 complete"
+      ],
+      "required_actions": [
+        "select and freeze exactly one challenger before final lock data"
+      ],
+      "current_status": "closed"
+    },
+    {
+      "gate_id": "Gate6",
+      "name": "final_lock_evaluation",
+      "entry_criteria": [
+        "one frozen challenger",
+        "untouched final evaluation population"
+      ],
+      "required_actions": [
+        "single final evaluation under contract v1.1"
+      ],
+      "current_status": "closed"
+    }
+  ]
+}

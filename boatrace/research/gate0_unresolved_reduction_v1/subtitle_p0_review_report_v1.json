@@ -1,0 +1,21 @@
+{
+  "counts": {
+    "evidence_confirmed": 0,
+    "evidence_rejected": 0,
+    "fixture_race_count": 148956,
+    "human_confirmation_required": 53,
+    "p0_race_count": 17692,
+    "p0_race_coverage": 0.11877332903676253,
+    "p0_subtitle_values": 53,
+    "remains_ambiguous": 53
+  },
+  "eligible_for_model_training": false,
+  "input": {
+    "materialized_stage": "results/boatrace_model_research/temporal_rehearsal/research_v0_1/race_stage_materialized.csv",
+    "review_queue": "research/subtitle_review_queue_v1.csv",
+    "taxonomy": "research/race_stage_taxonomy_v1.csv"
+  },
+  "policy_result": "No new stage name is introduced and context-dependent values remain unknown.",
+  "purpose": "policy_execution_validation",
+  "status": "provisional"
+}

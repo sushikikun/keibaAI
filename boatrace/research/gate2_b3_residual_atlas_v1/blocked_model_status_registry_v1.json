@@ -1,0 +1,18 @@
+{
+  "CatBoost": {
+    "status": "resource_blocked_pending_host_capacity",
+    "formal_metric_available": false,
+    "scientifically_rejected": false
+  },
+  "S120": {
+    "status": "resource_blocked_on_current_host",
+    "formal_metric_available": false,
+    "scientifically_rejected": false
+  },
+  "SAR": {
+    "status": "resource_blocked_on_current_host",
+    "formal_metric_available": false,
+    "probability_contract_validated": true,
+    "scientifically_rejected": false
+  }
+}

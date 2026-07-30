@@ -1,0 +1,31 @@
+{
+  "created_at": "2026-07-18T23:28:00+09:00",
+  "model_id": "noodds_v345_frozen_d9_stability",
+  "frozen_before_evaluation": true,
+  "purpose": "Apply the already fitted v345 D8 coefficients without refitting to the immediately following D9 period.",
+  "evaluation": {
+    "start_date": "2026-04-24",
+    "end_date": "2026-05-23",
+    "bootstrap_unit": "race_date",
+    "bootstrap_seed": 34509,
+    "gates": [
+      "mean candidate-minus-v312 logloss below zero",
+      "date-cluster bootstrap 95% CI upper bound below zero",
+      "daily paired one-sided Wilcoxon p below 0.05"
+    ]
+  },
+  "policy": {
+    "odds_used": false,
+    "payout_used": false,
+    "same_day_results_used_for_features": false,
+    "d9_fit_or_calibration": false,
+    "posthoc_search": false,
+    "formal_promotion_allowed": false
+  },
+  "inputs_sha256": {
+    "dataset_manifest": "4283DC0D06981F7292EC18E8D7496CF651EFBCE5F4C81CB367EC940AF5949266",
+    "history": "77B558EFDF025FF96EBA498E8ACE4F345B58467E9353CCD072F1431B976B82D7",
+    "v345_report": "B43E537044D50915AF8FF3F9BD63315977C9A542683B6CFF68DCE5026BE77651"
+  },
+  "scope_note": "D9 is later than all v345 fitting folds but has been used by the broader research program; this is a development stability check, not the final untouched promotion test."
+}

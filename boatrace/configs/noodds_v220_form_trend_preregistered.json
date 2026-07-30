@@ -1,0 +1,55 @@
+{
+  "created_at": "2026-07-11T17:10:00+09:00",
+  "model_id": "noodds_raw_v220_form_trend_residual",
+  "hypothesis": "Explicit short-versus-long form contrasts and their within-race relative values can expose changes in racer condition that are difficult for tree splits over separate raw aggregates to represent.",
+  "frozen_before_run": true,
+  "inputs": {
+    "v206_oof_sha256": "91C39993E0C3CE29A5DB3F0EDBE4836D622D436B87C446B982CBEDF46FED6AA5",
+    "runner_features_sha256": "AB44DFA6B56EA764E38FB46667A5D8C170C7338B3F8AC50A800D0CBE8147463F"
+  },
+  "base_contrasts": [
+    "recent5_win_rate minus recent20_win_rate",
+    "recent5_top2_rate minus recent20_top2_rate",
+    "recent5_top3_rate minus recent20_top3_rate",
+    "recent5_avg_finish minus recent20_avg_finish",
+    "recent10_win_rate minus recent20_win_rate",
+    "recent10_top3_rate minus recent20_top3_rate",
+    "recent10_avg_finish minus recent20_avg_finish",
+    "recent10_start_st minus term_avg_st_prior",
+    "exhibition_time minus recent10_exhibition",
+    "local_win_rate_snapshot minus national_win_rate_snapshot"
+  ],
+  "feature_rule": {
+    "per_contrast": [
+      "raw_difference",
+      "difference_minus_six_lane_mean"
+    ],
+    "candidate_interaction": "first, second, and third lane contrast vectors plus lane categorical ids",
+    "missing_policy": "retain NaN for LightGBM native missing handling",
+    "history_policy": "all source aggregates were built from strictly prior dates; current exhibition is available before prediction"
+  },
+  "model": {
+    "residual_model_params": "exactly v209 MODEL_PARAMS",
+    "development": "D6 inner fit/calibration, D7 test; D6 fit, D7 gamma calibration, D8 test",
+    "freeze_if_passed": "fit D6+D7 and calibrate gamma on D8",
+    "test_fold": "D9"
+  },
+  "forbidden": [
+    "odds",
+    "payout",
+    "current or future race outcomes",
+    "contrast search",
+    "parameter search",
+    "gamma refit on D9",
+    "D9 outcome use before freeze"
+  ],
+  "development_acceptance_rule": {
+    "d7_log_loss_delta_lt": 0.0,
+    "d8_log_loss_delta_lt": 0.0,
+    "pooled_d7_d8_daily_bootstrap_ci95_upper_lt": 0.0
+  },
+  "d9_acceptance_rule": {
+    "d9_log_loss_delta_lt": 0.0,
+    "d9_daily_bootstrap_ci95_upper_lt": 0.0
+  }
+}

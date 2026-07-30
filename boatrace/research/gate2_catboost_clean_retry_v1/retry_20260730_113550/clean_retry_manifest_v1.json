@@ -1,0 +1,91 @@
+{
+    "manifest_id":  "boatrace_gate2_catboost_clean_retry_manifest_v2",
+    "run_id":  "clean_retry_run_v2_283b74468bbb996c8839_clean_retry_1",
+    "retry_generation":  "clean_retry_1",
+    "status":  "clean_retry_waiting_for_host_memory",
+    "artifacts":  [
+                      {
+                          "path":  "clean_retry_candidate_status_v1.csv",
+                          "sha256":  "e6b3bcfec7e238ea53904fef41f4c82ae97f21ca93a00737e06009a941883686",
+                          "size_bytes":  192
+                      },
+                      {
+                          "path":  "clean_retry_data_access_audit_v1.json",
+                          "sha256":  "6767c22a8563f68f431eb09f534b5ebb429371465e1bc604ab745942b7a89b82",
+                          "size_bytes":  607
+                      },
+                      {
+                          "path":  "clean_retry_first_candidate_result_v1.json",
+                          "sha256":  "10124c5994a21cd7a54a017d81c2cc74ff5f00fa865887c968bcd91a2d314331",
+                          "size_bytes":  538
+                      },
+                      {
+                          "path":  "clean_retry_guard_audit_v1.json",
+                          "sha256":  "136c8c7ddafccdfc256d8c5d2e1e857bf0432d76759a017c93ce91fcdc5c3ed3",
+                          "size_bytes":  415
+                      },
+                      {
+                          "path":  "clean_retry_host_memory_preflight_trace_v1.csv",
+                          "sha256":  "d13cb0b7b86a8d7e149ec68c216fe66f1361a9e018d61a93795434fcfe9abb1b",
+                          "size_bytes":  314
+                      },
+                      {
+                          "path":  "clean_retry_host_memory_preflight_v1.json",
+                          "sha256":  "31268beff9f190a9b9f5d19477ae4750c4e42bbda3d77a1794f32fed2fea0d3b",
+                          "size_bytes":  2407
+                      },
+                      {
+                          "path":  "clean_retry_input_validation_v1.json",
+                          "sha256":  "74512eebef5f64b10d5bfffc659a7a4097f0a7a0e5e9b7639b4297efccb84073",
+                          "size_bytes":  1120
+                      },
+                      {
+                          "path":  "clean_retry_leakage_validation_v1.json",
+                          "sha256":  "3d255504fa0bfafa5102eef6c9a03f91b699465fe07ef0d42b2efa2885c8425e",
+                          "size_bytes":  648
+                      },
+                      {
+                          "path":  "clean_retry_report_v1.md",
+                          "sha256":  "9a4596886a8d2c22f2e992ed864857d3be5fb711120d49caf103c0266c48cd5e",
+                          "size_bytes":  671
+                      },
+                      {
+                          "path":  "clean_retry_resource_summary_v1.json",
+                          "sha256":  "d0f362d6465444c9a04238e1a4021a595bc840fcfb9606af03cc701d31d086fe",
+                          "size_bytes":  428
+                      },
+                      {
+                          "path":  "clean_retry_resource_trace_v1.csv",
+                          "sha256":  "e6fc5cbcc10c1ee92990643e27c037070adcc0f6a8171071816bd7901a09a6d3",
+                          "size_bytes":  256
+                      },
+                      {
+                          "path":  "clean_retry_validation_v1.json",
+                          "sha256":  "8410d450607daff172ea581257aaaa404c5a051c3740425dc4cee3e761d2a655",
+                          "size_bytes":  1474
+                      },
+                      {
+                          "path":  "previous_resource_stop_validation_v1.json",
+                          "sha256":  "5bd89160597edbb1bfd923da89296a7cdada32162a6f01ab0e76247b81698422",
+                          "size_bytes":  554
+                      },
+                      {
+                          "path":  "protected_anchor_after_clean_retry.csv",
+                          "sha256":  "bfb617a0b2c2cabcf8866bcb55e364031484d8e5fcc07638714ab3efec99e4f4",
+                          "size_bytes":  2426740
+                      },
+                      {
+                          "path":  "protected_anchor_before_clean_retry.csv",
+                          "sha256":  "bfb617a0b2c2cabcf8866bcb55e364031484d8e5fcc07638714ab3efec99e4f4",
+                          "size_bytes":  2426740
+                      },
+                      {
+                          "path":  "protected_anchor_diff_clean_retry.csv",
+                          "sha256":  "4ed2a850c4153f8fa2ecbe8907ffe1877a52ad2b1a52ca561d26b026f6335517",
+                          "size_bytes":  52
+                      }
+                  ],
+    "previous_resource_staging_preserved":  true,
+    "formal_run_promoted":  false,
+    "third_retry_not_started":  true
+}

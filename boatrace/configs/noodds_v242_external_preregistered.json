@@ -1,0 +1,44 @@
+{
+  "evaluation_id": "noodds_v242_external_20260702_09",
+  "status": "preregistered_before_v242_external_predictions",
+  "frozen_at": "2026-07-12T03:13:30+09:00",
+  "unlock_reason": {
+    "development_folds": ["d6", "d7", "d8"],
+    "all_development_folds_improved": true,
+    "pooled_daily_bootstrap_ci95_upper_below_zero": true,
+    "legacy_d9_result": "mean improved but CI upper crossed zero; external was independently unlocked by the development gate"
+  },
+  "training": {
+    "dataset": "results/noodds_raw_v200/dataset",
+    "races": 72646,
+    "date_range": ["2024-10-27", "2026-07-01"],
+    "model_structure": "v235 contextual first-second-third LightGBM plus fixed OpenSkill features",
+    "parameter_search": false
+  },
+  "external": {
+    "dataset": "results/noodds_raw_v200/external_20260709_dataset",
+    "date_range": ["2026-07-02", "2026-07-09"],
+    "expected_races": 1144,
+    "openskill_sidecar": "results/noodds_raw_v200/openskill_sidecar_v242_external_20260709",
+    "same_day_results_used_as_features": false,
+    "prior_external_days_used_for_later_rating_updates": true
+  },
+  "comparison": {
+    "candidate": "0.80*v206 + 0.20*v242",
+    "baseline": "0.80*v206 + 0.20*v235",
+    "odds_used": false,
+    "payout_used": false,
+    "venue_filters": false,
+    "missingness_filters": false
+  },
+  "success_gate": {
+    "candidate_minus_v235_mean_log_loss_below_zero": true,
+    "daily_cluster_bootstrap_ci95_upper_below_zero": true
+  },
+  "bootstrap": {
+    "unit": "race_date",
+    "samples": 20000,
+    "seed": 24279
+  },
+  "decision": "No tuning is allowed after opening the external outcomes."
+}

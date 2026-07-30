@@ -1,0 +1,8 @@
+{
+  "actual_feature_data_opened": false,
+  "actual_target_data_opened": false,
+  "gate2b_completion_verified": true,
+  "gate2b_manifest_sha256": "2525f33681f6c4790f06a209c2a77d078ec1685338144c7c2520d2092b05212e",
+  "passed": true,
+  "synthetic_input_only": true
+}

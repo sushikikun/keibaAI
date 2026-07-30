@@ -1,0 +1,14 @@
+{
+  "artifact": "local_data_registry_v1",
+  "storage_policy": "local_only_not_committed",
+  "corpus_release_id": "corpus_release_v1_200118_4f5554a4057e",
+  "strict_complete_count": 200118,
+  "audit_candidate_count": 219240,
+  "snapshot_id": "research_v1_219240_1d586db9a15a",
+  "feature_sidecar_id": "feature_sidecar_v1_213016_6fa39ceeb32f",
+  "split_id": "split_v1_d3318c40504b",
+  "final_lock_reference": "final_lock_v1_365d_9294f86b36fe",
+  "final_lock_status": "sealed_local_reference_only",
+  "corresponding_local_sha256": "recorded in local source manifests; source bodies are not included",
+  "github_import_policy": "sanitized summaries and manifests only"
+}

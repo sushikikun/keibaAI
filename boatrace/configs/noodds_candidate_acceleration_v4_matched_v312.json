@@ -1,0 +1,44 @@
+{
+    "protocol_id":  "noodds_candidate_acceleration_v4_matched_v312",
+    "frozen_at":  "2026-07-15T18:16:14.5249983+09:00",
+    "purpose":  "resource futility screening against v312 generated with the same fixed screen train and validation rows",
+    "policy":  {
+                   "odds_used":  false,
+                   "payout_used":  false,
+                   "screen_never_promotes":  true,
+                   "final_protocol":  "configs/noodds_evaluation_protocol_v9.json",
+                   "posthoc_threshold_search":  false
+               },
+    "matched_parent":  {
+                           "model":  "v312_large_history_racer_identity_set_ranker_on_v295",
+                           "directory":  "results/noodds_raw_v200/large_history_racer_identity_set_ranker_on_v295_v312_screen",
+                           "prediction_key":  "standalone",
+                           "fold_sha256":  {
+                                               "d6":  "D709C5B24B729F4598A870CA7ED90CB97E31022F8C64628F5B8BF622A83D4064",
+                                               "d7":  "0B5B1E431C4822CBCD9225B9F24615C9D5FA54C60CB5683B26FA49BDE5AB89FC",
+                                               "d8":  "7400C4F713C907C4B565613EC0C6A65B1D3816358F99333025163035B4710373"
+                                           }
+                       },
+    "required_alignment":  [
+                               "race_indices exact",
+                               "race_dates exact",
+                               "true_combo exact",
+                               "same fixed screen_train_indices",
+                               "same fixed screen_validation_indices",
+                               "same frozen candidate budget"
+                           ],
+    "comparison":  {
+                       "candidate_probability":  "candidate anchored probability generated from matched screen rows",
+                       "parent_probability":  "v312 matched screen standalone probability",
+                       "metric":  "pooled exact-top3 logloss delta",
+                       "bootstrap_unit":  "race_date",
+                       "bootstrap_samples":  20000,
+                       "bootstrap_seed":  31319
+                   },
+    "futility_gate":  {
+                          "stop_only_if_delta_mean_above_zero":  true,
+                          "stop_only_if_ci95_lower_above_zero":  true,
+                          "require_both":  true,
+                          "single_fold_rejection":  false
+                      }
+}

@@ -1,0 +1,10 @@
+metric,value
+start_date,2025-07-28
+end_date,2026-07-27
+calendar_day_count,365
+U0_count,50802
+venue_count,24
+per_venue_min_count,1788
+per_venue_max_count,2401
+month_count,12
+race_key_duplicates,0

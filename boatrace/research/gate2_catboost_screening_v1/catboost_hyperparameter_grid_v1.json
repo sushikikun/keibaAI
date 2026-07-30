@@ -1,0 +1,48 @@
+{
+  "common": {
+    "allow_writing_files": false,
+    "auto_class_weights": null,
+    "bagging_temperature": 1.0,
+    "boosting_type": "Plain",
+    "bootstrap_type": "Bayesian",
+    "class_weights": null,
+    "classes_count": 120,
+    "early_stopping_rounds": 100,
+    "eval_metric": "MultiClass",
+    "grow_policy": "SymmetricTree",
+    "has_time": true,
+    "iterations": 1500,
+    "learning_rate": 0.05,
+    "loss_function": "MultiClass",
+    "nan_mode": "Min",
+    "random_strength": 1.0,
+    "task_type": "CPU",
+    "thread_count": 1,
+    "use_best_model": true,
+    "verbose": false
+  },
+  "grid": {
+    "C01": {
+      "depth": 6,
+      "l2_leaf_reg": 3
+    },
+    "C02": {
+      "depth": 6,
+      "l2_leaf_reg": 10
+    },
+    "C03": {
+      "depth": 8,
+      "l2_leaf_reg": 3
+    },
+    "C04": {
+      "depth": 8,
+      "l2_leaf_reg": 10
+    }
+  },
+  "selection_scope": "CB-F0 only",
+  "tie_break": [
+    "fewer_tree_count",
+    "shallower_depth",
+    "smaller_config_id"
+  ]
+}

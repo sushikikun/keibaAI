@@ -1,0 +1,168 @@
+{
+  "gate": "Gate 1-B v1",
+  "release_id": "corpus_release_v1_200118_4f5554a4057e",
+  "release_manifest_sha256": "09ba1172dbd403aa4066e7934348fca5102df66618b73be26b506b72354fb6fe",
+  "candidate_logical_sha256": "02dc589557bda558a134f766222cc502a774804db9a57fe6084372bc4d30527d",
+  "snapshot_id": "research_v1_219240_1d586db9a15a",
+  "snapshot_path": "results/boatrace_model_research/snapshots/research_v1_219240_1d586db9a15a",
+  "snapshot_manifest_sha256": "eb2ddf85af16255dbc9d64f264ba0565da73949ccc957dda0b1de6d0bf48bf4c",
+  "validation": {
+    "gate1a_release_verified": true,
+    "strict_count_200118_verified": true,
+    "audit_candidate_count_219240_verified": true,
+    "frozen_candidate_set_verified": true,
+    "snapshot_generated_from_zero": true,
+    "research_v0_1_not_used_as_incremental_base": true,
+    "feature_count_49_verified": true,
+    "forbidden_feature_count_zero": true,
+    "target_mismatch_count_zero": true,
+    "strict_target_unscorable_count_zero": true,
+    "race_key_duplicate_count_zero": true,
+    "class_map_valid": true,
+    "point_in_time_leakage_count_zero": true,
+    "uniform_sanity_passed": true,
+    "oracle_sanity_passed": true,
+    "parser_regime_blocker_count": 0,
+    "protected_anchor_difference_zero": true,
+    "automation_remains_paused": true,
+    "walkforward_not_created": true,
+    "final_lock_not_created": true,
+    "model_training_not_started": true,
+    "errors": [],
+    "warnings": [],
+    "passed": true,
+    "snapshot_id": "research_v1_219240_1d586db9a15a",
+    "snapshot_path": "results/boatrace_model_research/snapshots/research_v1_219240_1d586db9a15a",
+    "snapshot_logical_sha256": "1d586db9a15a85499ee52433891e48d6689a3f12f5acbc6dba9bbed0ba9feebb",
+    "dataset_manifest_sha256": "eb2ddf85af16255dbc9d64f264ba0565da73949ccc957dda0b1de6d0bf48bf4c",
+    "counts": {
+      "strict_candidate_count": 200118,
+      "strict_prediction_eligible_count": 200118,
+      "strict_primary_scorable_count": 200118,
+      "non_strict_candidate_count": 19122,
+      "non_strict_prediction_eligible_count": 12898,
+      "non_strict_primary_scorable_count": 0,
+      "tied_count": 546,
+      "auxiliary_only_count": 12720,
+      "unrecoverable_count": 6224,
+      "exclusion_reason_counts": {
+        "beforeinfo_parse_or_six_boat_invalid": 5608,
+        "beforeinfo_required_feature_missing": 370,
+        "outcome_identity_unresolved": 2948,
+        "outcome_target_source_missing": 15628,
+        "outcome_tied_order": 186,
+        "outcome_void_or_unscorable": 360,
+        "program_six_boat_invalid": 369,
+        "raw_hash_invalid_or_unavailable": 9,
+        "source_identity_invalid": 3317
+      }
+    }
+  },
+  "artifacts": [
+    {
+      "path": "date_distribution_profile_v1.csv",
+      "size_bytes": 155655,
+      "sha256": "aa4e4fef9960c63619eee089380ee26b41559372857dee38300e44899e97c495"
+    },
+    {
+      "path": "distribution_anomalies_v1.csv",
+      "size_bytes": 27,
+      "sha256": "615a185556a54e541a3897edb369c8b660bc1388fd447eb75b9d078aabacaff1"
+    },
+    {
+      "path": "distribution_audit_report_v1.json",
+      "size_bytes": 175,
+      "sha256": "de64550592532ca708968be52231cbb72ab1c0a4b6460e92733f8c2ead40332d"
+    },
+    {
+      "path": "feature_point_in_time_audit_v1.csv",
+      "size_bytes": 18896,
+      "sha256": "f5fdac6eb4d25d7c7ef8c8f81f1b6241605dc4821eca0b444d4a0d020f79002f"
+    },
+    {
+      "path": "feature_value_profile_v1.csv",
+      "size_bytes": 3107,
+      "sha256": "dfba82ecbf0b52720372cf68a4e5d850769048a0276d524689874eb73da10bad"
+    },
+    {
+      "path": "frozen_audit_candidate_race_keys_v1.csv",
+      "size_bytes": 3507850,
+      "sha256": "3c2aff04fd63d01d9b6c479cd4b3c17502af4f24af1db6a7ace1846e5b0eb1aa"
+    },
+    {
+      "path": "frozen_audit_candidate_registry_v1.csv",
+      "size_bytes": 15137362,
+      "sha256": "b4c8eb822862265eb663f4d37928a97d713766327c6dfe4e39d5cb8ca384abac"
+    },
+    {
+      "path": "frozen_audit_candidate_registry_v1.json",
+      "size_bytes": 323,
+      "sha256": "beea48aedd936ec5b395d6eee3be5b1d0c25e1ac147ac49bbe829d9758f8db2c"
+    },
+    {
+      "path": "gate1b_report_v1.md",
+      "size_bytes": 2063,
+      "sha256": "c67150c2bd236f60b37608eec53438f36c35dddce827cc027c4b93cb86e80d0a"
+    },
+    {
+      "path": "gate1b_validation_v1.json",
+      "size_bytes": 2073,
+      "sha256": "7293c51aa607df108ccc7ede653df84fa610fae17bca704bbe427aeb639bc77b"
+    },
+    {
+      "path": "oracle_sanity_report_v1.json",
+      "size_bytes": 293,
+      "sha256": "e04166d27dd1bfdaa69f3552817b88f8a3a45fcb4e0455748e75199df1510743"
+    },
+    {
+      "path": "outcome_reconciliation_report_v1.json",
+      "size_bytes": 396,
+      "sha256": "ffddbfebf3517577b550021631882b4090fe7e174e7eec7fb7a45d860a566619"
+    },
+    {
+      "path": "parser_regime_profile_v1.csv",
+      "size_bytes": 247,
+      "sha256": "e804e30da345d54862f23c471eeb81117d840e830685f3fbc2822d322a9264c7"
+    },
+    {
+      "path": "protected_anchor_after_gate1b.csv",
+      "size_bytes": 2425413,
+      "sha256": "e48f3fcbc5b2651a22fb4763ccad917c3c945d5900c1fc157ef3f778dd035d70"
+    },
+    {
+      "path": "protected_anchor_before_gate1b.csv",
+      "size_bytes": 2425413,
+      "sha256": "e48f3fcbc5b2651a22fb4763ccad917c3c945d5900c1fc157ef3f778dd035d70"
+    },
+    {
+      "path": "protected_anchor_diff_gate1b.csv",
+      "size_bytes": 89,
+      "sha256": "0d615117ca63f90eaaa8ae761de934242a649b50a679a117436de73088c3c6ca"
+    },
+    {
+      "path": "target_mismatches_v1.csv",
+      "size_bytes": 186,
+      "sha256": "ff20bdf23a199ac5a58e51c4c31926d6d286505501500b518e8f4c4e7adef1b4"
+    },
+    {
+      "path": "target_reconciliation_v1.csv",
+      "size_bytes": 16146905,
+      "sha256": "a1c74bfef74db3f5ed47a90d9978cbc034dc931fef40eef9b06e6e06e003f1c2"
+    },
+    {
+      "path": "uniform_sanity_report_v1.json",
+      "size_bytes": 506,
+      "sha256": "e513c01c599a4b81945499cd1b90ff1e3d7991537a89bb585142c22f8a176fe7"
+    },
+    {
+      "path": "unregistered_source_fields_v1.csv",
+      "size_bytes": 667,
+      "sha256": "7cb2b3d7ced33adeb13a3e6d7fae5308af3a23688960aa6e96a6da1f6313e0bf"
+    },
+    {
+      "path": "venue_distribution_profile_v1.csv",
+      "size_bytes": 3599,
+      "sha256": "9ce4cad8594811e5ad12bea61258a63f76258fd00f4019762091b2dc40074eaa"
+    }
+  ]
+}

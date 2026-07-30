@@ -1,0 +1,9 @@
+{
+  "enumerate_all_prefixes": true,
+  "probability_sum": 1.0,
+  "stages": [
+    "first",
+    "second_given_first",
+    "third_given_first_second"
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "actual_target_data_opened": false,
+  "actual_training_data_opened": false,
+  "artifacts": [
+    {
+      "path": "research/runtime_v1/base_python_selection_v1.json",
+      "sha256": "7de672f80f0bbd922cf52eb9b43c3d500709c5f403a19b3173f8b30ef536e805",
+      "size_bytes": 508
+    },
+    {
+      "path": "research/runtime_v1/data_access_audit_v1.json",
+      "sha256": "49c07767ac5de3144a095bdb5ba9e5b94dc7cb6f18f31b7e722446a2c623eb36",
+      "size_bytes": 273
+    },
+    {
+      "path": "research/runtime_v1/dependency_resolution_report_v1.json",
+      "sha256": "a7fec92804999bb04f5b3c134c02ab25271ea42e39a94636d49cf1d93cb82c44",
+      "size_bytes": 594
+    },
+    {
+      "path": "research/runtime_v1/gate2a_runtime_report_v1.md",
+      "sha256": "3326f8c0d8b3b61a3cbf6811ecacc013650a911417e8a0670676566582aa7df7",
+      "size_bytes": 2013
+    },
+    {
+      "path": "research/runtime_v1/gate2a_runtime_validation_v1.json",
+      "sha256": "831fc7381d7cf6ea8816425830149a1e2b3c5238dec5b20bd14e22a04cc5c562",
+      "size_bytes": 1092
+    },
+    {
+      "path": "research/runtime_v1/gate2b_authorization_requirements_v1.md",
+      "sha256": "3aceef021382e82ec5ef07473d8525e739c568c5287be6f3853f4923df8adff7",
+      "size_bytes": 272
+    },
+    {
+      "path": "research/runtime_v1/guard_revalidation_v1.json",
+      "sha256": "3088bc56a6f8e68d3f7eb76e4c18ef3a4f9d040a47a7e47b74b299e7b907e549",
+      "size_bytes": 536
+    },
+    {
+      "path": "research/runtime_v1/installed_packages_v1.csv",
+      "sha256": "57e723eea0ff9f438a475e76362595f1fa1dd781864dd9f74c2ea2b7b2c0d519",
+      "size_bytes": 1084
+    },
+    {
+      "path": "research/runtime_v1/pip_check_report_v1.txt",
+      "sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+      "size_bytes": 31
+    },
+    {
+      "path": "research/runtime_v1/protected_anchor_after_gate2a.csv",
+      "sha256": "bfb617a0b2c2cabcf8866bcb55e364031484d8e5fcc07638714ab3efec99e4f4",
+      "size_bytes": 2426740
+    },
+    {
+      "path": "research/runtime_v1/protected_anchor_before_gate2a.csv",
+      "sha256": "bfb617a0b2c2cabcf8866bcb55e364031484d8e5fcc07638714ab3efec99e4f4",
+      "size_bytes": 2426740
+    },
+    {
+      "path": "research/runtime_v1/protected_anchor_diff_gate2a.csv",
+      "sha256": "9a390ecdd68452489fd17a7bb0b4aeb02999bd7e60c724efcbe17b78707cab23",
+      "size_bytes": 49
+    },
+    {
+      "path": "research/runtime_v1/requirements_wave1_input_v1.txt",
+      "sha256": "d74a1cc2ae7a0fbe270366e707d86c54c48c41085679e4310a75dbd5306a87ef",
+      "size_bytes": 65
+    },
+    {
+      "path": "research/runtime_v1/requirements_wave1_lock_v1.txt",
+      "sha256": "0ab47756617d75c4cae3bcfe8a95d083ab579e136589cca67bc911319ce04c24",
+      "size_bytes": 179
+    },
+    {
+      "path": "research/runtime_v1/runtime_activation_commands_v1.ps1",
+      "sha256": "f707b7c3afd8439c28f0bdb040f67e1d2930b6c8953d6c1e9b0dae3363b36b7a",
+      "size_bytes": 138
+    },
+    {
+      "path": "research/runtime_v1/runtime_determinism_report_v1.json",
+      "sha256": "015b9c9fd68e7ddf14f041048bbc611b33d9b2b907e349302cbb1ec4ffee93ba",
+      "size_bytes": 231
+    },
+    {
+      "path": "research/runtime_v1/runtime_environment_inventory_v1.json",
+      "sha256": "bf989b6db4b287ad77c489ed145b99651c7e31ecd0101e07bff6b315c6fdbd30",
+      "size_bytes": 1864
+    },
+    {
+      "path": "research/runtime_v1/runtime_environment_lock_candidate_v1.json",
+      "sha256": "767260a228e3ce9ea2e5cb1fcc254e56407525fd473fab04ce00b789a51a69a1",
+      "size_bytes": 557
+    },
+    {
+      "path": "research/runtime_v1/runtime_readiness_patch_proposal_v1.json",
+      "sha256": "70b02c797a274f4b46f5dfbe1fb6106870c87aa9f8aefb994d976711e07148f2",
+      "size_bytes": 354
+    },
+    {
+      "path": "research/runtime_v1/runtime_smoke_test_v1.json",
+      "sha256": "2d86c71bfed56207db71fba8aa98208f14495f75e14f941f58e34d1dcfac2b38",
+      "size_bytes": 436
+    },
+    {
+      "path": "research/runtime_v1/runtime_smoke_test_v1_log.txt",
+      "sha256": "528dd33614ba397ff1029c3743cd3a41f6a7cf189df6274c6a78b56a7f4b5319",
+      "size_bytes": 377
+    },
+    {
+      "path": "research/runtime_v1/runtime_usage_policy_v1.md",
+      "sha256": "0d7bfbd34881f33a151d05630d8746124d94c8fcf09128b513088ba6787c8f2a",
+      "size_bytes": 507
+    },
+    {
+      "path": "research/runtime_v1/seed_runtime_validation_v1.json",
+      "sha256": "4d8881753ef9d85a094e6c83295d638a4b97b2131df5cc9c505b751a003791a6",
+      "size_bytes": 550
+    },
+    {
+      "path": "research/runtime_v1/wave1_dependency_plan_v1.csv",
+      "sha256": "9749b5880567a9bdd3c6cc784912d6825eb4dabbdf9981652e9d8519d1729ad8",
+      "size_bytes": 679
+    },
+    {
+      "path": "research/runtime_v1/wheelhouse_manifest_v1.csv",
+      "sha256": "462f2f6901d9d0074e1428342a0b8fd36e72c5da965e2b93089ab650d1a5d1eb",
+      "size_bytes": 1596
+    },
+    {
+      "path": "scripts/bootstrap_boatrace_research_runtime_v1.py",
+      "sha256": "b1ed07372233e602a33efa8963cbf5daeeae0f4fddab39b4e99c64668b3fcca2",
+      "size_bytes": 166
+    },
+    {
+      "path": "scripts/smoke_test_boatrace_research_runtime_v1.py",
+      "sha256": "22466e51209a7b45da5ddb87c19e5d68acfa0a1d3e7debb6498d8d2d076622ef",
+      "size_bytes": 249
+    },
+    {
+      "path": "scripts/validate_boatrace_research_runtime_v1.py",
+      "sha256": "0e22eb7a6b33d55dc625238498ecce2e209ebf6bee40497f6f7b083c3fbd3610",
+      "size_bytes": 261
+    },
+    {
+      "path": "tests/test_boatrace_research_runtime_v1.py",
+      "sha256": "43bc4ab7cbf6ea8a81ee1e73b061ac58a003afccf6aec55cd2a7014f645261ae",
+      "size_bytes": 373
+    }
+  ],
+  "automation_paused": true,
+  "final_lock_unlocked": false,
+  "gate": "Gate 2-A",
+  "gate1e_manifest_sha256": "df3e9c71ea9060e92de2957ccbd269291fcb4bda60a5142c78ece224bd40f56a",
+  "metrics_computed": false,
+  "python_executable": "<USER_HOME>\\.venvs\\boatrace-research-v1\\Scripts\\python.exe",
+  "runtime_id": "boatrace_research_runtime_v1",
+  "status": "passed",
+  "system_site_packages": false,
+  "venv_path": "<USER_HOME>\\.venvs\\boatrace-research-v1",
+  "wheelhouse_path": "<USER_HOME>\\.cache\\boatrace-research-v1\\wheelhouse"
+}

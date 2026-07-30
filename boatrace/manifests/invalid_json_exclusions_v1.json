@@ -1,0 +1,52 @@
+[
+    {
+        "repo_path":  "research\\core_decision_experiments_v1.json",
+        "reason":  "source JSON was syntactically invalid after source encoding; excluded without semantic repair",
+        "action":  "not_committed"
+    },
+    {
+        "repo_path":  "research\\data_source_registry_v1.json",
+        "reason":  "source JSON was syntactically invalid after source encoding; excluded without semantic repair",
+        "action":  "not_committed"
+    },
+    {
+        "repo_path":  "research\\hypothesis_dependency_graph_v1.json",
+        "reason":  "source JSON was syntactically invalid after source encoding; excluded without semantic repair",
+        "action":  "not_committed"
+    },
+    {
+        "repo_path":  "research\\hypothesis_registry_v2.json",
+        "reason":  "source JSON was syntactically invalid after source encoding; excluded without semantic repair",
+        "action":  "not_committed"
+    },
+    {
+        "repo_path":  "research\\pre_research_readiness_report_v1.json",
+        "reason":  "source JSON was syntactically invalid after source encoding; excluded without semantic repair",
+        "action":  "not_committed"
+    },
+    {
+        "repo_path":  "research\\temporal_entity_identity_policy_v1.json",
+        "reason":  "source JSON was syntactically invalid after source encoding; excluded without semantic repair",
+        "action":  "not_committed"
+    },
+    {
+        "repo_path":  "research\\equipment_generation_official_evidence_v1\\inputs\\upload_manifest.json",
+        "reason":  "source JSON was syntactically invalid after source encoding; excluded without semantic repair",
+        "action":  "not_committed"
+    },
+    {
+        "repo_path":  "research\\gate2_catboost_clean_retry_v1\\clean_retry_manifest_v1.json",
+        "reason":  "source JSON was syntactically invalid after source encoding; excluded without semantic repair",
+        "action":  "not_committed"
+    },
+    {
+        "repo_path":  "research\\gate2_catboost_clean_retry_v1\\retry_20260730_113550\\previous_resource_stop_validation_v1.json",
+        "reason":  "source JSON was syntactically invalid after source encoding; excluded without semantic repair",
+        "action":  "not_committed"
+    },
+    {
+        "repo_path":  "research\\hypothesis_addenda\\boatrace_research_hypothesis_addendum_v1\\source_package\\boatrace_research_hypothesis_addendum_v1\\boatrace_research_hypothesis_addendum_v1.json",
+        "reason":  "source JSON was syntactically invalid after source encoding; excluded without semantic repair",
+        "action":  "not_committed"
+    }
+]

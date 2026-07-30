@@ -1,0 +1,2 @@
+column_type,contract
+numerical,train-only median + add_indicator + StandardScaler(with_mean=false)

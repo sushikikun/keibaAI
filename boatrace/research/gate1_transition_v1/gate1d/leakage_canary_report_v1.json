@@ -1,0 +1,54 @@
+{
+  "all_canaries_rejected": true,
+  "canaries": [
+    {
+      "accepted_count": 0,
+      "canary_id": "LC01",
+      "name": "target self source",
+      "status": "rejected"
+    },
+    {
+      "accepted_count": 0,
+      "canary_id": "LC02",
+      "name": "same-day race source",
+      "status": "rejected"
+    },
+    {
+      "accepted_count": 0,
+      "canary_id": "LC03",
+      "name": "same-day previous result",
+      "status": "rejected"
+    },
+    {
+      "accepted_count": 0,
+      "canary_id": "LC04",
+      "name": "C/D equipment source",
+      "status": "rejected"
+    },
+    {
+      "accepted_count": 0,
+      "canary_id": "LC05",
+      "name": "pre-boundary equipment source",
+      "status": "rejected"
+    },
+    {
+      "accepted_count": 0,
+      "canary_id": "LC06",
+      "name": "cross-generation source",
+      "status": "rejected"
+    },
+    {
+      "accepted_count": 0,
+      "canary_id": "LC07",
+      "name": "current target label source",
+      "status": "rejected"
+    }
+  ],
+  "current_target_dependency_count": 0,
+  "equipment_C_D_source_count": 0,
+  "equipment_cross_generation_count": 0,
+  "equipment_preboundary_source_count": 0,
+  "future_source_count": 0,
+  "same_day_source_count": 0,
+  "target_self_source_count": 0
+}

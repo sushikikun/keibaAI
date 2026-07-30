@@ -1,0 +1,20 @@
+{
+  "environment_inventory_sha256": "a9449d114d84a22be9990c88ff95ba8e6eee9ecdfe6790f4be2f650fa2854a6d",
+  "no_install_performed": true,
+  "packages": {
+    "catboost": null,
+    "duckdb": null,
+    "lightgbm": null,
+    "numpy": "2.3.5",
+    "optuna": null,
+    "pandas": "3.0.1",
+    "pyarrow": null,
+    "scikit-learn": null,
+    "scipy": null,
+    "torch": null,
+    "xgboost": null
+  },
+  "python_executable": "<USER_HOME>\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "python_version": "3.12.13",
+  "venv_creation_deferred_to_gate2": true
+}

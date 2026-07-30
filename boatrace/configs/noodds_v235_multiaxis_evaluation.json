@@ -1,0 +1,27 @@
+{
+  "evaluation_id": "noodds_v235_multiaxis_v001",
+  "status": "fixed_before_multiaxis_results",
+  "baseline": "noodds_raw_v230_exact_top3_pl",
+  "challenger": "noodds_raw_v235_contextual_order",
+  "folds": [
+    "d6",
+    "d7",
+    "d8",
+    "d9"
+  ],
+  "metrics": [
+    "trifecta_log_loss",
+    "brier_score_120",
+    "mean_true_combo_rank",
+    "top_prediction_ece",
+    "per_race_nll_p95",
+    "per_race_nll_p99",
+    "per_race_nll_max",
+    "stage_first",
+    "stage_second_given_true_first",
+    "stage_third_given_true_first_second"
+  ],
+  "bootstrap_unit": "race_date",
+  "bootstrap_samples": 20000,
+  "bootstrap_seed": 23549
+}

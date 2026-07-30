@@ -1,0 +1,159 @@
+{
+  "artifacts": [
+    {
+      "path": "research/runtime_catboost_v1/catboost_dependency_plan_v1.csv",
+      "sha256": "441143793cd00b78d4c996c576ed9431378f6fb086fc7f5e2149e6e6835b2a68",
+      "size_bytes": 683
+    },
+    {
+      "path": "research/runtime_catboost_v1/catboost_dependency_resolution_report_v1.json",
+      "sha256": "a03fc7896f1668572caa89e4fb3b3e0eea2f64eb446e5f4cec88ee2f4ada3fcb",
+      "size_bytes": 778
+    },
+    {
+      "path": "research/runtime_catboost_v1/catboost_determinism_report_v1.json",
+      "sha256": "855fd3069c9ebafb916a1d39d7febce314db4cd0aaf3ee8c1bdadaabdb6863b7",
+      "size_bytes": 244
+    },
+    {
+      "path": "research/runtime_catboost_v1/catboost_pypi_metadata_v1.json",
+      "sha256": "6712995f0017b533ebeca368e664c9bd765be605fac06e7682f5e8a8c1c292d8",
+      "size_bytes": 904
+    },
+    {
+      "path": "research/runtime_catboost_v1/catboost_python_compatibility_v1.json",
+      "sha256": "6d4bbcc1406bc2247588ca5d04e8984eeb2ad5556f6962d94208daf0815ad89a",
+      "size_bytes": 485
+    },
+    {
+      "path": "research/runtime_catboost_v1/catboost_runtime_guard_validation_v1.json",
+      "sha256": "e6aca77db20f91938c81b55be651a0c956e9207214b3d9ed056fbed5d3783f2b",
+      "size_bytes": 250
+    },
+    {
+      "path": "research/runtime_catboost_v1/catboost_selected_wheel_v1.json",
+      "sha256": "5aae1658d60d72e8d5cda6cd5ebca84602bb50aaa63e041635811ef8b72fcb03",
+      "size_bytes": 511
+    },
+    {
+      "path": "research/runtime_catboost_v1/catboost_synthetic_smoke_log_v1.txt",
+      "sha256": "76a25912945ac16c991722d85730225f9ddde2f88fbfe7a21b48ddf3425dc2e6",
+      "size_bytes": 182
+    },
+    {
+      "path": "research/runtime_catboost_v1/catboost_synthetic_smoke_v1.json",
+      "sha256": "19b601ccc62cd06237dd99f1858b97551fa413b3a40a7c52347178d83f0a6649",
+      "size_bytes": 1709
+    },
+    {
+      "path": "research/runtime_catboost_v1/catboost_wheelhouse_manifest_v1.csv",
+      "sha256": "d51a1a0435fef4e3bb52887d1b8350797963b1f6406515fa6e18df2d14f0e8c0",
+      "size_bytes": 17988
+    },
+    {
+      "path": "research/runtime_catboost_v1/constraints_gate2a_exact_v1.txt",
+      "sha256": "418ba4fa27b8e99653c44e9ac3e6e3e5db8afa787a3f0834cf7af21f761ca545",
+      "size_bytes": 61
+    },
+    {
+      "path": "research/runtime_catboost_v1/gate2ca_data_access_audit_v1.json",
+      "sha256": "4799a9f47201f2fd66435c62aafd49b05758f360c189327f8b75babab16f278a",
+      "size_bytes": 331
+    },
+    {
+      "path": "research/runtime_catboost_v1/gate2ca_input_validation_v1.json",
+      "sha256": "9bf0f22e9e864ddaed6a004f8637c6d98485a28c1e6a09a8d0733e54f5ff011f",
+      "size_bytes": 272
+    },
+    {
+      "path": "research/runtime_catboost_v1/gate2ca_report_v1.md",
+      "sha256": "cbf0e1fd10bb7e2ac737c2cff1af0428a5d5ab0014bebdf907f79f448eed492d",
+      "size_bytes": 741
+    },
+    {
+      "path": "research/runtime_catboost_v1/gate2ca_validation_v1.json",
+      "sha256": "7148980bacd389f0187060c675ea7336b9e9be7f30578f0037668ff02c7aef13",
+      "size_bytes": 1080
+    },
+    {
+      "path": "research/runtime_catboost_v1/gate2cb_authorization_requirements_v1.md",
+      "sha256": "a7006f9fa1939d2485f651b51bd505abcb38665ec31d0ea55ee67be6869f8296",
+      "size_bytes": 260
+    },
+    {
+      "path": "research/runtime_catboost_v1/installed_packages_catboost_v1.csv",
+      "sha256": "82012b178737e2b00500b51de43a04b5cbfabf28c3ac11c21f60b9678db6b685",
+      "size_bytes": 376
+    },
+    {
+      "path": "research/runtime_catboost_v1/pip_check_catboost_v1.txt",
+      "sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+      "size_bytes": 31
+    },
+    {
+      "path": "research/runtime_catboost_v1/protected_anchor_after_gate2ca.csv",
+      "sha256": "bfb617a0b2c2cabcf8866bcb55e364031484d8e5fcc07638714ab3efec99e4f4",
+      "size_bytes": 2426740
+    },
+    {
+      "path": "research/runtime_catboost_v1/protected_anchor_before_gate2ca.csv",
+      "sha256": "bfb617a0b2c2cabcf8866bcb55e364031484d8e5fcc07638714ab3efec99e4f4",
+      "size_bytes": 2426740
+    },
+    {
+      "path": "research/runtime_catboost_v1/protected_anchor_diff_gate2ca.csv",
+      "sha256": "a3bd111803844d8cc169cee6d2a68fcb94c5f6f6d1820fe67c39367489ff2785",
+      "size_bytes": 204
+    },
+    {
+      "path": "research/runtime_catboost_v1/requirements_catboost_input_v1.txt",
+      "sha256": "87e6babba557f4a0d1ac1f6e02c8e4ca6a781eab4526f2b9a38f576a057fd116",
+      "size_bytes": 17
+    },
+    {
+      "path": "research/runtime_catboost_v1/requirements_catboost_lock_v1.txt",
+      "sha256": "f6cc8fdf92176e2dc2f00f928740e0c34921fb699875faede10d01ae2f7140cb",
+      "size_bytes": 432
+    },
+    {
+      "path": "research/runtime_catboost_v1/runtime_catboost_activation_commands_v1.ps1",
+      "sha256": "c2e7ca2a96889b40e270de0cb44887766c89a80f3e293f56a1fd2d24e93b05b2",
+      "size_bytes": 137
+    },
+    {
+      "path": "research/runtime_catboost_v1/runtime_catboost_environment_inventory_v1.json",
+      "sha256": "495e73634fe090771f7c7d1c49f2cd8b60a14a114716ccdcb5b42c3da76e302b",
+      "size_bytes": 1934
+    },
+    {
+      "path": "research/runtime_catboost_v1/runtime_catboost_lock_candidate_v1.json",
+      "sha256": "eccf1a4d08afc6578e4e2a13f028287e79b12bbe928cba4b0222d03f84e587f8",
+      "size_bytes": 460
+    },
+    {
+      "path": "research/runtime_catboost_v1/runtime_catboost_readiness_patch_proposal_v1.json",
+      "sha256": "2ecabfcb674a295cad0b186dcf9b998c43cb341377d9450334e601f228c02435",
+      "size_bytes": 324
+    },
+    {
+      "path": "research/runtime_catboost_v1/runtime_catboost_usage_policy_v1.md",
+      "sha256": "c3a782ff9380019d5af9c90907f673a428cdaebc5a7bdbd1fe11f74c3a6b616c",
+      "size_bytes": 315
+    },
+    {
+      "path": "research/runtime_catboost_v1/synthetic_catboost_model_v1.cbm",
+      "sha256": "70527876ab6d317fd712eb365386e6591f35dfca49d3f3af512178cfdc86f4ad",
+      "size_bytes": 47896
+    }
+  ],
+  "automation_paused": true,
+  "final_lock_unlock_count": 0,
+  "gate": "Gate 2-C-A",
+  "manifest_id": "boatrace_gate2ca_manifest_v1",
+  "model_training_authorized": false,
+  "real_data_access": false,
+  "runtime_id": "boatrace_research_runtime_catboost_v1",
+  "status": "passed",
+  "validation_path": "research/runtime_catboost_v1/gate2ca_validation_v1.json",
+  "validation_sha256": "7148980bacd389f0187060c675ea7336b9e9be7f30578f0037668ff02c7aef13"
+}

@@ -1,0 +1,15 @@
+{
+  "candidate_count": 219240,
+  "outcome_counts": {
+    "identity_unresolved": 2948,
+    "target_source_missing": 15628,
+    "tied_order": 186,
+    "unique_normal": 200118,
+    "void_or_unscorable": 360
+  },
+  "target_mismatch_count": 0,
+  "strict_target_unscorable_count": 0,
+  "strict_target_mismatch_count": 0,
+  "strict_prediction_ineligible_count": 0,
+  "status": "passed"
+}

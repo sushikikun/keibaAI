@@ -1,0 +1,24 @@
+{
+  "f4_status": "separate auxiliary-only source; not inference candidate",
+  "gate": "Gate 1-D",
+  "materialized_feature_sets": [
+    "F0_safe_core_49",
+    "F1_asof_racer_history",
+    "F2_asof_equipment_history_verified_scope"
+  ],
+  "not_materialized_feature_sets": [
+    "F3_relative_race_features",
+    "F5_temporal_verified_features",
+    "F6_external_or_late_stage"
+  ],
+  "policy_id": "boatrace_gate1d_feature_compiler_policy_v1",
+  "rules": [
+    "Target race excluded from all histories.",
+    "Source race_date must be strictly earlier than target race_date; same-day disabled.",
+    "F1 cold starts remain null with flags.",
+    "F2 accepts official A/B evidence only and generation start strictly earlier.",
+    "No preprocessing or model fitting at Gate 1-D."
+  ],
+  "source_gate1c_manifest_sha256": "379f459cff4d7e9327c478c9ff6b2a3069c48604c05ca67af9cf8b0a9f64b8d3",
+  "source_snapshot_id": "research_v1_219240_1d586db9a15a"
+}

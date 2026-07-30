@@ -1,0 +1,75 @@
+{
+  "contract_id": "boatrace_model_outcome_audit_v0_1",
+  "version": "0.1.0",
+  "status": "audit_overlay",
+  "base_research_snapshot": "research_v0_136183_55f32b3538a9",
+  "base_snapshot_policy": "immutable_read_only",
+  "candidate_universe": {
+    "definition": "union of complete_manifest.csv and excluded_races.csv for every batch frozen in the research_v0 dataset manifest",
+    "expected_races": 148956,
+    "prediction_eligibility_uses_outcome": false,
+    "prediction_requirements": [
+      "official program exists",
+      "official program contains exactly lanes 1 through 6",
+      "every program entry has racer, motor, and boat identity",
+      "closed_at is present",
+      "official beforeinfo HTML exists",
+      "beforeinfo parses to exactly lanes 1 through 6",
+      "required exhibition and weather fields are present",
+      "beforeinfo parser emits no warning"
+    ]
+  },
+  "outcome_policy": {
+    "unique_order": "official result has one lane at each of places 1, 2, and 3, all six finish ranks are the permutation 1 through 6, and the raw trifecta payout confirms that ordered top three",
+    "unique_top3_abnormal": "official result has one lane at each of places 1, 2, and 3 and the raw trifecta payout confirms that order, while at least one remaining finish code is non-standard (for example F/refund/disqualification)",
+    "tied": "official result or trifecta payout represents more than one winning ordered top-three combination",
+    "void": "no uniquely confirmed ordered top-three target",
+    "main_one_hot_rule": "prediction eligible and either unique_order or unique_top3_abnormal with exactly one matching official raw trifecta payout",
+    "tied_one_hot_forbidden": true
+  },
+  "coverage_definitions": {
+    "candidate_to_prediction_eligible_rate": "prediction_eligible / candidate_universe",
+    "prediction_eligible_to_scorable_rate": "main_one_hot_scorable / prediction_eligible",
+    "scorable_to_prediction_artifact_rate": "scorable race_keys present as valid rows in the prediction artifact / scorable"
+  },
+  "target_reconciliation": {
+    "unique_required_equalities": [
+      "top3_targets first/second/third equals official raw result places 1/2/3",
+      "trifecta_class_id decode equals first/second/third",
+      "official raw trifecta payout contains exactly that ordered combination"
+    ],
+    "tied_policy": "retain all official winning combinations separately; never assign one class_id"
+  },
+  "feature_availability": {
+    "prediction_cutoff": "after official beforeinfo is available and strictly before closed_at",
+    "allowed_sources": [
+      "official program snapshot",
+      "official beforeinfo snapshot"
+    ],
+    "result_tables_inference_allowed": false,
+    "provider_aggregate_limitation": "the upstream calculation windows behind published national, local, motor, and boat percentages are not present in the raw schema and therefore cannot be independently reconstructed by this audit"
+  },
+  "diagnostics": {
+    "uniform_probability": 0.008333333333333333,
+    "oracle_unique_one_hot": true,
+    "oracle_unscorable_fallback": "uniform solely to satisfy full prediction coverage; these rows are not scored",
+    "absolute_tolerance": 1e-12
+  },
+  "known_race_keys": [
+    "20251224_02_02",
+    "20251231_24_05",
+    "20260205_14_06",
+    "20260523_16_03",
+    "20260531_06_07",
+    "20260531_06_08"
+  ],
+  "protected_inputs": [
+    "results/boatrace_complete_corpus",
+    "results/boatrace_existing_source_audit",
+    "results/data_expansion_batches",
+    "results/boatrace_history_raw",
+    "results/boatrace_complete_corpus/pre_strict_v2_backup",
+    "results/boatrace_model_research/snapshots/research_v0_136183_55f32b3538a9"
+  ],
+  "hash_algorithm": "SHA-256"
+}

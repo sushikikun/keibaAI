@@ -1,0 +1,86 @@
+{
+  "model_id": "noodds_raw_v235_contextual_order",
+  "status": "preregistered_before_future_outcome_evaluation",
+  "frozen_at": "2026-07-11T21:40:00+09:00",
+  "hypothesis": "Second-place probabilities must depend on the selected first boat, and third-place probabilities must depend on both selected boats.",
+  "policy": {
+    "odds_used": false,
+    "payout_used": false,
+    "outcome_used_as_feature": false,
+    "architecture_search": false,
+    "context_feature_search": false,
+    "temperature_search": false,
+    "blend_weight_search": false,
+    "legacy_d9_is_development_only": true,
+    "final_confirmation": "noodds_future_forward_evaluation_v234"
+  },
+  "baseline": {
+    "model_id": "noodds_raw_v230_exact_top3_pl",
+    "report_path": "results/noodds_raw_v200/exact_top3_pl_v230/report.json",
+    "report_sha256": "53655912f8ef216d89acf521224cf5c52c89bb028ba34b47fde0cc2ddb5ba7de"
+  },
+  "model": {
+    "stage1": "six-way conditional softmax using candidate features",
+    "stage2": "five-way conditional softmax using candidate and selected-first context",
+    "stage3": "four-way conditional softmax using candidate, selected-first, and selected-second context",
+    "inherit_lightgbm_parameters_from": "noodds_raw_v230_exact_top3_pl",
+    "temperature": 1.0,
+    "v206_weight": 0.8,
+    "contextual_order_weight": 0.2
+  },
+  "context_feature_names": [
+    "lane_code",
+    "grade_ord",
+    "national_win_rate_snapshot",
+    "national_top2_rate_snapshot",
+    "local_win_rate_snapshot",
+    "local_top2_rate_snapshot",
+    "motor_top2_rate_snapshot",
+    "boat_top2_rate_snapshot",
+    "term_win_rate_prior",
+    "term_top2_rate_prior",
+    "term_avg_st_prior",
+    "hist_win_rate",
+    "hist_top2_rate",
+    "hist_top3_rate",
+    "hist_avg_finish",
+    "recent10_win_rate",
+    "recent10_top3_rate",
+    "recent10_avg_finish",
+    "racer_venue_top3_rate",
+    "racer_lane_win_rate",
+    "racer_lane_top3_rate",
+    "venue_lane_win_rate",
+    "venue_lane_second_rate",
+    "venue_lane_third_rate",
+    "exhibition_time",
+    "start_st",
+    "start_display_left_pct"
+  ],
+  "context_difference_policy": {
+    "difference": "candidate minus selected context",
+    "exclude_from_difference": [
+      "lane_code"
+    ]
+  },
+  "development_folds": [
+    "d6",
+    "d7",
+    "d8"
+  ],
+  "legacy_temporal_check": "d9",
+  "development_gate": {
+    "candidate_minus_v230_log_loss_below_zero_in_every_fold": true,
+    "pooled_daily_cluster_bootstrap_ci95_upper_below_zero": true
+  },
+  "legacy_check_gate": {
+    "candidate_minus_v230_log_loss_below_zero": true
+  },
+  "bootstrap": {
+    "unit": "race_date",
+    "samples": 20000,
+    "development_seed": 23518,
+    "legacy_check_seed": 23509
+  },
+  "decision": "Even if all legacy folds improve, v235 remains experimental until the frozen future release gate is met."
+}

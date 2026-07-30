@@ -1,0 +1,20 @@
+{
+  "validation_id": "boatrace_research_design_validation_v2",
+  "status": "pass",
+  "checks": {
+    "hypothesis_id_duplicate_count": 0,
+    "core_hypothesis_count": 25,
+    "core_with_data_count": 25,
+    "core_with_experiment_count": 25,
+    "orphan_hypothesis_count": 0,
+    "dependency_cycle_count": 0,
+    "data_gap_invalid_class_count": 0,
+    "core_missing_rejection_count": 0,
+    "primary_metric_conflict_count": 0,
+    "current_feature_row_count": 49,
+    "official_window_proposal_count": 10,
+    "prohibited_inference_feature_count": 0,
+    "immutable_anchor_change_count": 0
+  },
+  "errors": []
+}

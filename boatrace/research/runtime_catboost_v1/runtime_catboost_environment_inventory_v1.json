@@ -1,0 +1,98 @@
+{
+  "base_python_executable": "<USER_HOME>\\.venvs\\boatrace-research-v1\\Scripts\\python.exe",
+  "packages": [
+    {
+      "name": "catboost",
+      "version": "1.2.10"
+    },
+    {
+      "name": "contourpy",
+      "version": "1.3.3"
+    },
+    {
+      "name": "cycler",
+      "version": "0.12.1"
+    },
+    {
+      "name": "fonttools",
+      "version": "4.63.0"
+    },
+    {
+      "name": "graphviz",
+      "version": "0.21"
+    },
+    {
+      "name": "joblib",
+      "version": "1.5.3"
+    },
+    {
+      "name": "kiwisolver",
+      "version": "1.5.0"
+    },
+    {
+      "name": "matplotlib",
+      "version": "3.11.1"
+    },
+    {
+      "name": "narwhals",
+      "version": "2.24.0"
+    },
+    {
+      "name": "numpy",
+      "version": "2.3.5"
+    },
+    {
+      "name": "packaging",
+      "version": "26.2"
+    },
+    {
+      "name": "pandas",
+      "version": "3.0.1"
+    },
+    {
+      "name": "pillow",
+      "version": "12.3.0"
+    },
+    {
+      "name": "pip",
+      "version": "25.0.1"
+    },
+    {
+      "name": "plotly",
+      "version": "6.9.0"
+    },
+    {
+      "name": "pyparsing",
+      "version": "3.3.2"
+    },
+    {
+      "name": "python-dateutil",
+      "version": "2.9.0.post0"
+    },
+    {
+      "name": "scikit-learn",
+      "version": "1.9.0"
+    },
+    {
+      "name": "scipy",
+      "version": "1.18.0"
+    },
+    {
+      "name": "six",
+      "version": "1.17.0"
+    },
+    {
+      "name": "threadpoolctl",
+      "version": "3.6.0"
+    },
+    {
+      "name": "tzdata",
+      "version": "2026.3"
+    }
+  ],
+  "pip_check_returncode": 0,
+  "python_executable": "<USER_HOME>\\.venvs\\boatrace-research-v2-catboost\\Scripts\\python.exe",
+  "runtime_id": "boatrace_research_runtime_catboost_v1",
+  "system_site_packages": false,
+  "venv_path": "<USER_HOME>\\.venvs\\boatrace-research-v2-catboost"
+}

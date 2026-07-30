@@ -1,0 +1,12 @@
+{
+  "artifact_retention": "retain successful and failed manifests; no silent deletion",
+  "checkpoint_storage": "immutable hash-addressed artifacts",
+  "cpu_gpu_determinism": "record device, driver, flags; deterministic CPU defaults",
+  "local_virtual_environment": "create only with explicit Gate2 approval",
+  "mixed_precision": "disabled unless explicitly authorized and deterministic",
+  "package_version_lock": "record exact versions in environment lock before Gate2",
+  "secrets": "never write secret or env values to artifacts",
+  "system_wide_install": "forbidden",
+  "temp_cleanup": "clean only task-owned temp files after hashes are recorded",
+  "thread_policy": "record and pin thread counts"
+}

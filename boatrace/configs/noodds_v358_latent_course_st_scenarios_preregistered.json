@@ -1,0 +1,34 @@
+{
+  "model_id": "noodds_v358_latent_course_st_scenarios",
+  "frozen_before_evaluation": true,
+  "parent": "v312 rolling probabilities",
+  "hypothesis": "Marginalizing trifecta predictions over plausible current-course assignments and ST uncertainty will improve distributional calibration, especially in non-identity course races, beyond a direct residual model.",
+  "frozen_teacher": {
+    "model": "results/noodds_raw_v200/v357_course_st_pretrain/model.pt",
+    "training_labels_end": "2026-04-09",
+    "current_actual_course_or_st_used_at_inference": false
+  },
+  "scenario_generation": {
+    "course": "normalize the product of six runner course probabilities over all 720 course permutations",
+    "top_course_scenarios": 12,
+    "retained_mass_is_renormalized": true,
+    "st": "predicted mean plus fixed residual quadrature offsets",
+    "st_offsets": [-1.0, 0.0, 1.0],
+    "st_residual_sigma": 0.0525213368,
+    "st_weights": [0.1586552539, 0.6826894922, 0.1586552539]
+  },
+  "outcome": {
+    "form": "v312-anchored three-stage lane utility residual conditioned on scenario course and ST",
+    "zero_initialization": "exactly reproduces v312",
+    "scenario_marginalization": "weighted arithmetic mixture of 36 conditional trifecta distributions"
+  },
+  "rolling_evaluation": {
+    "d9": {"core": ["d6", "d7"], "selection": "d8"},
+    "d10": {"core": ["d6", "d7", "d8"], "selection": "d9"},
+    "d11": {"core": ["d6", "d7", "d8", "d9"], "selection": "d10"},
+    "fixed_goal_period": "2026-05-01 through 2026-07-17"
+  },
+  "training": {"max_epochs": 20, "patience": 3, "minimum_improvement": 0.00005, "batch_races": 192, "learning_rate": 0.0002, "weight_decay": 0.01, "gradient_clip": 1.0, "threads": 4, "seed": 35801},
+  "gates": {"intermediate_logloss_below": 3.7, "final_logloss_below": 3.6892},
+  "policy": {"odds_used": false, "payout_used": false, "same_day_results_used": false, "future_data_used": false, "target_actual_course_or_st_used": false, "post_result_hyperparameter_change": false}
+}

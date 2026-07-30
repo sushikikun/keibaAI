@@ -1,0 +1,43 @@
+{
+  "confirmation_fold_count": 2,
+  "dataset_manifest_sha256": "eb2ddf85af16255dbc9d64f264ba0565da73949ccc957dda0b1de6d0bf48bf4c",
+  "evaluation_periods": [
+    {
+      "evaluation_end": "2024-03-31",
+      "fold_id": "screening_fold_1",
+      "selection_start": "2023-07-01"
+    },
+    {
+      "evaluation_end": "2024-06-30",
+      "fold_id": "screening_fold_2",
+      "selection_start": "2023-10-01"
+    },
+    {
+      "evaluation_end": "2024-09-30",
+      "fold_id": "screening_fold_3",
+      "selection_start": "2024-01-01"
+    },
+    {
+      "evaluation_end": "2024-12-31",
+      "fold_id": "screening_fold_4",
+      "selection_start": "2024-04-01"
+    },
+    {
+      "evaluation_end": "2025-03-31",
+      "fold_id": "confirmation_fold_1",
+      "selection_start": "2024-07-01"
+    },
+    {
+      "evaluation_end": "2025-07-27",
+      "fold_id": "confirmation_fold_2",
+      "selection_start": "2024-10-01"
+    }
+  ],
+  "feature_sidecar_manifest_sha256": "2a4d0549e1763ac37dc4904bd2e118142051f8058a24e61f7b36d0f4ecaff87d",
+  "final_lock_id": "final_lock_v1_365d_9294f86b36fe",
+  "final_lock_manifest_sha256": "65a8dbcab15085e63716529c1013ca735057f30bddf63ab6e34fe0527853047c",
+  "membership_logical_sha256": "d3318c40504b34f163cf3db12ce9469002aa21804659f250574305978864b8bc",
+  "screening_fold_count": 4,
+  "source_snapshot_id": "research_v1_219240_1d586db9a15a",
+  "split_id": "split_v1_d3318c40504b"
+}

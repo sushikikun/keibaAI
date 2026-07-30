@@ -1,0 +1,64 @@
+{
+  "created_at": "2026-07-11T20:45:00+09:00",
+  "model_id": "noodds_raw_v233_set_attention",
+  "hypothesis": "A compact attention model that jointly encodes all six boats can add errors independent from GBDT while retaining the exact sequential top-three likelihood.",
+  "frozen_before_run": true,
+  "feature_set": "full_no_ids",
+  "architecture": {
+    "runner_projection": 32,
+    "race_projection": 32,
+    "lane_embedding": 32,
+    "venue_embedding": 32,
+    "weather_embedding": 32,
+    "transformer_layers": 1,
+    "attention_heads": 4,
+    "feedforward_width": 64,
+    "dropout": 0.10,
+    "stage_heads": 3
+  },
+  "training": {
+    "epochs": 6,
+    "batch_races": 1024,
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "seed": 23301,
+    "early_stopping": false,
+    "loss": "mean exact conditional cross entropy for first, second and third"
+  },
+  "normalization": {
+    "fit_on_training_races_only": true,
+    "missing_value": "training mean after standardization equals zero"
+  },
+  "calibration": {
+    "date_range": ["2025-11-25", "2026-01-23"],
+    "temperature_grid": [0.7, 1.0, 1.4],
+    "D6_or_later_used": false
+  },
+  "candidate": {
+    "baseline": "v230 frozen fixed ensemble",
+    "formula": "0.80 * v230 frozen fixed ensemble plus 0.20 * v233",
+    "blend_weight_searched": false
+  },
+  "development_folds": ["d6", "d7", "d8"],
+  "test_fold": "d9",
+  "forbidden": [
+    "odds",
+    "payout",
+    "architecture search",
+    "epoch search",
+    "blend-weight search",
+    "D6-D9 temperature selection",
+    "D9 evaluation after development failure"
+  ],
+  "development_acceptance_rule": {
+    "each_fold_log_loss_delta_lt": 0.0,
+    "pooled_daily_bootstrap_ci95_upper_lt": 0.0
+  },
+  "d9_acceptance_rule": {
+    "log_loss_delta_lt": 0.0,
+    "daily_bootstrap_ci95_upper_lt": 0.0
+  },
+  "procedural_note": "D6-D9 and July are no longer globally untouched because prior candidates were evaluated there. Results are research evidence; final promotion requires new future data."
+}

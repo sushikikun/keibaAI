@@ -1,0 +1,12 @@
+{
+    "run_id":  "clean_retry_run_v2_283b74468bbb996c8839_clean_retry_1",
+    "candidate_count":  0,
+    "first_candidate_started":  false,
+    "first_candidate_status":  "not_started",
+    "minimum_system_available_mib":  2463,
+    "warning_events":  0,
+    "hard_stop_events":  0,
+    "resource_stop_candidate":  null,
+    "final_state":  "clean_retry_waiting_for_host_memory",
+    "started_training":  false
+}

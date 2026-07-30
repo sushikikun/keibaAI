@@ -1,0 +1,65 @@
+{
+  "created_at": "2026-07-18T21:36:00+09:00",
+  "model_id": "noodds_v341_official_result_history_on_v312",
+  "frozen_before_run": true,
+  "hypothesis": "Strictly-prior official actual start timing, actual course, finish, and winning-technique histories add realized race-skill information not fully represented by pre-race exhibition snapshots in v312.",
+  "active_parent": "noodds_raw_v312_large_history_racer_identity_set_ranker_on_v295",
+  "single_change": "append the frozen 17-column official-result runner history sidecar to v312 numeric runner inputs",
+  "policy": {
+    "odds_used": false,
+    "payout_used": false,
+    "same_day_results_used_for_features": false,
+    "future_results_used": false,
+    "posthoc_search": false
+  },
+  "inputs_sha256": {
+    "dataset_manifest": "4283DC0D06981F7292EC18E8D7496CF651EFBCE5F4C81CB367EC940AF5949266",
+    "official_history": "8BE0B9EA9A09BBE56AC1E83DAF33AE80BD47FF1E8678DCBEA96416569899924F",
+    "official_history_manifest": "BC8270E72A5A2B5285B86AF4C2D5CB5BC8846C637DC59F8ADDE8C3762DDD6FC0",
+    "v312_d6": "58F4652100DD921C32612123DA05AFE036CD0BF6CC2032F24BDE73EC847EFA00",
+    "v312_d7": "507CA4323BF4F695657FFCD8011B53173F389172C29DF6EE48DFFFDCE45F0E3A",
+    "v312_d8": "156EFA7FCC87E47BDAEA1524FF81698ED5B4D33AAE2CB252A34403225BF0F011"
+  },
+  "base_definition": {
+    "pairwise_tau": 20,
+    "current_meet_window_days": 7,
+    "current_meet_overall_tau": 50,
+    "current_meet_tau": 10
+  },
+  "identity_features": {
+    "embedding_widths": {"racer_code": 16}
+  },
+  "architecture": {
+    "runner_projection_width": 48,
+    "race_projection_width": 48,
+    "lane_embedding_width": 48,
+    "identity_projection_width": 48,
+    "self_attention_layers": 1,
+    "attention_heads": 4,
+    "feedforward_width": 96,
+    "dropout": 0.1
+  },
+  "training": {
+    "epochs_full": 6,
+    "epochs_screen": 3,
+    "batch_races": 256,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.001,
+    "gradient_clip": 1.0,
+    "threads": 4,
+    "seed": 34101
+  },
+  "anchoring": {
+    "formula": "softmax(log(v312)+gamma*centered(log(v341_raw)-log(v312)))",
+    "gamma_bounds": [0.0, 0.25],
+    "d6": "v312 unchanged; gamma=0",
+    "d7_gamma_fit": "D6 OOF only",
+    "d8_gamma_fit": "D6 plus D7 OOF only"
+  },
+  "promotion_requires": {
+    "pooled_mean_delta_below_zero": true,
+    "date_cluster_bootstrap_ci95_upper_below_zero": true,
+    "daily_paired_wilcoxon_less_holm_adjusted_p_below": 0.05,
+    "holm_family_size": 1
+  }
+}

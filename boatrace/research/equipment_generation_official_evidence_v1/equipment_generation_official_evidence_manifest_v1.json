@@ -1,0 +1,320 @@
+{
+  "artifact_set_sha256": "625321fa196f0c9e301208ec251c40f6e023c6ae6b4d87277f20af33a0be1e2e",
+  "files": [
+    {
+      "path": "blocked_hypothesis_impact_v1.csv",
+      "sha256": "d57df0a55ae23f972fcf89cea7e093ee3cf06b2c1000a6afb6f12e7d7c029fce",
+      "size_bytes": 3055
+    },
+    {
+      "path": "equipment_generation_official_evidence_report_v1.md",
+      "sha256": "ce7873f0a7f5edcfff93b3352ec27ca84649c122a1f60b7306d1903e03dd61ce",
+      "size_bytes": 4728
+    },
+    {
+      "path": "equipment_generation_official_evidence_validation_v1.json",
+      "sha256": "8eeafc22768a860099c7143d264b1ed0e76808c3483cc98ff0be6899519a6505",
+      "size_bytes": 7069
+    },
+    {
+      "path": "evidence_batch_resolution_v1.csv",
+      "sha256": "749842166502b58c5e6b1b296ca347f5189a5efd24e9120d6d8cac3f40d12420",
+      "size_bytes": 18109
+    },
+    {
+      "path": "evidence_coverage_report_v1.json",
+      "sha256": "7c933f9c655dda14b83395fffc0c602a5b7ca17625cd1a0de09fc0e15f44f54e",
+      "size_bytes": 2176
+    },
+    {
+      "path": "generation_boundary_candidates_v1.csv",
+      "sha256": "e102ba64ce34f84ebe22baab753877fed5bd17a38385a5183820d164435ed4b1",
+      "size_bytes": 24118
+    },
+    {
+      "path": "generation_boundary_unresolved_v1.csv",
+      "sha256": "cc991ddd7b947982131b0938b3ed28d37479933d7ad32966f253b4d5e76d6585",
+      "size_bytes": 23879
+    },
+    {
+      "path": "inputs/equipment_evidence_batch_queue_v1.csv",
+      "sha256": "b55e92912474a70cf96b6274865e045569b1de45dc16cce49c8172f955e82689",
+      "size_bytes": 21838
+    },
+    {
+      "path": "inputs/equipment_generation_evidence_registry_v1.csv",
+      "sha256": "7c92504af82dd539004bf9e06299b668043e2270856d7c6d1ecf799ce6e4a120",
+      "size_bytes": 999783
+    },
+    {
+      "path": "inputs/hypothesis_execution_readiness_v1.csv",
+      "sha256": "5f9781c6240045ab3712d0320e5354f4cf2553979a7be7f781c0ffe7db509d58",
+      "size_bytes": 12806
+    },
+    {
+      "path": "inputs/upload_manifest.json",
+      "sha256": "fd79af9dc72097babf2bb54a10af46396556d8f29a8fbb928aa6b862e582e9a5",
+      "size_bytes": 4723
+    },
+    {
+      "path": "manual_followup_queue_v1.csv",
+      "sha256": "6fcd0045b3c01a3f79cb51466b642aa2f7131c5f3c7d2bf916d784ef49d92fbb",
+      "size_bytes": 17112
+    },
+    {
+      "path": "official_evidence_registry_v1.csv",
+      "sha256": "b050d51843c2ece612c1fb57fa63d15674065bbe51ef44f5ce43d3c2117e57bc",
+      "size_bytes": 26643
+    },
+    {
+      "path": "raw/html_extracts/EV001.txt",
+      "sha256": "c8eec9584d3c0d6d76aa4e788cfcb771a0c232fb91e458774446f2fa591ed513",
+      "size_bytes": 675
+    },
+    {
+      "path": "raw/html_extracts/EV002.txt",
+      "sha256": "6ae1fa16d4525f50a80385aef22a5ff52beaf2a6dc7def03c6114ac2575ff3bb",
+      "size_bytes": 731
+    },
+    {
+      "path": "raw/html_extracts/EV003.txt",
+      "sha256": "ceaf4bd4cc1d7dc8f202b4ea871c8aa45fc26141be6bf023e371d3a2d74dca94",
+      "size_bytes": 638
+    },
+    {
+      "path": "raw/html_extracts/EV004.txt",
+      "sha256": "3fb69b8e4abbd98a6fbadbd595588a71e0adbd23fefc30a500e1ac46fe88c583",
+      "size_bytes": 679
+    },
+    {
+      "path": "raw/html_extracts/EV006.txt",
+      "sha256": "46230ed8d13cd8fb70428c621013e931396a234612d05275424e143cb047bbba",
+      "size_bytes": 638
+    },
+    {
+      "path": "raw/html_extracts/EV007.txt",
+      "sha256": "6c4cf899c34ab33861c733d5ef74474b373ab0cbd1d3b81151276863c510ee85",
+      "size_bytes": 623
+    },
+    {
+      "path": "raw/html_extracts/EV008.txt",
+      "sha256": "fac1a0308f62079bc119ed3b46514948026568b08453de01b4937b66183ce1cf",
+      "size_bytes": 648
+    },
+    {
+      "path": "raw/html_extracts/EV009.txt",
+      "sha256": "bc89bd833be8b2386acb121de884598d44cbd64b99d0f4143d8b7233907b3588",
+      "size_bytes": 623
+    },
+    {
+      "path": "raw/html_extracts/EV010.txt",
+      "sha256": "b6e1c26409df6e07fa2363cfe390ddf22cc878ebff308e4fd5fee0397bf71e7c",
+      "size_bytes": 626
+    },
+    {
+      "path": "raw/html_extracts/EV011.txt",
+      "sha256": "fc4d40b7b1fadc1ac1a15f4ddca5199a2d59117cd38536a72c55b4f72ed282b2",
+      "size_bytes": 639
+    },
+    {
+      "path": "raw/html_extracts/EV012.txt",
+      "sha256": "85cb1fea2c86120618a722c0285fce6556c69020ec58952ed8443b10bf4e25c1",
+      "size_bytes": 624
+    },
+    {
+      "path": "raw/html_extracts/EV013.txt",
+      "sha256": "98eb0bbcedf5fc33e593aa42d0e02ee2ad229ef048d196d17548eeaa4bc0fc31",
+      "size_bytes": 636
+    },
+    {
+      "path": "raw/html_extracts/EV014.txt",
+      "sha256": "7ffb67893c437f58d984c68b037bb243d4ebb4a236900663a04dd547c5979595",
+      "size_bytes": 607
+    },
+    {
+      "path": "raw/html_extracts/EV015.txt",
+      "sha256": "b8013d0c0d91c4e77020858bc9a4aacbc327f1e884867ce3aa1eb5446f2f94b7",
+      "size_bytes": 684
+    },
+    {
+      "path": "raw/html_extracts/EV016.txt",
+      "sha256": "dd3720a836d516e07d7a03f2959336763cfb3ec9c607c1a57a3ada7029158f4c",
+      "size_bytes": 685
+    },
+    {
+      "path": "raw/html_extracts/EV017.txt",
+      "sha256": "4a3d37b12b4905a87c1ba8bc635b17ce676fd33bc3ad22270d3b25f8aa5a4acf",
+      "size_bytes": 663
+    },
+    {
+      "path": "raw/html_extracts/EV018.txt",
+      "sha256": "b84c05289a8f5a3b7e1a4dfa094e6415a43a3ce4d0e6d242488c19f4ef3ee4bf",
+      "size_bytes": 630
+    },
+    {
+      "path": "raw/html_extracts/EV019.txt",
+      "sha256": "923d4282cd04dc40c213a8cb02c961838c606c5ef4ac5e4f39a877ed335ecb1b",
+      "size_bytes": 648
+    },
+    {
+      "path": "raw/html_extracts/EV020.txt",
+      "sha256": "b170f87e3bf10361b1f5e94275037e507972fb200fd4319d908c2edeaf29b387",
+      "size_bytes": 628
+    },
+    {
+      "path": "raw/html_extracts/EV021.txt",
+      "sha256": "4652ea9c5ceefbf34c6db69d8145f570e7d57e6606cbd7556e60826ff47142e3",
+      "size_bytes": 612
+    },
+    {
+      "path": "raw/html_extracts/EV022.txt",
+      "sha256": "61d99a106b6d424d83085efd213f41d8eeee52ea8ae7a1600790428bfbcf05c9",
+      "size_bytes": 588
+    },
+    {
+      "path": "raw/html_extracts/EV023.txt",
+      "sha256": "be110598ad86180b920b35443f1d0cee99e12ecf1a11f2c4d001e5dba1831c5a",
+      "size_bytes": 629
+    },
+    {
+      "path": "raw/html_extracts/EV025.txt",
+      "sha256": "91f8c0d5922be6757b2062ac29ded8eea6033912619db0966242af8ccc697afb",
+      "size_bytes": 639
+    },
+    {
+      "path": "raw/html_extracts/EV026.txt",
+      "sha256": "d0c41f19ba93dda6cfb4926700294386d9ab5fc6dd190d273ad1f0bc5f3b6c67",
+      "size_bytes": 682
+    },
+    {
+      "path": "raw/html_extracts/EV027.txt",
+      "sha256": "79a7592b4a50b184a2b7ae899bb22361350b400115742fd7100754f3b79e844b",
+      "size_bytes": 632
+    },
+    {
+      "path": "raw/html_extracts/EV028.txt",
+      "sha256": "c55832aefe2008eff30ff242c5ecbde3e8516fd65a09cdd800b9b34929412cbd",
+      "size_bytes": 635
+    },
+    {
+      "path": "raw/html_extracts/EV029.txt",
+      "sha256": "7f48dc9746fe04c12ef8dc8350bc1058d8213494d46275d1a4683ce4fd90d309",
+      "size_bytes": 639
+    },
+    {
+      "path": "raw/html_extracts/EV030.txt",
+      "sha256": "671d2ff54887d4b36630c7cbeb472c13819dcdf00ff49b552669bd45d47e010e",
+      "size_bytes": 624
+    },
+    {
+      "path": "raw/html_extracts/EV031.txt",
+      "sha256": "964cc21ce60481c4aad1a5da65b5ce68f17c7e3812fdd2b725242fd7b77dd992",
+      "size_bytes": 617
+    },
+    {
+      "path": "raw/html_extracts/EV032.txt",
+      "sha256": "afffee43a9791d73f601c0bcf50379a8123759260f1d2b237f7a8fde6533401c",
+      "size_bytes": 602
+    },
+    {
+      "path": "raw/html_extracts/EV033.txt",
+      "sha256": "b72d75b2c1573f5118f56f54c5d42bff7024579dc086ed70c4fa5c5677834da2",
+      "size_bytes": 625
+    },
+    {
+      "path": "raw/html_extracts/EV034.txt",
+      "sha256": "85ed2a3d561e6d5aa4cce991ec6e09715223b7bc71691823f321b5b79865c7de",
+      "size_bytes": 617
+    },
+    {
+      "path": "raw/html_extracts/EV035.txt",
+      "sha256": "6aa0903ee09946606fd1f19bb86877058768b5750ca2b8f3cf1962c8ca54419b",
+      "size_bytes": 680
+    },
+    {
+      "path": "raw/html_extracts/EV036.txt",
+      "sha256": "c7b2dadda912529e34331a334851fc8a2500347ce0e54b81d9d116825aaece20",
+      "size_bytes": 634
+    },
+    {
+      "path": "raw/html_extracts/EV037.txt",
+      "sha256": "a4bf027eb0ea2c4c9b217db15ca578445ceb2fec2814ea3b1ffd1f9158e76055",
+      "size_bytes": 620
+    },
+    {
+      "path": "raw/html_extracts/EV038.txt",
+      "sha256": "041b1e6e439a5ab04643911da63785d0b592140327cc683a831fcadccf5d2ff9",
+      "size_bytes": 635
+    },
+    {
+      "path": "raw/html_extracts/EV039.txt",
+      "sha256": "547e812ea04c92e643e94211281a78d9ea298202ab3c07e895718a9da7bc219d",
+      "size_bytes": 585
+    },
+    {
+      "path": "raw/html_extracts/EV040.txt",
+      "sha256": "adb34a41b4583f9da9253fa830126afd699d2c61fa83c51d88b429f7f4566a40",
+      "size_bytes": 657
+    },
+    {
+      "path": "raw/html_extracts/EV043.txt",
+      "sha256": "e4c99dff0e74674bbfb62807c271a6537aaf346ff12ab31937726c362a2ae694",
+      "size_bytes": 682
+    },
+    {
+      "path": "raw/pdfs/edogawa_20250506_generation.pdf",
+      "sha256": "26857d89e19908e6e47ba30cb750ef3fe676579c61c8df3ba6cbf42b51e41d11",
+      "size_bytes": 779649
+    },
+    {
+      "path": "raw/pdfs/gamagori_20230707_generation.pdf",
+      "sha256": "db7ffa26029c9870b19a829d0cbd5b35ef01905610bc4eca15a9731c966e1077",
+      "size_bytes": 277362
+    },
+    {
+      "path": "raw/pdfs/heiwajima_20260618_new_motor_boat.pdf",
+      "sha256": "a41e83b980498236fc3905d561e878d21b961e9a5c7d66651a5b889077932253",
+      "size_bytes": 3574711
+    },
+    {
+      "path": "raw/pdfs/marugame_20260709_new_boat.pdf",
+      "sha256": "ca191542c337e938d4716091d9c0b3b938944400f0d52a9cb0101876e13fe988",
+      "size_bytes": 463855
+    }
+  ],
+  "generated_at": "2026-07-28T00:07:28Z",
+  "input_files": [
+    {
+      "path": "inputs/equipment_evidence_batch_queue_v1.csv",
+      "sha256": "b55e92912474a70cf96b6274865e045569b1de45dc16cce49c8172f955e82689"
+    },
+    {
+      "path": "inputs/equipment_generation_evidence_registry_v1.csv",
+      "sha256": "7c92504af82dd539004bf9e06299b668043e2270856d7c6d1ecf799ce6e4a120"
+    },
+    {
+      "path": "inputs/hypothesis_execution_readiness_v1.csv",
+      "sha256": "5f9781c6240045ab3712d0320e5354f4cf2553979a7be7f781c0ffe7db509d58"
+    },
+    {
+      "path": "inputs/upload_manifest.json",
+      "sha256": "fd79af9dc72097babf2bb54a10af46396556d8f29a8fbb928aa6b862e582e9a5"
+    }
+  ],
+  "manifest_id": "equipment_generation_official_evidence_manifest_v1",
+  "purpose": "Official primary-source evidence package for BOAT RACE motor/boat generation boundaries.",
+  "self_hash_policy": "Manifest does not contain its own SHA-256. The external .sha256 file records it.",
+  "status": "completed_with_partial_historical_coverage",
+  "summary": {
+    "current_A_or_B_boundaries": 47,
+    "current_C_only_boundaries": 1,
+    "formal_model_research_ready_changed": false,
+    "full_batch_period_boundary_coverage": 2,
+    "generation_ids_issued": 0,
+    "historical_A_or_B_boundaries": 7,
+    "input_batches": 48,
+    "input_equipment_keys": 3240,
+    "official_evidence_sources": 43,
+    "total_A_or_B_boundary_candidates": 54
+  }
+}

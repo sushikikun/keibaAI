@@ -1,0 +1,11 @@
+{
+  "filename": "catboost-1.2.10-cp312-cp312-win_amd64.whl",
+  "official_pypi_only": true,
+  "pypi_sha256": "6b8a7ef11d7a89fc547760cfafeee895011a4b92cc1f60d00235ef80a71158ed",
+  "sha256_match": true,
+  "source_url": "https://files.pythonhosted.org/packages/93/e2/f467a133b37eef2b3d8697d46a6e7f0da24bd3643f5475817c473ffc41dc/catboost-1.2.10-cp312-cp312-win_amd64.whl",
+  "tags": [
+    "cp312-cp312-win_amd64"
+  ],
+  "wheel_sha256": "6b8a7ef11d7a89fc547760cfafeee895011a4b92cc1f60d00235ef80a71158ed"
+}

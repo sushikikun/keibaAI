@@ -1,0 +1,5 @@
+blocker_id,scope,status,reason,next_gate_action
+B-G1C-WALKFORWARD,evaluation,unresolved,Walk-forward contract not fixed,Gate2 contract review
+B-G1C-FINAL-LOCK,release,unresolved,Final lock not fixed,Do not create final lock
+B-G1C-ENV,environment,unresolved,Environment not fixed,Environment freeze later
+B-G1C-DRYRUN,research,unresolved,Final dry-run not run,Run after Gate1C only

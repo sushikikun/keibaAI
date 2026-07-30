@@ -1,0 +1,14 @@
+{
+    "run_id":  "clean_retry_run_v1_283b74468bbb996c8839",
+    "candidate":  "Screening Fold 1 / CB-F0 / Config C01",
+    "status":  "not_started",
+    "result":  "not_run",
+    "start_available_memory_mib":  3339,
+    "candidate_min_available_memory_mib":  null,
+    "candidate_end_available_memory_mib":  null,
+    "model_saved":  false,
+    "best_iteration":  null,
+    "selection_prediction_generated":  false,
+    "subprocess_completed":  false,
+    "stop_reason":  "clean_retry_waiting_for_host_memory"
+}

@@ -1,0 +1,42 @@
+{
+  "gate_id": "noodds_market_domination_gate_v001",
+  "status": "frozen_before_20260710_plus_evaluation",
+  "frozen_at": "2026-07-12T05:05:00+09:00",
+  "objective": "The odds-free standalone probability model must decisively outperform the normalized trifecta market, not merely approach it.",
+  "prediction_policy": {
+    "odds_used_by_model": false,
+    "payout_used_by_model": false,
+    "market_used_only_for_evaluation": true,
+    "posthoc_segments_or_filters_allowed": false
+  },
+  "development_status": {
+    "through_date": "2026-07-09",
+    "all_periods_through_date_are_ineligible_for_final_confirmation": true,
+    "reason": "They informed architecture selection, blend diagnostics, or market-gap analysis."
+  },
+  "confirmation_stream": {
+    "start_date": "2026-07-10",
+    "minimum_complete_market_races": 3000,
+    "minimum_distinct_race_dates": 20,
+    "evaluation_unit": "race_date",
+    "odds_requirement": "all 120 trifecta closing-or-15-minute odds present",
+    "feature_requirement": "same live-available feature policy as training"
+  },
+  "primary_gate": {
+    "standalone_minus_market_mean_log_loss_at_most": -0.01,
+    "daily_cluster_bootstrap_ci95_upper_below": 0.0,
+    "fraction_of_days_standalone_beats_market_at_least": 0.7,
+    "each_stage_log_loss_delta_vs_market_at_most": 0.0
+  },
+  "diagnostic_only_before_minimum_sample": [
+    "mean_log_loss_delta",
+    "daily_log_loss_delta",
+    "stage1_delta",
+    "stage2_given_true_first_delta",
+    "stage3_given_true_first_second_delta",
+    "calibration_error",
+    "top1_accuracy",
+    "mean_true_rank"
+  ],
+  "decision": "Do not call the model market-beating or promote an EV policy until every primary gate passes on the frozen confirmation stream."
+}

@@ -1,0 +1,39 @@
+{
+    "run_id":  "clean_retry_run_v2_283b74468bbb996c8839_clean_retry_1",
+    "previous_resource_stop_verified":  true,
+    "previous_staging_unchanged":  true,
+    "formal_run_absent_before_retry":  true,
+    "metrics_absent_before_retry":  true,
+    "runtime_verified":  true,
+    "dataset_verified":  true,
+    "split_verified":  true,
+    "final_lock_sealed":  true,
+    "final_lock_unlock_zero":  true,
+    "host_memory_thresholds_computed":  true,
+    "preflight_stability_checked":  true,
+    "single_fit_serial_execution":  true,
+    "candidate_subprocess_isolation":  true,
+    "first_candidate_status":  "not_started",
+    "model_parameter_change_zero":  true,
+    "feature_contract_change_zero":  true,
+    "hyperparameter_grid_change_zero":  true,
+    "screening_fold_count":  4,
+    "completed_arm_fold_count":  0,
+    "confirmation_access_zero":  true,
+    "confirmation_metrics_zero":  true,
+    "final_lock_access_zero":  true,
+    "final_lock_metrics_zero":  true,
+    "dependency_install_count_zero":  true,
+    "protected_anchor_difference_zero":  true,
+    "automation_remains_paused":  true,
+    "formal_champion_not_selected":  true,
+    "third_retry_not_started":  true,
+    "errors":  [
+
+               ],
+    "warnings":  [
+                     "Last available memory was below start threshold 3072 MiB"
+                 ],
+    "final_status":  "clean_retry_waiting_for_host_memory",
+    "passed":  false
+}

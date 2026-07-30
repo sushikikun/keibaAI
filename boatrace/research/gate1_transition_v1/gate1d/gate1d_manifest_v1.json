@@ -1,0 +1,114 @@
+{
+  "F0_count": 49,
+  "F1_count": 14,
+  "F2_boat_verified_entries": 192108,
+  "F2_motor_verified_entries": 247686,
+  "F3_entry_count": 0,
+  "F3_race_count": 0,
+  "F5_count": 0,
+  "U0": 200118,
+  "U1": 178,
+  "U2": 12720,
+  "artifacts": [
+    {
+      "path": "research/gate1_transition_v1/gate1d/deferred_preprocessing_registry_v1.csv",
+      "sha256": "7934492121bd513d8d082a64cb59b8e20bb83c800918e55632b03e995e5c3b9d",
+      "size_bytes": 1637
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1d/derived_feature_anomalies_v1.csv",
+      "sha256": "9a46db77c124eb7f49255dedc5ca1b5199a2e0116b2f7675fb31dfd3952a3c1e",
+      "size_bytes": 270
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1d/derived_feature_profile_v1.csv",
+      "sha256": "f9b35655d8f7b20183c42b98a6a424473bb986b0496705d4a018aa9bda1666f2",
+      "size_bytes": 4349
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1d/feature_availability_flags.csv",
+      "sha256": "7adb07509e032bb4aeb184f09c18b7fb91cd1ea1c483755263447fb08780aecc",
+      "size_bytes": 28544398
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1d/feature_compiler_policy_v1.json",
+      "sha256": "cd28304c0422d3dbe0874153d1ebd236c7bd0d4bded0eaffd87da92ba88dbe9a",
+      "size_bytes": 967
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1d/feature_compiler_policy_v1.md",
+      "sha256": "8c944dec545511438abcd71076f498d79fc3b021042ccefbd87157df76c8b8ae",
+      "size_bytes": 354
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1d/feature_materialization_scope_v1.csv",
+      "sha256": "869bd3a5a9396fd9a33235c6354520448edab64097e2e98f379a7cd309fd9209",
+      "size_bytes": 1999
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1d/feature_quality_report_v1.json",
+      "sha256": "ad44f8f097982e7e718bad29ace93b24d190d5126a08e0b8d4ffb11972ee07bb",
+      "size_bytes": 255
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1d/gate1d_determinism_report_v1.json",
+      "sha256": "50cbdaa2b396de9c1c7d7ce0608dee966209a269d1157b923f714c9824114d59",
+      "size_bytes": 189
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1d/gate1d_report_v1.md",
+      "sha256": "8d2625445d138f9c6837873a9960f4d46cbe547f57f75124ed4db18672cf9bbf",
+      "size_bytes": 2801
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1d/gate1d_validation_v1.json",
+      "sha256": "7e4e28805b0e8ed50938f6b92147e1a303d49787db770ba753dee6ee5ce7da50",
+      "size_bytes": 1558
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1d/leakage_canary_report_v1.json",
+      "sha256": "0ba02a09993cb3619931dd17bd79a23f6e4a2ee16805ba5c33dc015a4cde98e5",
+      "size_bytes": 1305
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1d/protected_anchor_after_gate1d.csv",
+      "sha256": "bfb617a0b2c2cabcf8866bcb55e364031484d8e5fcc07638714ab3efec99e4f4",
+      "size_bytes": 2426740
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1d/protected_anchor_before_gate1d.csv",
+      "sha256": "bfb617a0b2c2cabcf8866bcb55e364031484d8e5fcc07638714ab3efec99e4f4",
+      "size_bytes": 2426740
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1d/protected_anchor_diff_gate1d.csv",
+      "sha256": "4ed2a850c4153f8fa2ecbe8907ffe1877a52ad2b1a52ca561d26b026f6335517",
+      "size_bytes": 52
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1d/snapshot_universe_join_audit_v1.csv",
+      "sha256": "0a09ae8c87effbcfaa738e63ec6ef5548309ffd634cccfb79c7ce18daeec48b7",
+      "size_bytes": 13420240
+    }
+  ],
+  "created_at": "2026-07-30T03:06:56.618289+09:00",
+  "equipment_C_D_source_count": 0,
+  "equipment_cross_generation_count": 0,
+  "equipment_preboundary_source_count": 0,
+  "feature_sidecar_id": "feature_sidecar_v1_213016_6fa39ceeb32f",
+  "feature_sidecar_path": "results/boatrace_model_research/feature_sidecars/feature_sidecar_v1_213016_6fa39ceeb32f",
+  "future_source_count": 0,
+  "gate": "Gate 1-D",
+  "gate1a_release_id": "corpus_release_v1_200118_4f5554a4057e",
+  "gate1a_release_manifest_sha256": "09ba1172dbd403aa4066e7934348fca5102df66618b73be26b506b72354fb6fe",
+  "gate1b_dataset_manifest_sha256": "eb2ddf85af16255dbc9d64f264ba0565da73949ccc957dda0b1de6d0bf48bf4c",
+  "gate1b_snapshot_id": "research_v1_219240_1d586db9a15a",
+  "gate1c_manifest_sha256": "379f459cff4d7e9327c478c9ff6b2a3069c48604c05ca67af9cf8b0a9f64b8d3",
+  "manifest_id": "boatrace_gate1d_manifest_v1",
+  "materialized_target_entries": 1278096,
+  "materialized_target_races": 213016,
+  "protected_anchor_difference_count": 0,
+  "same_day_source_count": 0,
+  "unregistered_feature_count": 0,
+  "validation_passed": true
+}

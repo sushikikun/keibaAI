@@ -1,0 +1,15 @@
+preprocessing_id,operation,affected_features,why_deferred,fit_scope,apply_scope,leakage_if_global,owning_experiment_program
+PP01,scaling,all numeric,fold-local statistics,train_fold_only,train_fold_only,yes,CDP-A01;CDP-A06
+PP02,normalization using population stats,all numeric,global population stats leak,train_fold_only,train_fold_only,yes,CDP-A01;CDP-A06
+PP03,mean/median imputation,all numeric,fit values leak if global,train_fold_only,train_fold_only,yes,CDP-A01;CDP-A06
+PP04,category vocab fitting,categoricals,future vocabulary leak,train_fold_only,train_fold_only,yes,CDP-A02
+PP05,one-hot,categoricals,fold-local vocab required,train_fold_only,train_fold_only,yes,CDP-A02
+PP06,target encoding,identifiers,uses outcomes,train_fold_only,train_fold_only,yes,CDP-A01;CDP-A06
+PP07,PCA,numeric blocks,fold-local transform,train_fold_only,train_fold_only,yes,CDP-A01
+PP08,feature selection,all candidates,validation labels leak,train_fold_only,train_fold_only,yes,CDP-A01;CDP-A06
+PP09,winsorization,numeric,cut points are learned,train_fold_only,train_fold_only,yes,CDP-A01
+PP10,learned embedding,identifiers,future outcome absorption,train_fold_only,train_fold_only,yes,CDP-A02
+PP11,learned exhibition expectation,exhibition,train-only fit,train_fold_only,train_fold_only,yes,CDP-A03
+PP12,learned venue-day state,venue/day,same-day not verified,train_fold_only,train_fold_only,yes,CDP-A08
+PP13,learned player skill,racer,time/fold boundary required,train_fold_only,train_fold_only,yes,CDP-A01;CDP-A06
+PP14,learned motor skill,equipment,generation boundary required,train_fold_only,train_fold_only,yes,CDP-A04;CDP-A05

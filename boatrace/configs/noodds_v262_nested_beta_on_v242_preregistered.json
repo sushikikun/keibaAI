@@ -1,0 +1,34 @@
+{
+  "model_id": "noodds_raw_v262_nested_beta_on_v242",
+  "hypothesis": "A fixed nested beta calibration fitted only on earlier development folds can correct v242 probability sharpness without changing ranking inputs.",
+  "policy": {
+    "odds_used": false,
+    "payout_used": false,
+    "target_fold_used_for_its_fit": false,
+    "posthoc_search": false,
+    "base_model": "noodds_raw_v242_openskill_contextual",
+    "comparison_model": "noodds_raw_v251_masked_pretrain_ar"
+  },
+  "mechanism": {
+    "d6_prediction": "unchanged v242",
+    "d7_calibration": "fit beta transform on D6 only",
+    "d8_calibration": "fit beta transform on D6+D7 only"
+  },
+  "calibration": {
+    "l2_strength": 0.001,
+    "identity": [1.0, -1.0, 0.0],
+    "bounds": [[0.5, 1.5], [-1.5, -0.5], [-2.0, 2.0]],
+    "optimizer": "L-BFGS-B",
+    "maxiter": 200,
+    "ftol": 1e-12
+  },
+  "screen": {
+    "protocol": "noodds_candidate_acceleration_v1",
+    "folds": ["d6", "d7", "d8"],
+    "futility_only": true
+  },
+  "final_evaluation": {
+    "protocol": "noodds_evaluation_protocol_v2",
+    "folds": ["d6", "d7", "d8"]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "U4_same_day_feature_verified_count": 0,
+  "candidate_count": 219240,
+  "meeting_feature_verified_count": 0,
+  "notes": [
+    "Historical identity is not prediction-time feature evidence.",
+    "Subtitle mapping is not silently promoted.",
+    "Same-day result/auxiliary joins are disabled."
+  ],
+  "race_stage_verified_count": 95275,
+  "report_id": "boatrace_temporal_capability_report_v1",
+  "same_day_feature_allowed_count": 0,
+  "same_day_physical_capture_verified_count": 0,
+  "status": "policy_sidecar_only",
+  "unresolved_meeting_rows": 72552
+}

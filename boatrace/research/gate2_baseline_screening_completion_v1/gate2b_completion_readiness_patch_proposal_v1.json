@@ -1,0 +1,9 @@
+{
+  "statistical_baseline_fold1_pilot_ready": true,
+  "statistical_baseline_screening4_ready": true,
+  "screening_statistical_baseline_reference_ready": true,
+  "machine_learning_baseline_ready": false,
+  "confirmation_authorized": false,
+  "final_lock_authorized": false,
+  "gate2c_explicit_approval_required": true
+}

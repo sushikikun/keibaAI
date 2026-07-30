@@ -1,0 +1,11 @@
+{
+  "explicit_unlock_required": true,
+  "final_lock_manifest_sha256": "65a8dbcab15085e63716529c1013ca735057f30bddf63ab6e34fe0527853047c",
+  "lock_id": "final_lock_v1_365d_9294f86b36fe",
+  "lock_manifest_immutable": true,
+  "normal_runner_access": false,
+  "status": "sealed",
+  "unknown_race_rejected": true,
+  "unlock_append_only": true,
+  "wrong_hash_rejected": true
+}

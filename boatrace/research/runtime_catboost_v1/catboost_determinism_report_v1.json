@@ -1,0 +1,10 @@
+{
+  "max_abs_diff_same_seed": 0.0,
+  "row_order_invariance_passed": true,
+  "seed": 20260730,
+  "seed_determinism_passed": true,
+  "synthetic_only": true,
+  "task_type": "CPU",
+  "thread_count": 1,
+  "unknown_category_passed": true
+}

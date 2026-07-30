@@ -1,0 +1,17 @@
+{
+    "run_id":  "clean_retry_run_v2_283b74468bbb996c8839_clean_retry_1",
+    "screening_feature_open_count":  0,
+    "screening_target_open_count":  0,
+    "screening_prediction_count":  0,
+    "screening_metrics_count":  0,
+    "confirmation_feature_access":  0,
+    "confirmation_target_access":  0,
+    "confirmation_prediction_count":  0,
+    "confirmation_metrics_count":  0,
+    "final_lock_feature_access":  0,
+    "final_lock_target_access":  0,
+    "final_lock_prediction_count":  0,
+    "final_lock_metrics_count":  0,
+    "final_lock_unlock_count":  0,
+    "passed":  true
+}

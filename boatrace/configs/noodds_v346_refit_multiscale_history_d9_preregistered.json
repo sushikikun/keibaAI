@@ -1,0 +1,39 @@
+{
+  "created_at": "2026-07-18T23:35:00+09:00",
+  "model_id": "noodds_v346_refit_multiscale_history_d9",
+  "frozen_before_evaluation": true,
+  "hypothesis": "The v345 D9 reversal is partly caused by using coefficients fitted only through D7; refitting the identical frozen feature family on all D6-D8 may stabilize the immediately following D9 prediction.",
+  "fit": {
+    "training_folds": ["d6", "d7", "d8"],
+    "evaluation_fold": "d9",
+    "optimizer": "L-BFGS-B",
+    "coefficient_bounds": [-0.35, 0.35],
+    "l2": 0.1,
+    "max_iterations": 300,
+    "standardization": "D6-D8 training races only"
+  },
+  "evaluation": {
+    "bootstrap_seed": 34609,
+    "gates": [
+      "mean candidate-minus-v312 logloss below zero",
+      "date-cluster bootstrap 95% CI upper bound below zero",
+      "daily paired one-sided Wilcoxon p below 0.05"
+    ]
+  },
+  "policy": {
+    "odds_used": false,
+    "payout_used": false,
+    "same_day_results_used_for_features": false,
+    "d9_fit_or_calibration": false,
+    "feature_or_hyperparameter_search_after_d9": false,
+    "formal_promotion_allowed": false
+  },
+  "inputs_sha256": {
+    "dev_d6": "5795EC88148C86B79CE997176D9EA76D7F1B8273188CEE8913CFB2658A82E5F7",
+    "dev_d7": "330828BDDE0178FE90FCDA6B664A95482ACE9439DBE4C0E2F12A05C6284D6848",
+    "dev_d8": "008C950EC1B3946F53343A43EA110E21CB3785AE8D29D09A91490FE8C39DA9F6",
+    "d9": "1557CCFB71F8B9A7BE870AEFA858F30156C60DE1F83D6418B6790FCAA05D9094",
+    "history": "77B558EFDF025FF96EBA498E8ACE4F345B58467E9353CCD072F1431B976B82D7"
+  },
+  "scope_note": "D9 remains a development period and cannot promote over formal v312."
+}

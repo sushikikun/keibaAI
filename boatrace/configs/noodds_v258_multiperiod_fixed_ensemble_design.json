@@ -1,0 +1,211 @@
+{
+    "model_id":  "noodds_raw_v258_multiperiod_fixed_ensemble",
+    "status":  "design_frozen_before_predictions",
+    "frozen_at":  "2026-07-13T10:02:31+09:00",
+    "policy":  {
+                   "odds_used":  false,
+                   "payout_used":  false,
+                   "weight_search":  false,
+                   "feature_group_search":  false
+               },
+    "components":  {
+                       "long_term":  [
+                                         "identity",
+                                         "grade",
+                                         "national",
+                                         "local",
+                                         "term",
+                                         "global_history",
+                                         "venue_history",
+                                         "lane_history",
+                                         "motor",
+                                         "boat"
+                                     ],
+                       "recent_form":  [
+                                           "identity",
+                                           "recent5",
+                                           "recent10",
+                                           "recent20",
+                                           "recent_start",
+                                           "recent_exhibition",
+                                           "current_weather",
+                                           "current_beforeinfo"
+                                       ],
+                       "meeting_state":  [
+                                             "identity",
+                                             "single_race_day",
+                                             "hayami",
+                                             "previous_race",
+                                             "current_motor",
+                                             "current_boat",
+                                             "current_beforeinfo",
+                                             "venue",
+                                             "race_number"
+                                         ]
+                   },
+    "model_per_component":  "v251 architecture trained independently with non-component runner numeric features masked and explicit availability indicators retained",
+    "fixed_probability_weights":  {
+                                      "long_term":  0.3333333333333333,
+                                      "recent_form":  0.3333333333333333,
+                                      "meeting_state":  0.3333333333333334
+                                  },
+    "baseline":  "v251 standalone",
+    "training":  {
+                     "seed":  25801,
+                     "pretrain_epochs":  3,
+                     "epochs":  6,
+                     "batch_races":  512,
+                     "threads":  8
+                 },
+    "development_folds":  [
+                              "d6",
+                              "d7",
+                              "d8"
+                          ],
+    "gate":  {
+                 "ensemble_each_fold_logloss_delta_below_zero":  true,
+                 "pooled_daily_bootstrap_ci95_upper_below_zero":  true,
+                 "all_component_metrics_reported":  true
+             },
+    "decision":  "Reject on any non-improving fold; no component or weight selection after a fold is opened.",
+    "exact_feature_mapping":  {
+                                  "common_availability":  {
+                                                              "runner_numeric":  [
+                                                                                     "start_st_missing",
+                                                                                     "prev_st_missing"
+                                                                                 ],
+                                                              "race_numeric":  [
+                                                                                   "deadline_missing",
+                                                                                   "wind_dir_missing",
+                                                                                   "exhibition_coverage",
+                                                                                   "start_st_coverage"
+                                                                               ]
+                                                          },
+                                  "long_term":  {
+                                                    "runner_numeric_rules":  [
+                                                                                 "age",
+                                                                                 "weight_kg",
+                                                                                 "grade_ord",
+                                                                                 "national_*",
+                                                                                 "local_*",
+                                                                                 "term_*",
+                                                                                 "hist_*",
+                                                                                 "racer_venue_*",
+                                                                                 "racer_lane_*",
+                                                                                 "venue_lane_*",
+                                                                                 "venue_race_lane_*",
+                                                                                 "motor_top2_rate_snapshot",
+                                                                                 "boat_top2_rate_snapshot",
+                                                                                 "rel_grade_*",
+                                                                                 "rel_national_*",
+                                                                                 "rel_local_*",
+                                                                                 "rel_term_*",
+                                                                                 "rel_hist_*",
+                                                                                 "rel_racer_venue_*",
+                                                                                 "rel_venue_lane_*",
+                                                                                 "rel_venue_race_lane_*",
+                                                                                 "rel_motor_*",
+                                                                                 "rel_boat_*"
+                                                                             ],
+                                                    "runner_categories":  [
+                                                                              "racer_code",
+                                                                              "branch_code",
+                                                                              "venue_motor_code",
+                                                                              "venue_boat_code"
+                                                                          ],
+                                                    "race_numeric":  [
+
+                                                                     ],
+                                                    "race_categories":  [
+
+                                                                        ]
+                                                },
+                                  "recent_form":  {
+                                                      "runner_numeric_rules":  [
+                                                                                   "recent5_*",
+                                                                                   "recent10_*",
+                                                                                   "recent20_*",
+                                                                                   "body_weight_kg",
+                                                                                   "adjust_weight_kg",
+                                                                                   "exhibition_time",
+                                                                                   "tilt",
+                                                                                   "propeller_new",
+                                                                                   "parts_count",
+                                                                                   "part_*",
+                                                                                   "start_st",
+                                                                                   "start_st_f",
+                                                                                   "start_st_l",
+                                                                                   "start_display_left_pct",
+                                                                                   "rel_recent*",
+                                                                                   "rel_body_weight_*",
+                                                                                   "rel_exhibition_*",
+                                                                                   "rel_tilt_*",
+                                                                                   "rel_start_st_*",
+                                                                                   "rel_start_display_*"
+                                                                               ],
+                                                      "runner_categories":  [
+                                                                                "racer_code",
+                                                                                "branch_code"
+                                                                            ],
+                                                      "race_numeric":  [
+                                                                           "temperature_c",
+                                                                           "wind_speed_m",
+                                                                           "wind_dir_sin",
+                                                                           "wind_dir_cos",
+                                                                           "water_temp_c",
+                                                                           "wave_cm",
+                                                                           "exhibition_spread",
+                                                                           "start_st_spread"
+                                                                       ],
+                                                      "race_categories":  [
+                                                                              "weather_code"
+                                                                          ]
+                                                  },
+                                  "meeting_state":  {
+                                                        "runner_numeric_rules":  [
+                                                                                     "single_race_day",
+                                                                                     "hayami_race_no",
+                                                                                     "prev_*",
+                                                                                     "motor_top2_rate_snapshot",
+                                                                                     "boat_top2_rate_snapshot",
+                                                                                     "body_weight_kg",
+                                                                                     "adjust_weight_kg",
+                                                                                     "exhibition_time",
+                                                                                     "tilt",
+                                                                                     "propeller_new",
+                                                                                     "parts_count",
+                                                                                     "part_*",
+                                                                                     "start_st",
+                                                                                     "start_st_f",
+                                                                                     "start_st_l",
+                                                                                     "start_display_left_pct",
+                                                                                     "rel_motor_*",
+                                                                                     "rel_boat_*",
+                                                                                     "rel_body_weight_*",
+                                                                                     "rel_exhibition_*",
+                                                                                     "rel_tilt_*",
+                                                                                     "rel_start_st_*",
+                                                                                     "rel_start_display_*"
+                                                                                 ],
+                                                        "runner_categories":  [
+                                                                                  "racer_code",
+                                                                                  "branch_code",
+                                                                                  "venue_motor_code",
+                                                                                  "venue_boat_code"
+                                                                              ],
+                                                        "race_numeric":  [
+                                                                             "race_no",
+                                                                             "exhibition_spread",
+                                                                             "start_st_spread"
+                                                                         ],
+                                                        "race_categories":  [
+                                                                                "venue_code_cat"
+                                                                            ]
+                                                    },
+                                  "mask_policy":  "all unspecified numeric features are set to their fold-training normalized mean (zero); all unspecified categorical features are set to unknown category 0; common availability features are retained in every component; skill sidecar features are retained only in long_term because they represent long-horizon opponent-adjusted ability"
+                              },
+    "bootstrap":  {
+                      "samples":  5000,
+                      "development_seed":  25851
+                  }
+}

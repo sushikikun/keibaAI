@@ -1,0 +1,10 @@
+{
+  "final_lock_guard_revalidated": true,
+  "final_lock_sealed": true,
+  "final_lock_unlock_zero": true,
+  "passed": true,
+  "performance_viewed": false,
+  "registry_event_count": 0,
+  "split_guard_revalidated": true,
+  "unlock_count": 0
+}

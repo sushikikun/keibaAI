@@ -1,0 +1,14 @@
+operation,fit_scope,apply_scope,status,leakage_if_global,notes
+numeric scaling,train_only,inference_transform_only,deferred,True,
+median/mean imputation,train_only,inference_transform_only,deferred,True,
+category vocabulary,train_only,inference_transform_only,deferred,True,
+one-hot encoding,train_only,inference_transform_only,deferred,True,
+target encoding,train_only,inference_transform_only,deferred,True,target encoding uses train OOF and train-fit map only
+frequency encoding,train_only,inference_transform_only,deferred,True,
+PCA,train_only,inference_transform_only,deferred,True,
+feature selection,train_only,inference_transform_only,deferred,True,
+learned exhibition expectation,train_only,inference_transform_only,deferred,True,
+learned player skill,train_only,inference_transform_only,deferred,True,
+learned motor skill,train_only,inference_transform_only,deferred,True,
+learned venue-day state,train_only,inference_transform_only,deferred,True,
+probability calibration,calibration_only,calibration_only,deferred,True,

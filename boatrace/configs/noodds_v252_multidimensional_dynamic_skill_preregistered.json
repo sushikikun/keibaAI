@@ -1,0 +1,75 @@
+{
+  "model_id": "noodds_raw_v252_multidimensional_dynamic_skill_ar",
+  "status": "preregistered_before_predictions",
+  "frozen_at": "2026-07-13T01:05:00+09:00",
+  "hypothesis": "Separate causal online ratings for win, top-two, top-three, start timing, and exhibition timing expose dynamic racer abilities hidden by a single overall finish-order rating.",
+  "policy": {
+    "odds_used": false,
+    "payout_used": false,
+    "same_day_results_used": false,
+    "all_same_day_features_frozen_before_updates": true,
+    "future_results_used": false,
+    "rating_parameter_search": false,
+    "feature_search": false,
+    "blend_weight_search": false,
+    "paired_seed_control": true,
+    "periods_through_20260711_ineligible_for_final_confirmation": true
+  },
+  "dataset": {
+    "path": "results/noodds_raw_v200/dataset",
+    "races": 72646,
+    "date_range": ["2024-10-27", "2026-07-01"],
+    "manifest_sha256": "4283dc0d06981f7292ec18e8d7496cf651efbce5f4c81cb367ec940af5949266"
+  },
+  "rating_dimensions": [
+    {"name": "win", "update_ranks": "winner rank 0; other five tied rank 1"},
+    {"name": "top2", "update_ranks": "first two tied rank 0; other four tied rank 1"},
+    {"name": "top3", "update_ranks": "first three tied rank 0; other three tied rank 1"},
+    {"name": "start", "update_ranks": "ascending observed start_st with exact ties; skip unless all six finite"},
+    {"name": "exhibition", "update_ranks": "ascending observed exhibition_time with exact ties; skip unless all six finite"}
+  ],
+  "rating_model": {
+    "library": "openskill",
+    "model": "PlackettLuce",
+    "parameters": "library defaults",
+    "initial_mu": 25.0,
+    "initial_sigma": 8.333333333333334,
+    "per_dimension_features": [
+      "mu", "sigma", "ordinal", "starts_log",
+      "relative_ordinal_diff", "relative_ordinal_z", "relative_ordinal_rank"
+    ],
+    "total_new_features": 35,
+    "start_st_source_runner_feature": 67,
+    "exhibition_time_source_runner_feature": 55
+  },
+  "architecture": {
+    "base": "v243 identity autoregressive Transformer",
+    "existing_skill_sidecar": "results/noodds_raw_v200/openskill_sidecar_v242_tieaware",
+    "new_skill_sidecar": "results/noodds_raw_v200/multidimensional_skill_sidecar_v252",
+    "inference": "exact enumeration of all 120 ordered top-three outcomes"
+  },
+  "training": {
+    "epochs": 6,
+    "batch_races": 512,
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1,
+    "seed": 24301,
+    "threads": 8,
+    "parameter_search": false
+  },
+  "baseline": {
+    "model_id": "noodds_raw_v243_identity_autoregressive_transformer",
+    "probability_source": "standalone",
+    "same_seed": 24301
+  },
+  "development_folds": ["d6", "d7", "d8"],
+  "development_gate": {
+    "v252_minus_v243_log_loss_below_zero_in_every_fold": true,
+    "pooled_daily_cluster_bootstrap_ci95_upper_below_zero": true
+  },
+  "legacy_d9": {"open_only_after_development_gate": true, "confirmation_role": "diagnostic_only"},
+  "bootstrap": {"unit": "race_date", "samples": 20000, "development_seed": 25218, "legacy_seed": 25209},
+  "decision": "Reject immediately after any development fold fails. Passing still requires prospective confirmation after 2026-07-11 and market comparison."
+}

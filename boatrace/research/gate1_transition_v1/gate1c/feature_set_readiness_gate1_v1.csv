@@ -1,0 +1,8 @@
+feature_set_id,feature_set_name,current_status,source_universe,point_in_time_status,materialized,blocked_by,programs_using,next_gate_action
+F0_safe_core_49,Frozen safe-core 49,ready_materialized,Gate1B snapshot,pass,true,,CDP-A01;CDP-A02;CDP-A03;CDP-A05;CDP-A06;CDP-A07;CDP-A08,No training until Gate2
+F1_asof_racer_history,As-of racer history,ready_after_asof_feature_materialization,U0,pass,false,as_of_materialization_not_created,CDP-A01;CDP-A06,Materialize after temporal contract
+F2_asof_equipment_history_verified_scope,Verified equipment history,partial_equipment_scope,U3 overlay,pass,false,A/B only; C/D unresolved,CDP-A04;CDP-A05;CDP-A07,Limit to verified sidecar
+F3_relative_race_features,Relative race features,not_materialized,U0,pass,false,feature materialization deferred,CDP-A02;CDP-A03;CDP-A08,Gate2 design only
+F4_auxiliary_target_training,Auxiliary targets,ready_auxiliary_only,U2,pass,true,training authorization false,CDP-A09;CDP-A10;CDP-A11;CDP-A12,Auxiliary-only planning
+F5_temporal_verified_features,Temporal verified features,blocked_by_temporal_provenance,U4,pass,false,same-day disabled; meeting evidence absent,CDP-A01;CDP-A12,Collect provenance first
+F6_external_or_late_stage,External/late-stage features,blocked,external/late-stage,not_applicable,false,external evidence or late-stage gate,CDP-A15;CDP-A13;CDP-A14,No Gate1 materialization

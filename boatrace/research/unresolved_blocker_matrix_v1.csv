@@ -1,0 +1,12 @@
+status,eligible_for_model_training,purpose,blocker_id,blocker,hypothesis_ids,current_state,resolution_evidence,external_action_required,blocking_gate,silent_fallback_allowed
+provisional,false,policy_execution_validation,B001,motor_generation_boundary_missing,H004;H005;H006;H007;H021;H033,unresolved,official A/B motor start/boundary evidence,true,Gate1,false
+provisional,false,policy_execution_validation,B002,boat_generation_boundary_missing,H004;H005;H006;H021;H033,unresolved,official A/B boat start/boundary evidence,true,Gate1,false
+provisional,false,policy_execution_validation,B003,meeting_episode_not_materialized,H005;H007;H013;H014;H021,unresolved,run policy v1 on final snapshot and resolve all exceptions,false,Gate1,false
+provisional,false,policy_execution_validation,B004,same_day_semantic_provenance_pending,H006;H014;H021,unresolved,approve timestamp/semantic-confirmed rows only,false,Gate1,false
+provisional,false,policy_execution_validation,B005,official_window_primary_spec_not_archived,H001;H003;H005;H012,unresolved,archive authoritative aggregation-window source,true,Gate1,false
+provisional,false,policy_execution_validation,B006,subtitle_manual_review_pending,H003;H022,unresolved,review queue by cumulative race coverage and freeze taxonomy version,false,Gate1,false
+provisional,false,policy_execution_validation,B007,venue_allocation_rollout_dates_unknown,H033,unresolved,venue-specific official rollout evidence; provenance only,true,late,false
+provisional,false,policy_execution_validation,B008,candidate_corpus_below_200000,H001-H033,unresolved,continue collection and freeze final snapshot after threshold,false,Gate1,false
+provisional,false,policy_execution_validation,B009,original_exhibition_artifact_absent,H032,unresolved,authorized acquisition and PIT audit,true,late,false
+provisional,false,policy_execution_validation,B010,exhibition_video_absent,H031,unresolved,"authorized acquisition, rights, retention and PIT audit",true,late,false
+provisional,false,policy_execution_validation,B011,official_text_extraction_not_audited,H030,unresolved,inventory local official HTML and validate cutoff semantics,false,late,false

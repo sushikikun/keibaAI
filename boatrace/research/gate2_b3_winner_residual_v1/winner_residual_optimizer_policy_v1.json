@@ -1,0 +1,14 @@
+{
+  "artifact": "winner_residual_optimizer_policy_v1",
+  "method": "L-BFGS-B",
+  "maxiter": 200,
+  "maxls": 40,
+  "ftol": 1e-10,
+  "gtol": 1e-6,
+  "lambda_grid": [0.01, 0.1, 1, 10, 100],
+  "selection_metric": "raw trifecta log loss",
+  "chunk_size": 1024,
+  "hard_stop_available_memory_mib": 512,
+  "warning_available_memory_mib": 1024,
+  "status": "resource_blocked"
+}

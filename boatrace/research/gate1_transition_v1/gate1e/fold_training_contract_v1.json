@@ -1,0 +1,12 @@
+{
+  "evaluation_never_enters_fit": true,
+  "fit_order": [
+    "train_only_fit",
+    "selection",
+    "train_plus_selection_refit",
+    "calibration",
+    "evaluation"
+  ],
+  "per_fold_isolation": true,
+  "raw_model_unchanged_after_refit": true
+}

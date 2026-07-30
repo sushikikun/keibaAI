@@ -1,0 +1,157 @@
+{
+  "manifest_id": "boatrace_research_design_manifest_v2",
+  "created_at": "2026-07-28T00:00:00+09:00",
+  "package_root": "research",
+  "status": "validated_design_only",
+  "evaluation_contract": "boatrace_model_evaluation_v1_1",
+  "class_map_mapping_sha256": "e5b36e44602700d1c50cbd2c839a20328fcc317abc0c7de8388ed1b91d410f50",
+  "input_immutability": {
+    "anchors_before": {
+      "configs/boatrace_model_evaluation_v1_1.json": "2347e7e0467bad64084eff01844b314d0e2533e3131f73816295fec8563e535e",
+      "configs/boatrace_model_dataset_contract_v1.json": "ca9eeb4d3623c21cde1f672aebe0b4767871fdcc174cdbfcaf4eeec4b9d7b9d1",
+      "configs/trifecta_class_map_v1.json": "273c728e2240531188ff7458e90d745a0af54b6a55b52e1916038186fdcb5446",
+      "configs/boatrace_model_outcome_audit_v0_1.json": "fcac3fa170032772f7b003411f2be621e61a8f61015ed31ace1508f6a4ad4637",
+      "results/boatrace_complete_corpus/status.json": "1f2f365be43102d80387d22ff2a8d5efd4b533d55fbcfedded1ab284aaa94a88",
+      "results/boatrace_complete_corpus/integrity_registry.sqlite": "3449eb32b1ad71fe13f75a53b289c6d186ad75d583413c10d21133740fc917e7",
+      "results/boatrace_model_research/snapshots/research_v0_136183_55f32b3538a9/dataset_manifest.json": "a59854ae6691c7e0875fddad45211d1cf4acb47458132d5c17a7e506ee396af0",
+      "results/boatrace_model_research/snapshots/research_v0_1_148956_b69fb714835e/dataset_manifest.json": "225882760ae06efe4e8363cea4e4a1e919d74ed848be29e572ab1617fa6f5ae5",
+      "results/boatrace_model_research/audits/research_v0_1/audit_manifest.json": "7b8ec5419b0d31f3bb69ec87011407307ecd3131cec18f66e53a3be4794ce219"
+    },
+    "anchors_after": {
+      "configs/boatrace_model_evaluation_v1_1.json": "2347e7e0467bad64084eff01844b314d0e2533e3131f73816295fec8563e535e",
+      "configs/boatrace_model_dataset_contract_v1.json": "ca9eeb4d3623c21cde1f672aebe0b4767871fdcc174cdbfcaf4eeec4b9d7b9d1",
+      "configs/trifecta_class_map_v1.json": "273c728e2240531188ff7458e90d745a0af54b6a55b52e1916038186fdcb5446",
+      "configs/boatrace_model_outcome_audit_v0_1.json": "fcac3fa170032772f7b003411f2be621e61a8f61015ed31ace1508f6a4ad4637",
+      "results/boatrace_complete_corpus/status.json": "1f2f365be43102d80387d22ff2a8d5efd4b533d55fbcfedded1ab284aaa94a88",
+      "results/boatrace_complete_corpus/integrity_registry.sqlite": "3449eb32b1ad71fe13f75a53b289c6d186ad75d583413c10d21133740fc917e7",
+      "results/boatrace_model_research/snapshots/research_v0_136183_55f32b3538a9/dataset_manifest.json": "a59854ae6691c7e0875fddad45211d1cf4acb47458132d5c17a7e506ee396af0",
+      "results/boatrace_model_research/snapshots/research_v0_1_148956_b69fb714835e/dataset_manifest.json": "225882760ae06efe4e8363cea4e4a1e919d74ed848be29e572ab1617fa6f5ae5",
+      "results/boatrace_model_research/audits/research_v0_1/audit_manifest.json": "7b8ec5419b0d31f3bb69ec87011407307ecd3131cec18f66e53a3be4794ce219"
+    },
+    "changed_anchors": [],
+    "result": "pass"
+  },
+  "artifacts": [
+    {
+      "path": "research/core_decision_experiments_v1.json",
+      "bytes": 28115,
+      "sha256": "f91a35e448b7b0b10ed78dc2437de4f8d9b678bf9a1883218c5d11a859ea569c"
+    },
+    {
+      "path": "research/data_gap_matrix_v1.csv",
+      "bytes": 9178,
+      "sha256": "70a6710ff2ae7e483f6194d15766b59a5a176d0da98c280c0072b275e1d45127"
+    },
+    {
+      "path": "research/data_source_registry_v1.json",
+      "bytes": 7662,
+      "sha256": "31411a7afc7ed52367d5bf307454325aac5bbe9cda402e100701e1426f0b1a6c"
+    },
+    {
+      "path": "research/feature_research_map_v1.csv",
+      "bytes": 32543,
+      "sha256": "94c6f51dc76ac92d0332019c1b2905afe878ac493f92abe6e7a8767899836fd0"
+    },
+    {
+      "path": "research/hypothesis_dependency_graph_v1.json",
+      "bytes": 9146,
+      "sha256": "0e88440a82ee6efcf8de5c686f78f085bf5fa6593d3601febce43379456f8d1a"
+    },
+    {
+      "path": "research/hypothesis_registry_v2.json",
+      "bytes": 99473,
+      "sha256": "76b8573b8ee4bce69b23c0dcf789d80894a26cbc21d201ac96f6e37911f2fe83"
+    },
+    {
+      "path": "research/hypothesis_registry_v2.md",
+      "bytes": 21216,
+      "sha256": "7dc8c0ced312a9880631eda9f489cc9c8092001c3bcb4fb056d9e53a7d127060"
+    },
+    {
+      "path": "research/model_family_specs/autoregressive_top3.md",
+      "bytes": 1732,
+      "sha256": "227162e0ebe1f76ee2b3f2e5769aa4ba3b36fc9e9f6707d70426b859cedd41cf"
+    },
+    {
+      "path": "research/model_family_specs/catboost_120.md",
+      "bytes": 1844,
+      "sha256": "6b03dba241fde183b25701da5b0d9d6931ef5e91b0638b5e4bd3fdfaf5047ff9"
+    },
+    {
+      "path": "research/model_family_specs/dynamic_entity_strength.md",
+      "bytes": 1849,
+      "sha256": "c23617295b9d576f3c2c0e2be7576318695c9c37a2f42d37d1aca0b46ce29792"
+    },
+    {
+      "path": "research/model_family_specs/latent_race_process.md",
+      "bytes": 1713,
+      "sha256": "4b701e915ce43ca7126600e3b42ca3ee84ad32cb5bab1acdb5956a2f05021a5e"
+    },
+    {
+      "path": "research/model_family_specs/probability_ensemble.md",
+      "bytes": 1661,
+      "sha256": "1225285b638b6b9f2817787593cb043770a258eb3c0fc14666cb1d4c73c28af1"
+    },
+    {
+      "path": "research/model_family_specs/relational_triple_scorer.md",
+      "bytes": 1620,
+      "sha256": "45d56bd97613da9d641a640429ff47ec8d90ab74a6e29f8485185f9fd12e0edc"
+    },
+    {
+      "path": "research/pre_research_readiness_report_v1.json",
+      "bytes": 8708,
+      "sha256": "a68b0fa216320dc1b507b85edcc8461f21b42725d7e032d02afc6fabcf97004f"
+    },
+    {
+      "path": "research/research_design_validation_v2.json",
+      "bytes": 630,
+      "sha256": "791020cb664a4766db2df2b389e5427e68e6d2635e7b8b80fe8435ecd2a4a405"
+    },
+    {
+      "path": "research/research_stage_gates_v1.json",
+      "bytes": 3370,
+      "sha256": "14a6ff0d945c4df4779a0a5c1a2d8f3def126d0b962fa570920743b0a7a274ed"
+    }
+  ],
+  "implementation_files": [
+    {
+      "path": "scripts/boatrace_research_design_v2_data.py",
+      "bytes": 20137,
+      "sha256": "55c8a1c628ad641f8339627743b4bc952e0ffb64af713e8feead5fe66a65518c"
+    },
+    {
+      "path": "scripts/build_boatrace_research_design_v2.py",
+      "bytes": 27214,
+      "sha256": "e6066b866973f57f8cf08481b72858791a62502a996f945de9c28df3c1ebd65f"
+    },
+    {
+      "path": "scripts/build_boatrace_research_design_v2_package.py",
+      "bytes": 51543,
+      "sha256": "5fa4bee6cc3a58f75e72bb14e30d953312531e11086a72457faeb5d7c2d657f2"
+    },
+    {
+      "path": "scripts/finalize_boatrace_research_design_v2_manifest.py",
+      "bytes": 1262,
+      "sha256": "8e5c9f3d47db607ecd3a3f3e781e0f86820f4e8966b8fa01f9b3781d87a23efc"
+    },
+    {
+      "path": "scripts/generate_boatrace_research_design_v2.py",
+      "bytes": 558,
+      "sha256": "b446f9cdf09b8aa2b3a52ac3e7657abc745598dcead4ec00d98e469faeba4f9e"
+    },
+    {
+      "path": "tests/test_boatrace_research_design_v2.py",
+      "bytes": 4623,
+      "sha256": "140656af1c56873ee2bd9c96e71564b2daaf1fbe55369d2d738a964217ccabb2"
+    }
+  ],
+  "external_actions": {
+    "external_data_acquired": false,
+    "dependencies_installed": false,
+    "model_training_run": false,
+    "temporary_metrics_computed": false,
+    "commit_or_push": false
+  },
+  "self_hash_policy": "manifest excludes its own file hash to avoid recursive self-reference; all other generated artifacts and all implementation files are hashed",
+  "artifact_set_sha256": "84b027029facfccd8a54733dfe8017060b154e7e4c993e63029f38d4fbc694a0"
+}

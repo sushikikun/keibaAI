@@ -1,0 +1,10 @@
+{
+  "model_id":"noodds_v359_hierarchical_venue_scenario_experts","frozen_before_evaluation":true,
+  "hypothesis":"Venue-specific water and course-taking regimes change how latent course/ST scenarios map to ordered finishes; hierarchical shrinkage can capture these differences without fitting 24 independent models.",
+  "features":["six expected actual-course probabilities","expected lane-course movement","predicted actual ST"],
+  "model":"v312-anchored shared stage utilities plus 24 venue-specific stage utility experts",
+  "selection":{"shared_l2":0.1,"venue_l2_grid":[0.3,1.0,3.0,10.0],"bounds":[-0.2,0.2],"max_iterations":100},
+  "rolling":{"d9":{"core":["d6","d7"],"selection":"d8"},"d10":{"core":["d6","d7","d8"],"selection":"d9"},"d11":{"core":["d6","d7","d8","d9"],"selection":"d10"}},
+  "goal":{"period":"2026-05-01 through 2026-07-17","intermediate_below":3.7,"final_below":3.6892},
+  "policy":{"odds_used":false,"payout_used":false,"same_day_results_used":false,"future_data_used":false,"target_actual_course_or_st_used":false,"post_result_hyperparameter_change":false}
+}

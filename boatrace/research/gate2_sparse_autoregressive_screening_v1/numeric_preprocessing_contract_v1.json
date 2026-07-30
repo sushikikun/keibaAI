@@ -1,0 +1,6 @@
+{
+    "imputer":  "SimpleImputer(strategy=median,add_indicator=true)",
+    "scaler":  "StandardScaler(with_mean=false)",
+    "fit_scope":  "train-only",
+    "dtype":  "float64"
+}

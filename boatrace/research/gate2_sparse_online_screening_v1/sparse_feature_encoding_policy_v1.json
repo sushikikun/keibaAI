@@ -1,0 +1,9 @@
+{
+  "alternate_sign": false,
+  "categorical_missing": "__MISSING__",
+  "chunk_size": 4096,
+  "dense_conversion_zero": true,
+  "dtype": "float64",
+  "input_type": "string",
+  "n_features": 131072
+}

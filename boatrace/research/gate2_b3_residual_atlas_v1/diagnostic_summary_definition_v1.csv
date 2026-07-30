@@ -1,0 +1,3 @@
+summary_id,definition,source
+S01,"per-race B3 raw/calibrated loss, rank, hits, stage losses, taxonomy, B3 deltas",existing baseline predictions and target snapshot
+S02,feature-family error profile by fold and support,Gate1-B/Gate1-D source-of-truth fields

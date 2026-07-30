@@ -1,0 +1,45 @@
+{
+  "model_id": "noodds_v360_multitask_embedding_residual",
+  "split": {
+    "teacher_end": "2026-04-23",
+    "selection_days": 30
+  },
+  "architecture": {
+    "width": 48,
+    "heads": 4,
+    "feedforward": 96,
+    "layers": 2,
+    "dropout": 0.08
+  },
+  "training": {
+    "seed": 360,
+    "threads": 6,
+    "batch_races": 512,
+    "learning_rate": 0.0007,
+    "weight_decay": 0.0001,
+    "max_epochs": 30,
+    "patience": 5,
+    "minimum_improvement": 0.00005,
+    "finish_weight": 1.0,
+    "course_weight": 0.20,
+    "st_weight": 3.0,
+    "technique_weight": 0.12
+  },
+  "residual": {
+    "l2_grid": [0.003, 0.01, 0.03, 0.1],
+    "coefficient_bound": 0.15,
+    "max_iterations": 100
+  },
+  "stopping": {
+    "continue_if_target_delta_below": -0.002,
+    "final_target_logloss_below": 3.6892,
+    "intermediate_logloss_below": 3.7000
+  },
+  "policy": {
+    "odds_used": false,
+    "payout_used": false,
+    "future_information_used": false,
+    "same_day_results_used": false,
+    "actual_course_st_technique_are_teacher_only": true
+  }
+}

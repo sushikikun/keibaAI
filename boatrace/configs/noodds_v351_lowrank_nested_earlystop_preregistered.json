@@ -1,0 +1,14 @@
+{
+  "created_at": "2026-07-19T00:38:00+09:00",
+  "model_id": "noodds_v351_lowrank_nested_earlystop",
+  "frozen_before_evaluation": true,
+  "hypothesis": "The v350 failure was caused by 120 unconstrained residual logits and training-loss-driven overfit. A three-stage lane-utility residual with nested chronological model selection can retain nonlinear six-runner interactions while reverting exactly to v312 when no validation gain exists.",
+  "architecture": {"width":48,"heads":4,"layers":1,"feedforward":128,"dropout":0.2,"output":"three lane utilities mapped to 120 permutations","initialization":"zero residual equals v312"},
+  "training": {"max_epochs":30,"patience":4,"minimum_improvement":0.00005,"batch_races":512,"learning_rate":0.0002,"weight_decay":0.01,"gradient_clip":1.0,"threads":4,"seed":35101,"d10_core_train":["d6","d7","d8"],"d10_selection":"d9","d11_core_train":["d6","d7","d8","d9"],"d11_selection":"d10","selection_rule":"lowest chronological selection-block logloss, including epoch zero v312"},
+  "features": {"runner":"same current-data-only runner inputs as v350 including 33 actual-course/ST/technique history features","race":"same current-data-only race inputs as v350","history_policy":"strictly prior race date only"},
+  "large_improvement": {"absolute_logloss_delta_at_most":-0.01,"additional_gates":["D10 delta below zero","D11 delta below zero","pooled bootstrap CI95 upper below zero","pooled one-sided daily Wilcoxon p below 0.05"]},
+  "policy": {"odds_used":false,"payout_used":false,"same_day_results_used_for_features":false,"future_data_used":false,"current_dataset_only":true,"post_result_hyperparameter_change":false},
+  "inputs_sha256": {
+    "dev_d6":"5795EC88148C86B79CE997176D9EA76D7F1B8273188CEE8913CFB2658A82E5F7","dev_d7":"330828BDDE0178FE90FCDA6B664A95482ACE9439DBE4C0E2F12A05C6284D6848","dev_d8":"008C950EC1B3946F53343A43EA110E21CB3785AE8D29D09A91490FE8C39DA9F6","d9":"5F11A640BADDBE6CF3D10F54F15A75C31C1EFE1042C7113331136F110D4A2495","d10":"3BB86204F13FC964DFD6027098AA94A4720B224934968AE883D69E53F2BBD986","d11":"371CA4E8D59F63E0201DF248B9875B1CB5A005B5BAD951A9522BB771E4F9AA8D","runner":"DF3736FBCF99853E69930858C1C3D91938DE486E41AAFB83DD4D1E167C80D075","race":"E9827A514F16621A39F49AD773A294F54B6F028175F8ED9204FC52C49E73F0E8","course_runner":"4B5DD4D57DAF510E87A1C92AB117165C2E85273580D6E01F21ADA54DF47CBEDC","course_race":"5FC8120AFA535C1B1A89F2B6F66B38B406735994A8B7DA91597D4640B939E2CB","history":"B6CA666DFDB4EF9CF6E5E8C40B2155EF37EA781970CDAFCB6947D4F040FC07CE"
+  }
+}

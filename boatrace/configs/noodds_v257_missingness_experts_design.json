@@ -1,0 +1,52 @@
+{
+    "model_id":  "noodds_raw_v257_missingness_experts_ar",
+    "status":  "design_frozen_before_predictions",
+    "frozen_at":  "2026-07-13T10:02:04+09:00",
+    "policy":  {
+                   "odds_used":  false,
+                   "payout_used":  false,
+                   "parameter_search":  false,
+                   "posthoc_missingness_filter":  false
+               },
+    "experts":  [
+                    "complete_beforeinfo",
+                    "partial_beforeinfo",
+                    "preinfo_only"
+                ],
+    "routing":  {
+                    "complete":  "exhibition and start-ST coverage both 1.0",
+                    "partial":  "all remaining mixed or partial coverage states",
+                    "preinfo_only":  "both coverages are 0"
+                },
+    "training_augmentation":  {
+                                  "complete_beforeinfo":  "retain the observed feature tensor without fabricating unavailable values",
+                                  "partial_beforeinfo":  "mask exhibition_time on lanes 1/3/5 and start_st/start_st_f/start_st_l on lanes 2/4/6; mask all race-relative exhibition/ST features because their six-lane context is incomplete; set masked start_st_missing to 1; set both coverage features to 0.5 and both spread features missing",
+                                  "preinfo_only":  "mask body_weight_kg, adjust_weight_kg, exhibition_time, tilt, propeller_new, parts_count, all part_* fields, start_st/start_st_f/start_st_l/start_display_left_pct and all corresponding race-relative features on every lane; set start_st_missing to 1, both coverage features to 0, and both spread features missing",
+                                  "normalization":  "fit once on fold-training observed data; a masked continuous value is represented by the normalized training mean (zero), while explicit missingness and coverage flags use their normalized target values"
+                              },
+    "architecture":  "shared v251 identity encoder plus three probability heads; only the routed head contributes at inference",
+    "loss":  "equal mean of exact top3 NLL across the three deterministic views",
+    "baseline":  "v251 using existing mean-imputation and missing indicators",
+    "training":  {
+                     "seed":  25701,
+                     "pretrain_epochs":  3,
+                     "epochs":  6,
+                     "batch_races":  384,
+                     "threads":  8
+                 },
+    "development_folds":  [
+                              "d6",
+                              "d7",
+                              "d8"
+                          ],
+    "gate":  {
+                 "overall_each_fold_logloss_delta_below_zero":  true,
+                 "pooled_daily_bootstrap_ci95_upper_below_zero":  true,
+                 "report_each_missingness_segment_without_using_it_as_a_filter":  true
+             },
+    "decision":  "Reject on overall development failure; segment results cannot rescue the candidate.",
+    "bootstrap":  {
+                      "samples":  5000,
+                      "development_seed":  25751
+                  }
+}

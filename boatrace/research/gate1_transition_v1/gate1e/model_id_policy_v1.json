@@ -1,0 +1,4 @@
+{
+  "config_hash_required": true,
+  "formula": "model_family + '_' + experiment_id"
+}

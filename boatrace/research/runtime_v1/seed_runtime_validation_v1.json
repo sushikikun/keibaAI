@@ -1,0 +1,22 @@
+{
+  "best_seed_post_selection_forbidden": true,
+  "deterministic": true,
+  "formula": "uint32(SHA256(dataset_manifest_sha256 + split_manifest_sha256 + experiment_id + replicate_index)[:8])",
+  "tests": [
+    {
+      "experiment_id": "dry_run_neural",
+      "replicate_index": 0,
+      "seed": 3110297433
+    },
+    {
+      "experiment_id": "dry_run_neural",
+      "replicate_index": 1,
+      "seed": 47781021
+    },
+    {
+      "experiment_id": "dry_run_neural",
+      "replicate_index": 2,
+      "seed": 1498304664
+    }
+  ]
+}

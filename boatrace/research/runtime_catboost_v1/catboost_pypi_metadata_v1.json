@@ -1,0 +1,28 @@
+{
+  "json_url": "https://pypi.org/pypi/catboost/1.2.10/json",
+  "name": "catboost",
+  "optional_extras_excluded": [
+    "widget"
+  ],
+  "requires_dist": [
+    "graphviz",
+    "matplotlib",
+    "numpy<3.0,>=1.16.0",
+    "pandas<4.0,>=0.24",
+    "scipy",
+    "plotly",
+    "six",
+    "traitlets; extra == \"widget\"",
+    "ipython; extra == \"widget\"",
+    "ipywidgets<9.0,>=7.0; extra == \"widget\""
+  ],
+  "selected_wheel": {
+    "filename": "catboost-1.2.10-cp312-cp312-win_amd64.whl",
+    "sha256": "6b8a7ef11d7a89fc547760cfafeee895011a4b92cc1f60d00235ef80a71158ed",
+    "size": 100214655,
+    "upload_time_iso_8601": "2026-02-18T16:12:20.046541Z",
+    "url": "https://files.pythonhosted.org/packages/93/e2/f467a133b37eef2b3d8697d46a6e7f0da24bd3643f5475817c473ffc41dc/catboost-1.2.10-cp312-cp312-win_amd64.whl"
+  },
+  "source": "https://pypi.org/",
+  "version": "1.2.10"
+}

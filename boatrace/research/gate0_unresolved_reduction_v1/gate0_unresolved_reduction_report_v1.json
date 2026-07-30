@@ -1,0 +1,65 @@
+{
+  "actions_not_run": [
+    "model_training",
+    "log_loss_evaluation",
+    "walk_forward_split",
+    "champion_selection",
+    "external_data_acquisition",
+    "external_web_access",
+    "dependency_installation"
+  ],
+  "eligible_for_model_training": false,
+  "equipment": {
+    "batch_count": 48,
+    "counts_by_equipment_type": {
+      "boat": 24,
+      "motor": 24
+    },
+    "counts_by_priority": {
+      "P0": 48
+    },
+    "eligible_for_model_training": false,
+    "external_evidence_acquired": false,
+    "generation_id_issued_count": 0,
+    "input_equipment_key_count": 3240,
+    "potential_generation_count_policy": "unknown_not_issued for every batch",
+    "purpose": "policy_execution_validation",
+    "status": "provisional"
+  },
+  "formal_model_research_ready": false,
+  "meeting": {
+    "prediction_time_feature_eligible_count": 0,
+    "resolution_status": {
+      "cancellation_or_no_race": 60,
+      "insufficient_local_evidence": 204,
+      "remains_unresolved": 648,
+      "resolved_for_identity_only": 324,
+      "structurally_left_censored": 1032
+    },
+    "scope": {
+      "diagnostic_low_rows": 1044,
+      "unresolved_rows": 2268
+    }
+  },
+  "purpose": "policy_execution_validation",
+  "same_day": {
+    "candidate_rows": 32022,
+    "eligibility_counts": {
+      "audit_match_only_not_feature_eligible": 31532,
+      "not_eligible": 490
+    },
+    "future_leakage_count": 0
+  },
+  "scope": "Gate 0 unresolved-item reduction audit and proposal only",
+  "status": "provisional",
+  "subtitle": {
+    "evidence_confirmed": 0,
+    "evidence_rejected": 0,
+    "fixture_race_count": 148956,
+    "human_confirmation_required": 53,
+    "p0_race_count": 17692,
+    "p0_race_coverage": 0.11877332903676253,
+    "p0_subtitle_values": 53,
+    "remains_ambiguous": 53
+  }
+}

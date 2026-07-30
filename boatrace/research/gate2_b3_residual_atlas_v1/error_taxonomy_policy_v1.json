@@ -1,0 +1,16 @@
+{
+  "classes": [
+    "low_loss_correctly_concentrated",
+    "winner_stage_dominant",
+    "second_stage_dominant_error",
+    "third_stage_dominant_error",
+    "top3_set_correct_order_wrong",
+    "winner_correct_later_order_wrong",
+    "broad_underconfidence",
+    "catastrophic_underweight",
+    "abnormal_tail_failure",
+    "mixed_error"
+  ],
+  "dominance_rule": "stage_loss_share>=0.5; ties by max stage",
+  "unassigned_forbidden": true
+}

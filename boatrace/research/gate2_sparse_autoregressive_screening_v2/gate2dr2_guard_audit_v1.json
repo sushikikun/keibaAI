@@ -1,0 +1,13 @@
+{
+    "confirmation_access":  0,
+    "confirmation_metrics":  0,
+    "final_lock_access":  0,
+    "final_lock_metrics":  0,
+    "final_lock_unlock":  0,
+    "target_fit_access":  0,
+    "calibration_raw_fit_access":  0,
+    "future_history":  0,
+    "sameday_history":  0,
+    "target_in_features":  0,
+    "status":  "verified"
+}

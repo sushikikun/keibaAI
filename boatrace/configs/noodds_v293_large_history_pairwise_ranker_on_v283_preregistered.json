@@ -1,0 +1,88 @@
+{
+  "created_at": "2026-07-15T09:25:00+09:00",
+  "model_id": "noodds_raw_v293_large_history_pairwise_ranker_on_v283",
+  "hypothesis": "Recent residual heads learned from only 4,437 D6 OOF races. A standalone pairwise ranker trained on every strictly prior race can use 50k-plus histories without requiring leaked parent predictions, then contribute a small fixed orthogonal correction to v283.",
+  "frozen_before_run": true,
+  "policy": {
+    "odds_used": false,
+    "payout_used": false,
+    "current_race_result_used": false,
+    "same_day_result_used": false,
+    "future_information_used": false,
+    "posthoc_search": false,
+    "active_parent": "v283_current_meet_form_on_v280"
+  },
+  "inputs": {
+    "v283_d6_sha256": "AB18CD797B7AADF3E2B0F9ED3E01278733015D9715074995F1E5D1AC555DFB49",
+    "v283_d7_sha256": "0BB70312010CA297A04D5FAA109FCBE51F79D89AFB531F616801B61384350FF3",
+    "v283_d8_sha256": "06C05744C38ECD914059CDE39F3A564FB1BF94FAB4035407D322888AD0316228",
+    "targets_sha256": "F71A3F7FF0C652B15C63828E92B77451B62150F8A922AB1732DBDE749C98BE12",
+    "race_dates_sha256": "47FA506F5D1CEA9C15ADBBB14D5A8793069D261B77FCB665069F8346CA21FB9D",
+    "runner_features_sha256": "AB44DFA6B56EA764E38FB46667A5D8C170C7338B3F8AC50A800D0CBE8147463F",
+    "race_features_sha256": "1D228F5420CAD1F6DF2E2325C31CBFAB739DF6DB26CDBA9830134EBCE525C239",
+    "runner_course_features_sha256": "0EA35A8A953C125947464768FB373827C498A54EAF7D72D14534B78C58AEEA59",
+    "race_course_features_sha256": "BAF128CD09B362B461CB4392548F51BF497FDE4BCD856C197FD674C0383B3541",
+    "course_available_sha256": "6CE308FE95919AFD7F212774DBB55CEE804FA4224AB1A01D20BA0CCF11E1E507",
+    "evaluation_protocol_v7_sha256": "1F3659B9F066B823E47C3766132F96E4DC34D2AE66FB45E0F02852878041B90C"
+  },
+  "training_rows": {
+    "full": "all races strictly before each validation fold from fixed fold_indices",
+    "screen": "fixed screen_train_indices from candidate acceleration cache",
+    "pair_labels": "top1 beats the other five, top2 beats the four below it, top3 beats the three outside top3; bottom3 pair order is unknown and omitted",
+    "orientation": "include both directions for every known comparison",
+    "pairs_per_complete_race": 24
+  },
+  "features": {
+    "runner_indices": [4,5,6,7,8,9,10,15,16,17,19,20,21,23,24,26,28,30,32,34,39,41,55,67],
+    "race_indices": [9,10,11,12,13,14,15,16,17,18,19,20],
+    "official_course_runner_width": 5,
+    "official_course_race_width": 4,
+    "pair_projection": "signed runner_i minus runner_j and absolute difference, plus race context",
+    "missing_handling": "LightGBM native missing; official course missing remains sidecar zeros with course_available zero"
+  },
+  "model": {
+    "library": "LightGBM binary classifier",
+    "n_estimators_full": 300,
+    "n_estimators_screen": 102,
+    "learning_rate": 0.03,
+    "num_leaves": 15,
+    "max_depth": 4,
+    "min_child_samples": 1000,
+    "reg_alpha": 2.0,
+    "reg_lambda": 20.0,
+    "max_bin": 63,
+    "feature_fraction": 0.8,
+    "bagging_fraction": 0.8,
+    "bagging_freq": 1,
+    "seed": 29301,
+    "threads": 4
+  },
+  "prediction": {
+    "pair_probability_clip": [0.001, 0.999],
+    "runner_score": "mean opponent logit P(runner_i beats runner_j), centered across six runners",
+    "candidate_residual": "0.15 * (1.0*score[first] + 0.5*score[second] + 0.25*score[third])",
+    "fixed_scale": 0.15,
+    "position_weights": [1.0,0.5,0.25],
+    "temperature_search": false,
+    "blend_search": false
+  },
+  "screen": {
+    "protocol": "configs/noodds_candidate_acceleration_v2.json",
+    "fixed_indices": true,
+    "futility_only": true
+  },
+  "final_protocol": "configs/noodds_evaluation_protocol_v7.json",
+  "promotion_requires": "mean delta versus v283 below zero, race-date bootstrap CI95 upper below zero, and v283 child-family Holm-adjusted p below 0.05",
+  "forbidden": [
+    "odds",
+    "payout",
+    "bottom3 invented ordering",
+    "same-day validation labels",
+    "future labels",
+    "feature search",
+    "scale search",
+    "position-weight search",
+    "post-result parameter changes"
+  ],
+  "difference_from_v292": "v292 fit a parent residual on only prior OOF folds. v293 learns an independent comparison model from all strictly prior raw races and uses v283 only at prediction time."
+}

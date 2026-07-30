@@ -1,0 +1,63 @@
+{
+  "model_id": "noodds_raw_v250_latent_regime_moe_ar",
+  "status": "preregistered_before_predictions",
+  "frozen_at": "2026-07-12T08:37:00+09:00",
+  "hypothesis": "A softly gated mixture of race-regime experts can model heterogeneous inside-dominant, start-driven, and upset dynamics without post-hoc hand segmentation.",
+  "policy": {
+    "odds_used": false,
+    "payout_used": false,
+    "features_changed": false,
+    "hand_defined_regimes": false,
+    "architecture_search": false,
+    "expert_count_search": false,
+    "balance_weight_search": false,
+    "blend_weight_search": false,
+    "paired_seed_control": true,
+    "periods_through_20260711_ineligible_for_final_confirmation": true
+  },
+  "dataset": {
+    "path": "results/noodds_raw_v200/dataset",
+    "races": 72646,
+    "manifest_sha256": "4283dc0d06981f7292ec18e8d7496cf651efbce5f4c81cb367ec940af5949266"
+  },
+  "architecture": {
+    "base": "v243 identity autoregressive Transformer",
+    "experts": 4,
+    "expert_mlp": [64, 128, 64],
+    "gate_input": "concatenated race-wise mean and max of six raw runner tokens",
+    "gate": [128, 64, 4],
+    "mixing": "race-level softmax shared by six runners",
+    "residual": "raw token plus layer-normalized weighted expert output",
+    "load_balance_loss_weight": 0.01,
+    "runner_width": 64,
+    "transformer_layers": 2,
+    "attention_heads": 8,
+    "feedforward_width": 128,
+    "dropout": 0.1,
+    "inference": "exact enumeration of all 120 ordered top-three outcomes"
+  },
+  "training": {
+    "epochs": 6,
+    "batch_races": 512,
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1,
+    "seed": 24301,
+    "threads": 8,
+    "parameter_search": false
+  },
+  "baseline": {
+    "model_id": "noodds_raw_v243_identity_autoregressive_transformer",
+    "probability_source": "standalone",
+    "same_seed": 24301
+  },
+  "development_folds": ["d6", "d7", "d8"],
+  "development_gate": {
+    "v250_minus_v243_log_loss_below_zero_in_every_fold": true,
+    "pooled_daily_cluster_bootstrap_ci95_upper_below_zero": true
+  },
+  "legacy_d9": {"open_only_after_development_gate": true, "confirmation_role": "diagnostic_only"},
+  "bootstrap": {"unit": "race_date", "samples": 20000, "development_seed": 25018, "legacy_seed": 25009},
+  "decision": "Reject immediately after any development fold fails. Passing still requires unseen confirmation after 2026-07-11."
+}

@@ -1,0 +1,12 @@
+{
+  "baseline_run_id": "baseline_run_v1_screening4_c59a595dbb92",
+  "baseline_manifest_sha256": "f3eb62dc643c9f2561f5ec1827e3d070b63fd85952425ea69b39dc0f73a8c6e3",
+  "evaluation_count_expected": 51232,
+  "input_prediction_types": [
+    "raw",
+    "calibrated"
+  ],
+  "new_training": false,
+  "new_prediction_generation": false,
+  "coverage_checked": true
+}

@@ -1,0 +1,87 @@
+{
+  "created_at": "2026-07-15T07:42:00+09:00",
+  "model_id": "noodds_raw_v290_anchored_set_residual_on_v283",
+  "hypothesis": "A zero-initialized permutation-equivariant residual network anchored to v283 log probabilities can learn joint six-runner interactions without replacing the strong parent or flattening millions of candidate rows into an unconstrained tree head.",
+  "frozen_before_run": true,
+  "policy": {
+    "odds_used": false,
+    "payout_used": false,
+    "current_race_result_used": false,
+    "same_day_result_used": false,
+    "future_information_used": false,
+    "posthoc_search": false,
+    "active_parent": "v283_current_meet_form_on_v280"
+  },
+  "inputs": {
+    "v283_d6_sha256": "AB18CD797B7AADF3E2B0F9ED3E01278733015D9715074995F1E5D1AC555DFB49",
+    "v283_d7_sha256": "0BB70312010CA297A04D5FAA109FCBE51F79D89AFB531F616801B61384350FF3",
+    "v283_d8_sha256": "06C05744C38ECD914059CDE39F3A564FB1BF94FAB4035407D322888AD0316228",
+    "targets_sha256": "F71A3F7FF0C652B15C63828E92B77451B62150F8A922AB1732DBDE749C98BE12",
+    "race_dates_sha256": "47FA506F5D1CEA9C15ADBBB14D5A8793069D261B77FCB665069F8346CA21FB9D",
+    "runner_features_sha256": "AB44DFA6B56EA764E38FB46667A5D8C170C7338B3F8AC50A800D0CBE8147463F",
+    "race_features_sha256": "1D228F5420CAD1F6DF2E2325C31CBFAB739DF6DB26CDBA9830134EBCE525C239",
+    "runner_course_features_sha256": "0EA35A8A953C125947464768FB373827C498A54EAF7D72D14534B78C58AEEA59",
+    "race_course_features_sha256": "BAF128CD09B362B461CB4392548F51BF497FDE4BCD856C197FD674C0383B3541",
+    "course_available_sha256": "6CE308FE95919AFD7F212774DBB55CEE804FA4224AB1A01D20BA0CCF11E1E507",
+    "evaluation_protocol_v7_sha256": "1F3659B9F066B823E47C3766132F96E4DC34D2AE66FB45E0F02852878041B90C"
+  },
+  "features": {
+    "runner_indices": [4,5,6,7,8,9,10,15,16,17,19,20,21,23,24,26,28,30,32,34,39,41,55,67],
+    "official_course_runner_width": 5,
+    "runner_missing_mask": "one mask per selected raw and course numeric feature",
+    "race_indices": [9,10,11,12,13,14,15,16,17,18,19,20],
+    "official_course_race_width": 4,
+    "normalization": "training-races-only mean and standard deviation; missing standardized value zero with explicit mask",
+    "lane_identity": true
+  },
+  "architecture": {
+    "runner_projection_width": 32,
+    "race_projection_width": 32,
+    "lane_embedding_width": 32,
+    "transformer_layers": 1,
+    "attention_heads": 4,
+    "feedforward_width": 64,
+    "dropout": 0.10,
+    "position_heads": 3,
+    "candidate_formula": "log(v283_probability) + centered_u1[first] + centered_u2[second] + centered_u3[third]",
+    "position_head_initialization": "all weights and biases exactly zero",
+    "residual_scale": 1.0
+  },
+  "training": {
+    "loss": "exact 120-class top3 cross entropy plus 0.01 mean squared centered residual utility",
+    "optimizer": "AdamW",
+    "epochs_full": 6,
+    "epochs_screen": 2,
+    "batch_races": 512,
+    "learning_rate": 0.0005,
+    "weight_decay": 0.001,
+    "gradient_clip": 1.0,
+    "threads": 4,
+    "seed": 29001,
+    "early_stopping": false,
+    "temperature_search": false,
+    "blend_search": false,
+    "d6_prediction": "unchanged v283",
+    "d7": "train only on D6 chronological history and predict D7",
+    "d8": "train only on D6 plus D7 chronological history and predict D8"
+  },
+  "screen": {
+    "protocol": "configs/noodds_candidate_acceleration_v2.json",
+    "fixed_indices": true,
+    "futility_only": true
+  },
+  "final_protocol": "configs/noodds_evaluation_protocol_v7.json",
+  "promotion_requires": "mean delta versus v283 below zero, race-date bootstrap CI95 upper below zero, and v283 child-family Holm-adjusted p below 0.05",
+  "forbidden": [
+    "odds",
+    "payout",
+    "same-day labels",
+    "future labels",
+    "architecture search",
+    "epoch search",
+    "temperature search",
+    "blend search",
+    "post-result residual-scale tuning"
+  ],
+  "difference_from_v233": "v233 learned a standalone sequential model then used a fixed blend; v290 is zero-initialized and can only modify the fold-safe v283 parent through an exact 120-class residual."
+}

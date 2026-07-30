@@ -1,0 +1,52 @@
+{
+  "boundary_candidate_level_counts": {
+    "A": 49,
+    "B": 5
+  },
+  "current_equipment_batch_C_only_count": 1,
+  "current_equipment_batch_exact_A_or_B_count": 47,
+  "current_slice_race_count": "not_computed_requires_race_level_date_join",
+  "evidence_batch_status_counts": {
+    "official_evidence_found_full_period": 2,
+    "official_evidence_partial": 45,
+    "official_evidence_partial_c_only": 1
+  },
+  "exact_A_or_B_boundary_candidate_count": 54,
+  "full_batch_period_boundaries": [
+    "EBATCH:07:motor:19b8135bc000",
+    "EBATCH:07:boat:ad4f5e5feeba"
+  ],
+  "full_batch_period_boundary_coverage_count": 2,
+  "generated_at": "2026-07-28T00:07:28Z",
+  "generation_id_issued_count": 0,
+  "historical_exact_boundary_candidate_count": 7,
+  "input_batch_count": 48,
+  "input_equipment_key_count": 3240,
+  "input_hypothesis_count": 33,
+  "input_sha256_match": {
+    "equipment_evidence_batch_queue_v1.csv": true,
+    "equipment_generation_evidence_registry_v1.csv": true,
+    "hypothesis_execution_readiness_v1.csv": true
+  },
+  "key_conclusion": "Current-generation exact starts are supported for 47 of 48 venue-equipment batches. Only Gamagori motor and boat have exact boundaries covering the entire uploaded 2023-2026 batch period. All other batches remain partially unresolved for older periods.",
+  "official_domain_failure_count": 1,
+  "official_evidence_level_counts": {
+    "A": 38,
+    "B": 4,
+    "C": 1
+  },
+  "official_evidence_source_count": 43,
+  "partial_or_unresolved_batch_count": 46,
+  "raw_evidence_file_count": 43,
+  "raw_normalized_html_extract_count": 39,
+  "raw_pdf_count": 4,
+  "report_id": "equipment_generation_official_evidence_coverage_v1",
+  "resolved_equipment_key_count": "not_materialized_in_this_package",
+  "strict_limitations": [
+    "No corpus or snapshot was modified.",
+    "No generation ID was issued.",
+    "Current-generation evidence does not resolve earlier generations in a multi-year batch.",
+    "Kiryu boat has staggered per-number calculation starts and no single A/B boundary in the located official source.",
+    "Exact affected race/key counts require Gate 1 race-level date and equipment-number materialization."
+  ]
+}

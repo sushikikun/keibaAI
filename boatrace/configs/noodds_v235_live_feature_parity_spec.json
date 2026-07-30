@@ -1,0 +1,43 @@
+{
+  "audit_id": "noodds_v235_live_feature_parity_v001",
+  "status": "frozen_before_live_adapter_implementation",
+  "reference_dataset": "results/noodds_raw_v200/dataset",
+  "reference_manifest_sha256": "4283dc0d06981f7292ec18e8d7496cf651efbce5f4c81cb367ec940af5949266",
+  "matrix_schema": {
+    "feature_set": "full_no_ids",
+    "layout": "row_heads",
+    "feature_count": 161,
+    "categorical_indices": [
+      0,
+      140,
+      149
+    ],
+    "ordered_schema_sha256": "8472fa0c8a55d1444bd50b8d13ca3aeaa028308a44705542ae061f52028207a4"
+  },
+  "historical_audit_dates": [
+    "2026-01-31",
+    "2026-04-15",
+    "2026-06-30"
+  ],
+  "required_checks": {
+    "all_candidate_race_keys_exist_in_reference": true,
+    "candidate_race_keys_unique": true,
+    "lane_order_is_1_through_6": true,
+    "feature_names_exact_order": true,
+    "categorical_indices_exact_order": true,
+    "nan_mask_exact": true,
+    "maximum_finite_absolute_error": 0.000001,
+    "minimum_distinct_audit_dates": 3,
+    "minimum_audit_races": 300
+  },
+  "history_policy": {
+    "strictly_prior_race_date_only": true,
+    "same_day_outcomes_forbidden": true,
+    "target_race_outcomes_forbidden": true
+  },
+  "activation_rule": "All checks must pass in one immutable audit report before prospective prediction capture starts.",
+  "current_compatibility": {
+    "build_live_v23_features.py": "incompatible_feature_schema",
+    "prospective_capture_active": false
+  }
+}

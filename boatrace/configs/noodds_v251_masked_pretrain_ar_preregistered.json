@@ -1,0 +1,60 @@
+{
+  "model_id": "noodds_raw_v251_masked_pretrain_ar",
+  "status": "preregistered_before_predictions",
+  "frozen_at": "2026-07-12T08:41:00+09:00",
+  "hypothesis": "Fold-local masked-feature pretraining teaches the unchanged v243 encoder identity, equipment, form, exhibition, and relative-feature structure before sparse trifecta supervision.",
+  "policy": {
+    "odds_used": false,
+    "payout_used": false,
+    "validation_features_used_in_pretraining": false,
+    "pretraining_uses_training_fold_only": true,
+    "architecture_search": false,
+    "mask_rate_search": false,
+    "pretrain_epoch_search": false,
+    "blend_weight_search": false,
+    "paired_seed_control": true,
+    "periods_through_20260711_ineligible_for_final_confirmation": true
+  },
+  "dataset": {
+    "path": "results/noodds_raw_v200/dataset",
+    "races": 72646,
+    "manifest_sha256": "4283dc0d06981f7292ec18e8d7496cf651efbce5f4c81cb367ec940af5949266"
+  },
+  "architecture": {
+    "inference_model": "unchanged v243 identity autoregressive Transformer",
+    "pretraining_numeric_decoder": [64, 128, "runner_numeric_width"],
+    "pretraining_categorical_decoders": "one linear decoder per runner categorical field",
+    "numeric_mask_rate": 0.15,
+    "categorical_mask_rate": 0.15,
+    "categorical_mask_token": 0,
+    "pretraining_loss": "masked numeric MSE plus mean masked categorical cross-entropy",
+    "pretraining_epochs": 3,
+    "finetuning_epochs": 6,
+    "inference": "exact enumeration of all 120 ordered top-three outcomes"
+  },
+  "training": {
+    "pretraining_epochs": 3,
+    "epochs": 6,
+    "batch_races": 512,
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1,
+    "seed": 24301,
+    "threads": 8,
+    "parameter_search": false
+  },
+  "baseline": {
+    "model_id": "noodds_raw_v243_identity_autoregressive_transformer",
+    "probability_source": "standalone",
+    "same_seed": 24301
+  },
+  "development_folds": ["d6", "d7", "d8"],
+  "development_gate": {
+    "v251_minus_v243_log_loss_below_zero_in_every_fold": true,
+    "pooled_daily_cluster_bootstrap_ci95_upper_below_zero": true
+  },
+  "legacy_d9": {"open_only_after_development_gate": true, "confirmation_role": "diagnostic_only"},
+  "bootstrap": {"unit": "race_date", "samples": 20000, "development_seed": 25118, "legacy_seed": 25109},
+  "decision": "Reject immediately after any development fold fails. Passing still requires unseen confirmation after 2026-07-11."
+}

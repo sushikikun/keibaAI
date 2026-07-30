@@ -1,0 +1,50 @@
+{
+  "created_at": "2026-07-11T17:00:00+09:00",
+  "model_id": "noodds_raw_v218_same_day_surprise_residual",
+  "hypothesis": "Earlier same-day outcomes should only move the forecast when they differ from v206's pre-race expectation. Cumulative observed-minus-predicted lane residuals can isolate latent venue-day conditions while reducing confounding by racer and motor strength.",
+  "frozen_before_run": true,
+  "inputs": {
+    "v206_oof_sha256": "91C39993E0C3CE29A5DB3F0EDBE4836D622D436B87C446B982CBEDF46FED6AA5",
+    "race_meta_sha256": "FFAC2634A9B01D1A0A4329F078288705A8B5899DA00FF31F488B622DD476BF96"
+  },
+  "feature_rule": {
+    "group": "race_date plus venue_code",
+    "ordering": "race_no ascending",
+    "strictly_prior_only": true,
+    "shrinkage_races": 3.0,
+    "runner_features": [
+      "prior_races_log",
+      "lane_first_observed_minus_predicted",
+      "lane_top3_observed_minus_predicted",
+      "lane_first_absolute_error"
+    ],
+    "race_features": [
+      "day_first_residual_l1",
+      "day_top3_residual_l1"
+    ],
+    "probability_source": "fold-safe v206 OOF"
+  },
+  "model": {
+    "residual_model_params": "exactly v209 MODEL_PARAMS",
+    "development": "D6 inner fit/calibration, D7 test; D6 fit, D7 gamma calibration, D8 test",
+    "freeze_if_passed": "fit D6+D7 and calibrate gamma on D8",
+    "test_fold": "D9"
+  },
+  "forbidden": [
+    "odds",
+    "payout",
+    "feature search",
+    "shrinkage search",
+    "gamma refit on D9",
+    "D9 outcome use before freeze"
+  ],
+  "development_acceptance_rule": {
+    "d7_log_loss_delta_lt": 0.0,
+    "d8_log_loss_delta_lt": 0.0,
+    "pooled_d7_d8_daily_bootstrap_ci95_upper_lt": 0.0
+  },
+  "d9_acceptance_rule": {
+    "d9_log_loss_delta_lt": 0.0,
+    "d9_daily_bootstrap_ci95_upper_lt": 0.0
+  }
+}

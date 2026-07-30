@@ -1,0 +1,36 @@
+{
+  "created_at": "2026-07-11T15:45:00+09:00",
+  "model_id": "noodds_raw_v215_seed_ensemble",
+  "hypothesis": "Averaging independently seeded copies of the frozen v206 full-order LambdaRank component will reduce estimator variance and improve trifecta log loss without changing features, labels, temperature, or blend weight.",
+  "frozen_before_run": true,
+  "inputs": {
+    "v206_scores_sha256": "229E3205FF924AA64E5AD52EE8D7876A2B54A9F21C546B76A3A74DC4FBAABBE7",
+    "v206_blend_sha256": "91C39993E0C3CE29A5DB3F0EDBE4836D622D436B87C446B982CBEDF46FED6AA5",
+    "v205_blend_sha256": "1401F19935232C3F61DA5996A54F3696CD99828FA4E323F0B706427EF1A6DDF2"
+  },
+  "method": {
+    "ranker_config": "exactly v206 except random_state",
+    "seeds": [20601, 21501, 21502],
+    "probability_ensemble": "arithmetic mean after each seed score is converted by Plackett-Luce",
+    "temperature": 1.4,
+    "listwise_weight": 0.2,
+    "v205_weight": 0.8,
+    "folds": ["d6", "d7", "d8", "d9"]
+  },
+  "forbidden": [
+    "odds",
+    "payout",
+    "ROI-based selection",
+    "seed selection after results",
+    "temperature search",
+    "blend-weight search",
+    "feature or label changes"
+  ],
+  "primary_metric": "trifecta multiclass log loss",
+  "acceptance_rule": {
+    "development_d6_d8_log_loss_delta_lt": 0.0,
+    "improved_fold_count_gte": 3,
+    "d9_daily_bootstrap_ci95_upper_lt": 0.0
+  },
+  "interpretation": "Passing creates a variance-reduced challenger only. It does not erase the known full-order-label selection bias or replace a clean frozen future test."
+}

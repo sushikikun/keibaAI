@@ -1,0 +1,52 @@
+{
+  "created_at": "2026-07-11T16:25:00+09:00",
+  "model_id": "noodds_raw_v216_groupwise_listwise",
+  "hypothesis": "The v206 listwise component scores each boat mainly from its own row and aggregate relative features. Explicitly exposing every candidate boat to the fixed-position features and candidate-minus-opponent differences of all six boats will improve structured trifecta probabilities by modeling local and outer-boat interactions.",
+  "research_basis": [
+    "Boat-race SHAP study reports that neighboring boats and boats 5/6 affect outcomes beyond the target boat's own ability.",
+    "Groupwise scoring functions report gains when an item's score is computed jointly with other items.",
+    "Set Transformer formalizes interaction-aware set modeling; this experiment uses a lower-variance GBDT approximation suitable for 72k tabular races."
+  ],
+  "frozen_before_run": true,
+  "inputs": {
+    "v206_blend_sha256": "91C39993E0C3CE29A5DB3F0EDBE4836D622D436B87C446B982CBEDF46FED6AA5",
+    "v205_blend_sha256": "1401F19935232C3F61DA5996A54F3696CD99828FA4E323F0B706427EF1A6DDF2"
+  },
+  "method": {
+    "base_ranker_config": "exactly v206 LambdaRank except random_state=21601",
+    "group_features": [
+      "grade_ord",
+      "national_win_rate_snapshot",
+      "local_win_rate_snapshot",
+      "motor_top2_rate_snapshot",
+      "term_avg_st_prior",
+      "hist_win_rate",
+      "recent10_win_rate",
+      "racer_venue_win_rate",
+      "exhibition_time",
+      "start_st"
+    ],
+    "context_expansion": "for each candidate and each absolute lane 1..6 append opponent raw feature and candidate-minus-opponent feature",
+    "temperature": 1.4,
+    "groupwise_weight": 0.2,
+    "v205_weight": 0.8,
+    "folds": ["d6", "d7", "d8", "d9"]
+  },
+  "forbidden": [
+    "odds",
+    "payout",
+    "ROI-based selection",
+    "feature selection after results",
+    "temperature search",
+    "blend-weight search",
+    "context subset search",
+    "target-fold-specific tuning"
+  ],
+  "primary_metric": "trifecta multiclass log loss",
+  "acceptance_rule": {
+    "development_d6_d8_log_loss_delta_lt": 0.0,
+    "improved_fold_count_gte": 3,
+    "d9_daily_bootstrap_ci95_upper_lt": 0.0
+  },
+  "interpretation": "Passing creates a challenger only. It does not prove profitability and still requires frozen forward evidence."
+}

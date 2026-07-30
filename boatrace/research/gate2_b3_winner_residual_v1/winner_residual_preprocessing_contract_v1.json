@@ -1,0 +1,11 @@
+{
+  "artifact": "winner_residual_preprocessing_contract_v1",
+  "imputation": "train-only median with missing indicators",
+  "scaling": "train mean/std",
+  "constant_flag": true,
+  "feature_selection_inside_run": false,
+  "fit_isolation": "train-only; refit train+selection before evaluation",
+  "future_source": "none by design",
+  "same_day_source": "none by design",
+  "status": "resource_blocked"
+}

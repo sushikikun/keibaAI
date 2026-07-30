@@ -1,0 +1,8 @@
+{
+  "model_id":"noodds_v354_event_attention","frozen_before_evaluation":true,
+  "hypothesis":"Masked event attention can select relevant past races and course changes that a single GRU final state compresses away.",
+  "architecture":{"width":64,"sequence_hidden":32,"heads":4,"layers":1,"feedforward":160,"dropout":0.2,"output":"attention pooled event history to three stage utilities","initialization":"zero residual equals v312"},
+  "training":{"max_epochs":24,"patience":4,"minimum_improvement":0.00005,"batch_races":384,"learning_rate":0.0002,"weight_decay":0.01,"gradient_clip":1.0,"threads":4,"seed":35401,"course_aux_weight":0.15,"st_aux_weight":0.10},
+  "large_improvement":{"absolute_logloss_delta_at_most":-0.01,"additional_gates":["D10 delta below zero","D11 delta below zero","pooled bootstrap CI95 upper below zero","pooled one-sided daily Wilcoxon p below 0.05"]},
+  "policy":{"odds_used":false,"payout_used":false,"same_day_results_used_for_features":false,"future_data_used":false,"current_dataset_only":true,"post_result_hyperparameter_change":false}
+}

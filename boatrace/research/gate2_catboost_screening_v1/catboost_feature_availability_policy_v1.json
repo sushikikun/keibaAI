@@ -1,0 +1,23 @@
+{
+  "F1_point_in_time": {
+    "cold_start_null_preserved": true,
+    "future": 0,
+    "same_day": 0
+  },
+  "F2_counts": {
+    "C_D_count": 0,
+    "assignment_rows": 1278096,
+    "cross_generation_count": 0,
+    "evidence_scope": "official A/B only",
+    "feature_set_id": "F2_asof_equipment_history_verified_scope",
+    "future_count": 0,
+    "pre_boundary_count": 0,
+    "same_day_count": 0,
+    "source_manifest_sha256": "379f459cff4d7e9327c478c9ff6b2a3069c48604c05ca67af9cf8b0a9f64b8d3",
+    "unresolved_entry_rows": 1100310,
+    "verified_boat_entries": 192108,
+    "verified_motor_entries": 247686
+  },
+  "F2_evidence_scope": "official A/B only",
+  "unverified_history": "null_and_verified_flag_preserved"
+}

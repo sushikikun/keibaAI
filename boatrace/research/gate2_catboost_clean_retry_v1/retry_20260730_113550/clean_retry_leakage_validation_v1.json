@@ -1,0 +1,19 @@
+{
+    "run_id":  "clean_retry_run_v2_283b74468bbb996c8839_clean_retry_1",
+    "training_started":  false,
+    "evaluation_target_fit":  0,
+    "calibration_target_raw_fit":  0,
+    "selection_target_non_config_use":  0,
+    "refit_scope_violation":  0,
+    "full_period_category_statistics":  0,
+    "full_period_imputation":  0,
+    "future_history":  0,
+    "sameday_history":  0,
+    "F2_CD_history":  0,
+    "F2_preboundary_history":  0,
+    "F2_cross_generation_history":  0,
+    "target_column_in_input":  0,
+    "arm_evaluation_key_difference":  0,
+    "passed":  true,
+    "not_run_because_preflight_blocked":  true
+}

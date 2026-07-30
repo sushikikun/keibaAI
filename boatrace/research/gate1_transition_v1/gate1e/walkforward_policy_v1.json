@@ -1,0 +1,135 @@
+{
+  "final_lock_end": "2026-07-27",
+  "final_lock_start": "2025-07-28",
+  "folds": [
+    {
+      "calibration": [
+        "2023-10-01",
+        "2023-12-31"
+      ],
+      "evaluation": [
+        "2024-01-01",
+        "2024-03-31"
+      ],
+      "fold_id": "screening_fold_1",
+      "selection": [
+        "2023-07-01",
+        "2023-09-30"
+      ],
+      "stage": "screening",
+      "train": [
+        "2022-03-01",
+        "2023-06-30"
+      ]
+    },
+    {
+      "calibration": [
+        "2024-01-01",
+        "2024-03-31"
+      ],
+      "evaluation": [
+        "2024-04-01",
+        "2024-06-30"
+      ],
+      "fold_id": "screening_fold_2",
+      "selection": [
+        "2023-10-01",
+        "2023-12-31"
+      ],
+      "stage": "screening",
+      "train": [
+        "2022-03-01",
+        "2023-09-30"
+      ]
+    },
+    {
+      "calibration": [
+        "2024-04-01",
+        "2024-06-30"
+      ],
+      "evaluation": [
+        "2024-07-01",
+        "2024-09-30"
+      ],
+      "fold_id": "screening_fold_3",
+      "selection": [
+        "2024-01-01",
+        "2024-03-31"
+      ],
+      "stage": "screening",
+      "train": [
+        "2022-03-01",
+        "2023-12-31"
+      ]
+    },
+    {
+      "calibration": [
+        "2024-07-01",
+        "2024-09-30"
+      ],
+      "evaluation": [
+        "2024-10-01",
+        "2024-12-31"
+      ],
+      "fold_id": "screening_fold_4",
+      "selection": [
+        "2024-04-01",
+        "2024-06-30"
+      ],
+      "stage": "screening",
+      "train": [
+        "2022-03-01",
+        "2024-03-31"
+      ]
+    },
+    {
+      "calibration": [
+        "2024-10-01",
+        "2024-12-31"
+      ],
+      "evaluation": [
+        "2025-01-01",
+        "2025-03-31"
+      ],
+      "fold_id": "confirmation_fold_1",
+      "selection": [
+        "2024-07-01",
+        "2024-09-30"
+      ],
+      "stage": "confirmation",
+      "train": [
+        "2022-03-01",
+        "2024-06-30"
+      ]
+    },
+    {
+      "calibration": [
+        "2025-01-01",
+        "2025-03-31"
+      ],
+      "evaluation": [
+        "2025-04-01",
+        "2025-07-27"
+      ],
+      "fold_id": "confirmation_fold_2",
+      "selection": [
+        "2024-10-01",
+        "2024-12-31"
+      ],
+      "stage": "confirmation",
+      "train": [
+        "2022-03-01",
+        "2024-09-30"
+      ]
+    }
+  ],
+  "rules": [
+    "train < selection < calibration < evaluation",
+    "no same date across roles within a fold",
+    "evaluation periods non-overlapping",
+    "final lock excluded",
+    "U0 primary supervised; U1/U2 sidecar only",
+    "2025-07-28 onward excluded from development roles"
+  ],
+  "split_id": "split_v1_d3318c40504b"
+}

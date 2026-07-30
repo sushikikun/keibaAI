@@ -1,0 +1,20 @@
+{
+  "confirmation_lock_ready": true,
+  "data_collection_complete": true,
+  "dependency_gap_count": 9,
+  "environment_inventory_ready": true,
+  "evaluation_contract_ready": true,
+  "feature_sidecar_ready": true,
+  "final_lock_ready": true,
+  "final_snapshot_ready": true,
+  "formal_model_research_ready": false,
+  "gate2_explicit_approval_required": true,
+  "model_training_authorized": false,
+  "preprocessing_contract_ready": true,
+  "protocol_passed_runtime_blocked": true,
+  "protocol_ready": true,
+  "research_design_ready": true,
+  "research_universe_ready": true,
+  "runtime_ready": false,
+  "walkforward_split_ready": true
+}

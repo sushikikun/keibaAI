@@ -1,0 +1,81 @@
+{
+    "protocol_id":  "noodds_research_protocol_v1",
+    "frozen_at":  "2026-07-16T09:15:00+09:00",
+    "purpose":  "Separate model-family research from the repeatedly observed D6-D8 development block before testing a new online dynamic Plackett-Luce family.",
+    "policy":  {
+                   "odds_used":  false,
+                   "payout_used":  false,
+                   "same_day_results_used_for_features":  false,
+                   "future_results_used":  false,
+                   "live_model_updated":  false,
+                   "production_db_updated":  false
+               },
+    "frozen_parent":  {
+                          "model_id":  "v312_large_history_racer_identity_set_ranker_on_v295",
+                          "role":  "development champion retained unchanged during research"
+                      },
+    "development_isolation":  {
+                                  "repeatedly_observed_blocks":  [
+                                                                     "d6",
+                                                                     "d7",
+                                                                     "d8"
+                                                                 ],
+                                  "research_validation_end":  "2025-12-31",
+                                  "d6_d8_role":  "one final internal comparison only after a model family and all fixed parameters are selected on the rolling research origins",
+                                  "prospective_confirmation":  "A separately frozen block after 2026-07-11 remains the only final confirmation.",
+                                  "input_preflight_amendment":  "Before any v337 prediction, the dataset coverage audit found zero races in 2025-08 through 2025-10. Rolling windows are limited to observed months; no race or date is imputed."
+                              },
+    "rolling_origin":  {
+                           "training_rule":  "Each origin trains only on races with race_date strictly before validation_start.",
+                           "minimum_train_races":  10000,
+                           "validation_windows":  [
+                                                      {
+                                                          "end":  "2025-02-28",
+                                                          "id":  "ro01",
+                                                          "start":  "2025-02-01"
+                                                      },
+                                                      {
+                                                          "end":  "2025-03-31",
+                                                          "id":  "ro02",
+                                                          "start":  "2025-03-01"
+                                                      },
+                                                      {
+                                                          "end":  "2025-04-30",
+                                                          "id":  "ro03",
+                                                          "start":  "2025-04-01"
+                                                      },
+                                                      {
+                                                          "end":  "2025-05-31",
+                                                          "id":  "ro04",
+                                                          "start":  "2025-05-01"
+                                                      },
+                                                      {
+                                                          "end":  "2025-06-30",
+                                                          "id":  "ro05",
+                                                          "start":  "2025-06-01"
+                                                      },
+                                                      {
+                                                          "end":  "2025-07-16",
+                                                          "id":  "ro06",
+                                                          "start":  "2025-07-01"
+                                                      },
+                                                      {
+                                                          "end":  "2025-11-30",
+                                                          "id":  "ro07",
+                                                          "start":  "2025-11-18"
+                                                      },
+                                                      {
+                                                          "end":  "2025-12-31",
+                                                          "id":  "ro08",
+                                                          "start":  "2025-12-01"
+                                                      }
+                                                  ],
+                           "primary_metric":  "pooled ordered exact-top3 race logloss",
+                           "uncertainty_unit":  "race_date"
+                       },
+    "first_model_family":  {
+                               "id":  "v337_online_dynamic_plackett_luce",
+                               "definition":  "A standalone, daily-updated racer and racer-by-official-course state model. It does not train on v312 probabilities and it emits its state before any result from the current race_date is applied.",
+                               "selection_rule":  "All state definitions and model parameters are selected using only the rolling origins. No candidate is promoted from a rolling result alone."
+                           }
+}

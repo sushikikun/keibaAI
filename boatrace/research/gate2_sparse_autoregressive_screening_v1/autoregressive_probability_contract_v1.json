@@ -1,0 +1,7 @@
+{
+    "formula":  "P1(i|X)*P2(j|X,i)*P3(k|X,i,j)",
+    "prefix_teacher_forcing":  true,
+    "inference_all_prefixes":  true,
+    "classes":  "1..6",
+    "probability_sum_tolerance":  1E-12
+}

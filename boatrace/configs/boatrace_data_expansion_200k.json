@@ -1,0 +1,12 @@
+{
+  "artifact": "boatrace_data_expansion_200k",
+  "public_sanitized_summary": true,
+  "scope": "data expansion and research contracts only",
+  "strict_complete_target_min": 200001,
+  "strict_complete_reference_count": 200118,
+  "audit_candidate_reference_count": 219240,
+  "required_standard": "settled standard six-boat race with complete pre-race, result, closing trifecta odds, and payout records",
+  "local_artifacts": "not committed",
+  "automation": "paused",
+  "note": "This is a sanitized public summary; raw collection records and local corpus artifacts are excluded."
+}

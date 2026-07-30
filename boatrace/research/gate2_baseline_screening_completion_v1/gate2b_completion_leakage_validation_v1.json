@@ -1,0 +1,11 @@
+{
+  "evaluation_result_used_in_fit_count": 0,
+  "calibration_result_used_in_raw_fit_count": 0,
+  "cross_fold_fit_artifact_reuse_count": 0,
+  "full_period_frequency_count": 0,
+  "confirmation_final_fit_count": 0,
+  "evaluation_key_set_difference": 0,
+  "class_order_difference": 0,
+  "canary_rejected": true,
+  "passed": true
+}

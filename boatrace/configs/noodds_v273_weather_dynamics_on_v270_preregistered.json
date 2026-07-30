@@ -1,0 +1,81 @@
+{
+    "model_id":  "noodds_raw_v273_weather_dynamics_on_v270",
+    "hypothesis":  "Within-day weather changes may add lane-advantage information beyond v270 official entry-course and multi-window form signals without using race outcomes.",
+    "policy":  {
+                   "odds_used":  false,
+                   "payout_used":  false,
+                   "race_result_used":  false,
+                   "future_weather_used":  false,
+                   "posthoc_search":  false,
+                   "active_parent":  "v270_form_trend_on_v269"
+               },
+    "inputs":  {
+                   "v270_d6_sha256":  "A4671A61F5E619FFCB2F30F2CFBF0E44EAC648488C557D86BC5E594F388417AE",
+                   "v270_d7_sha256":  "AC2B302937B17EDCB81E3BFB4923189D87D3105AAAD14CD710B7CB14117E3C37",
+                   "v270_d8_sha256":  "349EBDC050258C58DDF6515328645264F71444A4A201DCE69464BC65419C7FFF",
+                   "race_features_sha256":  "1D228F5420CAD1F6DF2E2325C31CBFAB739DF6DB26CDBA9830134EBCE525C239",
+                   "race_meta_sha256":  "FFAC2634A9B01D1A0A4329F078288705A8B5899DA00FF31F488B622DD476BF96",
+                   "evaluation_protocol_v5_sha256":  "AFF03DF001D18E3413F815169598507E30EFDE6D4BEECFAF92C1A495D5FEE3A5"
+               },
+    "features":  {
+                     "source":  "current and strictly prior same-venue-day weather only",
+                     "ordering":  "race_date, venue_code, race_no",
+                     "scalar_sources":  [
+                                            "temperature_c",
+                                            "wind_speed_m",
+                                            "water_temp_c",
+                                            "wave_cm"
+                                        ],
+                     "scalar_transforms":  [
+                                               "current_minus_previous",
+                                               "current_minus_prior_mean",
+                                               "prior_standard_deviation",
+                                               "current_available",
+                                               "previous_available"
+                                           ],
+                     "wind_transforms":  [
+                                             "sin_current_minus_previous",
+                                             "cos_current_minus_previous",
+                                             "sin_current_minus_prior_mean",
+                                             "cos_current_minus_prior_mean",
+                                             "previous_chord_distance",
+                                             "current_available",
+                                             "previous_available"
+                                         ],
+                     "context":  [
+                                     "prior_races_log",
+                                     "first_lane",
+                                     "second_lane",
+                                     "third_lane"
+                                 ],
+                     "missing_policy":  "fixed v266 availability indicators and zero-filled unavailable deltas"
+                 },
+    "training":  {
+                     "d6_prediction":  "unchanged v270",
+                     "d7":  "D6 chronological inner fit and calibration only",
+                     "d8":  "fit D6, calibrate gamma on D7, then fit D6+D7 and predict D8",
+                     "full_params":  {
+                                         "n_estimators":  100,
+                                         "learning_rate":  0.03,
+                                         "num_leaves":  7,
+                                         "max_depth":  3,
+                                         "min_child_samples":  5000,
+                                         "reg_alpha":  2,
+                                         "reg_lambda":  30,
+                                         "max_bin":  63,
+                                         "colsample_bytree":  0.9,
+                                         "random_state":  27301,
+                                         "n_jobs":  8,
+                                         "verbosity":  -1,
+                                         "deterministic":  true,
+                                         "force_col_wise":  true
+                                     },
+                     "screen_overrides":  {
+                                              "n_estimators":  34,
+                                              "min_child_samples":  1700
+                                          }
+                 },
+    "screen_protocol":  "configs/noodds_candidate_acceleration_v2.json",
+    "final_protocol":  "configs/noodds_evaluation_protocol_v5.json",
+    "promotion_requires":  "mean delta versus v270 below zero, race-date bootstrap CI95 upper below zero, and v270 child-family Holm-adjusted p below 0.05"
+}

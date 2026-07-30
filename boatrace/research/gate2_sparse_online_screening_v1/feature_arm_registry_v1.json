@@ -1,0 +1,24 @@
+{
+  "arms": [
+    {
+      "features": "safe_core_49",
+      "id": "F0"
+    },
+    {
+      "features": "F0+F1_asof_racer_history",
+      "id": "F1"
+    },
+    {
+      "features": "F0+F1+F2_asof_equipment_history_verified_scope",
+      "id": "F2"
+    }
+  ],
+  "forbidden": [
+    "F3",
+    "F5",
+    "same_day",
+    "future",
+    "confirmation",
+    "final_lock"
+  ]
+}

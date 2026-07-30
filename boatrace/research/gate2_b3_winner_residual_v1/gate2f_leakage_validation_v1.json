@@ -1,0 +1,12 @@
+{
+  "artifact": "gate2f_leakage_validation_v1",
+  "preprocessing_fit_isolated": true,
+  "future_source_count": 0,
+  "same_day_source_count": 0,
+  "f2_source_count": 0,
+  "outcome_source_count": 0,
+  "odds_payout_source_count": 0,
+  "evaluation_derived_source_count": 0,
+  "full_data_scan_completed": false,
+  "status": "resource_blocked"
+}

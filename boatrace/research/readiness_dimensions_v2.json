@@ -1,0 +1,105 @@
+{
+  "report_id": "boatrace_readiness_dimensions_v2",
+  "created_at": "2026-07-28T00:00:00+09:00",
+  "current_gate": "Gate0",
+  "dimensions": {
+    "research_design_ready": {
+      "ready": true,
+      "status": "ready",
+      "reason_codes": [
+        "RD_V2_VALIDATED",
+        "HYPOTHESIS_DAG_AND_GATES_PRESENT"
+      ]
+    },
+    "evaluation_contract_ready": {
+      "ready": true,
+      "status": "ready",
+      "reason_codes": [
+        "EVAL_V1_1_FROZEN",
+        "CLASS_MAP_V1_FROZEN"
+      ]
+    },
+    "target_pipeline_ready": {
+      "ready": true,
+      "status": "ready_for_current_snapshot_reaudit_required_at_gate1",
+      "reason_codes": [
+        "V01_TARGET_AUDIT_PASS",
+        "UNIQUE_TIED_VOID_SEPARATED",
+        "GATE1_FINAL_REAUDIT_REQUIRED"
+      ]
+    },
+    "data_collection_complete": {
+      "ready": false,
+      "status": "not_ready",
+      "reason_codes": [
+        "CANDIDATE_COUNT_148956_BELOW_200000",
+        "COLLECTION_CONTINUES"
+      ]
+    },
+    "equipment_identity_ready": {
+      "ready": false,
+      "status": "not_ready",
+      "reason_codes": [
+        "LOCAL_BOUNDARY_FIELD_ABSENT",
+        "ALL_3240_LOCAL_KEYS_LEVEL_D",
+        "OFFICIAL_A_B_EVIDENCE_NOT_COLLECTED"
+      ]
+    },
+    "meeting_temporal_semantics_ready": {
+      "ready": false,
+      "status": "policy_ready_materialization_pending",
+      "reason_codes": [
+        "MEETING_POLICY_V1_DEFINED",
+        "EPISODES_NOT_MATERIALIZED",
+        "POSTPONEMENT_CANCELLATION_EXCEPTIONS_PENDING"
+      ]
+    },
+    "same_day_feature_policy_ready": {
+      "ready": true,
+      "status": "policy_ready_feature_materialization_pending",
+      "reason_codes": [
+        "TARGET_BEFOREINFO_SEMANTIC_RULE_DEFINED",
+        "DIRECT_RESULT_JOIN_FORBIDDEN",
+        "PROVENANCE_FIELDS_REQUIRED"
+      ]
+    },
+    "official_window_provenance_ready": {
+      "ready": false,
+      "status": "mapping_ready_primary_archive_pending",
+      "reason_codes": [
+        "TEN_CURRENT_COLUMNS_MAPPED",
+        "TWO_FL_RAW_FIELDS_MAPPED",
+        "PRIMARY_SPEC_NOT_LOCALLY_ARCHIVED",
+        "SNAPSHOT_UNCHANGED"
+      ]
+    },
+    "formal_model_research_ready": {
+      "ready": false,
+      "status": "not_ready",
+      "reason_codes": [
+        "DATA_COLLECTION_INCOMPLETE",
+        "EQUIPMENT_IDENTITY_NOT_READY",
+        "MEETING_MATERIALIZATION_PENDING",
+        "GATE1_NOT_PASSED"
+      ]
+    }
+  },
+  "formal_model_research_decision": "NOT_READY",
+  "aggregation_rule": "formal_model_research_ready is not an average. Every blocking dimension must be ready under its own reason-coded gate.",
+  "facts": {
+    "candidate_races": 148956,
+    "program_days": 972,
+    "venue_count": 24,
+    "equipment_observed_keys": 3240,
+    "subtitle_distinct_including_null": 595,
+    "current_official_stat_columns_mapped": 10
+  },
+  "work_not_performed": [
+    "model training",
+    "Log Loss evaluation",
+    "walk-forward split selection",
+    "champion selection",
+    "external data acquisition",
+    "dependency installation"
+  ]
+}

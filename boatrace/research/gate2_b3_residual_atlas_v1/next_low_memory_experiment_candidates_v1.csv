@@ -1,0 +1,4 @@
+candidate_id,status,reason
+LM-01,deferred,Requires explicit Gate 2-F authorization; no training in Gate 2-E.
+LM-02,deferred,Requires host capacity and explicit authorization.
+LM-03,deferred,Requires host capacity and explicit authorization.

@@ -1,0 +1,10 @@
+{
+    "score_transform":  "log_sigmoid(decision_function)",
+    "mask_invalid":  "-inf",
+    "normalization":  "logsumexp over valid classes",
+    "joint":  "log_p1+log_p2+log_p3 then logsumexp over 120",
+    "probability_sum_tolerance":  1E-12,
+    "direct_softmax_forbidden":  true,
+    "canary_status":  "passed",
+    "canary_max_error":  4.4408920985006262E-16
+}

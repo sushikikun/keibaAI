@@ -1,0 +1,12 @@
+{
+  "artifact": "b3_winner_prior_policy_v1",
+  "gate": "Gate 2-F",
+  "purpose": "Correct only the B3 winner prior P_B3_1(i); keep P_B3_2(j|i) and P_B3_3(k|i,j) unchanged.",
+  "fit_policy": "Train-only leave-one-out winner prior for each training row; no in-sample offset.",
+  "factorization": "P(i,j,k)=P_B3_1(i)*P_B3_2(j|i)*P_B3_3(k|i,j)",
+  "b3_reference": "results/boatrace_model_research/baseline_runs/baseline_run_v1_screening4_c59a595dbb92",
+  "b3_reference_manifest_sha256": "f3eb62dc643c9f2561f5ec1827e3d070b63fd85952425ea69b39dc0f73a8c6e3",
+  "stage_2_3_policy": "unchanged",
+  "full_fit_completed": false,
+  "status": "resource_blocked"
+}

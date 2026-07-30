@@ -1,0 +1,20 @@
+{
+  "pip_check_passed": true,
+  "platform": "win_amd64",
+  "pre_release_count": 0,
+  "python_version": "3.12.13 (main, Mar  3 2026, 15:01:35) [MSC v.1944 64 bit (AMD64)]",
+  "resolved_top_level": {
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.18.0"
+  },
+  "source_build_count": 0,
+  "status": "passed",
+  "system_site_packages": false,
+  "system_wide_install": false,
+  "wheel_count": 10,
+  "wheel_hashes_recorded": true,
+  "wheelhouse_path": "<USER_HOME>\\.cache\\boatrace-research-v1\\wheelhouse",
+  "wheels_only": true
+}

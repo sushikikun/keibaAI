@@ -1,0 +1,17 @@
+{
+  "batch_count": 48,
+  "counts_by_equipment_type": {
+    "boat": 24,
+    "motor": 24
+  },
+  "counts_by_priority": {
+    "P0": 48
+  },
+  "eligible_for_model_training": false,
+  "external_evidence_acquired": false,
+  "generation_id_issued_count": 0,
+  "input_equipment_key_count": 3240,
+  "potential_generation_count_policy": "unknown_not_issued for every batch",
+  "purpose": "policy_execution_validation",
+  "status": "provisional"
+}

@@ -1,0 +1,53 @@
+{
+  "model_id": "noodds_raw_v265_same_day_surprise_on_v242",
+  "hypothesis": "Observed-minus-v242-predicted results from earlier races at the same venue-day reveal temporary conditions not represented by the pre-race v242 forecast.",
+  "policy": {
+    "odds_used": false,
+    "payout_used": false,
+    "same_race_result_used": false,
+    "future_result_used": false,
+    "posthoc_search": false,
+    "base_model": "v242_openskill_contextual_standalone"
+  },
+  "features": {
+    "source": "v242 D6-D8 fold-safe OOF probabilities plus completed earlier same-day outcomes",
+    "ordering": "race_date, venue_code, race_no",
+    "strictly_prior_same_venue_day_only": true,
+    "shrinkage_races": 3.0,
+    "screen_feature_generation": "build on complete D6-D8 OOF sequence before selecting fixed screen rows",
+    "runner": [
+      "prior_races_log",
+      "lane_first_observed_minus_predicted",
+      "lane_top3_observed_minus_predicted",
+      "lane_first_absolute_error"
+    ],
+    "race": ["day_first_residual_l1", "day_top3_residual_l1"]
+  },
+  "training": {
+    "d6_prediction": "unchanged v242",
+    "d7": "D6 chronological inner fit and calibration only",
+    "d8": "fit D6, calibrate gamma on D7, then fit D6+D7 and predict D8",
+    "full_params": {
+      "n_estimators": 100,
+      "learning_rate": 0.03,
+      "num_leaves": 7,
+      "max_depth": 3,
+      "min_child_samples": 5000,
+      "reg_alpha": 2.0,
+      "reg_lambda": 30.0,
+      "max_bin": 63,
+      "colsample_bytree": 0.9,
+      "random_state": 26501,
+      "n_jobs": 8,
+      "verbosity": -1,
+      "deterministic": true,
+      "force_col_wise": true
+    },
+    "screen_overrides": {
+      "n_estimators": 34,
+      "min_child_samples": 1700
+    }
+  },
+  "screen_protocol": "configs/noodds_candidate_acceleration_v2.json",
+  "final_protocol": "configs/noodds_evaluation_protocol_v3.json"
+}

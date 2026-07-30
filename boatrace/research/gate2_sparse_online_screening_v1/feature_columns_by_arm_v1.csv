@@ -1,0 +1,4 @@
+arm,scope
+F0,safe_core_49
+F1,F0+F1_asof_racer_history
+F2,F0+F1+F2_verified_equipment_history

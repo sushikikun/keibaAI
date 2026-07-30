@@ -1,0 +1,12 @@
+package,version,classification,install_performed
+numpy,2.3.5,available,False
+pandas,3.0.1,available,False
+scipy,,missing_required_for_wave1,False
+scikit-learn,,missing_required_for_wave1,False
+catboost,,missing_required_for_later_wave,False
+lightgbm,,missing_required_for_later_wave,False
+xgboost,,missing_required_for_later_wave,False
+torch,,missing_required_for_later_wave,False
+pyarrow,,missing_required_for_later_wave,False
+duckdb,,missing_required_for_later_wave,False
+optuna,,missing_required_for_later_wave,False

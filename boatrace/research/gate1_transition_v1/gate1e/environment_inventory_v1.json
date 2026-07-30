@@ -1,0 +1,44 @@
+{
+  "architecture": "AMD64",
+  "available_disk_bytes": 213134516224,
+  "cpu_count": 16,
+  "cuda": null,
+  "deterministic_settings_availability": [
+    "PYTHONHASHSEED",
+    "OMP_NUM_THREADS",
+    "MKL_NUM_THREADS",
+    "torch.use_deterministic_algorithms when torch is authorized"
+  ],
+  "driver": null,
+  "gpu": {
+    "available": false,
+    "reason": "torch not installed in current runtime"
+  },
+  "installed_packages": {
+    "catboost": null,
+    "duckdb": null,
+    "lightgbm": null,
+    "numpy": "2.3.5",
+    "optuna": null,
+    "pandas": "3.0.1",
+    "pyarrow": null,
+    "scikit-learn": null,
+    "scipy": null,
+    "torch": null,
+    "xgboost": null
+  },
+  "locale": "('Japanese_Japan', '932')",
+  "os": "Windows-11-10.0.22631-SP0",
+  "pip_version": "pip 26.0.1 from <USER_HOME>\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\pip (python 3.12)",
+  "python_executable": "<USER_HOME>\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "python_version": "3.12.13",
+  "ram": {
+    "available_bytes": 3967774720,
+    "total_bytes": 16890519552
+  },
+  "thread_env": {
+    "CODEX_THREAD_ID": "019f6fc9-0092-7561-bb26-f8a200f1e34e",
+    "COMPUTERNAME": "YU"
+  },
+  "timezone": "東京 (標準時)"
+}

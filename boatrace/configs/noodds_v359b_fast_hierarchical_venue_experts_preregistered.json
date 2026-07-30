@@ -1,0 +1,8 @@
+{
+  "model_id":"noodds_v359b_fast_hierarchical_venue_experts","frozen_before_evaluation":true,
+  "hypothesis":"The v359 hierarchy is computationally viable with deterministic mini-batch optimization while retaining shared and venue-specific stage utilities over latent course/ST features.",
+  "architecture":{"features":8,"shared_stage_utilities":true,"venue_experts":24,"stages":3,"zero_initialization":"equals v312"},
+  "training":{"max_epochs":40,"patience":4,"minimum_improvement":0.00005,"batch_races":512,"learning_rate":0.003,"shared_l2":0.1,"venue_l2":1.0,"gradient_clip":1.0,"threads":4,"seed":35921,"refit":"core plus selection for selected epoch count"},
+  "goal":{"period":"2026-05-01 through 2026-07-17","intermediate_below":3.7,"final_below":3.6892},
+  "policy":{"odds_used":false,"payout_used":false,"same_day_results_used":false,"future_data_used":false,"target_actual_course_or_st_used":false,"post_result_hyperparameter_change":false}
+}

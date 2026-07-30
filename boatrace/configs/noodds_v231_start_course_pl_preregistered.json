@@ -1,0 +1,72 @@
+{
+  "model_id": "noodds_raw_v231_start_course_pl",
+  "status": "preregistered_before_course_backfill_completion",
+  "frozen_at": "2026-07-11T21:30:00+09:00",
+  "hypothesis": "Official pre-race start exhibition course adds stable ordering information beyond lane and the existing v230 features.",
+  "policy": {
+    "odds_used": false,
+    "payout_used": false,
+    "finish_or_outcome_used_as_feature": false,
+    "course_source": "official beforeinfo start exhibition course available before deadline",
+    "course_backfill_results_not_inspected_for_model_selection": true,
+    "architecture_search": false,
+    "feature_search": false,
+    "blend_weight_search": false,
+    "temperature_search": false
+  },
+  "baseline": {
+    "model_id": "noodds_raw_v230_exact_top3_pl",
+    "report_path": "results/noodds_raw_v200/exact_top3_pl_v230/report.json",
+    "report_sha256": "53655912f8ef216d89acf521224cf5c52c89bb028ba34b47fde0cc2ddb5ba7de"
+  },
+  "dataset": {
+    "path": "results/noodds_raw_v200/dataset",
+    "expected_races": 72646,
+    "manifest_sha256": "4283dc0d06981f7292ec18e8d7496cf651efbce5f4c81cb367ec940af5949266",
+    "required_course_coverage": 1.0
+  },
+  "course_sidecar": {
+    "path": "results/noodds_raw_v200/start_course_sidecar_v231",
+    "runner_features": [
+      "start_display_course",
+      "course_minus_lane",
+      "course_changed",
+      "moved_inward",
+      "moved_outward"
+    ],
+    "race_features": [
+      "course_available",
+      "course_change_count",
+      "course_total_abs_delta",
+      "course_max_abs_delta"
+    ]
+  },
+  "model": {
+    "structure": "three exact conditional Plackett-Luce LightGBM heads",
+    "inherit_all_parameters_from": "noodds_raw_v230_exact_top3_pl",
+    "temperature": 1.0,
+    "v206_weight": 0.8,
+    "course_pl_weight": 0.2
+  },
+  "development_folds": [
+    "d6",
+    "d7",
+    "d8"
+  ],
+  "sealed_holdout_fold": "d9",
+  "development_gate": {
+    "candidate_minus_v230_log_loss_below_zero_in_every_fold": true,
+    "pooled_daily_cluster_bootstrap_ci95_upper_below_zero": true
+  },
+  "holdout_gate": {
+    "candidate_minus_v230_log_loss_below_zero": true,
+    "daily_cluster_bootstrap_ci95_upper_below_zero": true
+  },
+  "bootstrap": {
+    "unit": "race_date",
+    "samples": 20000,
+    "development_seed": 23118,
+    "holdout_seed": 23109
+  },
+  "decision": "Only a passed d9 candidate may become a frozen challenger; production remains unchanged."
+}

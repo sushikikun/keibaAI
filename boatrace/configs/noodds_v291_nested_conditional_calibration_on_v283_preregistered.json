@@ -1,0 +1,73 @@
+{
+  "created_at": "2026-07-15T08:10:00+09:00",
+  "model_id": "noodds_raw_v291_nested_conditional_calibration_on_v283",
+  "hypothesis": "The strong v283 ranking may retain systematic stage-wise overconfidence or lane bias. A low-dimensional calibration that exactly factorizes its 120 probabilities into first, second-given-first, and third-given-pair distributions can improve exact-top3 logloss without replacing the parent ranking model.",
+  "frozen_before_run": true,
+  "policy": {
+    "odds_used": false,
+    "payout_used": false,
+    "current_race_result_used": false,
+    "same_day_result_used": false,
+    "future_information_used": false,
+    "posthoc_search": false,
+    "active_parent": "v283_current_meet_form_on_v280"
+  },
+  "inputs": {
+    "v283_d6_sha256": "AB18CD797B7AADF3E2B0F9ED3E01278733015D9715074995F1E5D1AC555DFB49",
+    "v283_d7_sha256": "0BB70312010CA297A04D5FAA109FCBE51F79D89AFB531F616801B61384350FF3",
+    "v283_d8_sha256": "06C05744C38ECD914059CDE39F3A564FB1BF94FAB4035407D322888AD0316228",
+    "targets_sha256": "F71A3F7FF0C652B15C63828E92B77451B62150F8A922AB1732DBDE749C98BE12",
+    "race_dates_sha256": "47FA506F5D1CEA9C15ADBBB14D5A8793069D261B77FCB665069F8346CA21FB9D",
+    "evaluation_protocol_v7_sha256": "1F3659B9F066B823E47C3766132F96E4DC34D2AE66FB45E0F02852878041B90C"
+  },
+  "structure": {
+    "factorization": "P(first) * P(second|first) * P(third|first,second)",
+    "stage_logits": "alpha_stage * log(parent_conditional_probability) + destination_lane_bias_stage",
+    "stage_alpha_initialization": 1.0,
+    "lane_bias_initialization": 0.0,
+    "lane_bias_centering": "subtract mean bias within each stage",
+    "stages": 3,
+    "free_temperature_parameters": 3,
+    "free_lane_bias_parameters": 18,
+    "parent_reconstruction_test": "unmodified conditionals must reconstruct all 120 v283 probabilities"
+  },
+  "training": {
+    "optimizer": "torch_lbfgs",
+    "max_iterations": 100,
+    "history_size": 20,
+    "line_search": "strong_wolfe",
+    "tolerance_grad": 1e-09,
+    "tolerance_change": 1e-11,
+    "l2_alpha_toward_one": 0.01,
+    "l2_lane_bias_toward_zero": 0.01,
+    "probability_floor": 1e-15,
+    "threads": 4,
+    "seed": 29101,
+    "early_stopping": false,
+    "temperature_search": false,
+    "regularization_search": false,
+    "blend_search": false,
+    "d6_prediction": "unchanged v283",
+    "d7": "fit all three calibrators only on D6 chronological history and predict D7",
+    "d8": "fit all three calibrators only on D6 plus D7 chronological history and predict D8"
+  },
+  "screen": {
+    "protocol": "configs/noodds_candidate_acceleration_v2.json",
+    "fixed_indices": true,
+    "futility_only": true
+  },
+  "final_protocol": "configs/noodds_evaluation_protocol_v7.json",
+  "promotion_requires": "mean delta versus v283 below zero, race-date bootstrap CI95 upper below zero, and v283 child-family Holm-adjusted p below 0.05",
+  "forbidden": [
+    "odds",
+    "payout",
+    "same-day labels",
+    "future labels",
+    "stage-specific feature search",
+    "temperature search",
+    "regularization search",
+    "blend search",
+    "post-result parameter changes"
+  ],
+  "difference_from_v279": "v279 trained flexible feature-dependent LightGBM conditional residuals. v291 is a 21-parameter parent-only calibration with no race or runner features and is initialized to exactly reproduce v283."
+}

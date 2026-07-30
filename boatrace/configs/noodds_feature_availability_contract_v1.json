@@ -1,0 +1,26 @@
+{
+  "contract_id": "noodds_feature_availability_contract_v1",
+  "frozen_at": "2026-07-16T09:00:00+09:00",
+  "scope": "v337 online dynamic Plackett-Luce research family",
+  "policy": {
+    "odds_used": false,
+    "payout_used": false,
+    "same_day_results_used_for_features": false,
+    "future_results_used": false
+  },
+  "allowed_prediction_inputs": [
+    {"name": "racer_code", "source": "dataset/runner_features.npy index 0", "availability": "entry identity before race; code<=0 becomes a race-lane-specific neutral key without shared history"},
+    {"name": "official_start_course", "source": "start_course_sidecar_v269_official_complete", "availability": "official pre-race display; unavailable values remain missing"},
+    {"name": "race_date", "source": "dataset/race_dates.npy", "availability": "schedule metadata"}
+  ],
+  "label_update_rule": "Finish-order labels may update state only after prediction features for every race on the same race_date have been emitted.",
+  "forbidden_prediction_inputs": [
+    "odds", "payout", "finish_position", "same-day finish-derived state", "future-day state", "imputed official start course"
+  ],
+  "required_checks": [
+    "dataset manifest declares odds_used=false and payout_used=false",
+    "all train race_dates are strictly earlier than each validation window start",
+    "no validation date appears in more than one rolling origin",
+    "official start-course missing values remain explicit rather than imputed"
+  ]
+}

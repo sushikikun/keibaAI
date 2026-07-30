@@ -1,0 +1,11 @@
+{
+  "failed_run_retention": "retain manifest; never promote",
+  "immutable_after_creation": true,
+  "required_hashes": [
+    "model_config_sha256",
+    "preprocessing_config_sha256",
+    "calibration_config_sha256",
+    "code_sha256",
+    "checkpoint_sha256"
+  ]
+}

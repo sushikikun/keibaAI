@@ -1,0 +1,12 @@
+{
+  "bin_count": 10,
+  "edge_fit_role": "train",
+  "transform_roles": [
+    "selection",
+    "calibration",
+    "evaluation"
+  ],
+  "duplicate_edge_policy": "strictly_increasing_edges_only",
+  "missing_bin": "separate_missing",
+  "infinity_forbidden": true
+}

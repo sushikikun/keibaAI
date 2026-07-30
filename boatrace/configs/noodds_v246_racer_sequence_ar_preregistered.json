@@ -1,0 +1,77 @@
+{
+  "model_id": "noodds_raw_v246_racer_sequence_ar",
+  "status": "preregistered_before_predictions",
+  "frozen_at": "2026-07-12T07:15:00+09:00",
+  "hypothesis": "A shared recurrent encoder over each racer's last 12 starts recovers form trajectory, layoff, and start/exhibition dynamics lost by fixed recent-window aggregates.",
+  "policy": {
+    "odds_used": false,
+    "payout_used": false,
+    "start_course_used": false,
+    "past_outcomes_used": true,
+    "current_or_future_outcomes_used": false,
+    "architecture_search": false,
+    "sequence_length_search": false,
+    "hidden_width_search": false,
+    "blend_weight_search": false,
+    "periods_through_20260711_ineligible_for_final_confirmation": true
+  },
+  "dataset": {
+    "path": "results/noodds_raw_v200/dataset",
+    "races": 72646,
+    "date_range": ["2024-10-27", "2026-07-01"],
+    "manifest_sha256": "4283dc0d06981f7292ec18e8d7496cf651efbce5f4c81cb367ec940af5949266"
+  },
+  "inputs": {
+    "feature_set": "full_ids",
+    "openskill_sidecar": "results/noodds_raw_v200/openskill_sidecar_v242_tieaware",
+    "sequence_sidecar": "results/noodds_raw_v200/racer_sequence_sidecar_v246",
+    "sequence_length": 12,
+    "sequence_feature_count": 13,
+    "sequence_history_policy": "strictly prior race_date only; all same-day sequences frozen before same-day updates"
+  },
+  "architecture": {
+    "base": "v243 identity autoregressive Transformer",
+    "sequence_encoder": "shared one-layer GRU",
+    "sequence_hidden_width": 32,
+    "sequence_input_layer_norm": true,
+    "sequence_projection_to_runner_width": 64,
+    "runner_width": 64,
+    "transformer_layers": 2,
+    "attention_heads": 8,
+    "feedforward_width": 128,
+    "dropout": 0.1,
+    "training_conditioning": "teacher forcing with true first and second",
+    "inference": "exact enumeration of all 120 ordered top-three outcomes"
+  },
+  "training": {
+    "epochs": 6,
+    "batch_races": 512,
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1,
+    "seed": 24601,
+    "threads": 8,
+    "parameter_search": false
+  },
+  "baseline": {
+    "model_id": "noodds_raw_v243_identity_autoregressive_transformer",
+    "probability_source": "standalone"
+  },
+  "development_folds": ["d6", "d7", "d8"],
+  "development_gate": {
+    "v246_minus_v243_log_loss_below_zero_in_every_fold": true,
+    "pooled_daily_cluster_bootstrap_ci95_upper_below_zero": true
+  },
+  "legacy_d9": {
+    "open_only_after_development_gate": true,
+    "confirmation_role": "diagnostic_only"
+  },
+  "bootstrap": {
+    "unit": "race_date",
+    "samples": 20000,
+    "development_seed": 24618,
+    "legacy_seed": 24609
+  },
+  "decision": "Reject on development failure. A pass still requires a new confirmation stream after 2026-07-11 and the separate market-domination gate."
+}

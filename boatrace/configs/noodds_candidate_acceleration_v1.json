@@ -1,0 +1,67 @@
+{
+  "protocol_id": "noodds_candidate_acceleration_v1",
+  "frozen_at": "2026-07-14T20:05:00+09:00",
+  "purpose": "resource screening only; final model ranking remains under noodds_evaluation_protocol_v2",
+  "policy": {
+    "odds_used": false,
+    "payout_used": false,
+    "posthoc_threshold_search": false,
+    "final_protocol": "configs/noodds_evaluation_protocol_v2.json"
+  },
+  "preflight": {
+    "required_folds": ["d6", "d7", "d8"],
+    "required_prediction_keys": ["standalone", "race_indices", "race_dates", "true_combo"],
+    "require_probability_rows_sum_to_one": true,
+    "probability_sum_atol": 0.00001,
+    "require_exact_race_index_alignment": true,
+    "reject_nonempty_output_without_resume": true
+  },
+  "cache": {
+    "directory": "results/noodds_raw_v200/candidate_acceleration_cache_v1",
+    "contents": [
+      "full fold train and validation indices",
+      "deterministic screen train and validation indices",
+      "v251 probabilities aligned to full validation indices",
+      "targets and race dates"
+    ],
+    "key_inputs": [
+      "dataset manifest sha256",
+      "dataset source db sha256",
+      "baseline prediction sha256",
+      "fold boundaries",
+      "screen policy"
+    ],
+    "cache_large_prepared_tensors": false
+  },
+  "screen": {
+    "folds": ["d6", "d7", "d8"],
+    "selection_unit": "race_date",
+    "selection_method": "sha256(seed|fold|split|race_date), then take lowest scores",
+    "seed": 26101,
+    "train_date_fraction": 0.35,
+    "validation_date_fraction": 0.35,
+    "minimum_train_dates": 60,
+    "minimum_validation_dates": 14,
+    "candidate_training_budget": {
+      "pretrain_epoch_fraction": 0.34,
+      "supervised_epoch_fraction": 0.34,
+      "minimum_pretrain_epochs": 1,
+      "minimum_supervised_epochs": 2
+    },
+    "bootstrap": {
+      "unit": "race_date",
+      "samples": 5000,
+      "seed": 26118
+    },
+    "futility_gate": {
+      "pooled_logloss_delta_greater_than": 0.02,
+      "daily_cluster_ci95_lower_greater_than": 0.0,
+      "require_both": true,
+      "single_fold_rejection": false
+    },
+    "outcomes": {
+      "stop_for_futility": "do not spend full D6-D8 training budget; retain screen report",
+      "continue_full_evaluation": "run complete D6-D8 and judge only with evaluation protocol v2"
+    }
+  }
+}

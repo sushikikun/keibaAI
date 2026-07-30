@@ -1,0 +1,7 @@
+{
+    "stage_classes":  "0..5",
+    "required_class_order":  "1..6 mapped to zero-based columns",
+    "model_classes_alignment":  "explicit",
+    "class_order_canary":  "passed",
+    "status":  "passed"
+}

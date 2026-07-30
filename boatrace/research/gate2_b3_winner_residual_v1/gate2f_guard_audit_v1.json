@@ -1,0 +1,12 @@
+{
+  "artifact": "gate2f_guard_audit_v1",
+  "p2_p3_unchanged_by_design": true,
+  "p2_p3_unchanged_verified_in_canary": true,
+  "beta_zero_identity_verified": true,
+  "prediction_coverage_100_percent": false,
+  "full_fold_metrics_available": false,
+  "formal_champion_selected": false,
+  "protected_anchor_difference_count": 0,
+  "invalid_batch_count": 0,
+  "status": "resource_blocked"
+}

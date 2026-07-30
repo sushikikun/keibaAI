@@ -1,0 +1,6 @@
+{
+  "dense_conversion_zero": true,
+  "fit_scope": "train-only",
+  "imputer": "SimpleImputer(strategy=median,add_indicator=True)",
+  "scaler": "StandardScaler(with_mean=False)"
+}

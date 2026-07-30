@@ -1,0 +1,37 @@
+{
+  "created_at": "2026-07-11T16:48:00+09:00",
+  "model_id": "noodds_raw_v217_coverage_gate",
+  "hypothesis": "The v206 listwise addition is beneficial when exhibition and start-ST are complete for all six boats, but unstable when either field is incomplete. Use v205 only for incomplete races and v206 otherwise.",
+  "frozen_before_run": true,
+  "artifacts": {
+    "development_diagnostic_sha256": "4CEFC22D90104ADED3C3DEE067B250C7E53C562F0BB7EE13E8A6F9D491BD8086",
+    "dataset_manifest_sha256": "4283DC0D06981F7292EC18E8D7496CF651EFBCE5F4C81CB367EC940AF5949266",
+    "v205_oof_sha256": "1401F19935232C3F61DA5996A54F3696CD99828FA4E323F0B706427EF1A6DDF2",
+    "v206_oof_sha256": "91C39993E0C3CE29A5DB3F0EDBE4836D622D436B87C446B982CBEDF46FED6AA5"
+  },
+  "fixed_rule": {
+    "use_v206_when": "exhibition_coverage >= 0.999 and start_st_coverage >= 0.999",
+    "use_v205_otherwise": true,
+    "test_fold": "d9"
+  },
+  "development_evidence": {
+    "complete_races": 12969,
+    "complete_v205_minus_v206_log_loss_delta": 0.008648678194729751,
+    "incomplete_races": 142,
+    "incomplete_v205_minus_v206_log_loss_delta": -0.04788081764059522,
+    "incomplete_direction_consistent_folds": ["d6", "d7", "d8"]
+  },
+  "forbidden": [
+    "odds",
+    "payout",
+    "threshold search",
+    "probability blending",
+    "D9-specific rule changes"
+  ],
+  "acceptance_rule": {
+    "d9_overall_log_loss_delta_lt": 0.0,
+    "d9_incomplete_segment_log_loss_delta_lt": 0.0,
+    "d9_daily_bootstrap_ci95_upper_lt": 0.0
+  },
+  "interpretation": "Passing creates a deterministic missingness specialist challenger. It does not change complete-race predictions."
+}

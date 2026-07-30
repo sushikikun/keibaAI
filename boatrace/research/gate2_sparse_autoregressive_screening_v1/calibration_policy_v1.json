@@ -1,0 +1,9 @@
+{
+    "candidates":  [
+                       "identity",
+                       "scalar_temperature"
+                   ],
+    "fit_scope":  "calibration-only",
+    "selection_metric":  "calibration_trifecta_log_loss",
+    "source_of_truth":  "Gate1-E calibration contract"
+}

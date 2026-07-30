@@ -1,0 +1,81 @@
+{
+  "created_at": "2026-07-15T08:55:00+09:00",
+  "model_id": "noodds_raw_v292_anchored_linear_runner_utility_on_v283",
+  "hypothesis": "v290 may have overfit because the attention residual was too flexible. A zero-initialized, strongly regularized linear runner-utility correction can test whether stable omitted linear effects remain in v283 while preserving the parent exactly at initialization.",
+  "frozen_before_run": true,
+  "policy": {
+    "odds_used": false,
+    "payout_used": false,
+    "current_race_result_used": false,
+    "same_day_result_used": false,
+    "future_information_used": false,
+    "posthoc_search": false,
+    "active_parent": "v283_current_meet_form_on_v280"
+  },
+  "inputs": {
+    "v283_d6_sha256": "AB18CD797B7AADF3E2B0F9ED3E01278733015D9715074995F1E5D1AC555DFB49",
+    "v283_d7_sha256": "0BB70312010CA297A04D5FAA109FCBE51F79D89AFB531F616801B61384350FF3",
+    "v283_d8_sha256": "06C05744C38ECD914059CDE39F3A564FB1BF94FAB4035407D322888AD0316228",
+    "targets_sha256": "F71A3F7FF0C652B15C63828E92B77451B62150F8A922AB1732DBDE749C98BE12",
+    "race_dates_sha256": "47FA506F5D1CEA9C15ADBBB14D5A8793069D261B77FCB665069F8346CA21FB9D",
+    "runner_features_sha256": "AB44DFA6B56EA764E38FB46667A5D8C170C7338B3F8AC50A800D0CBE8147463F",
+    "runner_course_features_sha256": "0EA35A8A953C125947464768FB373827C498A54EAF7D72D14534B78C58AEEA59",
+    "course_available_sha256": "6CE308FE95919AFD7F212774DBB55CEE804FA4224AB1A01D20BA0CCF11E1E507",
+    "evaluation_protocol_v7_sha256": "1F3659B9F066B823E47C3766132F96E4DC34D2AE66FB45E0F02852878041B90C"
+  },
+  "features": {
+    "runner_indices": [4,5,6,7,8,9,10,15,16,17,19,20,21,23,24,26,28,30,32,34,39,41,55,67],
+    "official_course_runner_width": 5,
+    "numeric_missing_mask": "one explicit mask per selected raw and course feature",
+    "lane_one_hot_width": 6,
+    "normalization": "training-races-only mean and standard deviation; missing standardized value zero",
+    "race_features_used": false
+  },
+  "structure": {
+    "formula": "log(v283_probability) + centered_u1[first] + centered_u2[second] + centered_u3[third]",
+    "runner_utility": "one zero-initialized linear head per finishing position over standardized runner features, missing masks, and lane one-hot",
+    "position_heads": 3,
+    "nonlinear_layers": 0,
+    "interactions": false,
+    "initialization": "all head weights and biases exactly zero"
+  },
+  "training": {
+    "optimizer": "torch_lbfgs",
+    "max_iterations": 100,
+    "history_size": 20,
+    "line_search": "strong_wolfe",
+    "tolerance_grad": 1e-09,
+    "tolerance_change": 1e-11,
+    "l2_weight_penalty": 0.1,
+    "l2_bias_penalty": 0.1,
+    "probability_floor": 1e-15,
+    "threads": 4,
+    "seed": 29201,
+    "early_stopping": false,
+    "regularization_search": false,
+    "temperature_search": false,
+    "blend_search": false,
+    "d6_prediction": "unchanged v283",
+    "d7": "fit only on D6 chronological history and predict D7",
+    "d8": "fit only on D6 plus D7 chronological history and predict D8"
+  },
+  "screen": {
+    "protocol": "configs/noodds_candidate_acceleration_v2.json",
+    "fixed_indices": true,
+    "futility_only": true
+  },
+  "final_protocol": "configs/noodds_evaluation_protocol_v7.json",
+  "promotion_requires": "mean delta versus v283 below zero, race-date bootstrap CI95 upper below zero, and v283 child-family Holm-adjusted p below 0.05",
+  "forbidden": [
+    "odds",
+    "payout",
+    "same-day labels",
+    "future labels",
+    "feature search",
+    "regularization search",
+    "temperature search",
+    "blend search",
+    "post-result parameter changes"
+  ],
+  "difference_from_v290": "v290 used a learned projection and self-attention. v292 has no nonlinear layers or attention and applies a strongly regularized linear correction only."
+}

@@ -1,0 +1,10 @@
+{
+  "runtime_ready": true,
+  "statistical_baseline_pipeline_ready": true,
+  "screening_baseline_reference_ready": true,
+  "machine_learning_baseline_ready": false,
+  "confirmation_authorized": false,
+  "final_lock_authorized": false,
+  "formal_champion_selected": false,
+  "gate2c_explicit_approval_required": true
+}

@@ -1,0 +1,4 @@
+anchor,value
+baseline_manifest_sha256,f3eb62dc643c9f2561f5ec1827e3d070b63fd85952425ea69b39dc0f73a8c6e3
+gate2e_passed,true
+automation_status,PAUSED

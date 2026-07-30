@@ -1,0 +1,71 @@
+{
+    "protocol_id":  "noodds_evaluation_protocol_v8",
+    "frozen_at":  "2026-07-15T11:04:47.9918742+09:00",
+    "scope":  "all descendants tested directly against v295 active parent",
+    "honesty_note":  "D6-D9 and prior external blocks have been repeatedly observed. This protocol ranks development descendants only; final proof requires a separately frozen future block.",
+    "references":  {
+                       "absolute":  {
+                                        "model_id":  "noodds_raw_v251_masked_pretrain_ar",
+                                        "role":  "stable reporting reference"
+                                    },
+                       "development_anchor":  {
+                                                  "model_id":  "v242_openskill_contextual_standalone",
+                                                  "role":  "historical anchor; improvement alone cannot promote"
+                                              },
+                       "previous_parent":  {
+                                               "model_id":  "v283_current_meet_form_on_v280",
+                                               "role":  "reporting reference for inherited current-meet and pairwise-history gain"
+                                           },
+                       "active_parent":  {
+                                             "model_id":  "v295_large_history_exact_top3_with_proven_history_on_v283",
+                                             "role":  "mandatory direct incremental comparison baseline"
+                                         }
+                   },
+    "folds":  [
+                  "d6",
+                  "d7",
+                  "d8"
+              ],
+    "primary_test":  {
+                         "metric":  "pooled exact-top3 race logloss delta versus active parent",
+                         "uncertainty_unit":  "race_date",
+                         "bootstrap_samples":  20000,
+                         "bootstrap_seed":  27218,
+                         "promotion_requires_mean_below_zero":  true,
+                         "promotion_requires_ci95_upper_below_zero":  true,
+                         "single_fold_veto":  false
+                     },
+    "multiplicity":  {
+                         "family":  "all complete descendants tested against v295 active parent",
+                         "test":  "one-sided Wilcoxon signed-rank test over paired daily mean logloss deltas versus v295 active parent",
+                         "alternative":  "candidate logloss is lower",
+                         "correction":  "Holm",
+                         "familywise_alpha":  0.05,
+                         "promotion_requires_holm_reject":  true
+                     },
+    "required_reporting":  [
+                               "delta_vs_v251",
+                               "delta_vs_v242",
+                               "delta_vs_v269",
+                               "delta_vs_v270",
+                               "delta_vs_v280",
+                               "delta_vs_v283",
+                               "delta_vs_active_parent",
+                               "active_parent_ci95",
+                               "raw_p",
+                               "holm_adjusted_p",
+                               "top1",
+                               "top5",
+                               "mean_true_combo_rank"
+                           ],
+    "screen_policy":  {
+                          "resource_screen_protocol":  "configs/noodds_candidate_acceleration_v2.json",
+                          "screen_is_futility_only":  true,
+                          "screen_never_promotes":  true,
+                          "stop_only_if_parent_delta_mean_above_zero_and_ci95_lower_above_zero":  true
+                      },
+    "external_policy":  {
+                            "prospective_start_exclusive":  "2026-07-11",
+                            "final_proof_requires":  "a separately frozen future block with no model, feature, threshold, parent, or candidate selection after outcomes are opened"
+                        }
+}

@@ -1,0 +1,43 @@
+{
+  "model_id": "noodds_raw_v248_stage_specific_ar",
+  "status": "preregistered_before_predictions",
+  "frozen_at": "2026-07-12T08:00:00+09:00",
+  "hypothesis": "Independent stage-specific Transformer encoders prevent first, second, and third-place objectives from compromising a shared race representation.",
+  "policy": {
+    "odds_used": false,
+    "payout_used": false,
+    "features_changed": false,
+    "architecture_search": false,
+    "blend_weight_search": false,
+    "paired_seed_control": true,
+    "periods_through_20260711_ineligible_for_final_confirmation": true
+  },
+  "dataset": {"path": "results/noodds_raw_v200/dataset", "races": 72646, "manifest_sha256": "4283dc0d06981f7292ec18e8d7496cf651efbce5f4c81cb367ec940af5949266"},
+  "architecture": {
+    "base": "v243 identity autoregressive Transformer",
+    "change": "three independent two-layer Transformer encoders initialized identically, one per top-three stage",
+    "runner_width": 64,
+    "transformer_layers_per_stage": 2,
+    "attention_heads": 8,
+    "feedforward_width": 128,
+    "dropout": 0.1,
+    "inference": "exact enumeration of all 120 ordered top-three outcomes"
+  },
+  "training": {
+    "epochs": 6,
+    "batch_races": 512,
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1,
+    "seed": 24301,
+    "threads": 8,
+    "parameter_search": false
+  },
+  "baseline": {"model_id": "noodds_raw_v243_identity_autoregressive_transformer", "probability_source": "standalone", "same_seed": 24301},
+  "development_folds": ["d6", "d7", "d8"],
+  "development_gate": {"each_fold_delta_below_zero": true, "pooled_daily_bootstrap_ci95_upper_below_zero": true},
+  "legacy_d9": {"open_only_after_development_gate": true},
+  "bootstrap": {"unit": "race_date", "samples": 20000, "development_seed": 24818, "legacy_seed": 24809},
+  "decision": "Reject on development failure. Passing still requires unseen confirmation after 2026-07-11."
+}

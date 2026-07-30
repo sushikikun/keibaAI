@@ -1,0 +1,33 @@
+{
+  "reproducible_id": true,
+  "required_fields": [
+    "experiment_id",
+    "program_id",
+    "hypothesis_ids",
+    "control_or_treatment",
+    "exploratory_or_confirmatory",
+    "source_snapshot",
+    "feature_sidecar",
+    "split",
+    "feature_set",
+    "model_family",
+    "model_config",
+    "preprocessing_config",
+    "calibration_config",
+    "seed_policy",
+    "compute_environment",
+    "code_hash",
+    "checkpoint_hashes",
+    "prediction_hashes",
+    "metrics_hashes",
+    "parent_experiment",
+    "status"
+  ],
+  "status_values": [
+    "planned",
+    "running",
+    "completed",
+    "failed",
+    "blocked"
+  ]
+}

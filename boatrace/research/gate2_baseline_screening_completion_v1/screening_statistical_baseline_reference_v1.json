@@ -1,0 +1,17 @@
+{
+  "reference_model_id": "B3_autoregressive_hierarchical_frequency",
+  "pooled_raw_log_loss": 4.151575557651773,
+  "pooled_calibrated_log_loss": 4.151932308088278,
+  "evaluation_race_count": 51232,
+  "folds_included": [
+    "screening_fold_1",
+    "screening_fold_2",
+    "screening_fold_3",
+    "screening_fold_4"
+  ],
+  "reference_scope": "screening_folds_1_to_4_only",
+  "fold1_reference_b0_raw": 4.787491742782046,
+  "not_a_formal_champion": true,
+  "confirmation_not_run": true,
+  "final_lock_not_run": true
+}

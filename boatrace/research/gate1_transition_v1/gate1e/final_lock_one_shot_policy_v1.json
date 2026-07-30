@@ -1,0 +1,10 @@
+{
+  "champion_and_predeclared_challenger_only": true,
+  "exact_hashes_required": true,
+  "first_result_read_once": true,
+  "gate1e_unlock_executed": false,
+  "implementation_retry_only": true,
+  "performance_retry_forbidden": true,
+  "post_result_model_change_invalidates_lock": true,
+  "unlock_requires_explicit_command": true
+}

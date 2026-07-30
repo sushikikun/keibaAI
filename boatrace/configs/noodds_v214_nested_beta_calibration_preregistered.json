@@ -1,0 +1,35 @@
+{
+  "created_at": "2026-07-11T15:25:00+09:00",
+  "model_id": "noodds_raw_v214_nested_beta_calibration",
+  "hypothesis": "A single temperature cannot correct v206's relative overestimate in the extreme low-probability tail. A fixed monotone three-parameter beta calibration fitted only on prior folds may improve multiclass reliability.",
+  "frozen_before_run": true,
+  "input_v206_oof_sha256": "91C39993E0C3CE29A5DB3F0EDBE4836D622D436B87C446B982CBEDF46FED6AA5",
+  "method": {
+    "formula": "q_raw = sigmoid(a*log(p) + b*log(1-p) + c); q = q_raw/sum(q_raw)",
+    "identity": [1.0, -1.0, 0.0],
+    "bounds": [[0.5, 1.5], [-1.5, -0.5], [-2.0, 2.0]],
+    "l2_strength": 0.001,
+    "optimizer": "L-BFGS-B",
+    "fit_plan": {
+      "d7": ["d6"],
+      "d8": ["d6", "d7"],
+      "d9": ["d6", "d7", "d8"]
+    }
+  },
+  "forbidden": [
+    "odds",
+    "payout",
+    "ROI-based selection",
+    "calibration-method search",
+    "bound search",
+    "penalty search",
+    "target-fold outcomes in its calibration fit"
+  ],
+  "primary_metric": "trifecta multiclass log loss",
+  "acceptance_rule": {
+    "all_of_d7_d8_d9_log_loss_delta_lt": 0.0,
+    "pooled_d7_d9_daily_bootstrap_ci95_upper_lt": 0.0,
+    "d9_daily_bootstrap_ci95_upper_lt": 0.0
+  },
+  "interpretation": "Passing creates a calibration challenger, not a new champion. A clean frozen future test remains required."
+}

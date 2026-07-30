@@ -1,0 +1,25 @@
+{
+    "run_id":  "clean_retry_run_v1_283b74468bbb996c8839",
+    "retry_generation":  "clean_retry_1",
+    "automation_paused":  true,
+    "confirmation_access":  0,
+    "confirmation_metrics":  0,
+    "final_lock_access":  0,
+    "final_lock_metrics":  0,
+    "final_lock_unlock":  0,
+    "formal_catboost_run_exists":  false,
+    "previous_staging_exists":  true,
+    "previous_staging_untouched":  true,
+    "runtime_manifest_sha256":  "b5a35896d8210cf8fa7960c0bcdeb03b6a80841887205ffc3edfce43de212c59",
+    "package_set":  {
+                        "numpy":  "2.3.5",
+                        "scipy":  "1.18.0",
+                        "catboost":  "1.2.10",
+                        "scikit_learn":  "1.9.0",
+                        "pandas":  "3.0.1"
+                    },
+    "final_lock_status":  "sealed",
+    "final_lock_performance_viewed":  false,
+    "final_lock_unlock_count":  0,
+    "passed":  true
+}

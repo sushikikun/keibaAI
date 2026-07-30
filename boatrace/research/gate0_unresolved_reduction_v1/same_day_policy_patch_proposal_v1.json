@@ -1,0 +1,15 @@
+{
+  "eligible_for_model_training": false,
+  "eligible_from_proven_pre_cutoff_source_count": 0,
+  "existing_policy_modified": false,
+  "external_or_web_data_acquired": false,
+  "proposal_id": "same_day_policy_patch_proposal_v1",
+  "purpose": "policy_execution_validation",
+  "rules": [
+    "Keep semantic_candidate rows quarantined unless separately approved as semantic_confirmed or timestamp_confirmed.",
+    "An audit match to a final result validates the printed value only; it does not establish prediction-time availability.",
+    "No direct result/auxiliary-target join may populate a same-day inference feature.",
+    "A prior race number must be less than its target race number; target and later results remain forbidden."
+  ],
+  "status": "provisional"
+}

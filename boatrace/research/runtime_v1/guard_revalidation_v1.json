@@ -1,0 +1,17 @@
+{
+  "actual_target_data_opened": false,
+  "actual_training_data_opened": false,
+  "confirmation_metrics_viewed": false,
+  "final_lock_metrics_viewed": false,
+  "final_lock_unlocked": false,
+  "passed": true,
+  "results": {
+    "screening_to_confirmation": "PASS_REJECTED",
+    "unknown_race": "PASS_REJECTED",
+    "unlock_without_command": "PASS_REJECTED",
+    "wrong_dataset_hash": "PASS_REJECTED",
+    "wrong_final_lock_hash": "PASS_REJECTED",
+    "wrong_split_hash": "PASS_REJECTED"
+  },
+  "unlock_event_count": 0
+}

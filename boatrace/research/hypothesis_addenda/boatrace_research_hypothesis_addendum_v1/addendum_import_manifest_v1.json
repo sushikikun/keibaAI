@@ -1,0 +1,156 @@
+{
+  "artifact_set_sha256": "8fe5bc402dc9674e6b81585eefbc5a2195b54e397ce57960b24a2d24f6a1aeea",
+  "artifacts": [
+    {
+      "path": "addendum_core_experiment_proposal_v1.csv",
+      "sha256": "a568eb11a70a8dce25e5d32a5cd1c488a2b7b615cf803bda2b9efd5266d732bc",
+      "size_bytes": 15768
+    },
+    {
+      "path": "addendum_data_gap_proposal_v1.csv",
+      "sha256": "a9649f411481f26ce8bcc20dd7beb2dd8786ed6c005547e3c56d472cfbe9fe4f",
+      "size_bytes": 29593
+    },
+    {
+      "path": "addendum_dependency_review_v1.csv",
+      "sha256": "41ba443d9e3f8a81e3dbcdf40762856f027abe0cd1e0c47bd6a377fc3eee6e26",
+      "size_bytes": 10950
+    },
+    {
+      "path": "addendum_import_report_v1.md",
+      "sha256": "94de7a51559bd92eef7e3c3dc0aaed24eed6ab951fe663c0c5fcebdc1476ae10",
+      "size_bytes": 2095
+    },
+    {
+      "path": "addendum_import_validation_v1.json",
+      "sha256": "7d61f17fdec8bb5bb858bc1dfd718da62a0cd0873d87bfffb81768f1e81bd0e3",
+      "size_bytes": 2234
+    },
+    {
+      "path": "addendum_local_reconciliation_v1.csv",
+      "sha256": "3573272c36619b56fb834898869a8b2fa850c1496fb637097222e3a64d8d8c1f",
+      "size_bytes": 13421
+    },
+    {
+      "path": "addendum_overlap_review_v1.csv",
+      "sha256": "fc0b6a8ce69e71c26979c06e9cb84978acecd49db9d07ec63f43eae0609e1d31",
+      "size_bytes": 24722
+    },
+    {
+      "path": "addendum_readiness_feature_map_proposal_v1.csv",
+      "sha256": "965943ac9dfbfa05da0e61613ca27ce371826dd0608f24bfa562e619a20c14b0",
+      "size_bytes": 29156
+    },
+    {
+      "path": "protected_anchor_after_v1.csv",
+      "sha256": "24281a8f49f87e824c3efd9d0565615fc1e7fb2b5139a9993460225c7fd93e6d",
+      "size_bytes": 1411
+    },
+    {
+      "path": "protected_anchor_before_v1.csv",
+      "sha256": "fab53ee0e2f96f56c4a9c0af5b48cb0e321c934c9ac57611026fc14c82b7d020",
+      "size_bytes": 1294
+    },
+    {
+      "path": "source_package/boatrace_research_hypothesis_addendum_v1/boatrace_research_hypothesis_addendum_v1.csv",
+      "sha256": "8bf80d55060818f445b61940fbe25451f9d6600c11b51d808f18d19d299187fc",
+      "size_bytes": 39163
+    },
+    {
+      "path": "source_package/boatrace_research_hypothesis_addendum_v1/boatrace_research_hypothesis_addendum_v1.json",
+      "sha256": "c542415c1004f008a3eb2ffdd835539dfa26073adfc96cb6b6cc53d326ee4995",
+      "size_bytes": 70620
+    },
+    {
+      "path": "source_package/boatrace_research_hypothesis_addendum_v1/boatrace_research_hypothesis_addendum_v1.md",
+      "sha256": "3329dba30b3274cc7d9ced45e8e8c3df494d41cc027119fb079cb10fd649d7a5",
+      "size_bytes": 25602
+    },
+    {
+      "path": "source_package/boatrace_research_hypothesis_addendum_v1/boatrace_research_hypothesis_addendum_v1_manifest.json",
+      "sha256": "40d822e78ad10361fc1e175cdb78ba27148b128f9c4a0a94a94e035ff01eed39",
+      "size_bytes": 1818
+    },
+    {
+      "path": "source_package/boatrace_research_hypothesis_addendum_v1/boatrace_research_hypothesis_addendum_v1_manifest.sha256",
+      "sha256": "a119ef8137dfa9ebc0000417ccefe2b9c214f361b1b23518a8388409a8e8cb64",
+      "size_bytes": 121
+    },
+    {
+      "path": "source_package/boatrace_research_hypothesis_addendum_v1/boatrace_research_hypothesis_addendum_v1_validation.json",
+      "sha256": "38876c01c071a7f22eece1dc22bfbf5f0f168ec33d52279d49b8a957f2fb8d64",
+      "size_bytes": 3318
+    },
+    {
+      "path": "source_package/boatrace_research_hypothesis_addendum_v1/codex_import_prompt_boatrace_research_hypothesis_addendum_v1.txt",
+      "sha256": "a6e7d32052ce4924058daf4d1500a9e2f6c47e242b7e9662b90937d2c0b2c4b5",
+      "size_bytes": 3780
+    },
+    {
+      "path": "source_package/boatrace_research_hypothesis_addendum_v1.zip",
+      "sha256": "5c4d49caa5ce818409c0a1569468084e0e635af7008b704f54d81ecf3cfd6398",
+      "size_bytes": 37009
+    }
+  ],
+  "created_at": "2026-07-28T07:15:51.683349+00:00",
+  "eligible_for_model_training": false,
+  "import_status": "newly_installed",
+  "manifest_id": "addendum_import_manifest_v1",
+  "protected_anchors": {
+    "after": {
+      "configs/boatrace_model_evaluation_v1_1.json": "2347e7e0467bad64084eff01844b314d0e2533e3131f73816295fec8563e535e",
+      "research/core_decision_experiments_v1.json": "f91a35e448b7b0b10ed78dc2437de4f8d9b678bf9a1883218c5d11a859ea569c",
+      "research/data_gap_matrix_v1.csv": "70a6710ff2ae7e483f6194d15766b59a5a176d0da98c280c0072b275e1d45127",
+      "research/feature_research_map_v1.csv": "94c6f51dc76ac92d0332019c1b2905afe878ac493f92abe6e7a8767899836fd0",
+      "research/hypothesis_dependency_graph_v1.json": "0e88440a82ee6efcf8de5c686f78f085bf5fa6593d3601febce43379456f8d1a",
+      "research/hypothesis_execution_readiness_v1.csv": "5f9781c6240045ab3712d0320e5354f4cf2553979a7be7f781c0ffe7db509d58",
+      "research/hypothesis_registry_v2.json": "76b8573b8ee4bce69b23c0dcf789d80894a26cbc21d201ac96f6e37911f2fe83",
+      "research/hypothesis_registry_v2.md": "7dc8c0ced312a9880631eda9f489cc9c8092001c3bcb4fb056d9e53a7d127060",
+      "research/research_stage_gates_v1.json": "14a6ff0d945c4df4779a0a5c1a2d8f3def126d0b962fa570920743b0a7a274ed",
+      "results/boatrace_model_research/snapshots/research_v0_136183_55f32b3538a9/dataset_manifest.json": "a59854ae6691c7e0875fddad45211d1cf4acb47458132d5c17a7e506ee396af0",
+      "results/boatrace_model_research/snapshots/research_v0_1_148956_b69fb714835e/dataset_manifest.json": "225882760ae06efe4e8363cea4e4a1e919d74ed848be29e572ab1617fa6f5ae5"
+    },
+    "before": {
+      "configs/boatrace_model_evaluation_v1_1.json": "2347e7e0467bad64084eff01844b314d0e2533e3131f73816295fec8563e535e",
+      "research/core_decision_experiments_v1.json": "f91a35e448b7b0b10ed78dc2437de4f8d9b678bf9a1883218c5d11a859ea569c",
+      "research/data_gap_matrix_v1.csv": "70a6710ff2ae7e483f6194d15766b59a5a176d0da98c280c0072b275e1d45127",
+      "research/feature_research_map_v1.csv": "94c6f51dc76ac92d0332019c1b2905afe878ac493f92abe6e7a8767899836fd0",
+      "research/hypothesis_dependency_graph_v1.json": "0e88440a82ee6efcf8de5c686f78f085bf5fa6593d3601febce43379456f8d1a",
+      "research/hypothesis_execution_readiness_v1.csv": "5f9781c6240045ab3712d0320e5354f4cf2553979a7be7f781c0ffe7db509d58",
+      "research/hypothesis_registry_v2.json": "76b8573b8ee4bce69b23c0dcf789d80894a26cbc21d201ac96f6e37911f2fe83",
+      "research/hypothesis_registry_v2.md": "7dc8c0ced312a9880631eda9f489cc9c8092001c3bcb4fb056d9e53a7d127060",
+      "research/research_stage_gates_v1.json": "14a6ff0d945c4df4779a0a5c1a2d8f3def126d0b962fa570920743b0a7a274ed",
+      "results/boatrace_model_research/snapshots/research_v0_136183_55f32b3538a9/dataset_manifest.json": "a59854ae6691c7e0875fddad45211d1cf4acb47458132d5c17a7e506ee396af0",
+      "results/boatrace_model_research/snapshots/research_v0_1_148956_b69fb714835e/dataset_manifest.json": "225882760ae06efe4e8363cea4e4a1e919d74ed848be29e572ab1617fa6f5ae5"
+    },
+    "changed": []
+  },
+  "purpose": "hypothesis_addendum_sidecar_review_only",
+  "safety": {
+    "champion_selected": false,
+    "commit_or_push": false,
+    "core_decision_experiments_updated": false,
+    "data_gap_matrix_updated": false,
+    "dependencies_installed": false,
+    "dependency_graph_updated": false,
+    "evaluation_contract_updated": false,
+    "evaluation_run": false,
+    "external_web_access": false,
+    "feature_research_map_updated": false,
+    "formal_h001_h033_registry_updated": false,
+    "formal_registry_merge_performed": false,
+    "model_training_run": false,
+    "readiness_updated": false,
+    "walk_forward_created": false
+  },
+  "self_hash_policy": "Manifest excludes itself and its companion .sha256 file to avoid recursive hashing.",
+  "source_package": {
+    "copied_zip_path": "source_package/boatrace_research_hypothesis_addendum_v1.zip",
+    "original_zip_path": "<USER_HOME>\\Downloads\\boatrace_research_hypothesis_addendum_v1.zip",
+    "original_zip_sha256": "5c4d49caa5ce818409c0a1569468084e0e635af7008b704f54d81ecf3cfd6398",
+    "source_file_entries_sha256": "d0531a7eee9a7a07b33bb05f99866c7ff984602b45d9f276db712a00410848ed",
+    "source_manifest_sha256": "40d822e78ad10361fc1e175cdb78ba27148b128f9c4a0a94a94e035ff01eed39",
+    "source_package_root": "source_package/boatrace_research_hypothesis_addendum_v1"
+  },
+  "status": "provisional"
+}

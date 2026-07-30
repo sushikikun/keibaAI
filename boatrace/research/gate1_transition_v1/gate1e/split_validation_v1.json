@@ -1,0 +1,29 @@
+{
+  "U0_all_accounted": true,
+  "U0_race_count": 200118,
+  "U1_race_count": 127,
+  "U1_sidecar_mapped": true,
+  "U2_race_count": 9549,
+  "U2_sidecar_mapped": true,
+  "development_after_lock_start_zero": true,
+  "evaluation_counts_by_fold": {
+    "confirmation_fold_1": 12727,
+    "confirmation_fold_2": 17399,
+    "screening_fold_1": 12822,
+    "screening_fold_2": 12953,
+    "screening_fold_3": 13169,
+    "screening_fold_4": 12288
+  },
+  "evaluation_min_count_passed": true,
+  "evaluation_overlap_zero": true,
+  "final_lock_overlap_zero": true,
+  "final_lock_race_count": 50802,
+  "fold_date_order_valid": true,
+  "fold_role_overlap_zero": true,
+  "initial_train_boundary_valid": true,
+  "membership_row_count": 777333,
+  "passed": true,
+  "race_key_duplicate_count": 0,
+  "split_id": "split_v1_d3318c40504b",
+  "venue_coverage_passed": true
+}

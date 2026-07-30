@@ -1,0 +1,2 @@
+parser_version,race_count,prediction_eligible_rate,primary_scorable_rate,feature_null_rate,parse_warning_rate,major_discontinuity
+gate1b_raw_reparse_v1,219240,0.9716110198868819,0.9127805145046525,0.042393902050795886,0.025579273855135923,False

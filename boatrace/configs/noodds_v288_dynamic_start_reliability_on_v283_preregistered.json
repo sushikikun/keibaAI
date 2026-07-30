@@ -1,0 +1,96 @@
+{
+  "model_id": "noodds_raw_v288_dynamic_start_reliability_on_v283",
+  "hypothesis": "Strictly prior-day long-run racer start-timing variance and racer-course timing residuals may distinguish stable launch skill from noisy current exhibition ST beyond v283's seven-day current-meet form.",
+  "policy": {
+    "odds_used": false,
+    "payout_used": false,
+    "current_race_result_used": false,
+    "same_day_result_used": false,
+    "future_information_used": false,
+    "posthoc_search": false,
+    "active_parent": "v283_current_meet_form_on_v280"
+  },
+  "inputs": {
+    "v283_d6_sha256": "AB18CD797B7AADF3E2B0F9ED3E01278733015D9715074995F1E5D1AC555DFB49",
+    "v283_d7_sha256": "0BB70312010CA297A04D5FAA109FCBE51F79D89AFB531F616801B61384350FF3",
+    "v283_d8_sha256": "06C05744C38ECD914059CDE39F3A564FB1BF94FAB4035407D322888AD0316228",
+    "targets_sha256": "F71A3F7FF0C652B15C63828E92B77451B62150F8A922AB1732DBDE749C98BE12",
+    "race_dates_sha256": "47FA506F5D1CEA9C15ADBBB14D5A8793069D261B77FCB665069F8346CA21FB9D",
+    "runner_features_sha256": "AB44DFA6B56EA764E38FB46667A5D8C170C7338B3F8AC50A800D0CBE8147463F",
+    "runner_course_features_sha256": "0EA35A8A953C125947464768FB373827C498A54EAF7D72D14534B78C58AEEA59",
+    "course_available_sha256": "6CE308FE95919AFD7F212774DBB55CEE804FA4224AB1A01D20BA0CCF11E1E507",
+    "evaluation_protocol_v7_sha256": "1F3659B9F066B823E47C3766132F96E4DC34D2AE66FB45E0F02852878041B90C"
+  },
+  "history": {
+    "ordering": "race_date ascending; emit all features for a date before any update from that date",
+    "racer_id_column": 0,
+    "term_avg_st_prior_column": 17,
+    "start_st_column": 67,
+    "start_st_f_column": 68,
+    "start_st_l_column": 69,
+    "start_st_missing_column": 70,
+    "official_course_column": 0,
+    "normal_st_policy": "update moments only when start_st finite and F/L/missing flags are all zero",
+    "overall_prior_count": 30,
+    "overall_prior_std": 0.04,
+    "course_shrinkage": 15,
+    "window": "all strictly prior dates",
+    "course_missing_policy": "course-specific features and interactions zero; overall racer history still updates",
+    "same_day_update": false,
+    "term_avg_st_prior_missing_policy": "fixed 0.15 before any screen or model result"
+  },
+  "features": {
+    "runner": [
+      "log1p_overall_normal_starts",
+      "overall_mean_minus_term_avg_st_prior",
+      "overall_st_std",
+      "course_mean_minus_overall_mean",
+      "course_std_minus_overall_std",
+      "log1p_course_normal_starts",
+      "current_start_st_minus_course_mean",
+      "current_start_st_z_course",
+      "current_start_st_valid",
+      "course_available"
+    ],
+    "candidate_projection": "fixed runner features for first, second and third plus lane identities",
+    "forbidden": [
+      "odds",
+      "payout",
+      "same-day labels",
+      "future labels",
+      "window search",
+      "prior-count search",
+      "course-shrinkage search",
+      "variance-floor search"
+    ]
+  },
+  "training": {
+    "d6_prediction": "unchanged v283",
+    "d7": "D6 chronological inner fit and calibration only on v283 parent",
+    "d8": "fit D6, calibrate gamma on D7, then fit D6+D7 and predict D8 on v283 parent",
+    "variance_floor": 0.0001,
+    "full_params": {
+      "n_estimators": 100,
+      "learning_rate": 0.03,
+      "num_leaves": 7,
+      "max_depth": 3,
+      "min_child_samples": 5000,
+      "reg_alpha": 2,
+      "reg_lambda": 30,
+      "max_bin": 63,
+      "colsample_bytree": 0.9,
+      "random_state": 28801,
+      "n_jobs": 8,
+      "verbosity": -1,
+      "deterministic": true,
+      "force_col_wise": true
+    },
+    "screen_overrides": {
+      "n_estimators": 34,
+      "min_child_samples": 1700
+    }
+  },
+  "screen_protocol": "configs/noodds_candidate_acceleration_v2.json",
+  "final_protocol": "configs/noodds_evaluation_protocol_v7.json",
+  "promotion_requires": "mean delta versus v283 below zero, race-date bootstrap CI95 upper below zero, and v283 child-family Holm-adjusted p below 0.05"
+}

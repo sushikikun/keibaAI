@@ -1,0 +1,10 @@
+adjudicated_role,data_gap_category,hypothesis_count,hypothesis_ids,recommended_action
+merged_variant_preserve_source_id,auxiliary_target_and_outcome_provenance,2,H062;H099,Oracle/補助target境界と特殊結果をGate1で再監査。
+merged_variant_preserve_source_id,formal_feature_and_experiment_specification,4,H061;H078;H082;H101,Gate1後にfeature/experiment仕様を確定。新規取得は原則不要。
+top_level_addendum_candidate,equipment_identity_and_allocation_provenance,3,H035;H045;H081,公式世代境界の適用可能期間だけGate1で再監査。未解決期間は保留。
+top_level_addendum_candidate,formal_feature_and_experiment_specification,2,H086;H109,Gate1後にfeature/experiment仕様を確定。新規取得は原則不要。
+top_level_addendum_candidate,temporal_point_in_time_provenance,5,H041;H043;H049;H055;H092,as-of生成と予測時点証跡をGate1でmaterialize。
+variant_attached_to_parent,auxiliary_target_and_outcome_provenance,13,H040;H044;H053;H058;H070;H071;H072;H090;H091;H096;H098;H105;H106,Oracle/補助target境界と特殊結果をGate1で再監査。
+variant_attached_to_parent,equipment_identity_and_allocation_provenance,14,H042;H046;H050;H051;H052;H066;H067;H068;H069;H077;H080;H083;H089;H104,公式世代境界の適用可能期間だけGate1で再監査。未解決期間は保留。
+variant_attached_to_parent,formal_feature_and_experiment_specification,23,H036;H037;H038;H039;H048;H054;H056;H057;H059;H064;H065;H073;H074;H075;H079;H084;H085;H087;H094;H095;H100;H103;H108,Gate1後にfeature/experiment仕様を確定。新規取得は原則不要。
+variant_attached_to_parent,temporal_point_in_time_provenance,10,H034;H047;H060;H063;H076;H088;H093;H097;H102;H107,as-of生成と予測時点証跡をGate1でmaterialize。

@@ -1,0 +1,8 @@
+{
+  "candidate_count": 219240,
+  "strict_count": 200118,
+  "non_strict_count": 19122,
+  "logical_sha256": "02dc589557bda558a134f766222cc502a774804db9a57fe6084372bc4d30527d",
+  "source": "Gate 1-A release-pinned complete_races and excluded_races artifacts",
+  "release_id": "corpus_release_v1_200118_4f5554a4057e"
+}

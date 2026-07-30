@@ -1,0 +1,65 @@
+{
+  "policy_id": "boatrace_same_day_previous_result_policy_v1",
+  "version": "1.0.0",
+  "status": "policy_ready_feature_not_materialized",
+  "time_fields": {
+    "semantic_available_at": "the official publication event of the target race beforeinfo in which the previous-race value is printed",
+    "physical_capture_at": "timestamp at which the exact official target-race beforeinfo artifact was fetched and hashed",
+    "prior_race_finish_at": "time the earlier race finished/settled; may be null when not independently timestamped",
+    "target_prediction_cutoff": "after target official beforeinfo acquisition and strictly before closed_at",
+    "provenance_confidence": "timestamp_confirmed|semantic_confirmed|semantic_candidate|insufficient"
+  },
+  "allowed_source_fields": [
+    "target-race official beforeinfo.prev_race_no_text",
+    "target-race official beforeinfo.prev_course_text",
+    "target-race official beforeinfo.prev_st_text",
+    "target-race official beforeinfo.prev_finish_text"
+  ],
+  "eligibility_predicates": [
+    "same_calendar_date",
+    "same_venue_code",
+    "same_racer_id",
+    "prior_race_number_less_than_target_race_number",
+    "prior_race_finish_before_semantic_availability",
+    "previous_result_is_printed_in_target_race_official_beforeinfo",
+    "semantic_available_at_no_later_than_target_prediction_cutoff",
+    "target_race_beforeinfo_identity_and_hash_are_preserved",
+    "no_target_or_later_result_fields_are_joined"
+  ],
+  "decision_logic": {
+    "timestamp_confirmed": "all predicates pass and physical_capture_at <= target_prediction_cutoff",
+    "semantic_confirmed": "all identity/order predicates pass; exact field is printed in the official target beforeinfo; official page semantics and artifact hash are audited, even if historical physical capture is later",
+    "semantic_candidate": "field is printed in target beforeinfo but publication/capture provenance is incomplete; quarantine until manual/audit confirmation",
+    "insufficient": "any identity, order, source-page, or cutoff predicate fails"
+  },
+  "feature_use_rule": "Only timestamp_confirmed or separately approved semantic_confirmed rows may enter a future as-of snapshot. semantic_candidate/insufficient rows remain null with a reason code.",
+  "prior_race_finish_time_fallback": "If prior_race_finish_at is unavailable, do not join a final result table. The value may only be a semantic_candidate based on its presence in the target-race official beforeinfo, pending provenance audit.",
+  "forbidden_paths": [
+    "direct_join_from_final_result_table_without_publication_time",
+    "use_of_race_number_order_as_proof_of_result_availability",
+    "target_or_later_race_result",
+    "result_page_captured_after_target_cutoff_used_as_inference_source",
+    "same_racer_match_without_same_date_and_venue",
+    "backfill_from_auxiliary_targets"
+  ],
+  "required_output_provenance": [
+    "source_target_race_key",
+    "source_field",
+    "semantic_available_at",
+    "physical_capture_at",
+    "prior_race_key",
+    "prior_race_finish_at",
+    "target_prediction_cutoff",
+    "provenance_confidence",
+    "eligibility_reason_code"
+  ],
+  "observed_local_fields": {
+    "beforeinfo_entry_rows": 457038,
+    "prev_race_no_nonblank": 144002,
+    "prev_course_nonblank": 143869,
+    "prev_st_nonblank": 143862,
+    "prev_finish_nonblank": 144002
+  },
+  "future_leakage_path_count_in_this_package": 0,
+  "reason": "no same-day feature was materialized; policy forbids direct result joins"
+}

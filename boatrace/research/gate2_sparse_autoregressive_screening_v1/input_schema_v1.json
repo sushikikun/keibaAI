@@ -1,0 +1,12 @@
+{
+    "input_unit":  "one_race_one_row",
+    "entry_expansion":  "boat_1..6",
+    "target_excluded":  true,
+    "screening_folds":  4,
+    "roles":  [
+                  "train",
+                  "selection",
+                  "calibration",
+                  "evaluation"
+              ]
+}

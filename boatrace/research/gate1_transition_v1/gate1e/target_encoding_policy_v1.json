@@ -1,0 +1,6 @@
+{
+  "full_data_fit_forbidden": true,
+  "selection_calibration_evaluation": "train-fit mapping only",
+  "status": "deferred",
+  "train_generation": "OOF within train only"
+}

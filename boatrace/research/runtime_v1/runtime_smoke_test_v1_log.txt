@@ -1,0 +1,1 @@
+{"actual_target_data_opened": false, "actual_training_data_opened": false, "imports_passed": true, "metrics_computed": false, "numpy_dataframe_passed": true, "numpy_version": "2.3.5", "pandas_version": "3.0.1", "save_load_reproducible": true, "scikit_learn_predict_proba_passed": true, "scikit_learn_version": "1.9.0", "scipy_softmax_finite": true, "scipy_version": "1.18.0"}

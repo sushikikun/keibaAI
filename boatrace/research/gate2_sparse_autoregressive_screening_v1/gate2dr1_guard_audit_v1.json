@@ -1,0 +1,19 @@
+{
+    "confirmation_feature_access":  0,
+    "confirmation_target_access":  0,
+    "confirmation_prediction_access":  0,
+    "confirmation_metrics_access":  0,
+    "final_lock_feature_access":  0,
+    "final_lock_target_access":  0,
+    "final_lock_prediction_access":  0,
+    "final_lock_metrics_access":  0,
+    "final_lock_unlock":  0,
+    "evaluation_target_fit":  0,
+    "calibration_target_raw_fit":  0,
+    "full_period_preprocessing":  0,
+    "future_history":  0,
+    "sameday_history":  0,
+    "f2_scope":  0,
+    "target_in_features":  0,
+    "status":  "verified"
+}

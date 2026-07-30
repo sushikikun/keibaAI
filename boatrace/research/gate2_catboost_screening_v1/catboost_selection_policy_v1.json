@@ -1,0 +1,12 @@
+{
+  "arm_specific_best_iteration": true,
+  "f0_grid": [
+    "C01",
+    "C02",
+    "C03",
+    "C04"
+  ],
+  "fit_split": "train",
+  "same_config_for_f1_f2": true,
+  "selection_split": "selection"
+}

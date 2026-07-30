@@ -1,0 +1,43 @@
+{
+  "model_id": "noodds_raw_v300_expanded_anchor_capacity_on_v295",
+  "created_before_evaluation": true,
+  "adaptive_development_hypothesis": true,
+  "adaptive_hypothesis_note": "Proposed after observing v295 gamma at its 0.25 ceiling; untouched post-2026-07-11 confirmation remains mandatory.",
+  "active_parent": "v295_large_history_exact_top3_with_proven_history_on_v283",
+  "mechanism": "Reuse frozen v295_raw predictions and expand only chronological anchor capacity.",
+  "anchoring": {
+    "formula": "softmax(log(v283) + gamma * centered(log(v295_raw) - log(v283)))",
+    "gamma_bounds": [0.0, 1.0],
+    "optimizer": "deterministic bounded scalar exact-top3 logloss minimization",
+    "D6": "v295 unchanged",
+    "D7_gamma_fit": "D6 OOF only",
+    "D8_gamma_fit": "D6 plus D7 OOF only",
+    "temperature_search": false,
+    "blend_search": false
+  },
+  "policy": {
+    "odds_used": false,
+    "payout_used": false,
+    "same_day_result_used": false,
+    "future_information_used": false,
+    "posthoc_parameter_search": false,
+    "live_model_update": false
+  },
+  "evaluation": {
+    "protocol": "configs/noodds_evaluation_protocol_v8.json",
+    "promotion_requires": [
+      "pooled_delta_vs_v295 < 0",
+      "race_date_cluster_bootstrap_ci95_upper < 0",
+      "v295_child_family_holm_p < 0.05"
+    ],
+    "D9": "diagnostic_only",
+    "untouched_final_period": "post-2026-07-11"
+  },
+  "input_sha256": {
+    "v295_d6": "D8474E75BBBFCC1F752D34D07FD26BAFCD6DFA960DA8113FFF541F8FB6A94412",
+    "v295_d7": "7EAFD5E9F9C12FFE6FC18F1BCBE9DEA60457308AC438C3246309075BEA17C778",
+    "v295_d8": "667CC1A7B960BE6C0EE7DF8696BAC33737C66851DB829A87262A01A800A16875",
+    "protocol_v8": "D581485AF0256CD1A16B7038C002ED991B1B3884677DF33FA52BE538FB335C0B",
+    "v295_source": "8673CE550F2973EC6DDB06843D4AE6CBAEEB27526BF84B0617944B27CD9D838B"
+  }
+}

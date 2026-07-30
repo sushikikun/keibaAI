@@ -1,0 +1,45 @@
+{
+  "applies_to": "future readiness revision only; readiness_dimensions_v2.json remains unchanged",
+  "dimensions": [
+    {
+      "dimension": "subtitle_taxonomy_review_status",
+      "evidence_count": 53,
+      "reason_code": "P0_LOCAL_CONTEXT_INSUFFICIENT_FOR_NEW_STAGE",
+      "value": "partially_reviewed_unresolved_retained"
+    },
+    {
+      "dimension": "meeting_identity_materialization_status",
+      "evidence_count": 324,
+      "reason_code": "MEETING_HISTORY_AND_PREDICTION_TIME_SEPARATED",
+      "value": "historical_resolution_only"
+    },
+    {
+      "dimension": "meeting_feature_eligibility_status",
+      "evidence_count": 0,
+      "reason_code": "NO_PREDICTION_TIME_PROVENANCE_ASSERTED",
+      "value": "not_materialized"
+    },
+    {
+      "dimension": "same_day_feature_policy_status",
+      "evidence_count": 32022,
+      "reason_code": "AUDIT_MATCH_DOES_NOT_PROVE_ASOF_AVAILABILITY",
+      "value": "audit_reconciled_but_quarantined"
+    },
+    {
+      "dimension": "equipment_evidence_batching_status",
+      "evidence_count": 48,
+      "reason_code": "NO_GENERATION_ID_ISSUED",
+      "value": "batched_waiting_official_evidence"
+    },
+    {
+      "dimension": "formal_model_research_ready",
+      "evidence_count": 0,
+      "reason_code": "DATA_COLLECTION_AND_GATE1_REBUILD_REMAIN_PENDING",
+      "value": false
+    }
+  ],
+  "eligible_for_model_training": false,
+  "proposal_id": "readiness_patch_proposal_v1",
+  "purpose": "policy_execution_validation",
+  "status": "provisional"
+}

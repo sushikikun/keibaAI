@@ -1,0 +1,89 @@
+{
+  "model_id": "noodds_raw_v240_exact_permutation_energy",
+  "status": "preregistered_before_v240_predictions",
+  "frozen_at": "2026-07-11T22:35:00+09:00",
+  "hypothesis": "A normalized distribution over all 720 finish permutations can capture position-specific and adjacent-boat interactions that stagewise Plackett-Luce models cannot represent.",
+  "structural_change": {
+    "input": "six-boat set with race context",
+    "encoder": "one permutation-equivariant Transformer encoder",
+    "output_space": "all 720 permutations of six boats",
+    "energy": "sum of six boat-position utilities plus five low-rank adjacent-position transition scores",
+    "normalization": "exact softmax over 720 permutations",
+    "trifecta_probability": "sum of the six full-permutation probabilities sharing the same top three boats"
+  },
+  "architecture": {
+    "width": 32,
+    "attention_layers": 1,
+    "attention_heads": 4,
+    "feedforward_width": 64,
+    "dropout": 0.1,
+    "transition_rank": 8,
+    "epochs": 6,
+    "batch_races": 256,
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "temperature": 1.0,
+    "seed": 24001
+  },
+  "loss": {
+    "all_races": "exact negative log marginal probability of the observed top-three order",
+    "complete_full_order_races": "add conditional bottom-three permutation negative log likelihood",
+    "conditional_bottom_loss_weight": 0.25,
+    "full_order_source": "entry_results finish_position",
+    "partial_order_policy": "never discard a race with a valid top-three target"
+  },
+  "dataset": {
+    "path": "results/noodds_raw_v200/dataset",
+    "races": 72646,
+    "date_range": [
+      "2024-10-27",
+      "2026-07-01"
+    ],
+    "complete_full_order_races_observed_before_training": 68113,
+    "top3_only_races_observed_before_training": 4533,
+    "feature_set": "full_no_ids",
+    "odds_used": false,
+    "payout_used": false
+  },
+  "baseline": {
+    "model_id": "noodds_raw_v235_contextual_order",
+    "root": "results/noodds_raw_v200/contextual_order_v235",
+    "comparison": "0.80*v206 + 0.20*v240 standalone versus 0.80*v206 + 0.20*v235 standalone"
+  },
+  "fixed_ensemble": {
+    "v206_weight": 0.8,
+    "v240_weight": 0.2,
+    "weight_searched": false
+  },
+  "development_folds": [
+    "d6",
+    "d7",
+    "d8"
+  ],
+  "legacy_temporal_check": "d9",
+  "development_gate": {
+    "candidate_minus_v235_log_loss_below_zero_in_every_fold": true,
+    "pooled_daily_cluster_bootstrap_ci95_upper_below_zero": true
+  },
+  "legacy_check_gate": {
+    "candidate_minus_v235_log_loss_below_zero": true
+  },
+  "evaluation_policy": {
+    "d9_is_not_a_new_final_holdout": true,
+    "final_confirmation_requires_new_frozen_future_block": true,
+    "architecture_search": false,
+    "epoch_search": false,
+    "temperature_search": false,
+    "blend_weight_search": false,
+    "feature_search": false
+  },
+  "bootstrap": {
+    "unit": "race_date",
+    "samples": 20000,
+    "development_seed": 24018,
+    "legacy_check_seed": 24009
+  },
+  "decision": "Reject immediately if the D6-D8 gate fails. Even a legacy D9 pass remains experimental until prospective confirmation."
+}

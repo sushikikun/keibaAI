@@ -1,0 +1,59 @@
+{
+  "model_id": "noodds_raw_v269_start_course_on_v242",
+  "hypothesis": "Official exhibition entry-course identity and lane movement can improve v242 probabilities now that coverage is 98.81%, without retraining the weaker v244 transformer.",
+  "policy": {
+    "odds_used": false,
+    "payout_used": false,
+    "race_result_used": false,
+    "future_information_used": false,
+    "posthoc_search": false,
+    "base_model": "v242_openskill_contextual_standalone"
+  },
+  "inputs": {
+    "v242_d6_sha256": "190AC27773C696BB35950FFC9421F4F00A2DC584FBE6AD07D5DEF153D4E60DF9",
+    "v242_d7_sha256": "E9940F8EAA6B1DBFB02E2C469DB84AFF6ADAF17E04CB84EA94CDB226F541EBA5",
+    "v242_d8_sha256": "7CAA10D21ACABF95931797B4109CDEA63E56DFCC76BAD0CCD666B9A645B06424",
+    "sidecar_manifest_sha256": "26AEF540E28D8C57F1437A1DD90065DBBF6155E768B8064ED6BA6D4E3D07B20D",
+    "runner_course_features_sha256": "0EA35A8A953C125947464768FB373827C498A54EAF7D72D14534B78C58AEEA59",
+    "race_course_features_sha256": "BAF128CD09B362B461CB4392548F51BF497FDE4BCD856C197FD674C0383B3541",
+    "course_available_sha256": "6CE308FE95919AFD7F212774DBB55CEE804FA4224AB1A01D20BA0CCF11E1E507",
+    "evaluation_protocol_sha256": "0F392B95565DBD58F48CF11F35F5263A33534471FA2598863DBE020610C0AF9E"
+  },
+  "coverage": {
+    "dataset_races": 72646,
+    "matched_races": 71781,
+    "missing_races": 865,
+    "missing_policy": "zero course features plus course_available=0; no imputation"
+  },
+  "features": {
+    "runner": ["start_display_course", "course_minus_lane", "course_changed", "moved_inward", "moved_outward"],
+    "race": ["course_available", "course_change_count", "course_total_abs_delta", "course_max_abs_delta"],
+    "candidate_context": ["first_runner", "second_runner", "third_runner", "race_features", "first_lane", "second_lane", "third_lane"],
+    "source_timing": "official beforeinfo after exhibition and before race close"
+  },
+  "training": {
+    "d6_prediction": "unchanged v242",
+    "d7": "D6 chronological inner fit and calibration only",
+    "d8": "fit D6, calibrate gamma on D7, then fit D6+D7 and predict D8",
+    "full_params": {
+      "n_estimators": 100,
+      "learning_rate": 0.03,
+      "num_leaves": 7,
+      "max_depth": 3,
+      "min_child_samples": 5000,
+      "reg_alpha": 2.0,
+      "reg_lambda": 30.0,
+      "max_bin": 63,
+      "colsample_bytree": 0.9,
+      "random_state": 26901,
+      "n_jobs": 8,
+      "verbosity": -1,
+      "deterministic": true,
+      "force_col_wise": true
+    },
+    "screen_overrides": {"n_estimators": 34, "min_child_samples": 1700}
+  },
+  "screen_protocol": "configs/noodds_candidate_acceleration_v2.json",
+  "final_protocol": "configs/noodds_evaluation_protocol_v3.json",
+  "acceptance": "screen is futility only; final D6-D8 requires v3 comparison against v242 and Holm correction"
+}

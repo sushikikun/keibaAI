@@ -1,0 +1,14 @@
+{
+  "model_id": "noodds_v357_course_st_pretrain",
+  "frozen_before_evaluation": true,
+  "hypothesis": "A shared six-runner encoder can learn the latent current-course assignment and actual-ST mechanisms from strictly historical labels, creating a causal representation for later trifecta scenario marginalization.",
+  "split": {
+    "core_train_end": "2026-02-23",
+    "selection_start": "2026-02-24",
+    "selection_end": "2026-04-09",
+    "target_period_labels_used": false
+  },
+  "architecture": {"width": 64, "heads": 4, "layers": 2, "feedforward": 192, "dropout": 0.15},
+  "training": {"max_epochs": 15, "patience": 3, "minimum_improvement": 0.0001, "batch_races": 384, "learning_rate": 0.0003, "weight_decay": 0.001, "course_weight": 1.0, "st_weight": 2.0, "threads": 4, "seed": 35701},
+  "policy": {"odds_used": false, "payout_used": false, "current_actual_course_as_input": false, "current_actual_st_as_input": false, "same_day_results_used": false, "future_data_used": false}
+}

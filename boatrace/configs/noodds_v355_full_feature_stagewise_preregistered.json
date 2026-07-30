@@ -1,0 +1,8 @@
+{
+ "model_id":"noodds_v355_full_feature_stagewise","frozen_before_evaluation":true,
+ "hypothesis":"A standalone model trained on all prior races and all 139 non-ID runner features can exploit exhibition, relative, equipment, weather and form signals omitted by the recent residual experiments.",
+ "architecture":{"width":96,"heads":4,"layers":2,"feedforward":256,"dropout":0.15},
+ "training":{"max_epochs":12,"patience":2,"minimum_improvement":0.0001,"batch_races":384,"learning_rate":0.00025,"weight_decay":0.001,"threads":4,"seed":35501,"selection":"last 30 prior race dates","core":"all dates before selection"},
+ "goal":{"period":"2026-05-01 through 2026-07-17","absolute_logloss_below":3.6892},
+ "policy":{"odds_used":false,"payout_used":false,"same_day_results_used_for_features":false,"future_data_used":false,"current_dataset_only":true,"post_result_hyperparameter_change":false}
+}

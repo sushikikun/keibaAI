@@ -1,0 +1,11 @@
+{
+  "change_requires_explicit_gate2_approval": true,
+  "default_threads": 1,
+  "env_vars": [
+    "OMP_NUM_THREADS",
+    "MKL_NUM_THREADS",
+    "OPENBLAS_NUM_THREADS",
+    "NUMEXPR_NUM_THREADS"
+  ],
+  "record_current_values": true
+}

@@ -1,0 +1,4 @@
+anchor,before,after,equal
+baseline_manifest_sha256,f3eb62dc643c9f2561f5ec1827e3d070b63fd85952425ea69b39dc0f73a8c6e3,f3eb62dc643c9f2561f5ec1827e3d070b63fd85952425ea69b39dc0f73a8c6e3,true
+gate2e_passed,true,true,true
+automation_status,PAUSED,PAUSED,true

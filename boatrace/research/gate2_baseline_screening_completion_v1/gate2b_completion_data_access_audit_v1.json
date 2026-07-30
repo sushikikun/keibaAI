@@ -1,0 +1,12 @@
+{
+  "confirmation_target_open_count": 0,
+  "confirmation_feature_open_count": 0,
+  "confirmation_prediction_count": 0,
+  "confirmation_metrics_count": 0,
+  "final_lock_target_open_count": 0,
+  "final_lock_feature_open_count": 0,
+  "final_lock_prediction_count": 0,
+  "final_lock_metrics_count": 0,
+  "final_lock_unlock_count": 0,
+  "passed": true
+}

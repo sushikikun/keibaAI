@@ -1,0 +1,9 @@
+{
+  "MKL_NUM_THREADS": "1",
+  "OMP_NUM_THREADS": "1",
+  "bitwise_test_scope": "synthetic smoke only",
+  "cpu_determinism_passed": true,
+  "gpu_available": false,
+  "pythonhashseed": "0",
+  "thread_counts_recorded": true
+}

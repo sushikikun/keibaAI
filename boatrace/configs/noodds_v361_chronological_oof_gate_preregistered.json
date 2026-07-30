@@ -1,0 +1,11 @@
+{
+  "model_id": "noodds_v361_chronological_oof_gate",
+  "gate": {"l2_to_uniform": 0.002, "minimum_weight": 0.0, "maximum_iterations": 200},
+  "protocol": {
+    "d9": "v360 only because no earlier v360 OOF selection block exists",
+    "d10": "fit v356/v360 weights on D9 only",
+    "d11": "fit v352/v354/v356/v360 weights on D10 only"
+  },
+  "targets": {"intermediate_below": 3.7000, "final_below": 3.6892},
+  "policy": {"odds_used": false, "payout_used": false, "future_information_used": false, "same_day_results_used": false}
+}

@@ -1,0 +1,38 @@
+{
+  "created_at": "2026-07-18T21:42:00+09:00",
+  "model_id": "noodds_v342_official_history_linear_residual_on_v312",
+  "frozen_before_run": true,
+  "hypothesis": "A low-capacity chronological linear residual can extract stable actual-ST, actual-course, and winning-technique history signal while retaining the calibrated v312 probability surface.",
+  "parent": "noodds_raw_v312_large_history_racer_identity_set_ranker_on_v295",
+  "features": "all 17 frozen runner_official_result_history columns, separately weighted for first, second, and third place",
+  "fit": {
+    "optimizer": "L-BFGS-B",
+    "coefficient_bounds": [-0.5, 0.5],
+    "l2": 0.01,
+    "max_iterations": 300,
+    "standardization": "training races only",
+    "d6": "v312 unchanged",
+    "d7": "fit D6 only",
+    "d8": "fit D6 plus D7 only"
+  },
+  "policy": {
+    "odds_used": false,
+    "payout_used": false,
+    "same_day_results_used_for_features": false,
+    "future_results_used": false,
+    "posthoc_search": false
+  },
+  "inputs_sha256": {
+    "dataset_manifest": "4283DC0D06981F7292EC18E8D7496CF651EFBCE5F4C81CBFAB7F7569842C16F8",
+    "official_history": "8BE0B9EA9A09BBE56AC1E83DAF33AE80BD47FF1E8678DCBEA96416569899924F",
+    "v312_d6": "58F4652100DD921C32612123DA05AFE036CD0BF6CC2032F24BDE73EC847EFA00",
+    "v312_d7": "507CA4323BF4F695657FFCD8011B53173F389172C29DF6EE48DFFFDCE45F0E3A",
+    "v312_d8": "156EFA7FCC87E47BDAEA1524FF81698ED5B4D33AAE2CB252A34403225BF0F011"
+  },
+  "promotion": {
+    "mean_delta_below_zero": true,
+    "date_cluster_bootstrap_ci95_upper_below_zero": true,
+    "daily_paired_wilcoxon_less_holm_adjusted_p_below": 0.05,
+    "holm_family_size": 2
+  }
+}

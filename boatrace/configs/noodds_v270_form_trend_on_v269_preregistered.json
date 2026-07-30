@@ -1,0 +1,28 @@
+{
+  "model_id": "noodds_raw_v270_form_trend_on_v269",
+  "hypothesis": "The fixed v267 multi-window form trend signal adds information to v269 official entry-course probabilities because the two mechanisms use different sources.",
+  "policy": {"odds_used": false, "payout_used": false, "race_result_used": false, "future_information_used": false, "posthoc_search": false, "active_parent": "v269_start_course_on_v242"},
+  "inputs": {
+    "v269_d6_sha256": "A96343C9452814EAA639E4432C9DABA35C1BAD0C3AB05B7F8C33E21FCA3DBB69",
+    "v269_d7_sha256": "6B9E89ABAC7C173ECAAA8480D26E2B9F86064C8DB8DB4A8F7B1826F23BDEFCBE",
+    "v269_d8_sha256": "EDE0188AE1F4DB5DFBC0A23A461FA6EED81D4DD1ED0C29D79A37632F1712F1C0",
+    "runner_features_sha256": "AB44DFA6B56EA764E38FB46667A5D8C170C7338B3F8AC50A800D0CBE8147463F",
+    "evaluation_protocol_v4_sha256": "EFDE603D766DAB5569322502D3852B64794C4535443DA180B13DDA3C92D7DF92"
+  },
+  "features": {
+    "mechanism": "exactly the fixed v267 form-trend feature builder; no additions or removals",
+    "fixed_contrasts": ["recent5_win_minus_recent20", "recent5_top2_minus_recent20", "recent5_top3_minus_recent20", "recent5_avg_finish_minus_recent20", "recent10_win_minus_recent20", "recent10_top3_minus_recent20", "recent10_avg_finish_minus_recent20", "recent10_start_st_minus_term", "current_exhibition_minus_recent10", "local_win_minus_national"],
+    "per_contrast": ["raw_difference", "difference_minus_six_lane_mean"],
+    "missing_policy": "retain NaN for LightGBM native missing handling"
+  },
+  "training": {
+    "d6_prediction": "unchanged v269",
+    "d7": "D6 chronological inner fit and calibration only",
+    "d8": "fit D6, calibrate gamma on D7, then fit D6+D7 and predict D8",
+    "full_params": {"n_estimators": 100, "learning_rate": 0.03, "num_leaves": 7, "max_depth": 3, "min_child_samples": 5000, "reg_alpha": 2.0, "reg_lambda": 30.0, "max_bin": 63, "colsample_bytree": 0.9, "random_state": 27001, "n_jobs": 8, "verbosity": -1, "deterministic": true, "force_col_wise": true},
+    "screen_overrides": {"n_estimators": 34, "min_child_samples": 1700}
+  },
+  "screen_protocol": "configs/noodds_candidate_acceleration_v2.json",
+  "final_protocol": "configs/noodds_evaluation_protocol_v4.json",
+  "promotion_requires": "mean delta versus v269 below zero, race-date bootstrap CI95 upper below zero, and child-family Holm-adjusted p below 0.05"
+}

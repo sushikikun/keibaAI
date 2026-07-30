@@ -1,0 +1,165 @@
+{
+    "created_at":  "2026-07-15T23:49:00+09:00",
+    "model_id":  "noodds_raw_v333_pair_history_stage_bias_on_v312",
+    "frozen_before_run":  true,
+    "hypothesis":  "Direct strictly-prior head-to-head state can improve ordered stage decisions when exposed as context-specific pair bias instead of only the aggregate runner history already present in v312.",
+    "policy":  {
+                   "odds_used":  false,
+                   "payout_used":  false,
+                   "same_day_validation_result_used":  false,
+                   "future_information_used":  false,
+                   "posthoc_search":  false,
+                   "active_parent":  "v312_large_history_racer_identity_set_ranker_on_v295"
+               },
+    "inputs_sha256":  {
+                          "v312_d6":  "58F4652100DD921C32612123DA05AFE036CD0BF6CC2032F24BDE73EC847EFA00",
+                          "v312_d7":  "507CA4323BF4F695657FFCD8011B53173F389172C29DF6EE48DFFFDCE45F0E3A",
+                          "v312_d8":  "156EFA7FCC87E47BDAEA1524FF81698ED5B4D33AAE2CB252A34403225BF0F011",
+                          "matched_v312_d6":  "D709C5B24B729F4598A870CA7ED90CB97E31022F8C64628F5B8BF622A83D4064",
+                          "matched_v312_d7":  "0B5B1E431C4822CBCD9225B9F24615C9D5FA54C60CB5683B26FA49BDE5AB89FC",
+                          "matched_v312_d8":  "7400C4F713C907C4B565613EC0C6A65B1D3816358F99333025163035B4710373",
+                          "runner_features":  "AB44DFA6B56EA764E38FB46667A5D8C170C7338B3F8AC50A800D0CBE8147463F",
+                          "race_features":  "1D228F5420CAD1F6DF2E2325C31CBFAB739DF6DB26CDBA9830134EBCE525C239",
+                          "targets":  "F71A3F7FF0C652B15C63828E92B77451B62150F8A922AB1732DBDE749C98BE12",
+                          "race_dates":  "47FA506F5D1CEA9C15ADBBB14D5A8793069D261B77FCB665069F8346CA21FB9D",
+                          "runner_course":  "0EA35A8A953C125947464768FB373827C498A54EAF7D72D14534B78C58AEEA59",
+                          "race_course":  "BAF128CD09B362B461CB4392548F51BF497FDE4BCD856C197FD674C0383B3541",
+                          "course_available":  "6CE308FE95919AFD7F212774DBB55CEE804FA4224AB1A01D20BA0CCF11E1E507",
+                          "protocol_v9":  "5CAC829D7CB2D7A806C1C356C7F4FEFEC050ED702666E7D74F79311798BCD0AD",
+                          "screen_v4":  "EACCA2106B9307E3E37B3260932C19CE7400D1E207A496D8EC1BDA4953578AD9",
+                          "v312_config":  "A5B789A4CCD95F25A7DB9DE444B1E8777556734ED6E9444542BF290F28304473",
+                          "v312_source":  "98E41E2D3A001B17A77DDCF9C03BA6BAE78BF256E6F7FD408C73D49E885DB7B2"
+                      },
+    "base_definition":  {
+                            "source":  "v312 frozen numeric features, pairwise tau20 history, seven-day current-meet history, folds, architecture, loss, optimizer, and parent OOF",
+                            "full_train_races":  {
+                                                     "d6":  50788,
+                                                     "d7":  55225,
+                                                     "d8":  59840
+                                                 },
+                            "pairwise_tau":  20,
+                            "current_meet_window_days":  7,
+                            "current_meet_overall_tau":  50,
+                            "current_meet_tau":  10
+                        },
+    "architecture":  {
+                         "runner_projection_width":  48,
+                         "race_projection_width":  48,
+                         "lane_embedding_width":  48,
+                         "identity_projection_width":  48,
+                         "self_attention_layers":  1,
+                         "attention_heads":  4,
+                         "feedforward_width":  96,
+                         "dropout":  0.1,
+                         "stage1":  "shared first-place utility",
+                         "stage2":  "unchanged v312 candidate utility and attention interaction plus a zero-initialized linear bias over direct pair(candidate, first) features",
+                         "stage3":  "unchanged v312 candidate utility and attention interactions plus separate zero-initialized linear biases over pair(candidate, first) and pair(candidate, second) features",
+                         "joint_probability":  "P(first)*P(second|first)*P(third|first,second) over 120 outcomes",
+                         "pair_bias_heads":  {
+                                                 "stage2_input_width":  3,
+                                                 "stage3_first_input_width":  3,
+                                                 "stage3_second_input_width":  3,
+                                                 "output_width_each":  1,
+                                                 "bias":  false,
+                                                 "initialization":  "all pair-head weights exactly zero after unchanged v312 shared-model initialization",
+                                                 "search":  false
+                                             }
+                     },
+    "training":  {
+                     "loss":  "ordered exact-top3 negative log likelihood",
+                     "optimizer":  "AdamW",
+                     "epochs_full":  6,
+                     "epochs_screen":  3,
+                     "batch_races":  256,
+                     "learning_rate":  0.0003,
+                     "weight_decay":  0.001,
+                     "gradient_clip":  1,
+                     "threads":  4,
+                     "seed":  31201,
+                     "early_stopping":  false,
+                     "search":  false,
+                     "initialization_order":  "construct unchanged v312 shared model first with seed31201, then append zero pair heads so shared parameter initialization matches v312"
+                 },
+    "anchoring":  {
+                      "formula":  "softmax(log(v312)+gamma*centered(log(v333_raw)-log(v312)))",
+                      "d6":  "v312 unchanged; gamma=0",
+                      "d7_gamma_fit":  "D6 OOF only",
+                      "d8_gamma_fit":  "D6 plus D7 OOF only",
+                      "gamma_bounds":  [
+                                           0,
+                                           0.25
+                                       ],
+                      "gamma_bound_search":  false
+                  },
+    "screen_protocol":  "configs/noodds_candidate_acceleration_v4_matched_v312.json",
+    "final_protocol":  "configs/noodds_evaluation_protocol_v9.json",
+    "promotion_requires":  "v312 delta below zero, race-date bootstrap CI95 upper below zero, and v312 child-family Holm-adjusted p below 0.05",
+    "forbidden":  [
+                      "odds",
+                      "payout",
+                      "same-day validation labels",
+                      "same-day pair-state updates",
+                      "future labels",
+                      "bottom3-vs-bottom3 fabricated outcomes",
+                      "unknown-pair imputation",
+                      "pair tau search",
+                      "pair feature search",
+                      "pair-head capacity search",
+                      "architecture search",
+                      "epoch search",
+                      "gamma-bound search",
+                      "post-result changes"
+                  ],
+    "iteration_reason":  "v332 course-specific identity failed full evaluation; v333 changes the interaction structure by exposing proven strictly-prior pair history directly at the ordered stage where it is relevant.",
+    "provenance_sha256":  {
+                              "pairwise_history_source":  "19D8C88FB568FED45AA4C5DB17FFAEA91F2BA3FD26EAFF8B89AB0CC411A9FB53",
+                              "v312_source":  "98E41E2D3A001B17A77DDCF9C03BA6BAE78BF256E6F7FD408C73D49E885DB7B2"
+                          },
+    "pair_history_features":  {
+                                  "racer_column":  {
+                                                       "racer_code":  0
+                                                   },
+                                  "target":  "ordered top3 lane indices",
+                                  "history_order":  "race_date ascending; emit features for every race on a date before updating with any result from that date",
+                                  "comparable_rule":  "both racers top3 or exactly one racer top3; two bottom3 racers are never updated",
+                                  "prior_mean":  0.5,
+                                  "beta_shrinkage_tau":  20,
+                                  "ordered_features":  [
+                                                           "signed_pair_residual_candidate_over_context",
+                                                           "log1p_comparable_count",
+                                                           "pair_known"
+                                                       ],
+                                  "unknown_pair":  [
+                                                       0,
+                                                       0,
+                                                       0
+                                                   ],
+                                  "full_series_races":  72646,
+                                  "known_pair_rate":  0.47023190081582833,
+                                  "known_count_median":  1,
+                                  "known_count_p90":  4,
+                                  "search":  false,
+                                  "tensor_layout":  "N x 6 candidate runners x 6 context runners x 3 raw channels; diagonal is zero",
+                                  "normalization":  "raw pair channels are appended to runner input and transformed with the inherited fold-training-only v312 runner normalization; pair_known remains an explicit channel"
+                              },
+    "identity_features":  {
+                              "runner_columns":  {
+                                                     "racer_code":  0
+                                                 },
+                              "vocabulary":  "built from each fold training indices only",
+                              "unknown_or_nonpositive":  0,
+                              "validation_unseen":  0,
+                              "numeric_arithmetic":  false,
+                              "standardization":  false,
+                              "embedding_widths":  {
+                                                       "racer_code":  16
+                                                   },
+                              "combination":  "embed fold-training-only racer_code, project to width48, and add to the v310 runner representation before self-attention"
+                          },
+    "preregistration_amendment":  {
+                                      "created_at":  "2026-07-15T23:52:00+09:00",
+                                      "reason":  "implementation boundary clarification before any v333 model output",
+                                      "model_output_observed":  false,
+                                      "changes":  "explicitly copied unchanged v312 racer identity config and documented tensor layout plus inherited training-only normalization; mechanism, tau, head capacity, seed, folds, gamma, and thresholds unchanged"
+                                  }
+}

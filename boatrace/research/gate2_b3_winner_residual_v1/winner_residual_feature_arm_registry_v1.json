@@ -1,0 +1,18 @@
+{
+  "artifact": "winner_residual_feature_arm_registry_v1",
+  "arm_count": 2,
+  "arms": {
+    "WR-S": {
+      "source": "official racer snapshot FF02",
+      "families": ["racer_age", "official_national_local_rates", "class", "safe_snapshot_values"],
+      "full_fold_completion": false
+    },
+    "WR-H": {
+      "source": "WR-S plus F1 racer history FF06 as-of features",
+      "families": ["prior_count", "recent_top1_top2_top3", "mean_finish", "prior_st_mean_std", "venue_course_history", "days_since_last_race", "cold_start"],
+      "full_fold_completion": false
+    }
+  },
+  "excluded": ["racer_id", "motor_boat_history", "outcome", "ST_course_result", "odds_payout", "same_day", "Gate2-E_bins", "evaluation_derived_features", "F2"],
+  "status": "resource_blocked"
+}

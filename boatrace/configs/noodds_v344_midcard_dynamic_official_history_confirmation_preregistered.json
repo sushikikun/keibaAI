@@ -1,0 +1,39 @@
+{
+  "created_at": "2026-07-18T21:55:00+09:00",
+  "model_id": "noodds_v344_midcard_dynamic_official_history_confirmation",
+  "status": "frozen_before_confirmation",
+  "candidate": {
+    "base": "noodds_v343_dynamic_official_history_residual_on_v312",
+    "gate": "use v343 probability for race_no 5 through 8 inclusive; otherwise use formal v312 unchanged",
+    "selection_disclosure": "The race-number gate was selected from a posthoc D7/D8 diagnostic and therefore cannot be promoted on any data through 2026-07-17. Only the new confirmation stream may decide promotion."
+  },
+  "parent": "noodds_raw_v312_large_history_racer_identity_set_ranker_on_v295",
+  "confirmation": {
+    "start_date": "2026-07-18",
+    "end_date": null,
+    "minimum_races": 4000,
+    "minimum_distinct_race_dates": 30,
+    "evaluate_once": true,
+    "no_interim_outcome_inspection": true
+  },
+  "primary_metric": "exact_top3_120way_logloss",
+  "promotion_requires": {
+    "candidate_minus_v312_mean_below_zero": true,
+    "race_date_cluster_bootstrap_ci95_upper_below_zero": true,
+    "daily_paired_wilcoxon_less_p_below": 0.05,
+    "holm_family_size": 1
+  },
+  "policy": {
+    "odds_used": false,
+    "payout_used": false,
+    "same_day_results_used_for_features": false,
+    "future_results_used": false,
+    "post_confirmation_tuning": false
+  },
+  "frozen_artifacts_sha256": {
+    "v343_report": "CA5024FBD66B5737B3A63D35AEDC03CD61EFB25852A95C78A35444AF9AB53747",
+    "v343_d7": "EC5A48410A46E331B04B42545761444F7717EAD6075D8A0C68E7A4ABC60438D6",
+    "v343_d8": "11EC34BCB4CEE30507C18FBEECC79B97F65153BA090B565D2F9D016A56E0F0C5"
+  },
+  "deployment_blocker": "Formal v312 future inference requires a deployable v295 parent model or an exact reconstructed parent chain; the handoff contains OOF parent probabilities but no v295 checkpoint."
+}

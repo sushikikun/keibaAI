@@ -1,0 +1,90 @@
+{
+    "protocol_id":  "noodds_evaluation_protocol_v2",
+    "status":  "retrospective_amendment_after_v242_standalone_discovery",
+    "frozen_at":  "2026-07-13T20:57:00.3829529+09:00",
+    "scope":  "all historical and future no-odds prediction candidates",
+    "honesty_note":  "D6-D9 have been repeatedly observed; this protocol supports development ranking and recovery, not untouched final proof.",
+    "exclusions":  [
+                       "odds-input models",
+                       "payout-input models",
+                       "smoke runs"
+                   ],
+    "common_baseline":  {
+                            "model_id":  "noodds_raw_v251_masked_pretrain_ar",
+                            "probability_source":  "standalone",
+                            "folds":  [
+                                          "d6",
+                                          "d7",
+                                          "d8"
+                                      ]
+                        },
+    "extraction":  {
+                       "direct_saved_oof":  "retain when any opened development fold improves logloss, top1, top5, or mean true rank versus v251",
+                       "legacy_mechanism":  "retain when pooled development logloss improved versus its contemporary no-odds baseline, or at least two development folds improved",
+                       "no_candidate_specific_threshold_search":  true
+                   },
+    "evaluation":  {
+                       "run_all_development_folds":  true,
+                       "early_fold_rejection":  false,
+                       "primary_metric":  "pooled exact-top3 race logloss delta versus v251",
+                       "uncertainty_unit":  "race_date",
+                       "bootstrap_samples":  20000,
+                       "bootstrap_seed":  25918,
+                       "fold_results":  "diagnostic only; no single-fold veto",
+                       "statuses":  {
+                                        "improved":  "pooled mean below zero and daily-cluster CI95 upper below zero",
+                                        "worse":  "pooled mean above zero and daily-cluster CI95 lower above zero",
+                                        "inconclusive":  "all other cases"
+                                    },
+                       "secondary_metrics":  [
+                                                 "top1_hit_rate",
+                                                 "top5_hit_rate",
+                                                 "mean_true_combo_rank",
+                                                 "brier_score",
+                                                 "calibration_error_top_prediction"
+                                             ],
+                       "familywise_check":  "after all recovered candidates finish, report Holm-adjusted one-sided paired daily tests"
+                   },
+    "temporal_policy":  {
+                            "d9":  "diagnostic only",
+                            "prospective_start_exclusive":  "2026-07-11",
+                            "final_proof":  "requires a separately frozen prospective block; historical development significance is insufficient"
+                        },
+    "recovery_order":  [
+                           "recompute complete saved OOF candidates against common v251",
+                           "fill missing D6-D8 folds without changing frozen model parameters",
+                           "port legacy mechanisms to the current baseline only under new preregistered candidates",
+                           "evaluate v256 after official start-course backfill",
+                           "evaluate v258 fixed multi-period ensemble"
+                       ],
+    "legacy_mechanisms_to_revisit":  [
+                                         {
+                                             "mechanism":  "same-day course tendency residual",
+                                             "model":  "v209"
+                                         },
+                                         {
+                                             "mechanism":  "exhibition/history residual",
+                                             "model":  "v210_v212"
+                                         },
+                                         {
+                                             "mechanism":  "nested probability calibration",
+                                             "model":  "v214"
+                                         },
+                                         {
+                                             "mechanism":  "same-day surprise state",
+                                             "model":  "v218"
+                                         },
+                                         {
+                                             "mechanism":  "weather dynamics",
+                                             "model":  "v219"
+                                         },
+                                         {
+                                             "mechanism":  "multi-window form trend",
+                                             "model":  "v220"
+                                         },
+                                         {
+                                             "mechanism":  "hierarchical venue residual",
+                                             "model":  "v221"
+                                         }
+                                     ]
+}

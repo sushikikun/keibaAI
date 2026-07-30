@@ -1,0 +1,1095 @@
+{
+  "contract_id": "trifecta_class_map_v1",
+  "version": "1.0.0",
+  "boat_identity": "lane_number_1_through_6",
+  "class_count": 120,
+  "class_id_range": [
+    0,
+    119
+  ],
+  "enumeration_rule": "ascending nested loops: first=1..6, second=1..6 except first, third=1..6 except first and second",
+  "mapping_sha256_algorithm": "sha256(UTF-8 canonical JSON of classes; keys sorted; separators ',' ':'; ensure_ascii=false)",
+  "mapping_sha256": "e5b36e44602700d1c50cbd2c839a20328fcc317abc0c7de8388ed1b91d410f50",
+  "classes": [
+    {
+      "class_id": 0,
+      "order": [
+        1,
+        2,
+        3
+      ],
+      "label": "1-2-3"
+    },
+    {
+      "class_id": 1,
+      "order": [
+        1,
+        2,
+        4
+      ],
+      "label": "1-2-4"
+    },
+    {
+      "class_id": 2,
+      "order": [
+        1,
+        2,
+        5
+      ],
+      "label": "1-2-5"
+    },
+    {
+      "class_id": 3,
+      "order": [
+        1,
+        2,
+        6
+      ],
+      "label": "1-2-6"
+    },
+    {
+      "class_id": 4,
+      "order": [
+        1,
+        3,
+        2
+      ],
+      "label": "1-3-2"
+    },
+    {
+      "class_id": 5,
+      "order": [
+        1,
+        3,
+        4
+      ],
+      "label": "1-3-4"
+    },
+    {
+      "class_id": 6,
+      "order": [
+        1,
+        3,
+        5
+      ],
+      "label": "1-3-5"
+    },
+    {
+      "class_id": 7,
+      "order": [
+        1,
+        3,
+        6
+      ],
+      "label": "1-3-6"
+    },
+    {
+      "class_id": 8,
+      "order": [
+        1,
+        4,
+        2
+      ],
+      "label": "1-4-2"
+    },
+    {
+      "class_id": 9,
+      "order": [
+        1,
+        4,
+        3
+      ],
+      "label": "1-4-3"
+    },
+    {
+      "class_id": 10,
+      "order": [
+        1,
+        4,
+        5
+      ],
+      "label": "1-4-5"
+    },
+    {
+      "class_id": 11,
+      "order": [
+        1,
+        4,
+        6
+      ],
+      "label": "1-4-6"
+    },
+    {
+      "class_id": 12,
+      "order": [
+        1,
+        5,
+        2
+      ],
+      "label": "1-5-2"
+    },
+    {
+      "class_id": 13,
+      "order": [
+        1,
+        5,
+        3
+      ],
+      "label": "1-5-3"
+    },
+    {
+      "class_id": 14,
+      "order": [
+        1,
+        5,
+        4
+      ],
+      "label": "1-5-4"
+    },
+    {
+      "class_id": 15,
+      "order": [
+        1,
+        5,
+        6
+      ],
+      "label": "1-5-6"
+    },
+    {
+      "class_id": 16,
+      "order": [
+        1,
+        6,
+        2
+      ],
+      "label": "1-6-2"
+    },
+    {
+      "class_id": 17,
+      "order": [
+        1,
+        6,
+        3
+      ],
+      "label": "1-6-3"
+    },
+    {
+      "class_id": 18,
+      "order": [
+        1,
+        6,
+        4
+      ],
+      "label": "1-6-4"
+    },
+    {
+      "class_id": 19,
+      "order": [
+        1,
+        6,
+        5
+      ],
+      "label": "1-6-5"
+    },
+    {
+      "class_id": 20,
+      "order": [
+        2,
+        1,
+        3
+      ],
+      "label": "2-1-3"
+    },
+    {
+      "class_id": 21,
+      "order": [
+        2,
+        1,
+        4
+      ],
+      "label": "2-1-4"
+    },
+    {
+      "class_id": 22,
+      "order": [
+        2,
+        1,
+        5
+      ],
+      "label": "2-1-5"
+    },
+    {
+      "class_id": 23,
+      "order": [
+        2,
+        1,
+        6
+      ],
+      "label": "2-1-6"
+    },
+    {
+      "class_id": 24,
+      "order": [
+        2,
+        3,
+        1
+      ],
+      "label": "2-3-1"
+    },
+    {
+      "class_id": 25,
+      "order": [
+        2,
+        3,
+        4
+      ],
+      "label": "2-3-4"
+    },
+    {
+      "class_id": 26,
+      "order": [
+        2,
+        3,
+        5
+      ],
+      "label": "2-3-5"
+    },
+    {
+      "class_id": 27,
+      "order": [
+        2,
+        3,
+        6
+      ],
+      "label": "2-3-6"
+    },
+    {
+      "class_id": 28,
+      "order": [
+        2,
+        4,
+        1
+      ],
+      "label": "2-4-1"
+    },
+    {
+      "class_id": 29,
+      "order": [
+        2,
+        4,
+        3
+      ],
+      "label": "2-4-3"
+    },
+    {
+      "class_id": 30,
+      "order": [
+        2,
+        4,
+        5
+      ],
+      "label": "2-4-5"
+    },
+    {
+      "class_id": 31,
+      "order": [
+        2,
+        4,
+        6
+      ],
+      "label": "2-4-6"
+    },
+    {
+      "class_id": 32,
+      "order": [
+        2,
+        5,
+        1
+      ],
+      "label": "2-5-1"
+    },
+    {
+      "class_id": 33,
+      "order": [
+        2,
+        5,
+        3
+      ],
+      "label": "2-5-3"
+    },
+    {
+      "class_id": 34,
+      "order": [
+        2,
+        5,
+        4
+      ],
+      "label": "2-5-4"
+    },
+    {
+      "class_id": 35,
+      "order": [
+        2,
+        5,
+        6
+      ],
+      "label": "2-5-6"
+    },
+    {
+      "class_id": 36,
+      "order": [
+        2,
+        6,
+        1
+      ],
+      "label": "2-6-1"
+    },
+    {
+      "class_id": 37,
+      "order": [
+        2,
+        6,
+        3
+      ],
+      "label": "2-6-3"
+    },
+    {
+      "class_id": 38,
+      "order": [
+        2,
+        6,
+        4
+      ],
+      "label": "2-6-4"
+    },
+    {
+      "class_id": 39,
+      "order": [
+        2,
+        6,
+        5
+      ],
+      "label": "2-6-5"
+    },
+    {
+      "class_id": 40,
+      "order": [
+        3,
+        1,
+        2
+      ],
+      "label": "3-1-2"
+    },
+    {
+      "class_id": 41,
+      "order": [
+        3,
+        1,
+        4
+      ],
+      "label": "3-1-4"
+    },
+    {
+      "class_id": 42,
+      "order": [
+        3,
+        1,
+        5
+      ],
+      "label": "3-1-5"
+    },
+    {
+      "class_id": 43,
+      "order": [
+        3,
+        1,
+        6
+      ],
+      "label": "3-1-6"
+    },
+    {
+      "class_id": 44,
+      "order": [
+        3,
+        2,
+        1
+      ],
+      "label": "3-2-1"
+    },
+    {
+      "class_id": 45,
+      "order": [
+        3,
+        2,
+        4
+      ],
+      "label": "3-2-4"
+    },
+    {
+      "class_id": 46,
+      "order": [
+        3,
+        2,
+        5
+      ],
+      "label": "3-2-5"
+    },
+    {
+      "class_id": 47,
+      "order": [
+        3,
+        2,
+        6
+      ],
+      "label": "3-2-6"
+    },
+    {
+      "class_id": 48,
+      "order": [
+        3,
+        4,
+        1
+      ],
+      "label": "3-4-1"
+    },
+    {
+      "class_id": 49,
+      "order": [
+        3,
+        4,
+        2
+      ],
+      "label": "3-4-2"
+    },
+    {
+      "class_id": 50,
+      "order": [
+        3,
+        4,
+        5
+      ],
+      "label": "3-4-5"
+    },
+    {
+      "class_id": 51,
+      "order": [
+        3,
+        4,
+        6
+      ],
+      "label": "3-4-6"
+    },
+    {
+      "class_id": 52,
+      "order": [
+        3,
+        5,
+        1
+      ],
+      "label": "3-5-1"
+    },
+    {
+      "class_id": 53,
+      "order": [
+        3,
+        5,
+        2
+      ],
+      "label": "3-5-2"
+    },
+    {
+      "class_id": 54,
+      "order": [
+        3,
+        5,
+        4
+      ],
+      "label": "3-5-4"
+    },
+    {
+      "class_id": 55,
+      "order": [
+        3,
+        5,
+        6
+      ],
+      "label": "3-5-6"
+    },
+    {
+      "class_id": 56,
+      "order": [
+        3,
+        6,
+        1
+      ],
+      "label": "3-6-1"
+    },
+    {
+      "class_id": 57,
+      "order": [
+        3,
+        6,
+        2
+      ],
+      "label": "3-6-2"
+    },
+    {
+      "class_id": 58,
+      "order": [
+        3,
+        6,
+        4
+      ],
+      "label": "3-6-4"
+    },
+    {
+      "class_id": 59,
+      "order": [
+        3,
+        6,
+        5
+      ],
+      "label": "3-6-5"
+    },
+    {
+      "class_id": 60,
+      "order": [
+        4,
+        1,
+        2
+      ],
+      "label": "4-1-2"
+    },
+    {
+      "class_id": 61,
+      "order": [
+        4,
+        1,
+        3
+      ],
+      "label": "4-1-3"
+    },
+    {
+      "class_id": 62,
+      "order": [
+        4,
+        1,
+        5
+      ],
+      "label": "4-1-5"
+    },
+    {
+      "class_id": 63,
+      "order": [
+        4,
+        1,
+        6
+      ],
+      "label": "4-1-6"
+    },
+    {
+      "class_id": 64,
+      "order": [
+        4,
+        2,
+        1
+      ],
+      "label": "4-2-1"
+    },
+    {
+      "class_id": 65,
+      "order": [
+        4,
+        2,
+        3
+      ],
+      "label": "4-2-3"
+    },
+    {
+      "class_id": 66,
+      "order": [
+        4,
+        2,
+        5
+      ],
+      "label": "4-2-5"
+    },
+    {
+      "class_id": 67,
+      "order": [
+        4,
+        2,
+        6
+      ],
+      "label": "4-2-6"
+    },
+    {
+      "class_id": 68,
+      "order": [
+        4,
+        3,
+        1
+      ],
+      "label": "4-3-1"
+    },
+    {
+      "class_id": 69,
+      "order": [
+        4,
+        3,
+        2
+      ],
+      "label": "4-3-2"
+    },
+    {
+      "class_id": 70,
+      "order": [
+        4,
+        3,
+        5
+      ],
+      "label": "4-3-5"
+    },
+    {
+      "class_id": 71,
+      "order": [
+        4,
+        3,
+        6
+      ],
+      "label": "4-3-6"
+    },
+    {
+      "class_id": 72,
+      "order": [
+        4,
+        5,
+        1
+      ],
+      "label": "4-5-1"
+    },
+    {
+      "class_id": 73,
+      "order": [
+        4,
+        5,
+        2
+      ],
+      "label": "4-5-2"
+    },
+    {
+      "class_id": 74,
+      "order": [
+        4,
+        5,
+        3
+      ],
+      "label": "4-5-3"
+    },
+    {
+      "class_id": 75,
+      "order": [
+        4,
+        5,
+        6
+      ],
+      "label": "4-5-6"
+    },
+    {
+      "class_id": 76,
+      "order": [
+        4,
+        6,
+        1
+      ],
+      "label": "4-6-1"
+    },
+    {
+      "class_id": 77,
+      "order": [
+        4,
+        6,
+        2
+      ],
+      "label": "4-6-2"
+    },
+    {
+      "class_id": 78,
+      "order": [
+        4,
+        6,
+        3
+      ],
+      "label": "4-6-3"
+    },
+    {
+      "class_id": 79,
+      "order": [
+        4,
+        6,
+        5
+      ],
+      "label": "4-6-5"
+    },
+    {
+      "class_id": 80,
+      "order": [
+        5,
+        1,
+        2
+      ],
+      "label": "5-1-2"
+    },
+    {
+      "class_id": 81,
+      "order": [
+        5,
+        1,
+        3
+      ],
+      "label": "5-1-3"
+    },
+    {
+      "class_id": 82,
+      "order": [
+        5,
+        1,
+        4
+      ],
+      "label": "5-1-4"
+    },
+    {
+      "class_id": 83,
+      "order": [
+        5,
+        1,
+        6
+      ],
+      "label": "5-1-6"
+    },
+    {
+      "class_id": 84,
+      "order": [
+        5,
+        2,
+        1
+      ],
+      "label": "5-2-1"
+    },
+    {
+      "class_id": 85,
+      "order": [
+        5,
+        2,
+        3
+      ],
+      "label": "5-2-3"
+    },
+    {
+      "class_id": 86,
+      "order": [
+        5,
+        2,
+        4
+      ],
+      "label": "5-2-4"
+    },
+    {
+      "class_id": 87,
+      "order": [
+        5,
+        2,
+        6
+      ],
+      "label": "5-2-6"
+    },
+    {
+      "class_id": 88,
+      "order": [
+        5,
+        3,
+        1
+      ],
+      "label": "5-3-1"
+    },
+    {
+      "class_id": 89,
+      "order": [
+        5,
+        3,
+        2
+      ],
+      "label": "5-3-2"
+    },
+    {
+      "class_id": 90,
+      "order": [
+        5,
+        3,
+        4
+      ],
+      "label": "5-3-4"
+    },
+    {
+      "class_id": 91,
+      "order": [
+        5,
+        3,
+        6
+      ],
+      "label": "5-3-6"
+    },
+    {
+      "class_id": 92,
+      "order": [
+        5,
+        4,
+        1
+      ],
+      "label": "5-4-1"
+    },
+    {
+      "class_id": 93,
+      "order": [
+        5,
+        4,
+        2
+      ],
+      "label": "5-4-2"
+    },
+    {
+      "class_id": 94,
+      "order": [
+        5,
+        4,
+        3
+      ],
+      "label": "5-4-3"
+    },
+    {
+      "class_id": 95,
+      "order": [
+        5,
+        4,
+        6
+      ],
+      "label": "5-4-6"
+    },
+    {
+      "class_id": 96,
+      "order": [
+        5,
+        6,
+        1
+      ],
+      "label": "5-6-1"
+    },
+    {
+      "class_id": 97,
+      "order": [
+        5,
+        6,
+        2
+      ],
+      "label": "5-6-2"
+    },
+    {
+      "class_id": 98,
+      "order": [
+        5,
+        6,
+        3
+      ],
+      "label": "5-6-3"
+    },
+    {
+      "class_id": 99,
+      "order": [
+        5,
+        6,
+        4
+      ],
+      "label": "5-6-4"
+    },
+    {
+      "class_id": 100,
+      "order": [
+        6,
+        1,
+        2
+      ],
+      "label": "6-1-2"
+    },
+    {
+      "class_id": 101,
+      "order": [
+        6,
+        1,
+        3
+      ],
+      "label": "6-1-3"
+    },
+    {
+      "class_id": 102,
+      "order": [
+        6,
+        1,
+        4
+      ],
+      "label": "6-1-4"
+    },
+    {
+      "class_id": 103,
+      "order": [
+        6,
+        1,
+        5
+      ],
+      "label": "6-1-5"
+    },
+    {
+      "class_id": 104,
+      "order": [
+        6,
+        2,
+        1
+      ],
+      "label": "6-2-1"
+    },
+    {
+      "class_id": 105,
+      "order": [
+        6,
+        2,
+        3
+      ],
+      "label": "6-2-3"
+    },
+    {
+      "class_id": 106,
+      "order": [
+        6,
+        2,
+        4
+      ],
+      "label": "6-2-4"
+    },
+    {
+      "class_id": 107,
+      "order": [
+        6,
+        2,
+        5
+      ],
+      "label": "6-2-5"
+    },
+    {
+      "class_id": 108,
+      "order": [
+        6,
+        3,
+        1
+      ],
+      "label": "6-3-1"
+    },
+    {
+      "class_id": 109,
+      "order": [
+        6,
+        3,
+        2
+      ],
+      "label": "6-3-2"
+    },
+    {
+      "class_id": 110,
+      "order": [
+        6,
+        3,
+        4
+      ],
+      "label": "6-3-4"
+    },
+    {
+      "class_id": 111,
+      "order": [
+        6,
+        3,
+        5
+      ],
+      "label": "6-3-5"
+    },
+    {
+      "class_id": 112,
+      "order": [
+        6,
+        4,
+        1
+      ],
+      "label": "6-4-1"
+    },
+    {
+      "class_id": 113,
+      "order": [
+        6,
+        4,
+        2
+      ],
+      "label": "6-4-2"
+    },
+    {
+      "class_id": 114,
+      "order": [
+        6,
+        4,
+        3
+      ],
+      "label": "6-4-3"
+    },
+    {
+      "class_id": 115,
+      "order": [
+        6,
+        4,
+        5
+      ],
+      "label": "6-4-5"
+    },
+    {
+      "class_id": 116,
+      "order": [
+        6,
+        5,
+        1
+      ],
+      "label": "6-5-1"
+    },
+    {
+      "class_id": 117,
+      "order": [
+        6,
+        5,
+        2
+      ],
+      "label": "6-5-2"
+    },
+    {
+      "class_id": 118,
+      "order": [
+        6,
+        5,
+        3
+      ],
+      "label": "6-5-3"
+    },
+    {
+      "class_id": 119,
+      "order": [
+        6,
+        5,
+        4
+      ],
+      "label": "6-5-4"
+    }
+  ]
+}

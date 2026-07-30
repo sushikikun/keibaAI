@@ -1,0 +1,14 @@
+{
+  "best_seed_post_selection_forbidden": true,
+  "confirmatory": {
+    "neural_seed_count": 5
+  },
+  "exploratory_screening": {
+    "deterministic_model_runs": 1,
+    "neural_seed_count": 3
+  },
+  "final_challenger": {
+    "seed_ensemble_fixed_before_unlock": true
+  },
+  "formula": "uint32(SHA256(dataset_manifest_sha256 + split_manifest_sha256 + experiment_id + replicate_index)[:8])"
+}

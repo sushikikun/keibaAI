@@ -1,0 +1,62 @@
+{
+  "model_id": "noodds_raw_v267_form_trend_on_v242",
+  "hypothesis": "Fixed short-versus-long prior form contrasts and within-race relative values can expose racer condition changes not represented sharply by v242.",
+  "policy": {
+    "odds_used": false,
+    "payout_used": false,
+    "same_race_result_used": false,
+    "future_result_used": false,
+    "posthoc_search": false,
+    "base_model": "v242_openskill_contextual_standalone"
+  },
+  "inputs": {
+    "runner_features_sha256": "AB44DFA6B56EA764E38FB46667A5D8C170C7338B3F8AC50A800D0CBE8147463F",
+    "evaluation_protocol_sha256": "0F392B95565DBD58F48CF11F35F5263A33534471FA2598863DBE020610C0AF9E"
+  },
+  "features": {
+    "source": "strictly prior runner aggregates plus current pre-race exhibition",
+    "fixed_contrasts": [
+      "recent5_win_minus_recent20",
+      "recent5_top2_minus_recent20",
+      "recent5_top3_minus_recent20",
+      "recent5_avg_finish_minus_recent20",
+      "recent10_win_minus_recent20",
+      "recent10_top3_minus_recent20",
+      "recent10_avg_finish_minus_recent20",
+      "recent10_start_st_minus_term",
+      "current_exhibition_minus_recent10",
+      "local_win_minus_national"
+    ],
+    "per_contrast": ["raw_difference", "difference_minus_six_lane_mean"],
+    "candidate_context": ["first_runner", "second_runner", "third_runner", "first_lane", "second_lane", "third_lane"],
+    "missing_policy": "retain NaN for LightGBM native missing handling"
+  },
+  "training": {
+    "d6_prediction": "unchanged v242",
+    "d7": "D6 chronological inner fit and calibration only",
+    "d8": "fit D6, calibrate gamma on D7, then fit D6+D7 and predict D8",
+    "full_params": {
+      "n_estimators": 100,
+      "learning_rate": 0.03,
+      "num_leaves": 7,
+      "max_depth": 3,
+      "min_child_samples": 5000,
+      "reg_alpha": 2.0,
+      "reg_lambda": 30.0,
+      "max_bin": 63,
+      "colsample_bytree": 0.9,
+      "random_state": 26701,
+      "n_jobs": 8,
+      "verbosity": -1,
+      "deterministic": true,
+      "force_col_wise": true
+    },
+    "screen_overrides": {
+      "n_estimators": 34,
+      "min_child_samples": 1700
+    }
+  },
+  "screen_protocol": "configs/noodds_candidate_acceleration_v2.json",
+  "final_protocol": "configs/noodds_evaluation_protocol_v3.json",
+  "acceptance": "screen is futility only; final D6-D8 requires v3 comparison against v242 and Holm correction"
+}

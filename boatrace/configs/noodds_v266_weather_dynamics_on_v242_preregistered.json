@@ -1,0 +1,53 @@
+{
+  "model_id": "noodds_raw_v266_weather_dynamics_on_v242",
+  "hypothesis": "Within-day weather changes can alter lane advantage beyond the current weather level already represented by v242.",
+  "policy": {
+    "odds_used": false,
+    "payout_used": false,
+    "same_race_result_used": false,
+    "future_weather_used": false,
+    "posthoc_search": false,
+    "base_model": "v242_openskill_contextual_standalone"
+  },
+  "inputs": {
+    "race_features_sha256": "1D228F5420CAD1F6DF2E2325C31CBFAB739DF6DB26CDBA9830134EBCE525C239",
+    "race_meta_sha256": "FFAC2634A9B01D1A0A4329F078288705A8B5899DA00FF31F488B622DD476BF96",
+    "evaluation_protocol_sha256": "0F392B95565DBD58F48CF11F35F5263A33534471FA2598863DBE020610C0AF9E"
+  },
+  "features": {
+    "source": "current and strictly prior same-venue-day weather only",
+    "ordering": "race_date, venue_code, race_no",
+    "scalar_sources": ["temperature_c", "wind_speed_m", "water_temp_c", "wave_cm"],
+    "scalar_transforms": ["current_minus_previous", "current_minus_prior_mean", "prior_standard_deviation", "current_available", "previous_available"],
+    "wind_transforms": ["sin_current_minus_previous", "cos_current_minus_previous", "sin_current_minus_prior_mean", "cos_current_minus_prior_mean", "previous_chord_distance", "current_available", "previous_available"],
+    "context": ["prior_races_log", "first_lane", "second_lane", "third_lane"]
+  },
+  "training": {
+    "d6_prediction": "unchanged v242",
+    "d7": "D6 chronological inner fit and calibration only",
+    "d8": "fit D6, calibrate gamma on D7, then fit D6+D7 and predict D8",
+    "full_params": {
+      "n_estimators": 100,
+      "learning_rate": 0.03,
+      "num_leaves": 7,
+      "max_depth": 3,
+      "min_child_samples": 5000,
+      "reg_alpha": 2.0,
+      "reg_lambda": 30.0,
+      "max_bin": 63,
+      "colsample_bytree": 0.9,
+      "random_state": 26601,
+      "n_jobs": 8,
+      "verbosity": -1,
+      "deterministic": true,
+      "force_col_wise": true
+    },
+    "screen_overrides": {
+      "n_estimators": 34,
+      "min_child_samples": 1700
+    }
+  },
+  "screen_protocol": "configs/noodds_candidate_acceleration_v2.json",
+  "final_protocol": "configs/noodds_evaluation_protocol_v3.json",
+  "acceptance": "screen is futility only; final D6-D8 requires v3 comparison against v242 and Holm correction"
+}

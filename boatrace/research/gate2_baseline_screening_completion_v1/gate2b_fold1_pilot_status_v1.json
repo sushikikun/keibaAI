@@ -1,0 +1,9 @@
+{
+  "original_validation_passed": true,
+  "implemented_fold_count": 1,
+  "contracted_fold_count": 4,
+  "contract_completion_at_original_run": false,
+  "valid_as_fold1_pilot": true,
+  "superseded_by_screening4_run": true,
+  "original_artifacts_mutated": false
+}

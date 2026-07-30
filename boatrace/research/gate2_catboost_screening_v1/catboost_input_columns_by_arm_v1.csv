@@ -1,0 +1,4 @@
+arm_id,logical_feature_set,physical_column_pattern
+CB-F0,F0_safe_core_49,race-level + boat_1..6
+CB-F1,F0_safe_core_49+F1_asof_racer_history,F0 + boat_1..6__F1
+CB-F2,F0_safe_core_49+F1+F2_asof_equipment_history_verified_scope,F1 + boat_1..6__F2

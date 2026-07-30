@@ -1,0 +1,12 @@
+{
+    "run_id":  "clean_retry_run_v2_283b74468bbb996c8839_clean_retry_1",
+    "confirmation_access_zero":  true,
+    "confirmation_metrics_zero":  true,
+    "final_lock_access_zero":  true,
+    "final_lock_metrics_zero":  true,
+    "final_lock_unlock_zero":  true,
+    "final_lock_status":  "sealed",
+    "final_lock_performance_viewed":  false,
+    "automation_paused":  true,
+    "passed":  true
+}

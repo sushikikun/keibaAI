@@ -1,0 +1,11 @@
+{
+  "confirmation_to_final_lock": "PASS_REJECTED",
+  "passed": true,
+  "screening_to_confirmation": "PASS_REJECTED",
+  "screening_to_final_lock": "PASS_REJECTED",
+  "unknown_race": "PASS_REJECTED",
+  "unlock_event_count": 0,
+  "unlock_without_command": "PASS_REJECTED",
+  "wrong_final_lock_manifest_hash": "PASS_REJECTED",
+  "wrong_hash": "PASS_REJECTED"
+}

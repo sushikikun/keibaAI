@@ -1,0 +1,125 @@
+{
+  "artifact_set_sha256": "a25c8ad1506a36b059626833cd19ca29d80e781638c09bcc7d06b1abcb81e110",
+  "artifacts": [
+    {
+      "bytes": 3718,
+      "path": "equipment_generation_import_report_v1.md",
+      "sha256": "7ef29c885a0c69902717146cfe01ffe5be8ef2c10696c9890156e1594e711ade"
+    },
+    {
+      "bytes": 1988,
+      "path": "equipment_generation_import_validation_v1.json",
+      "sha256": "7d2fa184960bb6b6935c8aef0d0278ef14a3dac833da01dd6eb0c2def1f43047"
+    },
+    {
+      "bytes": 13802,
+      "path": "evidence_batch_local_reconciliation_v1.csv",
+      "sha256": "cd54ac97dd65a0e24b7b1129cea8c7152bff1fe8dbf4502b806f1e08cb63a009"
+    },
+    {
+      "bytes": 19512,
+      "path": "generation_boundary_gate1_materialization_plan_v1.csv",
+      "sha256": "82519b33d81ad24d15ecb9a886db4f57c76c90f0f72816940b135e3d5222c543"
+    },
+    {
+      "bytes": 20675,
+      "path": "generation_boundary_local_reconciliation_v1.csv",
+      "sha256": "2f81ef1b03b200d7bf711312ffd93520fcdc7feb77a52549e35b777ba68953e5"
+    },
+    {
+      "bytes": 2719,
+      "path": "hypothesis_readiness_patch_proposal_v1.csv",
+      "sha256": "909bdbafebf36f5cfe9fa8306b7e6788ab1815d6211c1a8eb36be34966bc26ed"
+    },
+    {
+      "bytes": 1795,
+      "path": "local_input_reconciliation_v1.csv",
+      "sha256": "5927b0f248a64049d28111220e0187336745d72e783879d395138b959e24088b"
+    },
+    {
+      "bytes": 1119,
+      "path": "protected_anchor_after_v1.csv",
+      "sha256": "5d79548279d103cfe900b94c1cbb93bafffbb7a93c6d994d41ca428d6f9c4ef4"
+    },
+    {
+      "bytes": 1032,
+      "path": "protected_anchor_before_v1.csv",
+      "sha256": "08a1aa5f1ae3e8ab02a164ab6ca240c56c2aa130d503d0733a53064197aeb630"
+    },
+    {
+      "bytes": 3970602,
+      "path": "source_package/equipment_generation_official_evidence_v1.zip",
+      "sha256": "f13ded62864412beffbe4c5fb4f2907f0a89216b314adecda20ed58d0691d016"
+    }
+  ],
+  "eligible_for_model_training": false,
+  "import_status": "newly_installed",
+  "manifest_id": "equipment_generation_import_manifest_v1",
+  "package_summary": {
+    "current_A_or_B_boundaries": 47,
+    "current_C_only_boundaries": 1,
+    "formal_model_research_ready_changed": false,
+    "full_batch_period_boundary_coverage": 2,
+    "generation_ids_issued": 0,
+    "historical_A_or_B_boundaries": 7,
+    "input_batches": 48,
+    "input_equipment_keys": 3240,
+    "official_evidence_sources": 43,
+    "total_A_or_B_boundary_candidates": 54
+  },
+  "protected_anchors": {
+    "after": {
+      "configs/boatrace_model_evaluation_v1_1.json": "2347e7e0467bad64084eff01844b314d0e2533e3131f73816295fec8563e535e",
+      "research/equipment_generation_evidence_registry_v1.csv": "7c92504af82dd539004bf9e06299b668043e2270856d7c6d1ecf799ce6e4a120",
+      "research/gate0_unresolved_reduction_v1/equipment_evidence_batch_queue_v1.csv": "b55e92912474a70cf96b6274865e045569b1de45dc16cce49c8172f955e82689",
+      "research/gate0_unresolved_reduction_v1/gate0_unresolved_reduction_manifest_v1.json": "e3fd0f962bfbb5ae7a31429c63e237502dd62958d5db0571681d34a3b6edb897",
+      "research/hypothesis_execution_readiness_v1.csv": "5f9781c6240045ab3712d0320e5354f4cf2553979a7be7f781c0ffe7db509d58",
+      "research/research_design_manifest_v2.json": "104db24acc0819e5f189552752d8d330f1365afbe94c757c1caed9d27638db97",
+      "research/temporal_policy_manifest_v1.json": "0a707213a1816e77def7a6405abd85c386d6d942bbd70cfda92a98bb2d13b952",
+      "results/boatrace_model_research/snapshots/research_v0_1_148956_b69fb714835e/dataset_manifest.json": "225882760ae06efe4e8363cea4e4a1e919d74ed848be29e572ab1617fa6f5ae5"
+    },
+    "before": {
+      "configs/boatrace_model_evaluation_v1_1.json": "2347e7e0467bad64084eff01844b314d0e2533e3131f73816295fec8563e535e",
+      "research/equipment_generation_evidence_registry_v1.csv": "7c92504af82dd539004bf9e06299b668043e2270856d7c6d1ecf799ce6e4a120",
+      "research/gate0_unresolved_reduction_v1/equipment_evidence_batch_queue_v1.csv": "b55e92912474a70cf96b6274865e045569b1de45dc16cce49c8172f955e82689",
+      "research/gate0_unresolved_reduction_v1/gate0_unresolved_reduction_manifest_v1.json": "e3fd0f962bfbb5ae7a31429c63e237502dd62958d5db0571681d34a3b6edb897",
+      "research/hypothesis_execution_readiness_v1.csv": "5f9781c6240045ab3712d0320e5354f4cf2553979a7be7f781c0ffe7db509d58",
+      "research/research_design_manifest_v2.json": "104db24acc0819e5f189552752d8d330f1365afbe94c757c1caed9d27638db97",
+      "research/temporal_policy_manifest_v1.json": "0a707213a1816e77def7a6405abd85c386d6d942bbd70cfda92a98bb2d13b952",
+      "results/boatrace_model_research/snapshots/research_v0_1_148956_b69fb714835e/dataset_manifest.json": "225882760ae06efe4e8363cea4e4a1e919d74ed848be29e572ab1617fa6f5ae5"
+    },
+    "changed": []
+  },
+  "purpose": "official_evidence_import_sidecar_only",
+  "safety": {
+    "commit_or_push": false,
+    "corpus_or_snapshot_updated": false,
+    "dependencies_installed": false,
+    "evaluation_run": false,
+    "existing_blocker_matrix_updated": false,
+    "existing_equipment_registry_updated": false,
+    "existing_hypothesis_readiness_updated": false,
+    "external_web_access": false,
+    "generation_ids_issued": 0,
+    "model_training_run": false
+  },
+  "self_hash_policy": "Manifest excludes itself and its companion .sha256 file to avoid recursive hashing.",
+  "source_package": {
+    "artifact_set_sha256": "625321fa196f0c9e301208ec251c40f6e023c6ae6b4d87277f20af33a0be1e2e",
+    "copied_zip_path": "source_package/equipment_generation_official_evidence_v1.zip",
+    "internal_manifest_sha256": "420ea33afa6a67ccf2386f89251b610809f183dcf49cb46c7d7e53940bf63554",
+    "original_zip_path": "<USER_HOME>\\Downloads\\equipment_generation_official_evidence_v1.zip",
+    "sha256": "f13ded62864412beffbe4c5fb4f2907f0a89216b314adecda20ed58d0691d016",
+    "size_bytes": 3970602
+  },
+  "source_sidecar": {
+    "artifact_set_sha256": "625321fa196f0c9e301208ec251c40f6e023c6ae6b4d87277f20af33a0be1e2e",
+    "file_count": 58,
+    "files_sha256": "c62e26c02d38c613db88475cc3e70fa88dd0986744a4efd099025d345f8c6f5f",
+    "install_status": "newly_installed",
+    "internal_manifest_sha256": "420ea33afa6a67ccf2386f89251b610809f183dcf49cb46c7d7e53940bf63554",
+    "path": "research/equipment_generation_official_evidence_v1",
+    "size_bytes": 6297780
+  },
+  "status": "provisional"
+}
