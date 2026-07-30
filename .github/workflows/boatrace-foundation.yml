@@ -17,11 +17,13 @@ jobs:
           import csv, json, re
           from pathlib import Path
           root = Path('boatrace')
-          banned = re.compile(r'(?:C:\\Users\|/home/|api[_-]?key|secret|token=)', re.I)
+          banned = re.compile(r'(?:C:\\Users\\|/home/|ghp_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{20,}|AKIA[0-9A-Z]{16})', re.I)
           for p in root.rglob('*'):
-              if not p.is_file(): continue
+              if not p.is_file():
+                  continue
               assert p.stat().st_size < 10 * 1024 * 1024, p
-              if p.suffix == '.json': json.loads(p.read_text(encoding='utf-8'))
+              if p.suffix == '.json':
+                  json.loads(p.read_text(encoding='utf-8'))
               if p.suffix == '.csv':
                   with p.open(encoding='utf-8', newline='') as f:
                       h = next(csv.reader(f), [])
