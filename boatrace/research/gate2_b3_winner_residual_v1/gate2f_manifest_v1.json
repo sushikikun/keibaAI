@@ -1,0 +1,32 @@
+{
+  "artifact": "gate2f_manifest_v1",
+  "gate": "Gate 2-F",
+  "run_id": "winner_residual_run_v1_20260730_resource_blocked",
+  "status": "resource_blocked",
+  "passed": false,
+  "source_of_truth": {
+    "gate2e_validation": "research/gate2_b3_residual_atlas_v1/gate2e_validation_v1.json",
+    "baseline_run_manifest": "results/boatrace_model_research/baseline_runs/baseline_run_v1_screening4_c59a595dbb92/run_manifest_v1.json",
+    "baseline_run_manifest_sha256": "f3eb62dc643c9f2561f5ec1827e3d070b63fd85952425ea69b39dc0f73a8c6e3"
+  },
+  "artifacts": [
+    "b3_winner_prior_policy_v1.json",
+    "winner_residual_model_contract_v1.json",
+    "winner_residual_feature_arm_registry_v1.json",
+    "winner_residual_preprocessing_contract_v1.json",
+    "winner_residual_optimizer_policy_v1.json",
+    "winner_residual_optimizer_canary_v1.json",
+    "gate2f_data_access_audit_v1.json",
+    "gate2f_guard_audit_v1.json",
+    "gate2f_leakage_validation_v1.json",
+    "gate2f_validation_v1.json",
+    "gate2f_report_v1.md",
+    "protected_anchor_before_gate2f.csv",
+    "protected_anchor_after_gate2f.csv",
+    "protected_anchor_diff_gate2f.csv"
+  ],
+  "full_arm_metrics": false,
+  "formal_champion": false,
+  "confirmation_or_final_lock_access": 0,
+  "automation_status": "PAUSED"
+}

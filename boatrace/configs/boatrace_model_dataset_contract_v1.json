@@ -1,0 +1,299 @@
+{
+  "contract_id": "boatrace_model_dataset_contract_v1",
+  "version": "1.0.0",
+  "status": "frozen",
+  "source": {
+    "corpus_root": "results/boatrace_complete_corpus",
+    "registry": "results/boatrace_complete_corpus/integrity_registry.sqlite",
+    "status": "results/boatrace_complete_corpus/status.json",
+    "canonical_membership": "integrity_registry.sqlite race_owners inside one read transaction",
+    "required_batch_integrity_status": "passed",
+    "required_batch_hash_status": "verified",
+    "read_only": true,
+    "source_tables": {
+      "race_facts": "batches/<batch>/race_facts.csv",
+      "entry_facts": "batches/<batch>/entry_facts.csv",
+      "batch_manifest": "batches/<batch>/batch_manifest.json"
+    },
+    "explicitly_not_read_for_features_or_targets": [
+      "market_odds",
+      "result_payouts"
+    ]
+  },
+  "protected_paths": [
+    "results/boatrace_complete_corpus",
+    "results/boatrace_existing_source_audit",
+    "results/data_expansion_batches",
+    "results/boatrace_history_raw",
+    "results/boatrace_complete_corpus/pre_strict_v2_backup"
+  ],
+  "snapshot_root": "results/boatrace_model_research/snapshots",
+  "source_schema": {
+    "race_facts_columns": [
+      "beforeinfo_time",
+      "closed_at",
+      "distance",
+      "grade_number",
+      "preview_air_temperature",
+      "preview_water_temperature",
+      "preview_wave_height",
+      "preview_weather",
+      "preview_wind_direction_number",
+      "preview_wind_speed",
+      "race_date",
+      "race_key",
+      "race_no",
+      "result_air_temperature",
+      "result_status",
+      "result_water_temperature",
+      "result_wave_height",
+      "result_weather_number",
+      "result_wind_direction_number",
+      "result_wind_speed",
+      "subtitle",
+      "title",
+      "venue_code",
+      "winning_technique_number"
+    ],
+    "entry_facts_columns": [
+      "actual_course",
+      "actual_finish",
+      "actual_start_timing",
+      "average_start_timing",
+      "boat_no",
+      "boat_top_2_percent",
+      "boat_top_3_percent",
+      "body_weight",
+      "exhibition_course",
+      "exhibition_start_timing",
+      "exhibition_time",
+      "lane",
+      "local_top_1_percent",
+      "local_top_2_percent",
+      "local_top_3_percent",
+      "maintenance_scope",
+      "maintenance_status",
+      "motor_no",
+      "motor_top_2_percent",
+      "motor_top_3_percent",
+      "national_top_1_percent",
+      "national_top_2_percent",
+      "national_top_3_percent",
+      "parts_exchange_status",
+      "program_weight",
+      "propeller_new",
+      "propeller_status",
+      "race_date",
+      "race_key",
+      "race_no",
+      "racer_age",
+      "racer_branch_number",
+      "racer_class_number",
+      "racer_id",
+      "racer_name",
+      "tilt",
+      "venue_code",
+      "weight_adjustment"
+    ]
+  },
+  "feature_tables": {
+    "race_features": {
+      "grain": "one row per prediction-input-eligible race",
+      "columns": [
+        "race_key",
+        "race_date",
+        "venue_code",
+        "race_no",
+        "closed_at",
+        "beforeinfo_time",
+        "distance",
+        "grade_number",
+        "preview_air_temperature",
+        "preview_water_temperature",
+        "preview_wave_height",
+        "preview_weather",
+        "preview_wind_direction_number",
+        "preview_wind_speed",
+        "subtitle",
+        "title"
+      ],
+      "identifier_columns": [
+        "race_key"
+      ],
+      "required_non_null_columns": [
+        "race_key",
+        "race_date",
+        "venue_code",
+        "race_no",
+        "closed_at"
+      ]
+    },
+    "boat_features": {
+      "grain": "six rows per prediction-input-eligible race, keyed by race_key and lane",
+      "columns": [
+        "race_key",
+        "lane",
+        "race_date",
+        "venue_code",
+        "race_no",
+        "racer_id",
+        "racer_name",
+        "racer_age",
+        "racer_branch_number",
+        "racer_class_number",
+        "average_start_timing",
+        "national_top_1_percent",
+        "national_top_2_percent",
+        "national_top_3_percent",
+        "local_top_1_percent",
+        "local_top_2_percent",
+        "local_top_3_percent",
+        "motor_no",
+        "motor_top_2_percent",
+        "motor_top_3_percent",
+        "boat_no",
+        "boat_top_2_percent",
+        "boat_top_3_percent",
+        "program_weight",
+        "body_weight",
+        "weight_adjustment",
+        "exhibition_course",
+        "exhibition_start_timing",
+        "exhibition_time",
+        "tilt",
+        "propeller_new",
+        "propeller_status",
+        "parts_exchange_status"
+      ],
+      "identifier_columns": [
+        "race_key",
+        "lane",
+        "racer_id",
+        "racer_name"
+      ],
+      "required_non_null_columns": [
+        "race_key",
+        "lane",
+        "race_date",
+        "venue_code",
+        "race_no",
+        "racer_id"
+      ]
+    }
+  },
+  "target_tables": {
+    "top3_targets": {
+      "grain": "one row per canonical source race",
+      "columns": [
+        "race_key",
+        "race_date",
+        "venue_code",
+        "race_no",
+        "target_status",
+        "target_class_id",
+        "first_lane",
+        "second_lane",
+        "third_lane",
+        "target_label"
+      ]
+    },
+    "auxiliary_targets": {
+      "grain": "one row per available source entry",
+      "columns": [
+        "race_key",
+        "lane",
+        "race_date",
+        "venue_code",
+        "race_no",
+        "target_status",
+        "actual_finish",
+        "actual_course",
+        "actual_start_timing",
+        "winning_technique_number"
+      ],
+      "inference_input_allowed": false
+    }
+  },
+  "eligibility": {
+    "grain": "one row per canonical source race",
+    "columns": [
+      "race_key",
+      "race_date",
+      "venue_code",
+      "race_no",
+      "source_batch",
+      "target_status",
+      "prediction_input_eligible",
+      "main_evaluation_eligible",
+      "exclusion_reasons"
+    ],
+    "prediction_input_rules": [
+      "exactly one race_facts row",
+      "required race identity and closed_at are non-null",
+      "exactly six entry_facts rows",
+      "lane set equals integers 1 through 6",
+      "race identity is consistent between race_facts and every entry_facts row",
+      "every racer_id is non-null"
+    ],
+    "target_status_rules": {
+      "unique_order": "result_status is settled_standard_six_boat and actual_finish is a permutation of integers 1 through 6",
+      "tied": "result_status is settled_standard_six_boat, six valid integer finish ranks are present, and at least one finish rank is duplicated",
+      "void": "all other outcome states"
+    },
+    "main_evaluation_rule": "prediction_input_eligible=true and target_status=unique_order"
+  },
+  "forbidden_feature_policy": {
+    "case_insensitive_name_tokens": [
+      "odds",
+      "popular",
+      "popularity",
+      "vote",
+      "bet",
+      "sales",
+      "payout",
+      "payback",
+      "refund"
+    ],
+    "exact_inference_forbidden_columns": [
+      "actual_course",
+      "actual_finish",
+      "actual_start_timing",
+      "winning_technique_number",
+      "result_air_temperature",
+      "result_status",
+      "result_water_temperature",
+      "result_wave_height",
+      "result_weather_number",
+      "result_wind_direction_number",
+      "result_wind_speed",
+      "maintenance_scope",
+      "maintenance_status"
+    ],
+    "applies_to": [
+      "race_features",
+      "boat_features",
+      "feature_manifest"
+    ]
+  },
+  "storage": {
+    "preferred": "parquet",
+    "fallback": "csv",
+    "fallback_allowed_only_when_no_existing_parquet_engine_is_available": true,
+    "csv_encoding": "UTF-8",
+    "parquet_engines_recognized": [
+      "pyarrow",
+      "duckdb",
+      "fastparquet"
+    ]
+  },
+  "manifest": {
+    "hash_algorithm": "SHA-256",
+    "required_hash_groups": [
+      "artifacts",
+      "configs",
+      "implementation_files",
+      "source_batches"
+    ],
+    "dataset_manifest_self_hash_policy": "omitted because a file cannot contain its own final cryptographic hash without circularity"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "applies_to": "future policy version only; existing policy and rehearsal stay unchanged",
+  "eligible_for_model_training": false,
+  "existing_policy_modified": false,
+  "new_feature_materializations": 0,
+  "proposal_id": "meeting_episode_policy_patch_proposal_v1",
+  "purpose": "policy_execution_validation",
+  "rules": [
+    "A block whose first local observation is a numbered day greater than 1 is structurally_left_censored.",
+    "A local 初日 anchor may resolve historical identity; it does not by itself prove prediction-time availability.",
+    "No meeting_id or meeting_day feature is materialized unless its prediction-time source and cutoff are independently proven.",
+    "Future schedule observations may not be used to make a target-time feature eligible."
+  ],
+  "status": "provisional"
+}

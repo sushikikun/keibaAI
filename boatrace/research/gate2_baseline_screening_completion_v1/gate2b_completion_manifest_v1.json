@@ -1,0 +1,139 @@
+{
+  "manifest_id": "boatrace_gate2b_completion_manifest_v1",
+  "baseline_run_id": "baseline_run_v1_screening4_c59a595dbb92",
+  "pilot_run_id": "baseline_run_v1_da5fd9906e5e",
+  "screening_fold_ids": [
+    "screening_fold_1",
+    "screening_fold_2",
+    "screening_fold_3",
+    "screening_fold_4"
+  ],
+  "evaluation_counts": {
+    "screening_fold_1": 12822,
+    "screening_fold_2": 12953,
+    "screening_fold_3": 13169,
+    "screening_fold_4": 12288
+  },
+  "artifacts": [
+    {
+      "path": "baseline_fold_stability_v1.csv",
+      "sha256": "37a3bc7305b1a6d7f5381adf715eb6755ed9af78d27b49386ab5a7b9d1e9daf9",
+      "size_bytes": 496
+    },
+    {
+      "path": "fold1_pilot_reconciliation_v1.json",
+      "sha256": "c5c13a33fbc480f8477796eca1305bc196241a00ef6d587897dd0994d6b5e68b",
+      "size_bytes": 1669
+    },
+    {
+      "path": "gate2b_completion_data_access_audit_v1.json",
+      "sha256": "dc3afb419ba474a37c5c372a413cd895139b0f2b1d1d1a83eee64765f1c0d63c",
+      "size_bytes": 361
+    },
+    {
+      "path": "gate2b_completion_guard_audit_v1.json",
+      "sha256": "34d46d591e2476b9d0a701265f6db097fef03b827e4ea1e3c799e2603ebefe4c",
+      "size_bytes": 141
+    },
+    {
+      "path": "gate2b_completion_leakage_validation_v1.json",
+      "sha256": "a7a70c64fe36edbe0e41dc8ac6e341c36167c83ab310ac0665de67ec025eca15",
+      "size_bytes": 338
+    },
+    {
+      "path": "gate2b_completion_readiness_patch_proposal_v1.json",
+      "sha256": "f4452d435c7077a526dfd5a9957075c0b10f6b8c7fa5b888818af49154daaf6e",
+      "size_bytes": 328
+    },
+    {
+      "path": "gate2b_completion_report_v1.md",
+      "sha256": "21816d245f52156c7ef749c04e7e9752fbca0306c288449996834896c2716736",
+      "size_bytes": 1375
+    },
+    {
+      "path": "gate2b_completion_validation_v1.json",
+      "sha256": "e5fb7fcc44c987975de6de4561d48ab7cac1fa858f6ea32be82b34b68e82ac9f",
+      "size_bytes": 1158
+    },
+    {
+      "path": "gate2b_contract_reconciliation_v1.json",
+      "sha256": "f5bbf0a4e1370c71aa8b87fc8ad7e846332d8527fbcfb5a24ff3216f406094a0",
+      "size_bytes": 1156
+    },
+    {
+      "path": "gate2b_fold1_pilot_status_v1.json",
+      "sha256": "a7b95ad7b7d9956d6060108e912b7e64645129ae9b7d7c87526b04b008ab9ec4",
+      "size_bytes": 270
+    },
+    {
+      "path": "gate2c_authorization_requirements_v2.md",
+      "sha256": "d99de4919b1a87d054c777212b2bd46575f7907c5087741fdbe0d9637fa5e4a9",
+      "size_bytes": 200
+    },
+    {
+      "path": "metrics_by_fold_v1.csv",
+      "sha256": "660bd22bc1114bb04eb574e86537abee3d4e72d862977870a41a2f519cc48144",
+      "size_bytes": 14684
+    },
+    {
+      "path": "metrics_by_model_fold_v1.csv",
+      "sha256": "660bd22bc1114bb04eb574e86537abee3d4e72d862977870a41a2f519cc48144",
+      "size_bytes": 14684
+    },
+    {
+      "path": "metrics_by_outcome_screening_v1.csv",
+      "sha256": "db8068c2dea52fe22d6e505fe1aba57ed75cccdeb282cda1239996e332dbf15f",
+      "size_bytes": 1022
+    },
+    {
+      "path": "metrics_by_race_number_screening_v1.csv",
+      "sha256": "805f5460201b8de7073bc8b07dbc65313e7f25e110ec11ad98b8d7e283cf4f62",
+      "size_bytes": 41818
+    },
+    {
+      "path": "metrics_by_venue_screening_v1.csv",
+      "sha256": "8be02b1f130064e4327e30d471ff6d34295bc3f1f77a46dbc34573b8d4a865a2",
+      "size_bytes": 83022
+    },
+    {
+      "path": "metrics_pooled_screening_v1.csv",
+      "sha256": "443ee6e0af7fb038e2766b8d82b41427a7b0e53577bd4e9fa452b6cf04d6ba18",
+      "size_bytes": 4040
+    },
+    {
+      "path": "metrics_pooled_screening_v1.json",
+      "sha256": "4d94c3200591bfa3795eb734f3c4f30562e6375f0cb6373d2f66b948c6f6ae5d",
+      "size_bytes": 10141
+    },
+    {
+      "path": "paired_daily_loss_summary_screening_v1.csv",
+      "sha256": "755d1b182796a0af37d634fb4eda02df94ecd16154adaf5fb45d2e506d47f9c7",
+      "size_bytes": 188205
+    },
+    {
+      "path": "paired_loss_differences_screening_v1.csv",
+      "sha256": "74097daeaa3bfc5e69f636fce9bc59b220807d006cf50462de5e77a9545084c9",
+      "size_bytes": 38118926
+    },
+    {
+      "path": "protected_anchor_after_gate2b_completion.csv",
+      "sha256": "bfb617a0b2c2cabcf8866bcb55e364031484d8e5fcc07638714ab3efec99e4f4",
+      "size_bytes": 2426740
+    },
+    {
+      "path": "protected_anchor_before_gate2b_completion.csv",
+      "sha256": "bfb617a0b2c2cabcf8866bcb55e364031484d8e5fcc07638714ab3efec99e4f4",
+      "size_bytes": 2426740
+    },
+    {
+      "path": "protected_anchor_diff_gate2b_completion.csv",
+      "sha256": "9a390ecdd68452489fd17a7bb0b4aeb02999bd7e60c724efcbe17b78707cab23",
+      "size_bytes": 49
+    },
+    {
+      "path": "screening_statistical_baseline_reference_v1.json",
+      "sha256": "16f07a9147dbc41b93485a4ead5a8d7129a542c52d5d91795a86dd1c4c61476e",
+      "size_bytes": 533
+    }
+  ]
+}

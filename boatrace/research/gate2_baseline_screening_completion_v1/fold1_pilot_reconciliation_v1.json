@@ -1,0 +1,66 @@
+{
+  "pilot_run_id": "baseline_run_v1_da5fd9906e5e",
+  "new_run_id": "baseline_run_v1_screening4_c59a595dbb92_building",
+  "checks": [
+    {
+      "prediction_type": "raw",
+      "model_id": "B0_uniform",
+      "key_count": 12822,
+      "numeric_equal": true,
+      "max_abs_diff": 0.0
+    },
+    {
+      "prediction_type": "raw",
+      "model_id": "B1_global_frequency",
+      "key_count": 12822,
+      "numeric_equal": true,
+      "max_abs_diff": 0.0
+    },
+    {
+      "prediction_type": "raw",
+      "model_id": "B2_hierarchical_frequency",
+      "key_count": 12822,
+      "numeric_equal": true,
+      "max_abs_diff": 0.0
+    },
+    {
+      "prediction_type": "raw",
+      "model_id": "B3_autoregressive_hierarchical_frequency",
+      "key_count": 12822,
+      "numeric_equal": true,
+      "max_abs_diff": 0.0
+    },
+    {
+      "prediction_type": "calibrated",
+      "model_id": "B0_uniform",
+      "key_count": 12822,
+      "numeric_equal": true,
+      "max_abs_diff": 0.0
+    },
+    {
+      "prediction_type": "calibrated",
+      "model_id": "B1_global_frequency",
+      "key_count": 12822,
+      "numeric_equal": true,
+      "max_abs_diff": 0.0
+    },
+    {
+      "prediction_type": "calibrated",
+      "model_id": "B2_hierarchical_frequency",
+      "key_count": 12822,
+      "numeric_equal": true,
+      "max_abs_diff": 0.0
+    },
+    {
+      "prediction_type": "calibrated",
+      "model_id": "B3_autoregressive_hierarchical_frequency",
+      "key_count": 12822,
+      "numeric_equal": true,
+      "max_abs_diff": 0.0
+    },
+    {
+      "reference_b0_equal": true
+    }
+  ],
+  "passed": true
+}

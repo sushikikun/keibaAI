@@ -1,0 +1,6 @@
+{
+  "chunk_size_invariance_passed": true,
+  "idempotent_rebuild_passed": true,
+  "input_order_invariance_passed": true,
+  "method": "date-buffered deterministic streaming compiler"
+}

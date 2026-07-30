@@ -1,0 +1,34 @@
+{
+  "arms": {
+    "CB-F0": {
+      "F1": false,
+      "F2": false
+    },
+    "CB-F1": {
+      "F1": true,
+      "F2": false
+    },
+    "CB-F2": {
+      "F1": true,
+      "F2": true
+    }
+  },
+  "categorical_missing": "__MISSING__",
+  "entry_expansion": "boat_number_1_to_6",
+  "fixed_metadata": [
+    "race_key",
+    "race_date",
+    "role",
+    "target_class_id"
+  ],
+  "input_unit": "one_race_one_row",
+  "numeric_missing": "NaN",
+  "provenance": {
+    "dataset_manifest_sha256": "eb2ddf85af16255dbc9d64f264ba0565da73949ccc957dda0b1de6d0bf48bf4c",
+    "feature_sidecar_manifest_sha256": "2a4d0549e1763ac37dc4904bd2e118142051f8058a24e61f7b36d0f4ecaff87d",
+    "split_manifest_sha256": "d3318c40504b34f163cf3db12ce9469002aa21804659f250574305978864b8bc"
+  },
+  "safe_core_logical_count": 49,
+  "schema_id": "catboost_input_schema_v1",
+  "target_excluded": true
+}

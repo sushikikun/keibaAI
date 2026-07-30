@@ -1,0 +1,10 @@
+{
+    "teacher_forcing_prefix_only":  true,
+    "enumeration_inference_only":  true,
+    "canary_status":  "not completed after resource stop",
+    "confirmation_access_zero":  true,
+    "final_lock_access_zero":  true,
+    "future_history_zero":  true,
+    "sameday_history_zero":  true,
+    "status":  "guarded"
+}

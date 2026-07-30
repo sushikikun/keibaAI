@@ -1,0 +1,9 @@
+{
+  "candidates": [
+    "identity",
+    "scalar_temperature"
+  ],
+  "evaluation_used_for_selection": false,
+  "fit_scope": "calibration_only",
+  "raw_model_modified": false
+}

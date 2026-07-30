@@ -1,0 +1,21 @@
+{
+  "A_B_candidate_count": 54,
+  "C_D_generation_id_assignments": 0,
+  "U3_all_boat_races": 32296,
+  "U3_all_motor_races": 41586,
+  "U3_any_races": 43973,
+  "assignment_rows_written": 1278096,
+  "notes": [
+    "Only official A/B evidence was used.",
+    "C/D evidence remains null and unresolved.",
+    "Corpus and research snapshot were not modified."
+  ],
+  "overlap_rows": 0,
+  "pre_boundary_assignments": 0,
+  "race_coverage_rows": 219240,
+  "report_id": "boatrace_equipment_generation_materialization_report_v1",
+  "status": "sidecar_only",
+  "unresolved_rows": 2112900,
+  "verified_boat_entries": 193776,
+  "verified_motor_entries": 249516
+}

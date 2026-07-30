@@ -1,0 +1,14 @@
+{
+  "confirmation_atomic_simulation_passed": true,
+  "confirmation_predictions_created": false,
+  "final_lock_one_shot_simulation_passed": true,
+  "final_lock_predictions_created": false,
+  "lock_guard_passed": true,
+  "model_training_started": false,
+  "passed": true,
+  "prediction_schema_passed": true,
+  "preprocessing_isolation_passed": true,
+  "screening_uniform_logloss": 4.787491742782046,
+  "screening_uniform_logloss_expected": 4.787491742782046,
+  "split_inspection_passed": true
+}

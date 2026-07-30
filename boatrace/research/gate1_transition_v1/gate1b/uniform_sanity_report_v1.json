@@ -1,0 +1,14 @@
+{
+  "population": "primary_supervised_candidate",
+  "count": 200118,
+  "tolerance": 1e-12,
+  "trifecta_log_loss": 4.787491742782046,
+  "winner_log_loss": 1.791759469228055,
+  "exacta_log_loss": 3.4011973816621555,
+  "top3_set_log_loss": 2.995732273553991,
+  "second_given_first_log_loss": 1.6094379124341003,
+  "third_given_first_second_log_loss": 1.3862943611198906,
+  "multiclass_brier": 0.9916666666666667,
+  "passed": true,
+  "kind": "uniform target/evaluator sanity only; not a model"
+}

@@ -1,0 +1,5 @@
+distribution_name,import_name,current_status,required_by_programs,requested_version_policy,wheel_required,source_build_allowed,install_action,reason
+numpy,numpy,available_in_gate1e;installed_in_venv,Wave1 runtime,exact==2.3.5,true,false,offline_wheel_install,Gate 2-A only
+pandas,pandas,available_in_gate1e;installed_in_venv,Wave1 runtime,exact==3.0.1,true,false,offline_wheel_install,Gate 2-A only
+scipy,scipy,missing_required_for_wave1;installed_in_venv,Wave1 runtime,exact==1.18.0,true,false,offline_wheel_install,Gate 2-A only
+scikit-learn,sklearn,missing_required_for_wave1;installed_in_venv,Wave1 runtime,exact==1.9.0,true,false,offline_wheel_install,Gate 2-A only

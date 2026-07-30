@@ -1,0 +1,9 @@
+{
+    "status":  "failed_probability_contract_and_resource_blocked",
+    "scientifically_rejected":  false,
+    "formal_metric_available":  false,
+    "prior_predictions_usable":  false,
+    "prior_fold_1_to_3_predictions_reused":  false,
+    "full_rerun_required":  true,
+    "prior_gate2dr1_validation":  "read_only"
+}

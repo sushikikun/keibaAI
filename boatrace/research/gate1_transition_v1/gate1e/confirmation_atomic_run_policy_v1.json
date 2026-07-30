@@ -1,0 +1,11 @@
+{
+  "C1_C2_model_config_fixed": true,
+  "C1_to_C2_config_change_forbidden": true,
+  "candidate_pipeline_hash_required": true,
+  "gate1e_execution": false,
+  "interrupted_run_status": "failed",
+  "metrics_publication_freezes_candidate": true,
+  "predictions_complete_before_metrics": true,
+  "rerun_requires_same_config_seed_code_hash": true,
+  "start_end_timestamps_required": true
+}

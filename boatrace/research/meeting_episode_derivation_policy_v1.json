@@ -1,0 +1,102 @@
+{
+  "policy_id": "boatrace_meeting_episode_derivation_policy_v1",
+  "version": "1.0.0",
+  "inputs": [
+    "venue_code",
+    "race_date",
+    "day_label",
+    "title",
+    "subtitle",
+    "official meeting schedule",
+    "missing/postponed/cancelled status"
+  ],
+  "output_schema": {
+    "episode_id": "string or null",
+    "meeting_day_number": "positive integer or null",
+    "derivation_confidence": "confirmed|high|medium|low|unresolved",
+    "exception_reason": "string or null"
+  },
+  "normalization": {
+    "retain_raw_fields": true,
+    "title_normalization": "Unicode NFKC plus whitespace collapse only",
+    "subtitle_role": "supporting context/race stage; never sole episode boundary",
+    "venue_code": "two-digit official venue code"
+  },
+  "derivation_order": [
+    {
+      "priority": 1,
+      "rule": "use an explicit official meeting schedule/meeting identifier when available",
+      "confidence": "confirmed"
+    },
+    {
+      "priority": 2,
+      "rule": "anchor episode at venue+normalized title+初日 and follow explicit N日目 labels in chronological schedule order",
+      "confidence": "high"
+    },
+    {
+      "priority": 3,
+      "rule": "infer 最終日 only when the same scheduled episode has prior day anchors and no contradictory title/status",
+      "confidence": "medium"
+    },
+    {
+      "priority": 4,
+      "rule": "for 順延/中止/missing day_label, use official schedule exception metadata; otherwise leave day number null",
+      "confidence": "low_or_unresolved"
+    }
+  ],
+  "episode_id_rule": {
+    "canonical_components": [
+      "venue_code",
+      "confirmed_or_derived_episode_start_date",
+      "normalized_title",
+      "schedule_revision_id"
+    ],
+    "format": "MEETING:<venue_code>:<start_yyyymmdd>:<first12_sha256>",
+    "null_rule": "if episode start cannot be established without guessing, episode_id is null"
+  },
+  "day_number_rules": {
+    "初日": 1,
+    "N日目": "N",
+    "最終日": "derive from confirmed episode schedule or prior monotonic anchors",
+    "順延": "do not increment automatically",
+    "中止": "do not create a completed meeting day automatically",
+    "missing": "null unless official schedule resolves it"
+  },
+  "episode_boundaries": [
+    "explicit new official schedule identifier",
+    "new 初日 at same venue after previous episode",
+    "confirmed end of previous schedule followed by a new title/schedule"
+  ],
+  "non_boundaries": [
+    "subtitle change within a meeting",
+    "race stage change",
+    "calendar gap alone without schedule evidence",
+    "title punctuation/width difference after conservative normalization"
+  ],
+  "exceptions": [
+    "postponed",
+    "cancelled",
+    "missing_program_shell",
+    "title_conflict",
+    "day_label_non_monotonic",
+    "overlapping_schedule",
+    "schedule_unavailable"
+  ],
+  "audit_evidence": {
+    "program_races": 148956,
+    "day_label_nonblank": 148752,
+    "day_label_counts": {
+      "４日目": 21996,
+      "２日目": 26820,
+      "３日目": 26724,
+      "最終日": 26784,
+      "初日": 26784,
+      "５日目": 17208,
+      "順延": 972,
+      "６日目": 1104,
+      "中止": 360,
+      "None": 204
+    }
+  },
+  "materialization_status": "policy_only_not_materialized"
+}

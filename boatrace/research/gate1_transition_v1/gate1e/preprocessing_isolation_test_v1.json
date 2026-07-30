@@ -1,0 +1,8 @@
+{
+  "calibration_label_excluded_from_raw_fit": true,
+  "evaluation_category_excluded_from_train_vocab": true,
+  "evaluation_extreme_excluded_from_train_scaling": true,
+  "passed": true,
+  "refit_train_plus_selection_only": true,
+  "target_encoding_train_only": true
+}

@@ -1,0 +1,25 @@
+{
+  "candidate_rows": 32022,
+  "distinct_prior_races": 8878,
+  "distinct_racers": 1644,
+  "distinct_target_races": 8365,
+  "duplicate_count": 0,
+  "eligibility_counts": {
+    "audit_match_only_not_feature_eligible": 31532,
+    "not_eligible": 490
+  },
+  "eligible_for_model_training": false,
+  "future_leakage_count": 0,
+  "physical_capture_counts": {
+    "captured_after_target_cutoff": 32022
+  },
+  "policy_result": "Raw official result JSON was used only to reconcile target-beforeinfo prev fields; it is never a feature source.",
+  "purpose": "policy_execution_validation",
+  "raw_result_feature_join_count": 0,
+  "reconciliation_counts": {
+    "audit_match": 31532,
+    "audit_mismatch": 490
+  },
+  "status": "provisional",
+  "target_or_later_result_mix_count": 0
+}

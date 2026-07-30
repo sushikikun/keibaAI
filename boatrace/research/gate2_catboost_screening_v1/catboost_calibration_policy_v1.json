@@ -1,0 +1,13 @@
+{
+  "candidates": [
+    "identity",
+    "scalar_temperature"
+  ],
+  "evaluation_used_for_selection": false,
+  "fit_scope": "calibration_only",
+  "raw_model_modified": false,
+  "temperature_range": [
+    0.05,
+    20.0
+  ]
+}

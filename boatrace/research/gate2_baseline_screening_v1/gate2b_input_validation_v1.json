@@ -1,0 +1,21 @@
+{
+  "gate1a_passed": true,
+  "gate1b_passed": true,
+  "gate1c_passed": true,
+  "gate1d_passed": true,
+  "gate1e_protocol_passed": true,
+  "gate2a_runtime_verified": true,
+  "runtime_manifest_sha256": "5b64b373b69e3be565fe91052df24e7d294aba378a2c4107a12d67d4319169c7",
+  "split_id": "split_v1_d3318c40504b",
+  "final_lock_id": "final_lock_v1_365d_9294f86b36fe",
+  "screening_fold_count": 4,
+  "screening_roles": {
+    "train": 42619,
+    "selection": 13190,
+    "calibration": 12149,
+    "evaluation": 12822
+  },
+  "class_map_sha256": "6a69deaa5f047f6b01d56d8ae56ed4cb9b992e4dcd29db4a9d346037172f122a",
+  "target_status_used": "unique_one_hot",
+  "passed": true
+}

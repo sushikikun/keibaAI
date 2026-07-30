@@ -1,0 +1,306 @@
+{
+  "checks": {
+    "all_batch_ids_accounted": true,
+    "all_candidate_evidence_exists": true,
+    "candidate_period_overlap_errors_zero": true,
+    "current_A_or_B_count_47": true,
+    "current_C_only_count_1": true,
+    "full_batch_coverage_count_2": true,
+    "generation_id_issued_zero": true,
+    "input_batch_count_48": true,
+    "input_sha256_all_match": true,
+    "no_C_or_D_boundary_candidates": true,
+    "official_domains_only": true,
+    "raw_files_all_exist": true,
+    "raw_hashes_all_match": true,
+    "raw_pdfs_valid_magic": true,
+    "unique_evidence_ids": true
+  },
+  "counts": {
+    "batch_resolution_rows": 48,
+    "boundary_candidates": 54,
+    "manual_followup_rows": 46,
+    "official_domain_failures": 1,
+    "official_evidence_sources": 43,
+    "overlap_errors": 0,
+    "raw_checks": 43,
+    "unresolved_rows": 46
+  },
+  "generated_at": "2026-07-28T00:07:28Z",
+  "input_sha256_match": {
+    "equipment_evidence_batch_queue_v1.csv": true,
+    "equipment_generation_evidence_registry_v1.csv": true,
+    "hypothesis_execution_readiness_v1.csv": true
+  },
+  "official_domain_failures": [],
+  "overlap_errors": [],
+  "passed": true,
+  "pdf_render_verification": {
+    "dpi": 80,
+    "pdf_count": 4,
+    "rendered_page_count": 6,
+    "renderer": "<LOCAL_RUNTIME>/render_pdf.py",
+    "status": "pass"
+  },
+  "raw_checks": [
+    {
+      "evidence_id": "EV001",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV002",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV003",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV004",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV005",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV006",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV007",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV008",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV009",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV010",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV011",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV012",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV013",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV014",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV015",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV016",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV017",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV018",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV019",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV020",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV021",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV022",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV023",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV024",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV025",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV026",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV027",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV028",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV029",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV030",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV031",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV032",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV033",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV034",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV035",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV036",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV037",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV038",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV039",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV040",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV041",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV042",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    },
+    {
+      "evidence_id": "EV043",
+      "exists": true,
+      "pdf_magic_ok": true,
+      "sha256_matches_registry": true
+    }
+  ],
+  "validation_id": "equipment_generation_official_evidence_validation_v1"
+}

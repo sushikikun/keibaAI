@@ -1,0 +1,77 @@
+{
+  "registry_id": "baseline_model_registry_v1",
+  "models": [
+    {
+      "model_id": "B0_uniform",
+      "model_family": "uniform",
+      "mathematical_definition": "p_c=1/120"
+    },
+    {
+      "model_id": "B1_global_frequency",
+      "model_family": "global_frequency",
+      "mathematical_definition": "(count_c+tau/120)/(N+tau)",
+      "hyperparameter_candidates": [
+        0.1,
+        1,
+        10,
+        100,
+        1000
+      ]
+    },
+    {
+      "model_id": "B2_hierarchical_frequency",
+      "model_family": "hierarchical_frequency",
+      "context_columns": [
+        "venue_code",
+        "race_number"
+      ],
+      "backoff_rule": "(venue,race)->venue->global",
+      "hyperparameter_candidates": {
+        "tau": [
+          0.1,
+          1,
+          10,
+          100,
+          1000
+        ],
+        "min_context_count": [
+          10,
+          25,
+          50,
+          100,
+          250
+        ]
+      }
+    },
+    {
+      "model_id": "B3_autoregressive_hierarchical_frequency",
+      "model_family": "autoregressive_hierarchical_frequency",
+      "context_columns": [
+        "venue_code",
+        "race_number"
+      ],
+      "stages": [
+        "first",
+        "second_given_first",
+        "third_given_first_second"
+      ],
+      "hyperparameter_candidates": {
+        "tau": [
+          0.1,
+          1,
+          10,
+          100,
+          1000
+        ],
+        "min_context_count": [
+          10,
+          25,
+          50,
+          100,
+          250
+        ]
+      }
+    }
+  ],
+  "class_map_sha256": "6a69deaa5f047f6b01d56d8ae56ed4cb9b992e4dcd29db4a9d346037172f122a"
+}

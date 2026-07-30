@@ -1,0 +1,11 @@
+{
+    "dataset_manifest_sha256":  "eb2ddf85af16255dbc9d64f264ba0565da73949ccc957dda0b1de6d0bf48bf4c",
+    "feature_sidecar_manifest_sha256":  "2a4d0549e1763ac37dc4904bd2e118142051f8058a24e61f7b36d0f4ecaff87d",
+    "split_manifest_sha256":  "d3318c40504b34f163cf3db12ce9469002aa21804659f250574305978864b8bc",
+    "class_map_sha256":  "6a69deaa5f047f6b01d56d8ae56ed4cb9b992e4dcd29db4a9d346037172f122a",
+    "runtime_manifest_sha256":  "5b64b373b69e3be565fe91052df24e7d294aba378a2c4107a12d67d4319169c7",
+    "screening_folds":  4,
+    "confirmation_access":  0,
+    "final_lock_access":  0,
+    "status":  "verified"
+}

@@ -1,0 +1,11 @@
+{
+  "artifact": "winner_residual_optimizer_canary_v1",
+  "probability_contract_canary_passed": true,
+  "decompose_compose_max_error": 1e-300,
+  "finite_probability_canary": true,
+  "beta_zero_identity_canary": true,
+  "analytic_gradient_full_run": false,
+  "full_optimization_completed": false,
+  "hard_stop_reason": "available physical memory fell to 356.5 MiB",
+  "status": "resource_blocked"
+}

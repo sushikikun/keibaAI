@@ -1,0 +1,417 @@
+{
+  "document_id": "boatrace_feature_set_tiers_v1",
+  "created_at": "2026-07-28T00:00:00+09:00",
+  "status": "provisional",
+  "eligible_for_model_training": false,
+  "purpose": "policy_execution_validation",
+  "tiers": [
+    {
+      "tier_id": "Tier1",
+      "name": "safe_core",
+      "rule": "current official prediction-time features and official aggregate snapshots",
+      "features": [
+        {
+          "feature_id": "RF_V01_RACE_FEATURES_RACE_KEY",
+          "feature_name": "race_key",
+          "source": "derived identity from official program natural key",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_RACE_FEATURES_RACE_DATE",
+          "feature_name": "race_date",
+          "source": "derived identity from official program natural key",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_RACE_FEATURES_VENUE_CODE",
+          "feature_name": "venue_code",
+          "source": "derived identity from official program natural key",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_RACE_FEATURES_RACE_NO",
+          "feature_name": "race_no",
+          "source": "derived identity from official program natural key",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_RACE_FEATURES_CLOSED_AT",
+          "feature_name": "closed_at",
+          "source": "raw programs JSON / programs[]",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_RACE_FEATURES_BEFOREINFO_TIME",
+          "feature_name": "beforeinfo_time",
+          "source": "official raw_html beforeinfo / parsed race fields",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_RACE_FEATURES_DISTANCE",
+          "feature_name": "distance",
+          "source": "raw programs JSON / programs[]",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_RACE_FEATURES_GRADE_NUMBER",
+          "feature_name": "grade_number",
+          "source": "raw programs JSON / programs[]",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_RACE_FEATURES_PREVIEW_AIR_TEMPERATURE",
+          "feature_name": "preview_air_temperature",
+          "source": "official raw_html beforeinfo / parsed race fields",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_RACE_FEATURES_PREVIEW_WATER_TEMPERATURE",
+          "feature_name": "preview_water_temperature",
+          "source": "official raw_html beforeinfo / parsed race fields",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_RACE_FEATURES_PREVIEW_WAVE_HEIGHT",
+          "feature_name": "preview_wave_height",
+          "source": "official raw_html beforeinfo / parsed race fields",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_RACE_FEATURES_PREVIEW_WEATHER",
+          "feature_name": "preview_weather",
+          "source": "official raw_html beforeinfo / parsed race fields",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_RACE_FEATURES_PREVIEW_WIND_DIRECTION_NUMBER",
+          "feature_name": "preview_wind_direction_number",
+          "source": "official raw_html beforeinfo / parsed race fields",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_RACE_FEATURES_PREVIEW_WIND_SPEED",
+          "feature_name": "preview_wind_speed",
+          "source": "official raw_html beforeinfo / parsed race fields",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_RACE_FEATURES_SUBTITLE",
+          "feature_name": "subtitle",
+          "source": "raw programs JSON / programs[]",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_RACE_FEATURES_TITLE",
+          "feature_name": "title",
+          "source": "raw programs JSON / programs[]",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_BOAT_FEATURES_RACE_KEY",
+          "feature_name": "race_key",
+          "source": "derived identity from official program natural key",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_BOAT_FEATURES_LANE",
+          "feature_name": "lane",
+          "source": "derived identity from official program natural key",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_BOAT_FEATURES_RACE_DATE",
+          "feature_name": "race_date",
+          "source": "derived identity from official program natural key",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_BOAT_FEATURES_VENUE_CODE",
+          "feature_name": "venue_code",
+          "source": "derived identity from official program natural key",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_BOAT_FEATURES_RACE_NO",
+          "feature_name": "race_no",
+          "source": "derived identity from official program natural key",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_BOAT_FEATURES_RACER_ID",
+          "feature_name": "racer_id",
+          "source": "raw programs JSON / programs[].boats[]",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_BOAT_FEATURES_RACER_NAME",
+          "feature_name": "racer_name",
+          "source": "raw programs JSON / programs[].boats[]",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_BOAT_FEATURES_RACER_AGE",
+          "feature_name": "racer_age",
+          "source": "raw programs JSON / programs[].boats[]",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_BOAT_FEATURES_RACER_BRANCH_NUMBER",
+          "feature_name": "racer_branch_number",
+          "source": "raw programs JSON / programs[].boats[]",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_BOAT_FEATURES_RACER_CLASS_NUMBER",
+          "feature_name": "racer_class_number",
+          "source": "raw programs JSON / programs[].boats[]",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_BOAT_FEATURES_AVERAGE_START_TIMING",
+          "feature_name": "average_start_timing",
+          "source": "raw programs JSON / programs[].boats[]",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_BOAT_FEATURES_NATIONAL_TOP_1_PERCENT",
+          "feature_name": "national_top_1_percent",
+          "source": "raw programs JSON / programs[].boats[]",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_BOAT_FEATURES_NATIONAL_TOP_2_PERCENT",
+          "feature_name": "national_top_2_percent",
+          "source": "raw programs JSON / programs[].boats[]",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_BOAT_FEATURES_NATIONAL_TOP_3_PERCENT",
+          "feature_name": "national_top_3_percent",
+          "source": "raw programs JSON / programs[].boats[]",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_BOAT_FEATURES_LOCAL_TOP_1_PERCENT",
+          "feature_name": "local_top_1_percent",
+          "source": "raw programs JSON / programs[].boats[]",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_BOAT_FEATURES_LOCAL_TOP_2_PERCENT",
+          "feature_name": "local_top_2_percent",
+          "source": "raw programs JSON / programs[].boats[]",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_BOAT_FEATURES_LOCAL_TOP_3_PERCENT",
+          "feature_name": "local_top_3_percent",
+          "source": "raw programs JSON / programs[].boats[]",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_BOAT_FEATURES_MOTOR_NO",
+          "feature_name": "motor_no",
+          "source": "raw programs JSON / programs[].boats[]",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_BOAT_FEATURES_MOTOR_TOP_2_PERCENT",
+          "feature_name": "motor_top_2_percent",
+          "source": "raw programs JSON / programs[].boats[]",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_BOAT_FEATURES_MOTOR_TOP_3_PERCENT",
+          "feature_name": "motor_top_3_percent",
+          "source": "raw programs JSON / programs[].boats[]",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_BOAT_FEATURES_BOAT_NO",
+          "feature_name": "boat_no",
+          "source": "raw programs JSON / programs[].boats[]",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_BOAT_FEATURES_BOAT_TOP_2_PERCENT",
+          "feature_name": "boat_top_2_percent",
+          "source": "raw programs JSON / programs[].boats[]",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_BOAT_FEATURES_BOAT_TOP_3_PERCENT",
+          "feature_name": "boat_top_3_percent",
+          "source": "raw programs JSON / programs[].boats[]",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_BOAT_FEATURES_PROGRAM_WEIGHT",
+          "feature_name": "program_weight",
+          "source": "raw programs JSON / programs[].boats[]",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_BOAT_FEATURES_BODY_WEIGHT",
+          "feature_name": "body_weight",
+          "source": "official raw_html beforeinfo / parsed lane fields",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_BOAT_FEATURES_WEIGHT_ADJUSTMENT",
+          "feature_name": "weight_adjustment",
+          "source": "official raw_html beforeinfo / parsed lane fields",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_BOAT_FEATURES_EXHIBITION_COURSE",
+          "feature_name": "exhibition_course",
+          "source": "official raw_html beforeinfo / parsed lane fields",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_BOAT_FEATURES_EXHIBITION_START_TIMING",
+          "feature_name": "exhibition_start_timing",
+          "source": "official raw_html beforeinfo / parsed lane fields",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_BOAT_FEATURES_EXHIBITION_TIME",
+          "feature_name": "exhibition_time",
+          "source": "official raw_html beforeinfo / parsed lane fields",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_BOAT_FEATURES_TILT",
+          "feature_name": "tilt",
+          "source": "official raw_html beforeinfo / parsed lane fields",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_BOAT_FEATURES_PROPELLER_NEW",
+          "feature_name": "propeller_new",
+          "source": "official raw_html beforeinfo / parsed lane fields",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_BOAT_FEATURES_PROPELLER_STATUS",
+          "feature_name": "propeller_status",
+          "source": "official raw_html beforeinfo / parsed lane fields",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        },
+        {
+          "feature_id": "RF_V01_BOAT_FEATURES_PARTS_EXCHANGE_STATUS",
+          "feature_name": "parts_exchange_status",
+          "source": "official raw_html beforeinfo / parsed lane fields",
+          "availability_rule": "officially available after beforeinfo acquisition and before closed_at"
+        }
+      ]
+    },
+    {
+      "tier_id": "Tier2",
+      "name": "conditional_temporal",
+      "rule": "allowed only after row-level point-in-time materialization audit",
+      "features": [
+        {
+          "feature_id": "T2_MEETING_EPISODE",
+          "feature_name": "meeting_episode_id",
+          "source": "meeting policy materialization",
+          "availability_rule": "must pass temporal policy v1"
+        },
+        {
+          "feature_id": "T2_MEETING_DAY",
+          "feature_name": "meeting_day_number",
+          "source": "meeting policy materialization",
+          "availability_rule": "must pass temporal policy v1"
+        },
+        {
+          "feature_id": "T2_SAME_DAY_SEQUENCE",
+          "feature_name": "same_day_scheduled_run_index",
+          "source": "program schedule only",
+          "availability_rule": "must pass temporal policy v1"
+        },
+        {
+          "feature_id": "T2_PRIOR_SAME_DAY_RESULT",
+          "feature_name": "prior_same_day_result",
+          "source": "approved target-beforeinfo provenance only",
+          "availability_rule": "must pass temporal policy v1"
+        },
+        {
+          "feature_id": "T2_MEETING_HISTORY",
+          "feature_name": "racer_equipment_meeting_history",
+          "source": "prior event-time observations",
+          "availability_rule": "must pass temporal policy v1"
+        },
+        {
+          "feature_id": "T2_FL_STATE",
+          "feature_name": "racer_flying_late_state",
+          "source": "target program snapshot",
+          "availability_rule": "must pass temporal policy v1"
+        },
+        {
+          "feature_id": "T2_RACE_STAGE",
+          "feature_name": "normalized_race_stage",
+          "source": "taxonomy v1",
+          "availability_rule": "must pass temporal policy v1"
+        },
+        {
+          "feature_id": "T2_VENUE_DAY_STATE",
+          "feature_name": "venue_day_state",
+          "source": "strictly prior cutoff-visible observations",
+          "availability_rule": "must pass temporal policy v1"
+        }
+      ]
+    },
+    {
+      "tier_id": "Tier3",
+      "name": "blocked",
+      "rule": "excluded from formal feature snapshots until blocker resolution",
+      "features": [
+        {
+          "feature_id": "T3_MOTOR_GENERATION_HISTORY",
+          "feature_name": "generation-aware motor history",
+          "source": "A/B boundary evidence missing",
+          "availability_rule": "blocked"
+        },
+        {
+          "feature_id": "T3_BOAT_GENERATION_HISTORY",
+          "feature_name": "generation-aware boat history",
+          "source": "A/B boundary evidence missing",
+          "availability_rule": "blocked"
+        },
+        {
+          "feature_id": "T3_ALLOCATION_INFERRED_DATE",
+          "feature_name": "inferred venue allocation rollout date",
+          "source": "provenance-only and inference forbidden",
+          "availability_rule": "blocked"
+        },
+        {
+          "feature_id": "T3_ORIGINAL_EXHIBITION",
+          "feature_name": "unacquired original exhibition",
+          "source": "artifact absent",
+          "availability_rule": "blocked"
+        },
+        {
+          "feature_id": "T3_EXHIBITION_VIDEO",
+          "feature_name": "unacquired exhibition video",
+          "source": "artifact absent",
+          "availability_rule": "blocked"
+        },
+        {
+          "feature_id": "T3_UNACQUIRED_EXTERNAL",
+          "feature_name": "other unacquired external data",
+          "source": "external acquisition prohibited",
+          "availability_rule": "blocked"
+        }
+      ]
+    }
+  ],
+  "validation": {
+    "feature_record_count": 63,
+    "cross_tier_overlap_count": 0,
+    "tier_counts": {
+      "safe_core": 49,
+      "conditional_temporal": 8,
+      "blocked": 6
+    }
+  }
+}

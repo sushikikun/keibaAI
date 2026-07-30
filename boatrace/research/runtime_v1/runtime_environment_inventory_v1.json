@@ -1,0 +1,50 @@
+{
+  "activation_command": "& \"<USER_HOME>\\.venvs\\boatrace-research-v1\\Scripts\\Activate.ps1\"",
+  "architecture": "AMD64",
+  "available_disk_bytes": 213134516224,
+  "cpu_count": 16,
+  "cuda": null,
+  "deactivation_command": "deactivate",
+  "deterministic_settings_availability": [
+    "PYTHONHASHSEED",
+    "OMP_NUM_THREADS",
+    "MKL_NUM_THREADS",
+    "torch.use_deterministic_algorithms when torch is authorized"
+  ],
+  "driver": null,
+  "gpu": {
+    "available": false,
+    "reason": "CPU-only runtime selected"
+  },
+  "installed_packages": {
+    "joblib": "1.5.3",
+    "narwhals": "2.24.0",
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "python-dateutil": "2.9.0.post0",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.18.0",
+    "six": "1.17.0",
+    "threadpoolctl": "3.6.0",
+    "tzdata": "2026.3"
+  },
+  "locale": "('Japanese_Japan', '932')",
+  "os": "Windows-11-10.0.22631-SP0",
+  "pip_version": "pip 26.0.1 from <USER_HOME>\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\pip (python 3.12)",
+  "python_executable": "<USER_HOME>\\.venvs\\boatrace-research-v1\\Scripts\\python.exe",
+  "python_version": "3.12.13 (main, Mar  3 2026, 15:01:35) [MSC v.1944 64 bit (AMD64)]",
+  "ram": {
+    "available_bytes": 3967774720,
+    "total_bytes": 16890519552
+  },
+  "requirements_lock_sha256": "0ab47756617d75c4cae3bcfe8a95d083ab579e136589cca67bc911319ce04c24",
+  "runtime_id": "boatrace_research_runtime_v1",
+  "system_site_packages": false,
+  "thread_env": {
+    "CODEX_THREAD_ID": "019f6fc9-0092-7561-bb26-f8a200f1e34e",
+    "COMPUTERNAME": "YU"
+  },
+  "timezone": "東京 (標準時)",
+  "venv_path": "<USER_HOME>\\.venvs\\boatrace-research-v1",
+  "wheelhouse_manifest_sha256": "462f2f6901d9d0074e1428342a0b8fd36e72c5da965e2b93089ab650d1a5d1eb"
+}

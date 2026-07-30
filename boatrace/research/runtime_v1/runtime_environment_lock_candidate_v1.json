@@ -1,0 +1,10 @@
+{
+  "environment_inventory_sha256": "bf989b6db4b287ad77c489ed145b99651c7e31ecd0101e07bff6b315c6fdbd30",
+  "immutable_after_creation": true,
+  "python_executable": "<USER_HOME>\\.venvs\\boatrace-research-v1\\Scripts\\python.exe",
+  "requirements_lock_sha256": "0ab47756617d75c4cae3bcfe8a95d083ab579e136589cca67bc911319ce04c24",
+  "runtime_id": "boatrace_research_runtime_v1",
+  "source_build_allowed": false,
+  "system_site_packages": false,
+  "wheelhouse_manifest_sha256": "462f2f6901d9d0074e1428342a0b8fd36e72c5da965e2b93089ab650d1a5d1eb"
+}

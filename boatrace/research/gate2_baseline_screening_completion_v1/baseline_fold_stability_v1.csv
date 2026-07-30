@@ -1,0 +1,5 @@
+model_id,calibrated_fold_mean,calibrated_fold_std,worst_fold,best_fold,beats_B0_fold_count,fold_count
+B0_uniform,4.787491742782046,0.0,screening_fold_1,screening_fold_1,0,4
+B1_global_frequency,4.180378003069976,0.017517816882002674,screening_fold_3,screening_fold_4,4,4
+B2_hierarchical_frequency,4.174823384039317,0.020209718944717032,screening_fold_3,screening_fold_4,4,4
+B3_autoregressive_hierarchical_frequency,4.151574189466669,0.019351014213846256,screening_fold_3,screening_fold_4,4,4

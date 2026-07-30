@@ -1,0 +1,12 @@
+{
+  "architecture": "64bit",
+  "candidate_path": "<USER_HOME>\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "compatibility_status": "pass",
+  "persistence_status": "stable_bundled_runtime",
+  "rejection_reason": null,
+  "selected": true,
+  "selected_venv_path": "<USER_HOME>\\.venvs\\boatrace-research-v1",
+  "system_site_packages": false,
+  "venv_capable": true,
+  "version": "3.12.13 (main, Mar  3 2026, 15:01:35) [MSC v.1944 64 bit (AMD64)]"
+}

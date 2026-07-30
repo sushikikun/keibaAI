@@ -1,0 +1,136 @@
+{
+    "manifest_id":  "gate2e_manifest_v1",
+    "baseline_run_id":  "baseline_run_v1_screening4_c59a595dbb92",
+    "baseline_manifest_sha256":  "f3eb62dc643c9f2561f5ec1827e3d070b63fd85952425ea69b39dc0f73a8c6e3",
+    "evaluation_count":  51232,
+    "model_training_count":  0,
+    "new_prediction_count":  0,
+    "automation_status":  "PAUSED",
+    "outputs":  [
+                    {
+                        "path":  "blocked_model_status_registry_v1.json",
+                        "sha256":  "16a65ffdcc84083805a51c9a411b97aa39f16d3c4d6d74a12b7f2d92477cfe94",
+                        "size_bytes":  498
+                    },
+                    {
+                        "path":  "decision_program_evidence_matrix_v1.csv",
+                        "sha256":  "b722d94e1538431fa9aee2e5fe9f051a8e5f073bb7f6c71dee6986aa765cde6f",
+                        "size_bytes":  1679
+                    },
+                    {
+                        "path":  "decision_program_priority_proposal_v1.json",
+                        "sha256":  "91fe64ee57f8b9dab58c6e8385412969cf5c36be378f3b018c89ae898b25f5f1",
+                        "size_bytes":  141
+                    },
+                    {
+                        "path":  "diagnostic_binning_policy_v1.json",
+                        "sha256":  "c7c7faebcc32e30c33124084fd2f83584b256e5b7eccd27112fa956d98837d6b",
+                        "size_bytes":  269
+                    },
+                    {
+                        "path":  "diagnostic_bin_edges_by_fold_v1.csv",
+                        "sha256":  "931855d555fd049b8e747f9bc64052e93006666d1ea0c152506f52147fb13643",
+                        "size_bytes":  17302
+                    },
+                    {
+                        "path":  "diagnostic_summary_definition_v1.csv",
+                        "sha256":  "e093552f32bb81bb7c37e775cfdca131de62f5648d0bdbaace4461e510262966",
+                        "size_bytes":  262
+                    },
+                    {
+                        "path":  "error_taxonomy_policy_v1.json",
+                        "sha256":  "9afe1ecd99f169ba37f9b0d9468f723f67ac6b7ed7e6f97af18674b02c96c21a",
+                        "size_bytes":  454
+                    },
+                    {
+                        "path":  "FF01_error_opportunity_profile_v1.csv",
+                        "sha256":  "a54568c860c7ee5874914e144c18853fcac32a310eb0e06f08c411609f342d04",
+                        "size_bytes":  53725
+                    },
+                    {
+                        "path":  "FF02_error_opportunity_profile_v1.csv",
+                        "sha256":  "a54568c860c7ee5874914e144c18853fcac32a310eb0e06f08c411609f342d04",
+                        "size_bytes":  53725
+                    },
+                    {
+                        "path":  "FF03_error_opportunity_profile_v1.csv",
+                        "sha256":  "a54568c860c7ee5874914e144c18853fcac32a310eb0e06f08c411609f342d04",
+                        "size_bytes":  53725
+                    },
+                    {
+                        "path":  "FF04_error_opportunity_profile_v1.csv",
+                        "sha256":  "a54568c860c7ee5874914e144c18853fcac32a310eb0e06f08c411609f342d04",
+                        "size_bytes":  53725
+                    },
+                    {
+                        "path":  "FF05_error_opportunity_profile_v1.csv",
+                        "sha256":  "a54568c860c7ee5874914e144c18853fcac32a310eb0e06f08c411609f342d04",
+                        "size_bytes":  53725
+                    },
+                    {
+                        "path":  "FF06_error_opportunity_profile_v1.csv",
+                        "sha256":  "a54568c860c7ee5874914e144c18853fcac32a310eb0e06f08c411609f342d04",
+                        "size_bytes":  53725
+                    },
+                    {
+                        "path":  "FF07_error_opportunity_profile_v1.csv",
+                        "sha256":  "a54568c860c7ee5874914e144c18853fcac32a310eb0e06f08c411609f342d04",
+                        "size_bytes":  53725
+                    },
+                    {
+                        "path":  "FF08_error_opportunity_profile_v1.csv",
+                        "sha256":  "a54568c860c7ee5874914e144c18853fcac32a310eb0e06f08c411609f342d04",
+                        "size_bytes":  53725
+                    },
+                    {
+                        "path":  "gate2e_data_access_audit_v1.json",
+                        "sha256":  "d2ff4f2fd7be178eba21c3cfeb3287aae9f73cbe40aa3abb4802ca5a07bf09fa",
+                        "size_bytes":  1063
+                    },
+                    {
+                        "path":  "gate2e_guard_audit_v1.json",
+                        "sha256":  "1a1a07b8c02ba8aa1bd6c48bb94e268dabdf34fa793de3572eb3c05a95fc2da3",
+                        "size_bytes":  158
+                    },
+                    {
+                        "path":  "gate2e_input_validation_v1.json",
+                        "sha256":  "a4a84adb4b8b4d437cd4d03fad892bc67f6e2d50d3799aa135a4cf0bbfb31c82",
+                        "size_bytes":  367
+                    },
+                    {
+                        "path":  "gate2e_manifest_v1.json",
+                        "sha256":  "b1cff6cbcfab4e19e3e32a14a79b62de14e6a24d674a92e849f8f5561bbf09ff",
+                        "size_bytes":  416
+                    },
+                    {
+                        "path":  "gate2e_report_v1.md",
+                        "sha256":  "a4b66e7b18616c948b7c26409fc9a4685fb98accb049ab9fd2af7c89ff83189a",
+                        "size_bytes":  1082
+                    },
+                    {
+                        "path":  "gate2e_validation_v1.json",
+                        "sha256":  "f14a20dec38d0f099f9442734fda4ada625ef649033f8455a04f443c95c6742a",
+                        "size_bytes":  924
+                    },
+                    {
+                        "path":  "next_low_memory_experiment_candidates_v1.csv",
+                        "sha256":  "b32cf1e13d24664e77dd825d078b3b4e96e69206a70b9b6eb63bd3d6743518e1",
+                        "size_bytes":  248
+                    },
+                    {
+                        "path":  "protected_anchor_after_gate2e.csv",
+                        "sha256":  "b1ec5adb5f7be36ea53c0f1ba6f023c5434aa97d01987894e4f84f07c51ea6d5",
+                        "size_bytes":  290
+                    },
+                    {
+                        "path":  "protected_anchor_before_gate2e.csv",
+                        "sha256":  "b1ec5adb5f7be36ea53c0f1ba6f023c5434aa97d01987894e4f84f07c51ea6d5",
+                        "size_bytes":  290
+                    },
+                    {
+                        "path":  "protected_anchor_diff_gate2e.csv",
+                        "sha256":  "5e6592c0a7e0305b19e02288b07e01d1c050d69e07ae25cfd62b5bc380cf0206",
+                        "size_bytes":  48
+                    }
+                ]
+}

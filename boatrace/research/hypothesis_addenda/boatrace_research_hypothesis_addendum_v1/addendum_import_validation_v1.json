@@ -1,0 +1,57 @@
+{
+  "checks": {
+    "addendum_dag_cycle_count_zero": true,
+    "core_decision_experiments_not_updated": true,
+    "eligible_for_model_training_all_false": true,
+    "formal_generation_or_model_execution_not_run": true,
+    "formal_registry_merge_not_applied": true,
+    "formal_registry_sha256_unchanged": true,
+    "hypothesis_count_76": true,
+    "id_collision_with_H001_H033_zero": true,
+    "parent_ids_all_exist": true,
+    "primary_metric_contract_all_trifecta_log_loss": true,
+    "protected_anchor_difference_count_zero": true,
+    "readiness_data_gap_feature_map_not_updated": true,
+    "source_package_artifact_hash_mismatch_zero": true,
+    "source_package_manifest_hash_match": true,
+    "status_all_proposed_addendum_unregistered": true,
+    "zip_file_copied_sha256_match": true
+  },
+  "counts": {
+    "addendum_dag_cycle_count": 0,
+    "addendum_hypotheses": 76,
+    "artifact_hash_mismatch_count": 0,
+    "core_experiment_proposal_count": 35,
+    "data_gap_proposal_count": 76,
+    "formal_hypotheses": 33,
+    "orphan_candidate_count": 0,
+    "protected_anchor_difference_count": 0,
+    "readiness_feature_map_proposal_count": 76,
+    "semantic_duplicate_reject": 0,
+    "semantic_merge_candidate": 6,
+    "semantic_new_distinct": 10,
+    "semantic_variant_of_existing": 60,
+    "source_package_bytes": 144422,
+    "source_package_file_count": 7
+  },
+  "created_at": "2026-07-28T07:15:51.668391+00:00",
+  "eligible_for_model_training": false,
+  "errors": [],
+  "passed": true,
+  "purpose": "hypothesis_addendum_sidecar_review_only",
+  "source_manifest": {
+    "manifest_id": "boatrace_research_hypothesis_addendum_v1_manifest",
+    "sha256": "40d822e78ad10361fc1e175cdb78ba27148b128f9c4a0a94a94e035ff01eed39"
+  },
+  "status": "provisional",
+  "validation_id": "addendum_import_validation_v1",
+  "warnings": [
+    "All H034-H109 records remain proposed_addendum_unregistered and are not formally adopted.",
+    "Semantic overlap classifications are review sidecar judgments, not merge actions."
+  ],
+  "zip": {
+    "sha256": "5c4d49caa5ce818409c0a1569468084e0e635af7008b704f54d81ecf3cfd6398",
+    "size_bytes": 37009,
+    "source_path": "<USER_HOME>\\Downloads\\boatrace_research_hypothesis_addendum_v1.zip"
+  }
+}

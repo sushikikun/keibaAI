@@ -1,0 +1,12 @@
+{
+  "selection_scope": "Screening Fold 1 selection only",
+  "refit_scope": "train+selection",
+  "calibration_scope": "calibration only",
+  "evaluation_scope": "evaluation only",
+  "calibrators": [
+    "identity",
+    "scalar_temperature"
+  ],
+  "evaluation_not_used_for_selection": true,
+  "champion_not_selected": true
+}

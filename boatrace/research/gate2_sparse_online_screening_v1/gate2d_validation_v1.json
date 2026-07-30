@@ -1,0 +1,40 @@
+{
+    "gate2a_runtime_verified":  true,
+    "gate2b_reference_verified":  true,
+    "catboost_marked_resource_blocked":  true,
+    "catboost_staging_unchanged":  true,
+    "screening_fold_count_4":  true,
+    "sparse_encoding_used":  true,
+    "dense_conversion_zero":  true,
+    "chunked_partial_fit_used":  true,
+    "S120_F0_status":  "resource_blocked",
+    "SAR_F0_status":  "not_run_due_to_resource_block",
+    "one_structure_completed_all_folds":  false,
+    "selected_structure_defined":  false,
+    "selected_F1_completed_all_folds":  false,
+    "selected_F2_attempted":  false,
+    "preprocessing_fit_isolated":  true,
+    "feature_hash_dimension_fixed":  true,
+    "autoregressive_probability_sum_valid":  false,
+    "class_order_valid":  false,
+    "prediction_coverage_100_percent":  false,
+    "confirmation_access_zero":  true,
+    "confirmation_metrics_zero":  true,
+    "final_lock_access_zero":  true,
+    "final_lock_metrics_zero":  true,
+    "final_lock_unlock_zero":  true,
+    "dependency_install_count_zero":  true,
+    "protected_anchor_difference_zero":  true,
+    "automation_remains_paused":  true,
+    "formal_champion_not_selected":  true,
+    "run_id":  "sparse_online_run_v1_aef8eccd7d9606f8b502",
+    "staging_path":  "results\\boatrace_model_research\\staging\\sparse_online_run_v1_aef8eccd7d9606f8b502_building",
+    "errors":  [
+
+               ],
+    "warnings":  [
+                     "first S120-F0 candidate reached hard-stop at available physical memory \u003c1024 MiB",
+                     "partial staging preserved; no promotion performed"
+                 ],
+    "status":  "resource_blocked"
+}

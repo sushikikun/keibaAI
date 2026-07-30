@@ -1,0 +1,6 @@
+{
+    "real_data_old_probability_failure":  "Fold3 probability_sum_max_error=1.0",
+    "fixture":  "not_run_due_to_resource_block",
+    "old_predictions_reused":  false,
+    "status":  "reproduced_on_prior_artifact_and_invalidated"
+}

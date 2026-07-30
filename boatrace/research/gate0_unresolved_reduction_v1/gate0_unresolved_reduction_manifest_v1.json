@@ -1,0 +1,207 @@
+{
+  "artifact_set_sha256": "a7fd814f867141a24b0c13172fb7103a0614883843c1e41e8d63396d9d0e8c24",
+  "artifacts": [
+    {
+      "bytes": 21838,
+      "path": "research/gate0_unresolved_reduction_v1/equipment_evidence_batch_queue_v1.csv",
+      "sha256": "b55e92912474a70cf96b6274865e045569b1de45dc16cce49c8172f955e82689"
+    },
+    {
+      "bytes": 436,
+      "path": "research/gate0_unresolved_reduction_v1/equipment_evidence_batch_summary_v1.json",
+      "sha256": "33449270822934b77167f94904c1beeacf336368bbf51367af412e30951102b2"
+    },
+    {
+      "bytes": 1788,
+      "path": "research/gate0_unresolved_reduction_v1/gate0_unresolved_reduction_report_v1.json",
+      "sha256": "cce67f4bdee11bca2c7a8897fed6a56fc995e90f188d7382db8ef22f879f0ca0"
+    },
+    {
+      "bytes": 8004,
+      "path": "research/gate0_unresolved_reduction_v1/gate0_unresolved_reduction_validation_v1.json",
+      "sha256": "46e6565a2a94525cf1158955f18c081f4d235ac86ee9db5a97167745074f506b"
+    },
+    {
+      "bytes": 810,
+      "path": "research/gate0_unresolved_reduction_v1/meeting_policy_patch_proposal_v1.json",
+      "sha256": "ce4afdf6d2d3d237e4f95c0726407f4f6a0b35a983b090fdf166f9a2c9034bd8"
+    },
+    {
+      "bytes": 2013,
+      "path": "research/gate0_unresolved_reduction_v1/meeting_resolution_summary_v1.json",
+      "sha256": "0fd2bc1cb5cf970fd5a07f8a73edb888cc174e32b5e19bc296090b32118de316"
+    },
+    {
+      "bytes": 896944,
+      "path": "research/gate0_unresolved_reduction_v1/meeting_unresolved_resolution_v1.csv",
+      "sha256": "05a4eadfc7ff34be7f17b2e6fef6e33eac84f1c6cf3f883187476ce86a5d66ae"
+    },
+    {
+      "bytes": 1021,
+      "path": "research/gate0_unresolved_reduction_v1/official_evidence_acquisition_plan_v1.md",
+      "sha256": "01dd3a4b73ae7b86837c4eb30a976a6646b80a0e5825f0c77f0ac645a75e71d3"
+    },
+    {
+      "bytes": 17148,
+      "path": "research/gate0_unresolved_reduction_v1/race_stage_taxonomy_patch_proposal_v1.csv",
+      "sha256": "7adedceda3314f67b28b8028d2b13f8646e607f3e7c50f2802ccf4483d4111e7"
+    },
+    {
+      "bytes": 1510,
+      "path": "research/gate0_unresolved_reduction_v1/readiness_patch_proposal_v1.json",
+      "sha256": "5904dad434867073f750055e3fc814d975ac760b13505739391aef15b4e70d22"
+    },
+    {
+      "bytes": 771,
+      "path": "research/gate0_unresolved_reduction_v1/same_day_audit_report_v1.json",
+      "sha256": "301c95c057460d3248d49f6560d0d1c6d148d81ed8f264e8d90ddc0b8e27de94"
+    },
+    {
+      "bytes": 14335654,
+      "path": "research/gate0_unresolved_reduction_v1/same_day_candidate_exclusions_v1.csv",
+      "sha256": "6984474d0256562d251e50828a3dca9c19eb0e623c3451c31979e0828bef9f55"
+    },
+    {
+      "bytes": 4853,
+      "path": "research/gate0_unresolved_reduction_v1/same_day_candidate_profile_v1.csv",
+      "sha256": "9eef6967d444845d66c56f152bb8b8d77e6f59f3c42da976594ca6fa68192983"
+    },
+    {
+      "bytes": 12638472,
+      "path": "research/gate0_unresolved_reduction_v1/same_day_candidate_reconciliation_v1.csv",
+      "sha256": "2a9558725647a0c1a88c493f987f9093e4b4a07fdef16ae16e73466da9dc15e2"
+    },
+    {
+      "bytes": 765,
+      "path": "research/gate0_unresolved_reduction_v1/same_day_policy_patch_proposal_v1.json",
+      "sha256": "bb71191df14036eaeb49cff0b2d7ffff0c17d8796cc67990a13d3f7a9b88f898"
+    },
+    {
+      "bytes": 748,
+      "path": "research/gate0_unresolved_reduction_v1/subtitle_p0_review_report_v1.json",
+      "sha256": "f319916ab7026c50ff332414e7ce643e1b00426a41e4826168f6658a45b84e26"
+    },
+    {
+      "bytes": 31229,
+      "path": "research/gate0_unresolved_reduction_v1/subtitle_p0_review_v1.csv",
+      "sha256": "b0853d1904b8cbb738d2646981796aa75f22a49dc8549086db9956211488f714"
+    },
+    {
+      "bytes": 2347,
+      "path": "research/gate0_unresolved_reduction_v1/unresolved_blocker_patch_proposal_v1.csv",
+      "sha256": "d52ff4b0f73adf59db94f552d5540e5561bfe911e6072f5118f66bca2862b982"
+    }
+  ],
+  "eligible_for_model_training": false,
+  "external_actions": {
+    "champion_selected": false,
+    "commit_or_push": false,
+    "dependencies_installed": false,
+    "external_data_acquired": false,
+    "external_web_access": false,
+    "log_loss_evaluated": false,
+    "model_training_run": false,
+    "walk_forward_split_created": false
+  },
+  "generation_ids_issued": 0,
+  "implementation_files": [
+    {
+      "bytes": 57657,
+      "path": "scripts/build_boatrace_gate0_unresolved_reduction_v1.py",
+      "sha256": "0591e5469488e9c2e108ac745b25df7da09833e5323260bbcc357c4832d3207d"
+    },
+    {
+      "bytes": 2026,
+      "path": "scripts/finalize_boatrace_gate0_unresolved_reduction_v1.py",
+      "sha256": "c794e633eaeeca3654c616cd9bc6ea5de9876e095a7bc895b0df5484f1cd6233"
+    },
+    {
+      "bytes": 8246,
+      "path": "scripts/generate_boatrace_gate0_unresolved_reduction_v1.py",
+      "sha256": "5b6cd7b4cc98df98664e16487cce23c62ec8e1549d5e04f9701cb13bb625ec33"
+    },
+    {
+      "bytes": 2788,
+      "path": "tests/test_boatrace_gate0_unresolved_reduction_v1.py",
+      "sha256": "87452d63c99cb7ba23348e1714a0525c971cb5be15d9f21ac627f5f075ab364a"
+    }
+  ],
+  "live_collection_observation": {
+    "after": {
+      "results/boatrace_complete_corpus/integrity_registry.sqlite": "097a266d6ce0f21b8699a06e0a0d8d252ffcc28a48ead746e6b3164ca8f5a07e",
+      "results/boatrace_complete_corpus/status.json": "015cebcc9a52877150fec693a48b4a76b7abc34dde127b707522d0514c4e9ca2"
+    },
+    "before": {
+      "results/boatrace_complete_corpus/integrity_registry.sqlite": "097a266d6ce0f21b8699a06e0a0d8d252ffcc28a48ead746e6b3164ca8f5a07e",
+      "results/boatrace_complete_corpus/status.json": "015cebcc9a52877150fec693a48b4a76b7abc34dde127b707522d0514c4e9ca2"
+    },
+    "note": "Live collector status/registry are observed only and excluded from frozen-anchor equality because collection is ongoing."
+  },
+  "manifest_id": "boatrace_gate0_unresolved_reduction_manifest_v1",
+  "protected_anchors": {
+    "after": {
+      "configs/boatrace_model_dataset_contract_v1.json": "ca9eeb4d3623c21cde1f672aebe0b4767871fdcc174cdbfcaf4eeec4b9d7b9d1",
+      "configs/boatrace_model_evaluation_v1_1.json": "2347e7e0467bad64084eff01844b314d0e2533e3131f73816295fec8563e535e",
+      "configs/boatrace_model_outcome_audit_v0_1.json": "fcac3fa170032772f7b003411f2be621e61a8f61015ed31ace1508f6a4ad4637",
+      "configs/trifecta_class_map_v1.json": "273c728e2240531188ff7458e90d745a0af54b6a55b52e1916038186fdcb5446",
+      "research/equipment_boundary_evidence_queue_v1.csv": "af4a30b604b2c8dcf271b6e2bac525ceb47dbd39a14fd3a11318af3587faa34d",
+      "research/equipment_generation_evidence_registry_v1.csv": "7c92504af82dd539004bf9e06299b668043e2270856d7c6d1ecf799ce6e4a120",
+      "research/hypothesis_execution_readiness_v1.csv": "5f9781c6240045ab3712d0320e5354f4cf2553979a7be7f781c0ffe7db509d58",
+      "research/meeting_episode_derivation_policy_v1.json": "3cb17ced3dceef12e16f663fb31bd2a1b24bbf89e496b4c672fa9d114b605396",
+      "research/race_stage_taxonomy_v1.csv": "58cbf07e04971558e6115087ce3e42fcdb85607a7bf65d11ac6d614c78aa0c17",
+      "research/research_design_manifest_v2.json": "104db24acc0819e5f189552752d8d330f1365afbe94c757c1caed9d27638db97",
+      "research/same_day_previous_result_policy_v1.json": "6b3359a8c9aaa0d5cf0a7c63e0685d724783dd456da10cf9f8b031c63554dfe8",
+      "research/subtitle_review_queue_v1.csv": "ed339ee83360c33edbcd6e5b1c720ec470993aef98d03c0496613cbd7ba79f7a",
+      "research/temporal_policy_manifest_v1.json": "0a707213a1816e77def7a6405abd85c386d6d942bbd70cfda92a98bb2d13b952",
+      "research/unresolved_blocker_matrix_v1.csv": "80c45b965e6691dfed40e53f3bd526a0e08e5658037621e6f2ec1cdfa8100bad",
+      "results/boatrace_model_research/audits/research_v0_1/audit_manifest.json": "7b8ec5419b0d31f3bb69ec87011407307ecd3131cec18f66e53a3be4794ce219",
+      "results/boatrace_model_research/snapshots/research_v0_136183_55f32b3538a9/dataset_manifest.json": "a59854ae6691c7e0875fddad45211d1cf4acb47458132d5c17a7e506ee396af0",
+      "results/boatrace_model_research/snapshots/research_v0_1_148956_b69fb714835e/dataset_manifest.json": "225882760ae06efe4e8363cea4e4a1e919d74ed848be29e572ab1617fa6f5ae5",
+      "results/boatrace_model_research/temporal_rehearsal/research_v0_1/meeting_episode_candidates.csv": "7daaf6d7b322ecf73559540a1f5708a88d6c65573d1bd87e7e1ff16988dd7f0e",
+      "results/boatrace_model_research/temporal_rehearsal/research_v0_1/race_stage_materialized.csv": "a00f80d20ffb22084213b029d7557c1b21fe67c03790698524f108635b369240",
+      "results/boatrace_model_research/temporal_rehearsal/research_v0_1/rehearsal_manifest.json": "a7b7c5d452578a6df266275a1c92d1a02a8dbb01927f24909b8748955498069d",
+      "results/boatrace_model_research/temporal_rehearsal/research_v0_1/same_day_previous_result_candidates.csv": "d77d3ae52933af4f7a41e637fa9a7e285f649d37d3aef8cb2ebcf5aa256a2704",
+      "results/boatrace_model_research/temporal_rehearsal/research_v0_1/same_day_sequence.csv": "e6015ed058cdfbfccd2019737efab11e88a17a99b7600e4d8df38638aeaeda78",
+      "results/boatrace_model_research/temporal_rehearsal/research_v0_1/temporal_exceptions.csv": "93e55719f0d77c0d09808f06d355c504583a49e18a0cfc2d35f982b9e74226a6",
+      "scripts/build_boatrace_hypothesis_rehearsal_v1.py": "a271e9eb2844869da6b6781c711227b5aacd9766d746f00034a4b63e1fbd25de",
+      "scripts/build_boatrace_temporal_policy_v1.py": "0572d4a1a59a87f0da41c6c1de989a00c27320e44dbdefaf4f6bb2ea2b65e839",
+      "tests/test_boatrace_hypothesis_rehearsal_v1.py": "b39740814011e170eda27957694efb9b133f03cf6a1388924c03993c9fc755e3",
+      "tests/test_boatrace_temporal_policy_v1.py": "bb644f02f782b45a04e186f2701ece4fe453fff21864016ae83f8d91bb911b3d"
+    },
+    "before": {
+      "configs/boatrace_model_dataset_contract_v1.json": "ca9eeb4d3623c21cde1f672aebe0b4767871fdcc174cdbfcaf4eeec4b9d7b9d1",
+      "configs/boatrace_model_evaluation_v1_1.json": "2347e7e0467bad64084eff01844b314d0e2533e3131f73816295fec8563e535e",
+      "configs/boatrace_model_outcome_audit_v0_1.json": "fcac3fa170032772f7b003411f2be621e61a8f61015ed31ace1508f6a4ad4637",
+      "configs/trifecta_class_map_v1.json": "273c728e2240531188ff7458e90d745a0af54b6a55b52e1916038186fdcb5446",
+      "research/equipment_boundary_evidence_queue_v1.csv": "af4a30b604b2c8dcf271b6e2bac525ceb47dbd39a14fd3a11318af3587faa34d",
+      "research/equipment_generation_evidence_registry_v1.csv": "7c92504af82dd539004bf9e06299b668043e2270856d7c6d1ecf799ce6e4a120",
+      "research/hypothesis_execution_readiness_v1.csv": "5f9781c6240045ab3712d0320e5354f4cf2553979a7be7f781c0ffe7db509d58",
+      "research/meeting_episode_derivation_policy_v1.json": "3cb17ced3dceef12e16f663fb31bd2a1b24bbf89e496b4c672fa9d114b605396",
+      "research/race_stage_taxonomy_v1.csv": "58cbf07e04971558e6115087ce3e42fcdb85607a7bf65d11ac6d614c78aa0c17",
+      "research/research_design_manifest_v2.json": "104db24acc0819e5f189552752d8d330f1365afbe94c757c1caed9d27638db97",
+      "research/same_day_previous_result_policy_v1.json": "6b3359a8c9aaa0d5cf0a7c63e0685d724783dd456da10cf9f8b031c63554dfe8",
+      "research/subtitle_review_queue_v1.csv": "ed339ee83360c33edbcd6e5b1c720ec470993aef98d03c0496613cbd7ba79f7a",
+      "research/temporal_policy_manifest_v1.json": "0a707213a1816e77def7a6405abd85c386d6d942bbd70cfda92a98bb2d13b952",
+      "research/unresolved_blocker_matrix_v1.csv": "80c45b965e6691dfed40e53f3bd526a0e08e5658037621e6f2ec1cdfa8100bad",
+      "results/boatrace_model_research/audits/research_v0_1/audit_manifest.json": "7b8ec5419b0d31f3bb69ec87011407307ecd3131cec18f66e53a3be4794ce219",
+      "results/boatrace_model_research/snapshots/research_v0_136183_55f32b3538a9/dataset_manifest.json": "a59854ae6691c7e0875fddad45211d1cf4acb47458132d5c17a7e506ee396af0",
+      "results/boatrace_model_research/snapshots/research_v0_1_148956_b69fb714835e/dataset_manifest.json": "225882760ae06efe4e8363cea4e4a1e919d74ed848be29e572ab1617fa6f5ae5",
+      "results/boatrace_model_research/temporal_rehearsal/research_v0_1/meeting_episode_candidates.csv": "7daaf6d7b322ecf73559540a1f5708a88d6c65573d1bd87e7e1ff16988dd7f0e",
+      "results/boatrace_model_research/temporal_rehearsal/research_v0_1/race_stage_materialized.csv": "a00f80d20ffb22084213b029d7557c1b21fe67c03790698524f108635b369240",
+      "results/boatrace_model_research/temporal_rehearsal/research_v0_1/rehearsal_manifest.json": "a7b7c5d452578a6df266275a1c92d1a02a8dbb01927f24909b8748955498069d",
+      "results/boatrace_model_research/temporal_rehearsal/research_v0_1/same_day_previous_result_candidates.csv": "d77d3ae52933af4f7a41e637fa9a7e285f649d37d3aef8cb2ebcf5aa256a2704",
+      "results/boatrace_model_research/temporal_rehearsal/research_v0_1/same_day_sequence.csv": "e6015ed058cdfbfccd2019737efab11e88a17a99b7600e4d8df38638aeaeda78",
+      "results/boatrace_model_research/temporal_rehearsal/research_v0_1/temporal_exceptions.csv": "93e55719f0d77c0d09808f06d355c504583a49e18a0cfc2d35f982b9e74226a6",
+      "scripts/build_boatrace_hypothesis_rehearsal_v1.py": "a271e9eb2844869da6b6781c711227b5aacd9766d746f00034a4b63e1fbd25de",
+      "scripts/build_boatrace_temporal_policy_v1.py": "0572d4a1a59a87f0da41c6c1de989a00c27320e44dbdefaf4f6bb2ea2b65e839",
+      "tests/test_boatrace_hypothesis_rehearsal_v1.py": "b39740814011e170eda27957694efb9b133f03cf6a1388924c03993c9fc755e3",
+      "tests/test_boatrace_temporal_policy_v1.py": "bb644f02f782b45a04e186f2701ece4fe453fff21864016ae83f8d91bb911b3d"
+    },
+    "changed": [],
+    "recursive_attestation": "Existing v2, temporal-policy, rehearsal, snapshot, and audit manifests remain immutable parent anchors."
+  },
+  "purpose": "policy_execution_validation",
+  "self_hash_policy": "Manifest excludes its own file hash to avoid recursive self-reference.",
+  "source_snapshot": "research_v0_1_148956_b69fb714835e",
+  "status": "provisional"
+}

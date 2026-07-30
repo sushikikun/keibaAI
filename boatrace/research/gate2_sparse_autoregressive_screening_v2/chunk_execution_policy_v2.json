@@ -1,0 +1,9 @@
+{
+    "training_chunk_size":  256,
+    "prediction_chunk_size":  32,
+    "stage_subprocess_serial":  true,
+    "log_probability_disk_streaming":  true,
+    "hard_stop_available_mib":  1024,
+    "warning_available_mib":  1536,
+    "dense_conversion_zero":  true
+}

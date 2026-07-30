@@ -1,0 +1,38 @@
+{
+    "gate2a_runtime_verified":  true,
+    "gate2b_reference_verified":  true,
+    "S120_marked_resource_blocked":  true,
+    "CatBoost_marked_resource_blocked":  true,
+    "prior_staging_unchanged":  true,
+    "screening_fold_count_4":  true,
+    "SAR_F0_completed_all_folds":  false,
+    "SAR_F0_completed_fold_count":  3,
+    "SAR_F1_completed_all_folds":  false,
+    "SAR_F2_attempted":  false,
+    "stage_models_trained_sequentially":  true,
+    "chunk_size_512":  true,
+    "dense_conversion_zero":  true,
+    "preprocessing_fit_isolated":  true,
+    "autoregressive_probability_sum_valid":  false,
+    "class_order_valid":  false,
+    "prediction_coverage_100_percent":  false,
+    "confirmation_access_zero":  true,
+    "confirmation_metrics_zero":  true,
+    "final_lock_access_zero":  true,
+    "final_lock_metrics_zero":  true,
+    "final_lock_unlock_zero":  true,
+    "dependency_install_count_zero":  true,
+    "protected_anchor_difference_zero":  true,
+    "automation_remains_paused":  true,
+    "formal_champion_not_selected":  true,
+    "run_id":  "sparse_autoregressive_run_v1_5dc137186be81fb2ba90",
+    "staging_path":  "results\\boatrace_model_research\\staging\\sparse_autoregressive_run_v1_5dc137186be81fb2ba90_building",
+    "errors":  [
+                   "Fold3 probability_sum_max_error=1.0"
+               ],
+    "warnings":  [
+                     "Fold4 SAR-F0 subprocess reached available physical memory 972.5 MiB and was stopped",
+                     "F1/F2, calibration, evaluation, and paired metrics not run"
+                 ],
+    "status":  "resource_blocked"
+}

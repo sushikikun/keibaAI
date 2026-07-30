@@ -1,0 +1,18 @@
+{
+  "automation_paused": true,
+  "b3_reference_calibrated_log_loss": 4.151932308088278,
+  "catboost_runtime_version": "1.2.10",
+  "confirmation_fold_count": 2,
+  "errors": [],
+  "feature_arm_count": 3,
+  "final_lock_id": "final_lock_v1_365d_9294f86b36fe",
+  "final_lock_unlock_count": 0,
+  "gate2b_baseline_reference_verified": true,
+  "gate2ca_manifest_sha256": "b5a35896d8210cf8fa7960c0bcdeb03b6a80841887205ffc3edfce43de212c59",
+  "gate2ca_runtime_verified": true,
+  "passed": true,
+  "protected_anchor_difference_zero": true,
+  "runtime_manifest_sha256": "b5a35896d8210cf8fa7960c0bcdeb03b6a80841887205ffc3edfce43de212c59",
+  "screening_fold_count": 4,
+  "split_id": "split_v1_d3318c40504b"
+}

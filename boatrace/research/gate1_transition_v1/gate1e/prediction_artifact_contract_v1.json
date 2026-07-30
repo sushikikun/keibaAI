@@ -1,0 +1,30 @@
+{
+  "class_order_sha256": "6a69deaa5f047f6b01d56d8ae56ed4cb9b992e4dcd29db4a9d346037172f122a",
+  "evaluation_only_prediction_rule": true,
+  "final_lock_prediction_forbidden": true,
+  "finite": true,
+  "non_negative": true,
+  "probability_length": 120,
+  "required_fields": [
+    "race_key",
+    "split_id",
+    "fold_id",
+    "stage",
+    "role",
+    "model_id",
+    "model_family",
+    "model_config_sha256",
+    "dataset_manifest_sha256",
+    "feature_sidecar_manifest_sha256",
+    "split_manifest_sha256",
+    "class_map_sha256",
+    "seed",
+    "prediction_type",
+    "probabilities_120",
+    "probability_sum",
+    "generated_at",
+    "code_sha256",
+    "checkpoint_sha256"
+  ],
+  "sum_tolerance": 1e-06
+}

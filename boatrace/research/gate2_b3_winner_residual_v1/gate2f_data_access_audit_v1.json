@@ -1,0 +1,11 @@
+{
+  "artifact": "gate2f_data_access_audit_v1",
+  "gate2e_validation_passed": true,
+  "b3_reference_manifest_sha256": "f3eb62dc643c9f2561f5ec1827e3d070b63fd85952425ea69b39dc0f73a8c6e3",
+  "screening_fold_count": 4,
+  "confirmation_lock_access_count": 0,
+  "final_lock_access_count": 0,
+  "dependency_install_count": 0,
+  "new_prediction_count": 0,
+  "status": "resource_blocked"
+}

@@ -1,0 +1,11 @@
+{
+  "population": "primary_supervised_candidate",
+  "count": 200118,
+  "trifecta_log_loss": 0.0,
+  "trifecta_brier_score": 0.0,
+  "hit_at_1": 1.0,
+  "actual_combo_rank": 1,
+  "prediction_coverage": 1.0,
+  "passed": true,
+  "kind": "oracle one-hot target sanity only; not a model"
+}

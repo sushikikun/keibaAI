@@ -1,0 +1,24 @@
+{
+  "calibration_only": [],
+  "forbidden_global_fit": [
+    "all operations using full dataset"
+  ],
+  "inference_transform_only": [
+    "apply frozen train-fit mapping"
+  ],
+  "train_only": [
+    "scaling",
+    "imputation",
+    "category_vocabulary",
+    "target_encoding_OOF",
+    "feature_selection",
+    "PCA",
+    "learned_expectations",
+    "player_skill",
+    "motor_skill",
+    "venue_day_state"
+  ],
+  "train_plus_selection_refit": [
+    "refit preprocessing after selection"
+  ]
+}

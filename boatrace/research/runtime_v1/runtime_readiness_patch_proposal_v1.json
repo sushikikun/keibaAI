@@ -1,0 +1,11 @@
+{
+  "confirmation_metrics_authorized": false,
+  "final_lock_authorized": false,
+  "formal_model_research_ready": true,
+  "gate2b_explicit_approval_required": true,
+  "model_training_authorized": false,
+  "protocol_ready": true,
+  "runtime_id": "boatrace_research_runtime_v1",
+  "runtime_ready": true,
+  "screening_metrics_authorized": false
+}

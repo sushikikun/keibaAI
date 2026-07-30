@@ -1,0 +1,13 @@
+{
+  "training_data_opened_count": 67958,
+  "screening_evaluation_target_open_count": 12822,
+  "confirmation_target_open_count": 0,
+  "confirmation_prediction_count": 0,
+  "confirmation_metrics_count": 0,
+  "final_lock_target_open_count": 0,
+  "final_lock_prediction_count": 0,
+  "final_lock_metrics_count": 0,
+  "final_lock_unlock_count": 0,
+  "confirmation_metrics_viewed": false,
+  "final_lock_performance_viewed": false
+}

@@ -1,0 +1,3 @@
+column_type,contract
+categorical,physical_column_name=normalized_value and missing=__MISSING__
+numerical,CSR numeric block with train-only median/indicator/scale

@@ -1,0 +1,12 @@
+{
+  "absent_count": 0,
+  "required_count": 8428,
+  "source_main_evaluation_eligible_count": 8428,
+  "source_snapshot": "research_v0_1_148956_b69fb714835e",
+  "status_counts": {
+    "no_longer_eligible_with_reason": 8,
+    "remains_non_strict_U2": 8420
+  },
+  "target_mismatch_count": 0,
+  "unresolved_count": 0
+}

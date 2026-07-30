@@ -1,0 +1,11 @@
+distribution_name,version,location,editable,source
+joblib,1.5.3,<USER_HOME>\.venvs\boatrace-research-v1\Lib\site-packages,false,offline_wheelhouse
+narwhals,2.24.0,<USER_HOME>\.venvs\boatrace-research-v1\Lib\site-packages,false,offline_wheelhouse
+numpy,2.3.5,<USER_HOME>\.venvs\boatrace-research-v1\Lib\site-packages,false,offline_wheelhouse
+pandas,3.0.1,<USER_HOME>\.venvs\boatrace-research-v1\Lib\site-packages,false,offline_wheelhouse
+python-dateutil,2.9.0.post0,<USER_HOME>\.venvs\boatrace-research-v1\Lib\site-packages,false,offline_wheelhouse
+scikit-learn,1.9.0,<USER_HOME>\.venvs\boatrace-research-v1\Lib\site-packages,false,offline_wheelhouse
+scipy,1.18.0,<USER_HOME>\.venvs\boatrace-research-v1\Lib\site-packages,false,offline_wheelhouse
+six,1.17.0,<USER_HOME>\.venvs\boatrace-research-v1\Lib\site-packages,false,offline_wheelhouse
+threadpoolctl,3.6.0,<USER_HOME>\.venvs\boatrace-research-v1\Lib\site-packages,false,offline_wheelhouse
+tzdata,2026.3,<USER_HOME>\.venvs\boatrace-research-v1\Lib\site-packages,false,offline_wheelhouse

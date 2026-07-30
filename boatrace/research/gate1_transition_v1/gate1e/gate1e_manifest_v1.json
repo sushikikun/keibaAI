@@ -1,0 +1,293 @@
+{
+  "artifacts": [
+    {
+      "path": "research/gate1_transition_v1/gate1e/artifact_storage_policy_v1.json",
+      "sha256": "725f70d7f7c0b6748ea3908a43f3d0dc059aca88036b0211f160acbc608867e9",
+      "size_bytes": 174
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/calibration_fit_contract_v1.json",
+      "sha256": "3c2d99e6909ad2384f571832fedd79ad5d9f318a8149d8ee77834c11da1a6b50",
+      "size_bytes": 184
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/category_unknown_policy_v1.json",
+      "sha256": "efde525ea5f8ab973e88cd4273dd06c792fdaadb54787d1c0fac30c8a6700e52",
+      "size_bytes": 131
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/checkpoint_contract_v1.json",
+      "sha256": "3da8849bcd2aea12b9b1abe67dd150aaff2445827e30d2927b74e62e51d45daf",
+      "size_bytes": 276
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/class_map_v1.json",
+      "sha256": "7b7d411c6be36e2b4ab0f42ab075dd80c4ce21836f03a51ed1db7de823c97a29",
+      "size_bytes": 1561
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/confirmation_atomic_run_policy_v1.json",
+      "sha256": "947d5759fbbd372686c14ca9b90e205619b6f2f09d0647bb3aa6a37e25e2288a",
+      "size_bytes": 395
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/confirmation_guard_test_v1.json",
+      "sha256": "12484c11ca14b70bce9f4eaf8d388197356772f91f482edaf70aaf2bd1b4b2f6",
+      "size_bytes": 153
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/confirmation_lock_manifest_v1.json",
+      "sha256": "6f85c66f568e946acc5358bddfe37ef990b8ba957dfa7b063ccc666b8b88fb54",
+      "size_bytes": 261
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/dependency_gap_report_v1.md",
+      "sha256": "622a97a80d762df12c0ae82fb7e06f65439aba3cbb60f4db2714e8fea9d6dd73",
+      "size_bytes": 357
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/dependency_inventory_v1.csv",
+      "sha256": "6b6046e64edf4bf7deac8d0738df5e30cc5aba479d71748da95d1441b7ca25ea",
+      "size_bytes": 535
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/deterministic_execution_policy_v1.json",
+      "sha256": "3605791fce7933d8f9a930d7985f8adbccf6a8550c25bf1aa342da6091e58d12",
+      "size_bytes": 202
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/environment_inventory_v1.json",
+      "sha256": "a9449d114d84a22be9990c88ff95ba8e6eee9ecdfe6790f4be2f650fa2854a6d",
+      "size_bytes": 1332
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/environment_lock_candidate_v1.json",
+      "sha256": "a0c144f8471d2bd732acf194fc52869a1b9311474dcaec23481b347e900c1e46",
+      "size_bytes": 610
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/evaluation_stage_policy_v1.json",
+      "sha256": "700661a4d9207b8951eb9c1b00bfa3cb37591301e3a79e4fe4802e9f057b8a3c",
+      "size_bytes": 517
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/experiment_id_policy_v1.json",
+      "sha256": "636cd34950fdfd2fd5511678b0ab774324dd248dace2202bc523a4b0cd691413",
+      "size_bytes": 150
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/experiment_manifest_contract_v1.json",
+      "sha256": "9297eb85096b5f08665a3901111844ce83e6feb51f9da43d5b055c6471ba60fc",
+      "size_bytes": 661
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/feature_join_contract_v1.json",
+      "sha256": "9257d991eace0fd410c389c86684dbec01b1380c99b97780026dbf232cd630da",
+      "size_bytes": 2448
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/final_lock_guard_policy_v1.json",
+      "sha256": "6cb1f2ce544bf3e21c5d71bc032dbdec961e353a351bdfc1bd0f5b480f0a89f8",
+      "size_bytes": 382
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/final_lock_guard_test_v1.json",
+      "sha256": "c3466e8e594c1936247a45895991ef138de20bbbcce6ba47485101712d5617ad",
+      "size_bytes": 229
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/final_lock_manifest_v1.json",
+      "sha256": "65a8dbcab15085e63716529c1013ca735057f30bddf63ab6e34fe0527853047c",
+      "size_bytes": 682
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/final_lock_one_shot_policy_v1.json",
+      "sha256": "aa1d194103a23bbb6756a0f4b5eaf0abea948a90e1e3f0bb3b742f924b86d4f9",
+      "size_bytes": 340
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/final_lock_profile_v1.csv",
+      "sha256": "ce36a7ec6e516f92468fd475e3d49756d49f93db23b24e039c64aa86fafecc0d",
+      "size_bytes": 208
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/final_lock_race_keys_v1.csv",
+      "sha256": "ea0f3441918d23f337b181b60abfddbcf1412432943c709287aadc6133183078",
+      "size_bytes": 1676515
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/fold_artifact_lineage_contract_v1.json",
+      "sha256": "3dce17bd39933e12d3a41da3c63376e6f0fa304c5b1106088e4c1bf853cddda9",
+      "size_bytes": 310
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/fold_membership_v1.csv",
+      "sha256": "e40719d0b3c685ca5253a309ac8a9a7fa7a32a87bc1a9831c4ffb7d8d94784a5",
+      "size_bytes": 90797100
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/fold_training_contract_v1.json",
+      "sha256": "aada66a2e87e26470a4b273b08c92f69dcc46676b4a8c34565d8a782a3df2be4",
+      "size_bytes": 258
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/gate1e_dry_run_report_v1.json",
+      "sha256": "8434724902845ad1eb5ed6727ff3edfe094d90dd7bb73eab650eeace6d808d2d",
+      "size_bytes": 507
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/gate1e_report_v1.md",
+      "sha256": "88b8fd4c9215680b2184cfb1a47c3da0e38f73447574c527cf45a44d1223ddbe",
+      "size_bytes": 3255
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/gate1e_validation_v1.json",
+      "sha256": "dc81197bc588a7db41baf355186e0fe77ffdab7bb2b24e77f58bf732ee3227a0",
+      "size_bytes": 1769
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/gate2_authorization_requirements_v1.md",
+      "sha256": "1e073a9e7b0afbec8ec55cd149e2f64691252a3d7809b5ba7ca235c8a9f24c34",
+      "size_bytes": 468
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/lock_access_registry_v1.jsonl",
+      "sha256": "5f989ede8d7906820380f2805bdbd83ad7f4751fa91033f3e4bf34e880d8a618",
+      "size_bytes": 31
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/lock_guard_validation_v1.json",
+      "sha256": "24866705aca7a326f9c4485af2648ac5de63227aa8a87c81670d4d5ed4b187e7",
+      "size_bytes": 368
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/model_id_policy_v1.json",
+      "sha256": "21bcba439343dd152835cd3c816ffed25b10cd2f95a90e6009be9b007a18b55d",
+      "size_bytes": 90
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/model_input_schema_v1.json",
+      "sha256": "445a3bd98956369e7d73f7a5d24995485d4d82f58f1dde946ae99e257f20f093",
+      "size_bytes": 2067
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/model_input_schema_v1.md",
+      "sha256": "ea4f4b5a3cd7cc15076183f74f7aa95be52c8f8a147b5b071dfed037e149128e",
+      "size_bytes": 307
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/prediction_artifact_contract_v1.json",
+      "sha256": "d9ad6a9171501db40acef75a558349634af5ed995ebe2b8f331899f3944bff14",
+      "size_bytes": 740
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/prediction_schema_example_v1.csv",
+      "sha256": "46d8d7a955d7985ea60a27d7e1024c94760845f84c3592867b7f5d56ba674594",
+      "size_bytes": 3333
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/preprocessing_fit_contract_v1.json",
+      "sha256": "d8a7af7d7bca93711a7ecc99f86868fc9c81505f3da9043ef15c0c7fca073cb5",
+      "size_bytes": 516
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/preprocessing_isolation_test_v1.json",
+      "sha256": "7460403d026b92dc4b18d81ae9756cd94ee49c50b72d12f6e844901302097a8c",
+      "size_bytes": 276
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/preprocessing_operation_registry_v1.csv",
+      "sha256": "0a2b58f2bb866e66cf7dc893bf2137a4f620ac6225fa780f9ed4b77dc7331644",
+      "size_bytes": 1047
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/protected_anchor_after_gate1e.csv",
+      "sha256": "bfb617a0b2c2cabcf8866bcb55e364031484d8e5fcc07638714ab3efec99e4f4",
+      "size_bytes": 2426740
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/protected_anchor_before_gate1e.csv",
+      "sha256": "bfb617a0b2c2cabcf8866bcb55e364031484d8e5fcc07638714ab3efec99e4f4",
+      "size_bytes": 2426740
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/protected_anchor_diff_gate1e.csv",
+      "sha256": "4ed2a850c4153f8fa2ecbe8907ffe1877a52ad2b1a52ca561d26b026f6335517",
+      "size_bytes": 52
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/readiness_patch_proposal_gate1e_v1.json",
+      "sha256": "dcf546d5464298139c252989ced0c09916d2515cd5fa3e82fe9c5cb46c46c15c",
+      "size_bytes": 652
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/research_environment_contract_v1.json",
+      "sha256": "d9427446edf4ff515714050ba5d422c2b7facf5a4a34edc61c0841b957eb21a8",
+      "size_bytes": 718
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/seed_derivation_test_v1.json",
+      "sha256": "e048f57d03f62356baed92658c6049fd7146eaefad324c8067e05ed8f8cd0898",
+      "size_bytes": 433
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/seed_policy_v1.json",
+      "sha256": "2d4feb5749ca9fb2ab4f811fe37f8ed0fb61d1a8e5c6e9b03cde73ab0f788e72",
+      "size_bytes": 404
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/split_guard_test_report_v1.json",
+      "sha256": "af6c8924ac6b3f139504133074d92bf786083730085ec72b9d4993954aa0d137",
+      "size_bytes": 234
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/split_manifest_v1.json",
+      "sha256": "6295c466d11a0b338fa85e91595d91f4ccc133d0b5ff6efb16f2942394372677",
+      "size_bytes": 1452
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/split_profile_v1.csv",
+      "sha256": "d9844396d7ab803d784fb07f498127975f9071ed9ad47549b418a10145a0014d",
+      "size_bytes": 1763
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/split_validation_v1.json",
+      "sha256": "8d105d45fa14aa68af8a3bbc8fafb970e0c12babe08843cba5929588ee5146d4",
+      "size_bytes": 875
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/target_encoding_policy_v1.json",
+      "sha256": "3c8532aa017ec2c947a81da308e7d6f6695791de1e25066dd6c3ab8e444f8b75",
+      "size_bytes": 179
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/thread_policy_v1.json",
+      "sha256": "771a2654e3ebb04a9558bb6d7343afb07b65ad2e0a7b2aea788d8842845331aa",
+      "size_bytes": 243
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1e/walkforward_policy_v1.json",
+      "sha256": "28b1374f3d3e267dbf35fbbaafdc79da029756f3f565230fc51e7f2c39bf04d8",
+      "size_bytes": 2775
+    }
+  ],
+  "created_at": "2026-07-30T03:43:45.249019+09:00",
+  "dependency_gap_count": 9,
+  "feature_sidecar_id": "feature_sidecar_v1_213016_6fa39ceeb32f",
+  "feature_sidecar_manifest_sha256": "2a4d0549e1763ac37dc4904bd2e118142051f8058a24e61f7b36d0f4ecaff87d",
+  "final_lock_id": "final_lock_v1_365d_9294f86b36fe",
+  "final_lock_logical_sha256": "9294f86b36fef245acfd1a142ddca85ed69efa97a03aac990eebbd945b12eaa2",
+  "final_lock_unlocked": false,
+  "gate": "Gate 1-E",
+  "gate1a_release_id": "corpus_release_v1_200118_4f5554a4057e",
+  "gate1a_release_manifest_sha256": "09ba1172dbd403aa4066e7934348fca5102df66618b73be26b506b72354fb6fe",
+  "gate1b_dataset_manifest_sha256": "eb2ddf85af16255dbc9d64f264ba0565da73949ccc957dda0b1de6d0bf48bf4c",
+  "gate1b_snapshot_id": "research_v1_219240_1d586db9a15a",
+  "gate1d_manifest_sha256": "75b5756e2b764912fdf110733813add08543132af2279666e56ae11d43912db7",
+  "manifest_id": "boatrace_gate1e_manifest_v1",
+  "protocol_passed": true,
+  "split_id": "split_v1_d3318c40504b",
+  "status": "protocol_passed_runtime_blocked",
+  "training_started": false,
+  "validation_passed": false
+}

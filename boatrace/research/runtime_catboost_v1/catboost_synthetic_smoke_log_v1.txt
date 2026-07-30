@@ -1,0 +1,7 @@
+synthetic_only=true
+120-class CatBoostClassifier CPU fit=PASS
+predict_proba contract=PASS
+save_load=PASS
+seed_determinism=True
+row_order_invariance=True
+unknown_category=True

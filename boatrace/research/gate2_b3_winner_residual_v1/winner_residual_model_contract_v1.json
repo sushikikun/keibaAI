@@ -1,0 +1,13 @@
+{
+  "artifact": "winner_residual_model_contract_v1",
+  "arms": ["CDP-A06_H045_WR-S", "CDP-A11_H064_H089_WR-H"],
+  "screening_folds": [1, 2, 3, 4],
+  "primary_role": "U0 supervised",
+  "target": "winner-only residual correction on B3 first-stage prior",
+  "unchanged_terms": ["P_B3_2(j|i)", "P_B3_3(k|i,j)"],
+  "optimizer": "SciPy L-BFGS-B with analytic gradient",
+  "calibration": ["Identity", "Scalar Temperature"],
+  "formal_champion": false,
+  "full_training_completed": false,
+  "status": "resource_blocked"
+}

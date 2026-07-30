@@ -1,0 +1,31 @@
+{
+  "blocking_reasons": [
+    "walk_forward_not_fixed",
+    "final_lock_not_fixed",
+    "environment_not_fixed",
+    "final_dry_run_not_run"
+  ],
+  "formal_model_research_ready": false,
+  "patch_id": "readiness_patch_proposal_gate1c_v1",
+  "protected_actions": [
+    "do_not_modify_formal_hypothesis_registry",
+    "do_not_train_models",
+    "do_not_create_walk_forward_or_final_lock"
+  ],
+  "safe_core_data_ready": true,
+  "safe_core_training_authorized": false,
+  "status": "proposal_only",
+  "statuses": {
+    "data_collection_complete": "ready",
+    "equipment_identity_ready": "not_ready",
+    "equipment_partial_scope_ready": "ready",
+    "evaluation_contract_ready": "ready",
+    "final_snapshot_ready": "ready",
+    "formal_model_research_ready": "blocked",
+    "research_design_ready": "ready",
+    "research_universe_ready": "ready",
+    "safe_core_research_ready": "ready_design_only",
+    "target_pipeline_ready": "ready",
+    "temporal_capability_ready": "ready_policy_sidecar_only"
+  }
+}

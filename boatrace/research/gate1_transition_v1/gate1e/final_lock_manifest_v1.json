@@ -1,0 +1,18 @@
+{
+  "U0_count": 50802,
+  "U1_count": 51,
+  "U2_count": 3171,
+  "calendar_day_count": 365,
+  "dataset_manifest_sha256": "eb2ddf85af16255dbc9d64f264ba0565da73949ccc957dda0b1de6d0bf48bf4c",
+  "end_date": "2026-07-27",
+  "feature_sidecar_manifest_sha256": "2a4d0549e1763ac37dc4904bd2e118142051f8058a24e61f7b36d0f4ecaff87d",
+  "immutable_after_creation": true,
+  "lock_id": "final_lock_v1_365d_9294f86b36fe",
+  "lock_status": "sealed",
+  "per_venue_min_count": 1788,
+  "performance_viewed": false,
+  "race_keys_logical_sha256": "9294f86b36fef245acfd1a142ddca85ed69efa97a03aac990eebbd945b12eaa2",
+  "start_date": "2025-07-28",
+  "unlock_count": 0,
+  "venue_count": 24
+}

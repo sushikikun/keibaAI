@@ -1,0 +1,10 @@
+{
+  "catboost_runtime_ready": true,
+  "confirmation_authorized": false,
+  "final_lock_authorized": false,
+  "gate2cb_explicit_approval_required": true,
+  "machine_learning_screening_ready": true,
+  "model_training_authorized": false,
+  "screening_metrics_authorized": false,
+  "statistical_baseline_ready": true
+}

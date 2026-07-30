@@ -1,0 +1,5 @@
+{
+  "hash_dimension": 131072,
+  "stateless": true,
+  "token_format": "<physical_column_name>=<normalized_value>"
+}

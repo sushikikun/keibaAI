@@ -1,0 +1,17 @@
+model_id,prediction_type,outcome_type,log_loss,count
+B0_uniform,raw,normal_unique,4.787491742782046,51232
+B0_uniform,raw,abnormal_tail,,0
+B0_uniform,calibrated,normal_unique,4.787491742782046,51232
+B0_uniform,calibrated,abnormal_tail,,0
+B1_global_frequency,raw,normal_unique,4.180413716599971,51232
+B1_global_frequency,raw,abnormal_tail,,0
+B1_global_frequency,calibrated,normal_unique,4.180701251979889,51232
+B1_global_frequency,calibrated,abnormal_tail,,0
+B2_hierarchical_frequency,raw,normal_unique,4.174982657577601,51232
+B2_hierarchical_frequency,raw,abnormal_tail,,0
+B2_hierarchical_frequency,calibrated,normal_unique,4.175202848878989,51232
+B2_hierarchical_frequency,calibrated,abnormal_tail,,0
+B3_autoregressive_hierarchical_frequency,raw,normal_unique,4.151575557651773,51232
+B3_autoregressive_hierarchical_frequency,raw,abnormal_tail,,0
+B3_autoregressive_hierarchical_frequency,calibrated,normal_unique,4.151932308088278,51232
+B3_autoregressive_hierarchical_frequency,calibrated,abnormal_tail,,0

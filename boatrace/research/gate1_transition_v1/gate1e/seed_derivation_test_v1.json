@@ -1,0 +1,21 @@
+{
+  "best_seed_post_selection_forbidden": true,
+  "deterministic": true,
+  "tests": [
+    {
+      "experiment_id": "dry_run_neural",
+      "replicate_index": 0,
+      "seed": 3206123067
+    },
+    {
+      "experiment_id": "dry_run_neural",
+      "replicate_index": 1,
+      "seed": 3947425730
+    },
+    {
+      "experiment_id": "dry_run_neural",
+      "replicate_index": 2,
+      "seed": 3433464848
+    }
+  ]
+}

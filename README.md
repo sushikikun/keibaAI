@@ -262,3 +262,7 @@ OneDriveの同期やファイルロックが原因になることがあります
 - 自動取得をするかどうか
 - 距離区分 `short` / `mile` / `middle` / `long` の正式なしきい値
 - `field_size` と実際の行数のズレをどこまで許容するか
+
+## Boat-race AI research
+
+This repository also contains an independent sanitized research foundation under [`boatrace/`](boatrace/README.md). The horse-racing MVP remains unchanged. Boat-race raw data, local corpus bodies, models, caches, credentials, and machine-specific paths are intentionally kept out of GitHub; public manifests record the local-only release references and import exclusions.

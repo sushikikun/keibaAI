@@ -1,0 +1,31 @@
+{
+  "actual_target_data_opened_false": true,
+  "actual_training_data_opened_false": true,
+  "automation_remains_paused": true,
+  "confirmation_metrics_computed_false": true,
+  "errors": [],
+  "final_lock_metrics_computed_false": true,
+  "final_lock_unlock_count_zero": true,
+  "gate1e_protocol_verified": true,
+  "guard_revalidation_passed": true,
+  "imports_passed": true,
+  "model_training_not_started": true,
+  "only_wave1_required_installed": true,
+  "passed": true,
+  "pip_check_passed": true,
+  "predict_proba_contract_passed": true,
+  "protected_anchor_difference_zero": true,
+  "save_load_reproducible": true,
+  "screening_metrics_computed_false": true,
+  "seed_policy_passed": true,
+  "stable_base_python_selected": true,
+  "synthetic_smoke_passed": true,
+  "system_site_packages_disabled": true,
+  "venv_created_or_identical": true,
+  "warnings": [
+    "Only synthetic smoke tests were executed; real-data metrics and training remain prohibited."
+  ],
+  "wave1_dependency_plan_complete": true,
+  "wheel_hashes_recorded": true,
+  "wheels_only": true
+}

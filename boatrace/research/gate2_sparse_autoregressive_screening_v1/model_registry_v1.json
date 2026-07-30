@@ -1,0 +1,13 @@
+{
+    "models":  [
+                   "SAR"
+               ],
+    "stages":  [
+                   "first",
+                   "second_given_first",
+                   "third_given_first_second"
+               ],
+    "formal_champion":  false,
+    "S120_research_attempted":  false,
+    "CatBoost_research_attempted":  false
+}

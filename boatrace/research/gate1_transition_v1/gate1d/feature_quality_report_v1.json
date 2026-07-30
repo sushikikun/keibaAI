@@ -1,0 +1,13 @@
+{
+  "anomaly_rows": 2,
+  "corrective_mutation_applied": false,
+  "diagnostic_only": true,
+  "feature_sets": {
+    "F0": 49,
+    "F1": 14,
+    "F2": 2,
+    "F3": 0,
+    "F5": 0
+  },
+  "report_id": "boatrace_gate1d_feature_quality_report_v1"
+}

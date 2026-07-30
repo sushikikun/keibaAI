@@ -1,0 +1,12 @@
+{
+  "evaluation_label_into_fit_rejected": true,
+  "calibration_label_into_raw_fit_rejected": true,
+  "selection_label_outside_tuning_rejected": true,
+  "refit_scope_train_plus_selection_only": true,
+  "full_period_frequency_rejected": true,
+  "final_lock_race_rejected": true,
+  "confirmation_race_rejected": true,
+  "duplicate_evaluation_keys": 0,
+  "leakage_canary_rejected": true,
+  "passed": true
+}

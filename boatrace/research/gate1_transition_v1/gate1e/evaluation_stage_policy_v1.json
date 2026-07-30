@@ -1,0 +1,20 @@
+{
+  "stages": {
+    "confirmation": {
+      "atomic_run_required": true,
+      "candidate_pipeline_frozen": true,
+      "final_lock_sealed": true
+    },
+    "final_lock": {
+      "explicit_unlock_required": true,
+      "normal_runner_access": false,
+      "performance_viewed": false
+    },
+    "screening": {
+      "confirmation_membership_only": true,
+      "confirmation_metrics_allowed": false,
+      "final_lock_metrics_allowed": false,
+      "screening_evaluation_allowed": true
+    }
+  }
+}

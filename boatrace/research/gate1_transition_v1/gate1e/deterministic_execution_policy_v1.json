@@ -1,0 +1,7 @@
+{
+  "deterministic_algorithms_required": true,
+  "gpu_nondeterminism_blocked": true,
+  "pythonhashseed_required": true,
+  "seed_policy": "seed_policy_v1.json",
+  "thread_counts_recorded": true
+}

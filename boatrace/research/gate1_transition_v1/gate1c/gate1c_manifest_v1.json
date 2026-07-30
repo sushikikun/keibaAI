@@ -1,0 +1,123 @@
+{
+  "artifacts": [
+    {
+      "path": "research/gate1_transition_v1/gate1c/equipment_generation_assignments_v1.csv",
+      "sha256": "08eb2a42fa5f67e5806ad49dde20a342c2c86f60c0152152099638ce7beac441",
+      "size_bytes": 179628047
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1c/equipment_generation_materialization_mismatches_v1.csv",
+      "sha256": "db36dbc7326f1ecca3407fb06fa2b9c5ad2f32a428e98005b2fef3ef8049b1e7",
+      "size_bytes": 68
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1c/equipment_generation_materialization_report_v1.json",
+      "sha256": "95024a8e7a08be1bdac907a657e9dac4945f0e999a1953cf494f1d4ec8ec9521",
+      "size_bytes": 669
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1c/equipment_generation_race_coverage_v1.csv",
+      "sha256": "db15896341fcc37793200eb0a35e6c30c0b85c25bf5a6e8c7b54f3686d09b29e",
+      "size_bytes": 13357425
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1c/equipment_generation_unresolved_v1.csv",
+      "sha256": "ab49fe8ef3e388418c502935d6905bc804db65545f7715530ae264813a1e2d2b",
+      "size_bytes": 148937262
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1c/experiment_program_activation_v1.csv",
+      "sha256": "2938428a2a23a3c5deec6054f34e9037cb5a34379b3c4c5cdd3dda01e0c2e60e",
+      "size_bytes": 4467
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1c/feature_set_readiness_gate1_v1.csv",
+      "sha256": "5b5f5dda4dfeb4b92114ec007127df94f877477927a953c145b5db7726855ed4",
+      "size_bytes": 1379
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1c/gate1c_report_v1.md",
+      "sha256": "4c836aea512c16bd88fcfa2fab99f2990c7d0f21abc235ce9ecb5cd5fdcde318",
+      "size_bytes": 2205
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1c/gate1c_validation_v1.json",
+      "sha256": "d8194a91c164a153b294d4133cf3d44b8b779ce1b5bd018a05b278232241c670",
+      "size_bytes": 1525
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1c/hypothesis_execution_registry_gate1_v1.csv",
+      "sha256": "04226799cecb9ff677d12665177c09302dc08b774e06b965e54b38904adacc25",
+      "size_bytes": 23034
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1c/non_strict_reconciliation_gate1c_v1.csv",
+      "sha256": "82c12b76c62c61b6a82a36c5ea459bbff319c8cc3b98e9e846ea28cf02eb9e71",
+      "size_bytes": 2785850
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1c/protected_anchor_after_gate1c.csv",
+      "sha256": "bfb617a0b2c2cabcf8866bcb55e364031484d8e5fcc07638714ab3efec99e4f4",
+      "size_bytes": 2426740
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1c/protected_anchor_before_gate1c.csv",
+      "sha256": "bfb617a0b2c2cabcf8866bcb55e364031484d8e5fcc07638714ab3efec99e4f4",
+      "size_bytes": 2426740
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1c/protected_anchor_diff_gate1c.csv",
+      "sha256": "216b4f808cc447ce7df353b2a36ce1aa07c1bfc54f7908fc33dc6ea76c893a8c",
+      "size_bytes": 52
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1c/readiness_patch_proposal_gate1c_v1.json",
+      "sha256": "09656a1cc1833757b7cd2fa5b37f3bd65c409535e92c26e8994d2456d7dca3d5",
+      "size_bytes": 1033
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1c/temporal_capability_exceptions_v1.csv",
+      "sha256": "52d1ee3ca5b8d5fb9891afedeecc15a9099b9029d479f0234e8c52f61484fa2a",
+      "size_bytes": 23458728
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1c/temporal_capability_report_v1.json",
+      "sha256": "880e8763f8506fbb03ac6a3a56561a8a56512869832e43ba6722c19b7760a729",
+      "size_bytes": 572
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1c/temporal_capability_sidecar_v1.csv",
+      "sha256": "7408a14d9c49fe227c0776de269dd2bb13bb05ca0200158774e2fdc309315adf",
+      "size_bytes": 37523968
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1c/universe_registry_gate1c_v1.csv",
+      "sha256": "12c27a826593fde3aeda3d611e71db4c4686c6e1d3a8c247128cdfa522a9bac2",
+      "size_bytes": 30454059
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1c/unresolved_blocker_patch_proposal_gate1c_v1.csv",
+      "sha256": "e1414c1efea0f70298fea7bbf564ac371634e57337e48a49276366b9f52a5036",
+      "size_bytes": 386
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1c/v0_1_non_strict_primary_migration_summary_v1.json",
+      "sha256": "d0c666d38a777b667c631b1cfc9f031f04e1a48c9bff1619fdb0598d9dd7338f",
+      "size_bytes": 325
+    },
+    {
+      "path": "research/gate1_transition_v1/gate1c/v0_1_non_strict_primary_migration_v1.csv",
+      "sha256": "00ee9145481c36f5b856a51746a171bdb5093af49641f3d52899fefd372f5399",
+      "size_bytes": 776429
+    }
+  ],
+  "created_at": "2026-07-30T02:21:31.443215+09:00",
+  "gate": "Gate 1-C",
+  "gate1a_release_id": "corpus_release_v1_200118_4f5554a4057e",
+  "gate1a_release_manifest_sha256": "09ba1172dbd403aa4066e7934348fca5102df66618b73be26b506b72354fb6fe",
+  "gate1b_dataset_manifest_sha256": "eb2ddf85af16255dbc9d64f264ba0565da73949ccc957dda0b1de6d0bf48bf4c",
+  "gate1b_snapshot_id": "research_v1_219240_1d586db9a15a",
+  "manifest_id": "boatrace_gate1c_manifest_v1",
+  "protected_anchor_diff_count": 0,
+  "validation_passed": true
+}

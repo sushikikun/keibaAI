@@ -1,0 +1,11 @@
+source,feature,policy
+registered_schema,beforeinfo_time,CatBoost categorical; missing token __MISSING__; train vocabulary only
+registered_schema,boat_generation_id,CatBoost categorical; missing token __MISSING__; train vocabulary only
+registered_schema,closed_at,CatBoost categorical; missing token __MISSING__; train vocabulary only
+registered_schema,motor_generation_id,CatBoost categorical; missing token __MISSING__; train vocabulary only
+registered_schema,parts_exchange_status,CatBoost categorical; missing token __MISSING__; train vocabulary only
+registered_schema,preview_weather,CatBoost categorical; missing token __MISSING__; train vocabulary only
+registered_schema,propeller_status,CatBoost categorical; missing token __MISSING__; train vocabulary only
+registered_schema,racer_name,CatBoost categorical; missing token __MISSING__; train vocabulary only
+registered_schema,subtitle,CatBoost categorical; missing token __MISSING__; train vocabulary only
+registered_schema,title,CatBoost categorical; missing token __MISSING__; train vocabulary only

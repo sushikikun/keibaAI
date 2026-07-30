@@ -1,0 +1,21 @@
+{
+    "model":  "SGDClassifier",
+    "loss":  "log_loss",
+    "penalty":  "l2",
+    "learning_rate":  "optimal",
+    "average":  true,
+    "shuffle":  false,
+    "early_stopping":  false,
+    "n_jobs":  1,
+    "random_state":  "Gate1-E seed policy",
+    "stages":  [
+                   "first",
+                   "second_given_first",
+                   "third_given_first_second"
+               ],
+    "arms":  [
+                 "F0",
+                 "F1",
+                 "F2"
+             ]
+}

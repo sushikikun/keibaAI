@@ -1,0 +1,121 @@
+{
+  "contract_id": "boatrace_model_evaluation_v1_1",
+  "version": "1.1.0",
+  "status": "frozen",
+  "scope": "six-boat no-odds ordered-trifecta probability research",
+  "prediction_cutoff": {
+    "definition": "after official exhibition and last-minute information have been acquired, and strictly before the official closing deadline",
+    "inclusive_lower_event": "official_beforeinfo_available",
+    "exclusive_upper_event": "closed_at",
+    "allowed_information": "official information whose availability timestamp is no later than the prediction cutoff"
+  },
+  "information_policy": {
+    "odds_used": false,
+    "popularity_used": false,
+    "vote_count_used": false,
+    "payout_used": false,
+    "prohibited_data_categories": [
+      "odds",
+      "popularity",
+      "vote_count",
+      "bet_count",
+      "sales_amount",
+      "payout"
+    ],
+    "prohibited_uses": [
+      "prediction_feature",
+      "training_target",
+      "sample_weight",
+      "calibration",
+      "hyperparameter_selection",
+      "model_selection"
+    ],
+    "auxiliary_target_only": [
+      "actual_course",
+      "actual_start_timing",
+      "winning_technique_number",
+      "actual_finish_4_through_6"
+    ],
+    "auxiliary_targets_are_inference_inputs": false
+  },
+  "evaluation_unit": {
+    "sample": "one_race",
+    "race_key_column": "race_key",
+    "required_boats": 6,
+    "prediction_coverage_denominator": "all races with prediction_input_eligible=true",
+    "required_prediction_coverage": 1.0,
+    "main_metric_population": "main_evaluation_eligible=true"
+  },
+  "target_policy": {
+    "statuses": [
+      "unique_order",
+      "tied",
+      "void"
+    ],
+    "main_one_hot_status": "unique_order",
+    "tied_in_main_one_hot": false,
+    "void_in_main_one_hot": false
+  },
+  "class_map": {
+    "path": "configs/trifecta_class_map_v1.json",
+    "contract_id": "trifecta_class_map_v1",
+    "class_count": 120,
+    "class_id_range": [
+      0,
+      119
+    ],
+    "mapping_sha256": "e5b36e44602700d1c50cbd2c839a20328fcc317abc0c7de8388ed1b91d410f50"
+  },
+  "prediction_schema": {
+    "format": "CSV or UTF-8 CSV.GZ",
+    "columns": {
+      "race_key": "string",
+      "probabilities": "p_000 through p_119 in frozen class_id order"
+    },
+    "probability_array_length": 120,
+    "constraints": {
+      "all_finite": true,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "sum": 1.0,
+      "sum_absolute_tolerance": 1e-10,
+      "duplicate_race_key_allowed": false,
+      "missing_race_key_allowed": false,
+      "extra_race_key_allowed": false
+    }
+  },
+  "metrics": {
+    "log_base": "e",
+    "trifecta_log_loss": "-ln(P(actual ordered first, second, third))",
+    "winner_log_loss": "-ln(sum P(class) over classes with actual first))",
+    "exacta_log_loss": "-ln(sum P(class) over classes with actual first and second))",
+    "top3_set_log_loss": "-ln(sum P(class) over permutations of the actual top-three set))",
+    "second_given_first_log_loss": "-ln(P(actual first and second) / P(actual first))",
+    "third_given_first_second_log_loss": "-ln(P(actual ordered top three) / P(actual first and second))",
+    "trifecta_brier": "sum over 120 classes of (P(class) - one_hot(class))^2",
+    "aggregation": "unweighted arithmetic mean over main_evaluation_eligible races"
+  },
+  "zero_observed_probability_policy": "metric_is_positive_infinity; the prediction is not structurally disqualified solely for containing zero",
+  "disqualification_conditions": [
+    "prediction coverage below 100 percent",
+    "duplicate, missing, or extra race_key",
+    "probability array length other than 120",
+    "NaN or positive/negative infinity",
+    "negative probability",
+    "probability greater than one",
+    "probability sum outside tolerance",
+    "class-map hash or mapping mismatch",
+    "snapshot validation failure"
+  ],
+  "uniform_reference": {
+    "probability_per_class": 0.008333333333333333,
+    "trifecta_log_loss": 4.787491742782046,
+    "winner_log_loss": 1.791759469228055,
+    "exacta_log_loss": 3.401197381662156,
+    "top3_set_log_loss": 2.995732273553991,
+    "second_given_first_log_loss": 1.6094379124341,
+    "third_given_first_second_log_loss": 1.386294361119891,
+    "trifecta_brier": 0.991666666666667,
+    "test_absolute_tolerance": 1e-12
+  }
+}

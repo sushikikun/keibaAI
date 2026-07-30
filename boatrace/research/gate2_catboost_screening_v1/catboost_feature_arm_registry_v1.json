@@ -1,0 +1,57 @@
+{
+  "arms": [
+    {
+      "arm_id": "CB-F0",
+      "logical_feature_sets": [
+        "F0_safe_core_49"
+      ],
+      "physical_source_tables": [
+        "race_features",
+        "boat_features"
+      ]
+    },
+    {
+      "arm_id": "CB-F1",
+      "logical_feature_sets": [
+        "F0_safe_core_49",
+        "F1_asof_racer_history"
+      ],
+      "physical_source_tables": [
+        "race_features",
+        "boat_features",
+        "asof_racer_features"
+      ]
+    },
+    {
+      "arm_id": "CB-F2",
+      "logical_feature_sets": [
+        "F0_safe_core_49",
+        "F1_asof_racer_history",
+        "F2_asof_equipment_history_verified_scope"
+      ],
+      "physical_source_tables": [
+        "race_features",
+        "boat_features",
+        "asof_racer_features",
+        "asof_motor_features"
+      ]
+    }
+  ],
+  "forbidden": [
+    "target",
+    "auxiliary_targets",
+    "U1",
+    "U2",
+    "F3",
+    "F5",
+    "confirmation",
+    "final_lock",
+    "same_day",
+    "future"
+  ],
+  "inference_allowed": true,
+  "schema_id": "catboost_feature_arm_registry_v1",
+  "source_dataset_manifest_sha256": "eb2ddf85af16255dbc9d64f264ba0565da73949ccc957dda0b1de6d0bf48bf4c",
+  "source_feature_sidecar_manifest_sha256": "2a4d0549e1763ac37dc4904bd2e118142051f8058a24e61f7b36d0f4ecaff87d",
+  "source_snapshot_id": "research_v1_219240_1d586db9a15a"
+}

@@ -1,0 +1,8 @@
+{
+    "stable_masked_ovr_log_probability":  true,
+    "direct_softmax_forbidden":  true,
+    "teacher_forcing_prefix_only":  true,
+    "confirmation_access_zero":  true,
+    "final_lock_access_zero":  true,
+    "status":  "guarded_resource_blocked"
+}

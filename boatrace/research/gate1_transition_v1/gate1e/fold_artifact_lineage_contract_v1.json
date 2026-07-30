@@ -1,0 +1,13 @@
+{
+  "metrics_hashes_required": true,
+  "prediction_hashes_required": true,
+  "required_hashes": [
+    "dataset_manifest_sha256",
+    "split_manifest_sha256",
+    "feature_sidecar_manifest_sha256",
+    "class_map_sha256",
+    "model_config_sha256",
+    "code_sha256",
+    "checkpoint_sha256"
+  ]
+}

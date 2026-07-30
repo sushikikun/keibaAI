@@ -109,3 +109,24 @@ tests/test_paper_trade.py
 tests/test_reporting.py
 tests/test_signals.py
 tests/test_storage.py
+
+# Boat-race local data and generated artifacts
+boatrace/data/
+boatrace/raw/
+boatrace/results/
+boatrace/models/
+boatrace/checkpoints/
+boatrace/staging/
+boatrace/failed_runs/
+boatrace/.venv/
+boatrace/**/__pycache__/
+boatrace/**/*.pyc
+boatrace/**/*.duckdb
+boatrace/**/*.sqlite
+boatrace/**/*.sqlite3
+boatrace/**/*.parquet
+boatrace/**/*.zip
+boatrace/**/.env
+boatrace/**/.env.*
+boatrace/**/wheelhouse/
+boatrace/**/cache/

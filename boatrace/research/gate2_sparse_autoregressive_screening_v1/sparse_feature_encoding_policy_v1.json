@@ -1,0 +1,11 @@
+{
+    "n_features":  131072,
+    "input_type":  "string",
+    "dtype":  "float64",
+    "alternate_sign":  false,
+    "chunk_size":  512,
+    "dense_conversion_zero":  true,
+    "toarray_zero":  true,
+    "categorical_missing":  "__MISSING__",
+    "token_format":  "\u003cphysical_column_name\u003e=\u003cnormalized_value\u003e"
+}

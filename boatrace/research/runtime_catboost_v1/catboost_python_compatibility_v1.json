@@ -1,0 +1,11 @@
+{
+  "base_python": "<USER_HOME>\\.venvs\\boatrace-research-v1\\Scripts\\python.exe",
+  "cache_tag": "cpython-312",
+  "compatible": true,
+  "implementation": "cpython",
+  "new_python": "<USER_HOME>\\.venvs\\boatrace-research-v2-catboost\\Scripts\\python.exe",
+  "platform_machine": "AMD64",
+  "pointer_bits": 64,
+  "selected_wheel": "catboost-1.2.10-cp312-cp312-win_amd64.whl",
+  "sys_version": "3.12.13 (main, Mar  3 2026, 15:01:35) [MSC v.1944 64 bit (AMD64)]"
+}

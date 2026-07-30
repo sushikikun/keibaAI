@@ -1,0 +1,5 @@
+{
+  "canonicalization": "sorted keys, UTF-8, no timestamps",
+  "collision_policy": "reject",
+  "formula": "sha256(canonical_config_json)[:16]"
+}

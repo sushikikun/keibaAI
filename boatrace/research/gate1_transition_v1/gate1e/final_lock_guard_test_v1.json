@@ -1,0 +1,8 @@
+{
+  "double_unlock_rejected": true,
+  "manifest_change_rejected": true,
+  "passed": true,
+  "unlock_missing_rejected": true,
+  "wrong_challenger_hash_rejected": true,
+  "wrong_final_lock_manifest_hash": "PASS_REJECTED"
+}

@@ -1,0 +1,27 @@
+{
+  "dependency_conflicts": 0,
+  "existing_gate2a_versions_unchanged": true,
+  "extras": [],
+  "only_binary": true,
+  "passed": true,
+  "pre_release": false,
+  "pypi_sha256_match": true,
+  "required_distributions": [
+    "graphviz",
+    "matplotlib",
+    "numpy<3.0,>=1.16.0",
+    "pandas<4.0,>=0.24",
+    "scipy",
+    "plotly",
+    "six",
+    "traitlets; extra == \"widget\"",
+    "ipython; extra == \"widget\"",
+    "ipywidgets<9.0,>=7.0; extra == \"widget\""
+  ],
+  "resolver": "pip",
+  "selected_catboost_sha256": "6b8a7ef11d7a89fc547760cfafeee895011a4b92cc1f60d00235ef80a71158ed",
+  "selected_catboost_wheel": "catboost-1.2.10-cp312-cp312-win_amd64.whl",
+  "source": "official-pypi",
+  "source_build_count": 0,
+  "source_distribution_count": 0
+}

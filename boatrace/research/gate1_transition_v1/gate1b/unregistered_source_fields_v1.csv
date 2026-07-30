@@ -1,0 +1,6 @@
+source_table,source_field,classification,formal_feature_included,reason
+raw_program_json,racer_flying_count,unregistered_source_field,False,proposed_future_feature; not in frozen safe_core
+raw_program_json,racer_late_count,unregistered_source_field,False,proposed_future_feature; not in frozen safe_core
+raw_program_json,day_label,unregistered_source_field,False,race stage text is not validated as safe_core
+raw_result_json,racer_course_number,unregistered_source_field,False,post-event actual course; target-only auxiliary provenance
+raw_result_json,racer_start_timing,unregistered_source_field,False,post-event actual start; target-only auxiliary provenance

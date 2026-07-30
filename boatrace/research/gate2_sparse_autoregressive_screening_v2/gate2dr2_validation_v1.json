@@ -1,0 +1,38 @@
+{
+    "prior_run_invalidated_for_probability_contract":  true,
+    "prior_artifacts_unchanged":  true,
+    "probability_failure_reproduced":  true,
+    "stable_masked_OVR_log_probability_used":  true,
+    "direct_softmax_not_used":  true,
+    "stage_classes_complete_and_aligned":  true,
+    "stage1_sum_passed":  true,
+    "stage2_mask_and_sum_passed":  true,
+    "stage3_mask_and_sum_passed":  true,
+    "joint_120_sum_passed":  true,
+    "extreme_logit_canaries_passed":  true,
+    "real_fixture_wiring_passed":  false,
+    "train_chunk_size_256":  true,
+    "prediction_chunk_size_32":  true,
+    "Fold1_to_4_rerun_from_zero":  true,
+    "SAR_F0_completed_all_folds":  false,
+    "SAR_F1_completed_all_folds":  false,
+    "SAR_F2_attempted":  false,
+    "prediction_coverage_100_percent":  false,
+    "probability_sum_max_error_le_1e_12":  false,
+    "confirmation_access_zero":  true,
+    "final_lock_access_zero":  true,
+    "final_lock_unlock_zero":  true,
+    "dependency_install_count_zero":  true,
+    "protected_anchor_difference_zero":  true,
+    "automation_remains_paused":  true,
+    "formal_champion_not_selected":  true,
+    "run_id":  "sparse_autoregressive_run_v2_c932c340ba2bcb7955fe",
+    "minimum_available_mib":  881,
+    "errors":  [
+
+               ],
+    "warnings":  [
+                     "Fold1 real-data subprocess stopped below 1024 MiB before fixture/training validation completed"
+                 ],
+    "status":  "resource_blocked"
+}

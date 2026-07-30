@@ -1,0 +1,10 @@
+package,requested_version,source,selection_reason,extras_allowed
+catboost,1.2.10,official-pypi,required Gate2-C-A runtime package,none
+graphviz,metadata-selected,official-pypi,declared CatBoost dependency,none
+matplotlib,metadata-selected,official-pypi,declared CatBoost dependency,none
+numpy,2.3.5,existing-gate2a-wheelhouse,Gate2-A exact lock,none
+pandas,3.0.1,existing-gate2a-wheelhouse,Gate2-A exact lock,none
+plotly,metadata-selected,official-pypi,declared CatBoost dependency,none
+scipy,1.18.0,existing-gate2a-wheelhouse,Gate2-A exact lock,none
+six,1.17.0,existing-gate2a-wheelhouse,Gate2-A exact lock,none
+scikit-learn,1.9.0,existing-gate2a-wheelhouse,Gate2-A exact lock,none

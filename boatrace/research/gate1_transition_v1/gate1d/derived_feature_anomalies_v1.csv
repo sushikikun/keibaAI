@@ -1,0 +1,3 @@
+feature_set_id,feature_name,anomaly_type,count,example
+F1_asof_racer_history,history_block,cold_start_null,2731,first racer observation; null by policy
+F2_asof_equipment_history_verified_scope,equipment_block,unresolved_scope,1100310,non-verified A/B remains null

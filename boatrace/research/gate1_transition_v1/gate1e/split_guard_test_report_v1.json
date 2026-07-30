@@ -1,0 +1,8 @@
+{
+  "confirmation_to_final_lock_rejected": true,
+  "passed": true,
+  "screening_to_confirmation_rejected": true,
+  "screening_to_final_lock_rejected": true,
+  "unknown_race_rejected": true,
+  "wrong_manifest_rejected": true
+}

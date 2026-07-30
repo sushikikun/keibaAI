@@ -1,0 +1,189 @@
+{
+  "checks": {
+    "adjudicated_roles_10_60_6": true,
+    "core_proposals_35_to_programs_15": true,
+    "formal_registry_action_not_applied_all": true,
+    "formal_registry_sha256_unchanged": true,
+    "h034_h109_count_76": true,
+    "local_inputs_all_match": true,
+    "merge_decisions_count_6": true,
+    "primary_metric_trifecta_log_loss": true,
+    "primary_parent_cycle_zero": true,
+    "program_member_total_35": true,
+    "protected_anchor_difference_count_zero": true,
+    "source_artifact_hash_mismatch_zero": true,
+    "source_id_deletion_zero": true,
+    "source_manifest_sha256_match": true,
+    "zip_sha256_copied_match": true
+  },
+  "counts": {
+    "artifact_hash_mismatch_count": 0,
+    "decision_programs": 15,
+    "input_files": 6,
+    "merge_decisions": 6,
+    "merged_variants": 6,
+    "program_members": 35,
+    "protected_anchor_difference_count": 0,
+    "records": 76,
+    "source_package_bytes": 283414,
+    "source_package_files": 19,
+    "top_level_candidates": 10,
+    "variants": 60
+  },
+  "created_at": "2026-07-28T08:09:32.893015+00:00",
+  "eligible_for_model_training": false,
+  "errors": [],
+  "local_input_reconciliation": [
+    {
+      "bom_match": true,
+      "file_name": "addendum_core_experiment_proposal_v1.csv",
+      "header_match": true,
+      "id_set_match": true,
+      "local_path": "research/hypothesis_addenda/boatrace_research_hypothesis_addendum_v1/addendum_core_experiment_proposal_v1.csv",
+      "local_row_count": 35,
+      "local_sha256": "a568eb11a70a8dce25e5d32a5cd1c488a2b7b615cf803bda2b9efd5266d732bc",
+      "local_size_bytes": 15768,
+      "package_path": "inputs/addendum_core_experiment_proposal_v1.csv",
+      "package_row_count": 35,
+      "package_sha256": "a568eb11a70a8dce25e5d32a5cd1c488a2b7b615cf803bda2b9efd5266d732bc",
+      "package_size_bytes": 15768,
+      "row_count_match": true,
+      "sha256_match": true,
+      "size_match": true,
+      "status": "matched"
+    },
+    {
+      "bom_match": true,
+      "file_name": "addendum_data_gap_proposal_v1.csv",
+      "header_match": true,
+      "id_set_match": true,
+      "local_path": "research/hypothesis_addenda/boatrace_research_hypothesis_addendum_v1/addendum_data_gap_proposal_v1.csv",
+      "local_row_count": 76,
+      "local_sha256": "a9649f411481f26ce8bcc20dd7beb2dd8786ed6c005547e3c56d472cfbe9fe4f",
+      "local_size_bytes": 29593,
+      "package_path": "inputs/addendum_data_gap_proposal_v1.csv",
+      "package_row_count": 76,
+      "package_sha256": "a9649f411481f26ce8bcc20dd7beb2dd8786ed6c005547e3c56d472cfbe9fe4f",
+      "package_size_bytes": 29593,
+      "row_count_match": true,
+      "sha256_match": true,
+      "size_match": true,
+      "status": "matched"
+    },
+    {
+      "bom_match": true,
+      "file_name": "addendum_dependency_review_v1.csv",
+      "header_match": true,
+      "id_set_match": true,
+      "local_path": "research/hypothesis_addenda/boatrace_research_hypothesis_addendum_v1/addendum_dependency_review_v1.csv",
+      "local_row_count": 76,
+      "local_sha256": "41ba443d9e3f8a81e3dbcdf40762856f027abe0cd1e0c47bd6a377fc3eee6e26",
+      "local_size_bytes": 10950,
+      "package_path": "inputs/addendum_dependency_review_v1.csv",
+      "package_row_count": 76,
+      "package_sha256": "41ba443d9e3f8a81e3dbcdf40762856f027abe0cd1e0c47bd6a377fc3eee6e26",
+      "package_size_bytes": 10950,
+      "row_count_match": true,
+      "sha256_match": true,
+      "size_match": true,
+      "status": "matched"
+    },
+    {
+      "bom_match": true,
+      "file_name": "addendum_overlap_review_v1.csv",
+      "header_match": true,
+      "id_set_match": true,
+      "local_path": "research/hypothesis_addenda/boatrace_research_hypothesis_addendum_v1/addendum_overlap_review_v1.csv",
+      "local_row_count": 76,
+      "local_sha256": "fc0b6a8ce69e71c26979c06e9cb84978acecd49db9d07ec63f43eae0609e1d31",
+      "local_size_bytes": 24722,
+      "package_path": "inputs/addendum_overlap_review_v1.csv",
+      "package_row_count": 76,
+      "package_sha256": "fc0b6a8ce69e71c26979c06e9cb84978acecd49db9d07ec63f43eae0609e1d31",
+      "package_size_bytes": 24722,
+      "row_count_match": true,
+      "sha256_match": true,
+      "size_match": true,
+      "status": "matched"
+    },
+    {
+      "bom_match": true,
+      "file_name": "boatrace_research_hypothesis_addendum_v1.csv",
+      "header_match": true,
+      "id_set_match": true,
+      "local_path": "research/hypothesis_addenda/boatrace_research_hypothesis_addendum_v1/source_package/boatrace_research_hypothesis_addendum_v1/boatrace_research_hypothesis_addendum_v1.csv",
+      "local_row_count": 76,
+      "local_sha256": "8bf80d55060818f445b61940fbe25451f9d6600c11b51d808f18d19d299187fc",
+      "local_size_bytes": 39163,
+      "package_path": "inputs/boatrace_research_hypothesis_addendum_v1.csv",
+      "package_row_count": 76,
+      "package_sha256": "8bf80d55060818f445b61940fbe25451f9d6600c11b51d808f18d19d299187fc",
+      "package_size_bytes": 39163,
+      "row_count_match": true,
+      "sha256_match": true,
+      "size_match": true,
+      "status": "matched"
+    },
+    {
+      "bom_match": true,
+      "file_name": "hypothesis_execution_readiness_v1.csv",
+      "header_match": true,
+      "id_set_match": true,
+      "local_path": "research/hypothesis_execution_readiness_v1.csv",
+      "local_row_count": 33,
+      "local_sha256": "5f9781c6240045ab3712d0320e5354f4cf2553979a7be7f781c0ffe7db509d58",
+      "local_size_bytes": 12806,
+      "package_path": "inputs/hypothesis_execution_readiness_v1.csv",
+      "package_row_count": 33,
+      "package_sha256": "5f9781c6240045ab3712d0320e5354f4cf2553979a7be7f781c0ffe7db509d58",
+      "package_size_bytes": 12806,
+      "row_count_match": true,
+      "sha256_match": true,
+      "size_match": true,
+      "status": "matched"
+    }
+  ],
+  "merge_targets": [
+    {
+      "canonical_parent_id": "H049",
+      "source_hypothesis_id": "H061"
+    },
+    {
+      "canonical_parent_id": "H043",
+      "source_hypothesis_id": "H062"
+    },
+    {
+      "canonical_parent_id": "H040",
+      "source_hypothesis_id": "H078"
+    },
+    {
+      "canonical_parent_id": "H039",
+      "source_hypothesis_id": "H082"
+    },
+    {
+      "canonical_parent_id": "H019",
+      "source_hypothesis_id": "H099"
+    },
+    {
+      "canonical_parent_id": "H049",
+      "source_hypothesis_id": "H101"
+    }
+  ],
+  "passed": true,
+  "purpose": "canonical_adjudication_sidecar_only",
+  "source_manifest": {
+    "manifest_id": "boatrace_research_hypothesis_adjudication_v1_manifest",
+    "sha256": "66898cb8ff6604b90aee5b509df0c82db3f6f5e335b599864e9803ddbaeb3bfd"
+  },
+  "status": "provisional",
+  "validation_id": "canonical_adjudication_local_validation_v1",
+  "warnings": [
+    "10 top-level records remain candidates and are not formally adopted.",
+    "All 66 non-top-level source IDs remain proposal-only variants; none was deleted or merged into the formal registry."
+  ],
+  "zip": {
+    "sha256": "b7f39de7a10714498fde91a5d4a2e6a88f57b4a80ea6118ec3a6d1ceae53ffa5",
+    "size_bytes": 54752,
+    "source_path": "<USER_HOME>\\Downloads\\boatrace_research_hypothesis_adjudication_v1.zip"
+  }
+}

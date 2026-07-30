@@ -1,0 +1,6 @@
+{
+  "parser_regime_blocker_count": 0,
+  "anomaly_count": 0,
+  "major_parser_discontinuity": false,
+  "rules": "single pinned parser regime; no discontinuity observed"
+}

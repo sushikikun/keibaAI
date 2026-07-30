@@ -1,0 +1,78 @@
+{
+  "manifest_id": "boatrace_gate2b_manifest_v1",
+  "gate": "Gate 2-B",
+  "baseline_run_id": "baseline_run_v1_da5fd9906e5e",
+  "artifacts": [
+    {
+      "path": "baseline_hyperparameter_grid_v1.json",
+      "sha256": "329b93eb30ea3800bf684fa73fbc5397ec6e7efd147a8beb190b21d94935a4b7",
+      "size_bytes": 241
+    },
+    {
+      "path": "baseline_model_registry_v1.json",
+      "sha256": "78bbd922d9abf4148bdb3814ef71c70f48e27eb4e30a0a31628fbcbab1315b2a",
+      "size_bytes": 1705
+    },
+    {
+      "path": "baseline_selection_policy_v1.json",
+      "sha256": "897321c743bec9e9a76f6b9bda4b1353a39ed131e7acd10881e30a94ae0eb752",
+      "size_bytes": 334
+    },
+    {
+      "path": "gate2b_data_access_audit_v1.json",
+      "sha256": "46460299246b7ff3cc9a0f994872bdcd72989886f1edc96cd377adff8bc4d9b9",
+      "size_bytes": 438
+    },
+    {
+      "path": "gate2b_guard_audit_v1.json",
+      "sha256": "966da0690de7856d96cf4a185b234d85226bf2f59f465de3bc00576cf5aebcf9",
+      "size_bytes": 204
+    },
+    {
+      "path": "gate2b_input_validation_v1.json",
+      "sha256": "454a15585388ab5306723e16d6d3b24b9bc900c3e9735f14069d1b3a4126616e",
+      "size_bytes": 684
+    },
+    {
+      "path": "gate2b_leakage_validation_v1.json",
+      "sha256": "fab39c8fbec00c86f10be93a2f8c738e54b68a3abea302cec3c78fe0b222a83e",
+      "size_bytes": 415
+    },
+    {
+      "path": "gate2b_readiness_patch_proposal_v1.json",
+      "sha256": "2a176f3bc00eed6fdcbc7cad73c22ae400e4f716f5145a298296b2e892cfb9ac",
+      "size_bytes": 327
+    },
+    {
+      "path": "gate2b_report_v1.md",
+      "sha256": "947a6a01219c41fe100550b3944d79a81f48f3bb6545349b5b06c3e387b55f79",
+      "size_bytes": 1458
+    },
+    {
+      "path": "gate2b_validation_v1.json",
+      "sha256": "375dad26a88c5bd4cd5602f5b5750339c91a9473a327053d475663ccddfd130b",
+      "size_bytes": 1166
+    },
+    {
+      "path": "gate2c_authorization_requirements_v1.md",
+      "sha256": "167488a32804a7778c19e9c39459a6dd4ad501f79b42e0fe7c6e633197b1dab1",
+      "size_bytes": 189
+    },
+    {
+      "path": "protected_anchor_after_gate2b.csv",
+      "sha256": "bfb617a0b2c2cabcf8866bcb55e364031484d8e5fcc07638714ab3efec99e4f4",
+      "size_bytes": 2426740
+    },
+    {
+      "path": "protected_anchor_before_gate2b.csv",
+      "sha256": "bfb617a0b2c2cabcf8866bcb55e364031484d8e5fcc07638714ab3efec99e4f4",
+      "size_bytes": 2426740
+    },
+    {
+      "path": "protected_anchor_diff_gate2b.csv",
+      "sha256": "9a390ecdd68452489fd17a7bb0b4aeb02999bd7e60c724efcbe17b78707cab23",
+      "size_bytes": 49
+    }
+  ],
+  "created_at": "2026-07-29T19:54:34.479468+00:00"
+}
