@@ -1,2 +1,0 @@
-timestamp_utc,candidate_id,fold_id,feature_arm,config_id,phase,system_available_mib,child_working_set_mib,child_private_bytes_mib,action
-2026-07-30T11:36:26.3662421Z,none,screening_fold_1,CB-F0,C01,preflight,2544,,,clean_retry_waiting_for_host_memory

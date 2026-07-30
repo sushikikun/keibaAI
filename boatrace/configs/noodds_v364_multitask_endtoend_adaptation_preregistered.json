@@ -1,8 +1,0 @@
-{
-  "model_id":"noodds_v364_multitask_endtoend_adaptation",
-  "hypothesis":"Low-learning-rate end-to-end adaptation of the v360 multi-task encoder to chronological OOF trifecta NLL captures outcome-relevant nonlinear directions lost by the frozen linear residual.",
-  "training":{"max_epochs":16,"patience":3,"minimum_improvement":0.00005,"batch_races":384,"encoder_learning_rate":0.000015,"head_learning_rate":0.0008,"weight_decay":0.002,"encoder_anchor_l2":0.0002,"gradient_clip":1.0,"threads":5,"seed":36401},
-  "rolling":{"d9":{"core":["d6","d7"],"selection":"d8"},"d10":{"core":["d6","d7","d8"],"selection":"d9"},"d11":{"core":["d6","d7","d8","d9"],"selection":"d10"}},
-  "goal":{"intermediate_below":3.7,"final_below":3.6892},
-  "policy":{"odds_used":false,"payout_used":false,"same_day_results_used":false,"future_data_used":false,"current_actual_course_st_technique_used":false}
-}

@@ -39,7 +39,7 @@
     "dpi": 80,
     "pdf_count": 4,
     "rendered_page_count": 6,
-    "renderer": "/home/oai/skills/pdfs/scripts/render_pdf.py",
+    "renderer": "<LOCAL_RUNTIME>/render_pdf.py",
     "status": "pass"
   },
   "raw_checks": [

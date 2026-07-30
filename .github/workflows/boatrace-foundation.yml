@@ -1,0 +1,34 @@
+name: Boat-race foundation
+on:
+  pull_request:
+    paths: ['boatrace/**', '.github/workflows/boatrace-foundation.yml']
+  workflow_dispatch:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Compile and validate public artifacts
+        run: |
+          python -m compileall -q boatrace/src boatrace/tests
+          python - <<'PY'
+          import csv, json, re
+          from pathlib import Path
+          root = Path('boatrace')
+          banned = re.compile(r'(?:C:\\Users\|/home/|api[_-]?key|secret|token=)', re.I)
+          for p in root.rglob('*'):
+              if not p.is_file(): continue
+              assert p.stat().st_size < 10 * 1024 * 1024, p
+              if p.suffix == '.json': json.loads(p.read_text(encoding='utf-8'))
+              if p.suffix == '.csv':
+                  with p.open(encoding='utf-8', newline='') as f:
+                      h = next(csv.reader(f), [])
+                  assert len(h) == len(set(h)), p
+              if p.suffix in {'.py', '.md', '.json', '.csv', '.yml'}:
+                  assert not banned.search(p.read_text(encoding='utf-8', errors='ignore')), p
+          PY
+      - name: Run retained unit tests
+        env: {PYTHONPATH: boatrace/src}
+        run: python -m unittest boatrace/tests/test_boatrace_model_research_v0.py

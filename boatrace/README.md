@@ -1,27 +1,24 @@
 # Boat-race AI research foundation
 
-This directory is an independent boat-race AI research project inside `keibaAI`. The existing keibaAI horse-racing project is not moved or rewritten.
+This directory is an independent, sanitized research foundation. The existing horse-racing MVP remains untouched.
 
-## Scope
+## GitHub scope
 
-- Research-only code, contracts, validation, audit, and sanitized Gate 1 / Gate 2 artifacts.
-- No raw HTML/JSON, complete-corpus bodies, snapshots, feature rows, odds/payout tables, models, checkpoints, databases, virtual environments, caches, secrets, or local machine paths.
-- Large research files over 10 MiB are excluded from the public import. The complete inclusion/exclusion ledger is `manifests/github_import_inventory_v1.csv`.
+Only contracts, minimal reusable source code, one synthetic-fixture unit test, current research status, model-family specifications, and provenance manifests are public. Local-only data, raw source material, odds/payout tables, predictions, models, databases, caches, and machine-specific artifacts are deliberately excluded.
 
-## Current public status
+## Canonical current files
 
-- Strict complete race count: 200,118 (local-only source artifact; not included here).
-- Audit candidate count: 219,240 (local-only source artifact; not included here).
-- Primary supervised U0 scope: 200,118 races.
-- Main target: future trifecta log loss without odds leakage.
-- B3 calibrated screening log loss reference: 4.151932308088278.
-- Current Gate 2-F status: `resource_blocked`; available physical memory reached 356.5 MiB, below the 512 MiB hard-stop threshold. No arm ranking or formal champion is claimed.
-- Confirmation and Final lock access: 0 in the migrated research record.
+- `configs/boatrace_model_dataset_contract_v1.json`
+- `configs/boatrace_model_evaluation_v1_1.json`
+- `configs/boatrace_model_outcome_audit_v0_1.json`
+- `configs/trifecta_class_map_v1.json`
+- `research/current_research_status_v1.md`
+- `manifests/local_data_registry_v1.json`
 
-## Layout
+Historical configurations and local integration tests are represented by `manifests/historical_config_registry_v1.csv` and `manifests/local_integration_test_registry_v1.csv`; they are not executable in a GitHub clone because their local dependencies are intentionally excluded.
 
-`configs/`, `docs/`, `research/`, `src/`, `scripts/`, `tests/`, `schemas/`, and `manifests/` contain sanitized project material. Local data release IDs and hashes are recorded in `manifests/local_data_registry_v1.json`; those local artifacts remain local-only and are not committed here.
+## Validation and CI
 
-## Reproducibility
+`tests/test_boatrace_model_research_v0.py` is a synthetic-fixture unit test and runs without local data or network access. GitHub Actions runs compilation, JSON/CSV/secret/path/size checks, and this retained test on changes below `boatrace/**`.
 
-Run tests from the repository root with the project's supported Python environment. Public files use placeholders such as `<PROJECT_ROOT>` instead of local absolute paths. No dependency installation or data download is performed by this import.
+Gate 2-F remains `resource_blocked`; this import does not claim a formal champion or reproduce WR-S/WR-H metrics. Confirmation and Final-lock artifacts were not accessed. Future model work must use a separate confirmed workflow.

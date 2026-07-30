@@ -125,12 +125,7 @@ IMPLEMENTATION_FILES = [
     "src/boatrace_model_research/snapshot.py",
     "src/boatrace_model_research/validation.py",
     "src/boatrace_model_research/evaluation.py",
-    "scripts/build_boatrace_model_snapshot.py",
-    "scripts/validate_boatrace_model_snapshot.py",
-    "scripts/check_boatrace_model_eligibility.py",
-    "scripts/generate_boatrace_uniform_predictions.py",
-    "scripts/evaluate_boatrace_trifecta_predictions.py",
-    "scripts/sanity_test_boatrace_model_research.py",
+
 ]
 
 CONFIG_FILES = [

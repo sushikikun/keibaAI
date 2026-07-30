@@ -1,8 +1,0 @@
-{
-  "model_id":"noodds_v362_v360_venue_scenario_experts",
-  "hypothesis":"The multi-task v360 global representation leaves stable venue-specific biases that latent predicted course/ST features can correct with hierarchical shrinkage.",
-  "training":{"max_epochs":30,"patience":4,"minimum_improvement":0.00003,"batch_races":512,"learning_rate":0.002,"shared_l2":0.2,"venue_l2":2.0,"gradient_clip":1.0,"threads":4,"seed":36201},
-  "protocol":{"d9":"v360 passthrough","d10":"train D9 with internal chronological last-20-percent selection","d11":"train D9 and select D10, then refit D9+D10"},
-  "goal":{"intermediate_below":3.7,"final_below":3.6892},
-  "policy":{"odds_used":false,"payout_used":false,"same_day_results_used":false,"future_data_used":false,"actual_course_st_technique_are_teacher_only":true}
-}

@@ -1,8 +1,0 @@
-{
-  "model_id":"noodds_v365_pairwise_order_decoder",
-  "hypothesis":"Explicit low-dimensional pairwise interactions between first, second, and third place candidates capture ordered-combination dependence omitted by additive stage utilities.",
-  "architecture":{"projection_width":16,"projection_seed":36500,"zero_initialization":"exactly v312"},
-  "training":{"max_epochs":35,"patience":4,"minimum_improvement":0.00004,"batch_races":512,"learning_rate":0.0015,"weight_decay":0.01,"gradient_clip":1.0,"threads":5,"seed":36501},
-  "goal":{"intermediate_below":3.7,"final_below":3.6892},
-  "policy":{"odds_used":false,"payout_used":false,"same_day_results_used":false,"future_data_used":false,"current_actual_course_st_technique_used":false}
-}

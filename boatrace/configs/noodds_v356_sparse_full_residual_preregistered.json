@@ -1,7 +1,0 @@
-{
- "model_id":"noodds_v356_sparse_full_residual","frozen_before_evaluation":true,
- "hypothesis":"Strongly regularized stage-specific utility corrections can extract incremental value from all current features without discarding v312's learned distribution.",
- "fit":{"l2_grid":[0.01,0.03,0.1,0.3],"coefficient_bounds":[-0.2,0.2],"selection":"immediately preceding full block","refit":"core plus selection before next block"},
- "goal":{"period":"2026-05-01 through 2026-07-17","absolute_logloss_below":3.6892},
- "policy":{"odds_used":false,"payout_used":false,"same_day_results_used_for_features":false,"future_data_used":false,"current_dataset_only":true,"post_result_hyperparameter_change":false}
-}

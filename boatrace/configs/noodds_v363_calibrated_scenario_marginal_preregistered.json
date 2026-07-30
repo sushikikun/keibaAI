@@ -1,8 +1,0 @@
-{
-  "model_id":"noodds_v363_calibrated_scenario_marginal",
-  "frozen_before_evaluation":true,
-  "scenario_generation":{"st_residual_sigma":0.0525213368,"st_offsets":[-1.0,0.0,1.0],"st_weights":[0.1586552539,0.6826894922,0.1586552539],"course_temperature":2.0},
-  "training":{"max_epochs":20,"patience":3,"minimum_improvement":0.00005,"batch_races":192,"learning_rate":0.0002,"weight_decay":0.01,"gradient_clip":1.0,"threads":4,"seed":36301},
-  "goal":{"intermediate_below":3.7,"final_below":3.6892},
-  "policy":{"odds_used":false,"payout_used":false,"same_day_results_used":false,"future_data_used":false,"target_actual_course_or_st_used":false,"post_result_hyperparameter_change":false}
-}
