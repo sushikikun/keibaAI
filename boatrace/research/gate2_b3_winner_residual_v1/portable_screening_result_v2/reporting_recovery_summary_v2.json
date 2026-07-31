@@ -1,0 +1,16 @@
+{
+  "status": "validated",
+  "source_failure_stage": "post_fit_reporting",
+  "source_failure": "selected_lambda CSV DictWriter rejected fields outside its declared schema",
+  "source_run_preserved": true,
+  "all_eight_raw_prediction_files_complete": true,
+  "original_calibrated_files_complete_and_hash_matched": 6,
+  "original_calibrated_files_truncated": 2,
+  "calibrated_files_regenerated": 8,
+  "regeneration_method": "apply recorded Fold/arm scalar temperature to complete raw 120-class probabilities",
+  "additional_model_fit_count": 0,
+  "formal_metrics_recomputed_from_individual_races": true,
+  "runner_unweighted_pooled_rows_used": false,
+  "validation_result": "passed",
+  "scientific_interpretation": "The model computations completed; recovery was limited to deterministic post-fit reporting."
+}

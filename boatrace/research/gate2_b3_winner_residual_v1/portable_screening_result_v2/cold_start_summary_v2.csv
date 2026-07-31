@@ -1,0 +1,7 @@
+subset_id,model_id,prediction_kind,count,trifecta_log_loss,winner_log_loss,hit_at_1,hit_at_5,mean_reciprocal_rank,note
+any_lane_cold_start,B3,calibrated,55,4.008277003861122,1.4125306514893345,0.12727272727272726,0.32727272727272727,0.23806452393953156,descriptive_only_small_subset
+any_lane_cold_start,WR-S,calibrated,55,3.8319499505858454,1.228963561101259,0.14545454545454545,0.32727272727272727,0.2587769346264823,descriptive_only_small_subset
+any_lane_cold_start,WR-H,calibrated,55,3.8333056817301614,1.2295954745571562,0.12727272727272726,0.32727272727272727,0.2421337538293936,descriptive_only_small_subset
+winning_lane_cold_start,B3,calibrated,0,,,,,,no_evaluation_race_in_subset
+winning_lane_cold_start,WR-S,calibrated,0,,,,,,no_evaluation_race_in_subset
+winning_lane_cold_start,WR-H,calibrated,0,,,,,,no_evaluation_race_in_subset

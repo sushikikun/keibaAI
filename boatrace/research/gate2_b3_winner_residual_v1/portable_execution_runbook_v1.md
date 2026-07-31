@@ -1,5 +1,7 @@
 # Gate 2-F portable execution runbook
 
+> Historical execution runbook. Gate 2-F Screening was subsequently completed with validated post-fit reporting recovery. See `portable_screening_result_v2/run_report_v2.md` and `../current_research_status_v1.md`. Do not rerun or open Confirmation data from this document alone.
+
 This is the execution entry point for continuing Gate 2-F on another trusted PC. Read the full canonical handoff first:
 
 - `boatrace/docs/next_steps_and_external_host_handoff_v1.md`

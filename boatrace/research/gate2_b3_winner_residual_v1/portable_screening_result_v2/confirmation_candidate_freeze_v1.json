@@ -1,0 +1,66 @@
+{
+  "artifact": "gate2f_confirmation_candidate_freeze_v1",
+  "status": "pending_explicit_authorization",
+  "screening_source": {
+    "draft_pr_number": 6,
+    "screening_result_commit_sha": "bb446431576f1387a8aa5b0109cce793132b341c",
+    "public_run_manifest_sha256": "33f28a86101538f930bfc1976d33c766902bb517c6376218bd05674ddc0ce06a",
+    "screening_candidate": "WR-H",
+    "screening_support": {
+      "pooled_calibrated_delta_vs_b3": -0.12339377846404213,
+      "improved_fold_count": 4,
+      "fold_count": 4,
+      "wr_h_vs_wr_s_pooled_calibrated_delta": -0.00682101602147674
+    }
+  },
+  "candidate_contract": {
+    "arm": "WR-H",
+    "model_form": "B3 winner prior plus official racer snapshot and F1 as-of racer-history residual",
+    "winner_only_correction": true,
+    "b3_second_stage_fixed": true,
+    "b3_third_stage_fixed": true,
+    "class_count": 120,
+    "lambda_grid": [0.01, 0.1, 1.0, 10.0, 100.0],
+    "screening_selected_lambda": 0.01,
+    "preprocessing": "train-only median imputation, missing indicators, train mean/std z-score",
+    "feature_selection_inside_run": false,
+    "calibration_policy": "scalar temperature; calibrator type fixed before Confirmation; temperature fit only on the Confirmation calibration role",
+    "seed_policy": "unchanged registered bundle seed",
+    "prohibited_inputs": ["odds", "popularity", "payout", "future", "F2", "same_day_previous_result"]
+  },
+  "frozen_public_contract_hashes": {
+    "model_contract_sha256": "8af352152b48b049c6dedc1e5e8a9fba163b0d2ac4755f239aedfaff3b76e75f",
+    "preprocessing_contract_sha256": "cd32fb5609cd3b86af3e64664acfd7fccc6a23cf5b08fac57f51b1f2cf2c5918",
+    "optimizer_policy_sha256": "0a6d8f191db9ff8cb634fe72deb74ceb37175401a6bfd2283542c8d17faf9b2c",
+    "feature_arm_registry_sha256": "5112d6367e14b739afc8bd446de357f89d5adb0328672485e77d69f8b6de78b2",
+    "screening_manifest_sha256": "33f28a86101538f930bfc1976d33c766902bb517c6376218bd05674ddc0ce06a",
+    "confirmation_split_manifest_sha256": "44ce2ab966821545886f9f2d4f86d021b75be0532a0afc799ec065edab6c3e68",
+    "confirmation_atomic_policy_sha256": "b90a2bf034aec1784e7dd2e9d90992214f909efd671b3a0c263a0997bbe8feca",
+    "protected_b3_manifest_sha256": "f3eb62dc643c9f2561f5ec1827e3d070b63fd85952425ea69b39dc0f73a8c6e3"
+  },
+  "confirmation_run_contract": {
+    "split_source": "Gate 1-E confirmation split manifest",
+    "confirmation_fold_count": 2,
+    "atomic_run_required": true,
+    "no_tuning": true,
+    "no_candidate_switching": true,
+    "predictions_complete_before_metrics": true,
+    "final_lock_sealed": true,
+    "resource_preflight_required": true
+  },
+  "proposed_preregistered_success_criteria": {
+    "primary": "calibrated pooled trifecta Log Loss below B3 and paired WR-H-minus-B3 95% CI upper bound below zero",
+    "fold_stability": "neither untouched Confirmation Fold deteriorates by more than 0.01 versus B3",
+    "contract": "100% coverage, valid 120-class probabilities, zero prohibited-feature access, unchanged raw B3 second/third conditionals",
+    "failure_action": "reject progression; no tuning, retry with changed parameters, candidate switch, or Final-lock access"
+  },
+  "authorization": {
+    "issue_number": 7,
+    "state": "PENDING_EXPLICIT_AUTHORIZATION",
+    "confirmation_data_access_count": 0,
+    "confirmation_rows_in_current_bundle": 0,
+    "final_lock_access_count": 0,
+    "final_lock_unlock_count": 0,
+    "automation": "PAUSED"
+  }
+}
