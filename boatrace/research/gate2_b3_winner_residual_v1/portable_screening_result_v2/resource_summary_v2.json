@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "preflight_sample_count": 13,
+  "preflight_sample_interval_seconds": 5,
+  "preflight_duration_seconds": 60,
+  "required_minimum_available_memory_mib": 3072,
+  "first_available_memory_mib": 20949,
+  "minimum_available_memory_mib": 20911,
+  "final_available_memory_mib": 20942,
+  "final_drop_from_first_mib": 7,
+  "competing_training_process_count": 0,
+  "execution_elapsed_seconds": 1170,
+  "execution_minimum_available_memory_mib": 16928,
+  "process_peak_rss_mib": null,
+  "warning_threshold_mib": 1024,
+  "hard_stop_threshold_mib": 512,
+  "warning_trigger_count": 0,
+  "hard_stop_trigger_count": 0,
+  "execution_order": "fully_serial_fold_then_arm",
+  "note": "Process peak RSS was not collected; host-level available memory was monitored throughout execution."
+}

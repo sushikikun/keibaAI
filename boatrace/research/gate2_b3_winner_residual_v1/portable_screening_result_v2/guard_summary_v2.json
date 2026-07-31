@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "screening_only": true,
+  "target_status": "unique_one_hot_only",
+  "odds_access_count": 0,
+  "popularity_access_count": 0,
+  "payout_access_count": 0,
+  "f2_access_count": 0,
+  "future_feature_access_count": 0,
+  "same_day_previous_result_access_count": 0,
+  "confirmation_access_count": 0,
+  "final_lock_access_count": 0,
+  "final_lock_unlock_count": 0,
+  "confirmation_row_count_in_bundle": 0,
+  "final_lock_row_count_in_bundle": 0,
+  "protected_b3_unchanged": true,
+  "automation": "PAUSED"
+}

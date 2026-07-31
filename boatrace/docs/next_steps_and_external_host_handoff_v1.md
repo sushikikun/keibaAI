@@ -1,5 +1,7 @@
 # Boat-race AI: next steps and external-host handoff v1
 
+> Superseded for current operations after Gate 2-F Screening completion. This remains the historical portable-execution contract. Use `next_steps_after_gate2f_screening_v1.md` and `../research/gate2_b3_winner_residual_v1/portable_screening_result_v2/run_report_v2.md` for the current next action. Confirmation and Final lock remain sealed.
+
 This document is the canonical public handoff for continuing the boat-race AI research from a different PC. It is written so that a fresh operator or Codex session can understand the current state, obtain the local-only execution bundle, run the next experiment without changing the scientific contract, and return only safe public summaries to GitHub.
 
 ## 1. Project objective
